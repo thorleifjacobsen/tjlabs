@@ -16,9 +16,9 @@
   --color-text-secondary: oklch(0.45 0.025 248);
   --color-text-muted:     oklch(0.60 0.015 248);
 
-  /* Typography */
-  --font-sans:    var(--ff-body, system-ui, sans-serif);
-  --font-display: var(--ff-display, Georgia, serif);
+  /* Typography — Comfortaa throughout */
+  --font-sans:    var(--ff-comfortaa, "Comfortaa", sans-serif);
+  --font-display: var(--ff-comfortaa, "Comfortaa", sans-serif);
 }
 
 html {
@@ -29,7 +29,17 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
 }
 
 .font-display {
