@@ -23,6 +23,7 @@ export function Footer() {
             {[
               { href: '#services', label: t('nav_services') },
               { href: '#projects', label: t('nav_projects') },
+              { href: '/blog', label: t('nav_blog') },
               { href: '#about', label: t('nav_about') },
               { href: '#contact', label: t('nav_contact') },
             ].map((l) => (

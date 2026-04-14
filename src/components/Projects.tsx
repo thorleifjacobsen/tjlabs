@@ -1,10 +1,12 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { ArrowUpRight, Tag, Package, Users, QrCode, MapPin, BarChart3, CreditCard, Bell, Layers } from 'lucide-react';
 import { AnimateIn } from '@/components/AnimateIn';
 
 export function Projects() {
   const t = useTranslations('projects');
+  const locale = useLocale();
+  const portfolioHref = locale === 'nb' ? '/portfolio' : `/${locale}/portfolio`;
 
   return (
     <section id="projects" className="border-t border-[var(--color-border)] py-24">
@@ -222,6 +224,15 @@ export function Projects() {
           </AnimateIn>
 
         </div>
+
+        <AnimateIn className="mt-14 text-center">
+          <a
+            href={portfolioHref}
+            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] border border-[var(--color-primary)] px-6 py-2.5 rounded-xl hover:bg-[var(--color-primary)] hover:text-white transition-all"
+          >
+            {t('view_all')} <ArrowUpRight className="w-4 h-4" />
+          </a>
+        </AnimateIn>
       </div>
     </section>
   );

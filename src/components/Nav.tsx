@@ -20,11 +20,13 @@ export function Nav() {
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
+  const blogHref = locale === 'nb' ? '/blog' : `/${locale}/blog`;
+
   const links = [
     { href: '#services', label: t('services') },
     { href: '#projects', label: t('projects') },
+    { href: blogHref, label: t('blog') },
     { href: '#about', label: t('about') },
-    { href: '#contact', label: t('contact') },
   ];
 
   return (

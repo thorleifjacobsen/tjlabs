@@ -1,17 +1,18 @@
 {
   "nav": {
     "services": "What I do",
-    "projects": "Projects",
+    "projects": "Portfolio",
+    "blog": "Blog",
     "about": "About",
     "contact": "Contact"
   },
   "hero": {
     "eyebrow": "Web development and making",
     "headline_1": "I build things",
-    "headline_2": "that actually work.",
+    "headline_2": "you actually need.",
     "tagline": "Websites, web applications, 3D printing and a bit of electronics. Based in Norway, up for most things.",
     "cta_primary": "Get in touch",
-    "cta_secondary": "See projects"
+    "cta_secondary": "See portfolio"
   },
   "services": {
     "label": "What I can help with",
@@ -38,6 +39,7 @@
     "label": "Own projects",
     "title": "Things I have built",
     "subtitle": "Two projects I have designed, built and launched myself. Both still running.",
+    "view_all": "See full portfolio",
     "losttags_desc": "A platform for QR labels you attach to things you do not want to lose. If someone finds the item and scans the code, the owner is automatically notified via SMS or email.",
     "losttags_f1": "Custom QR labels with optional design",
     "losttags_f2": "Automatic notifications via SMS and email",
@@ -53,6 +55,18 @@
     "inventoriz_stat_locs": "locations",
     "inventoriz_stat_users": "users",
     "view": "See project"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Projects I have worked on.",
+    "back": "Back"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Things I have made, learned or thought up.",
+    "read_more": "Read more",
+    "back": "Back to blog",
+    "no_posts": "No posts yet."
   },
   "about": {
     "label": "About me",
@@ -92,7 +106,8 @@
   },
   "footer": {
     "nav_services": "What I do",
-    "nav_projects": "Projects",
+    "nav_projects": "Portfolio",
+    "nav_blog": "Blog",
     "nav_about": "About",
     "nav_contact": "Contact",
     "rights": "All rights reserved."
