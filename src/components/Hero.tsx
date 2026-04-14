@@ -4,11 +4,8 @@ import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 export function Hero() {
   const t = useTranslations('hero');
 
-  const stack = ['Next.js', 'TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Tailwind CSS'];
-
   return (
     <section className="relative overflow-hidden">
-      {/* Background gradient blob */}
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-10"
@@ -19,7 +16,6 @@ export function Hero() {
 
       <div className="max-w-6xl mx-auto px-6 py-28 md:py-40">
         <div className="max-w-3xl">
-          {/* Available badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-200 bg-green-50 text-green-700 text-xs font-medium mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             {t('available')}
@@ -35,7 +31,6 @@ export function Hero() {
             {t('tagline')}
           </p>
 
-          {/* CTAs */}
           <div className="flex flex-wrap gap-3 mb-12">
             <a
               href="#projects"
@@ -51,19 +46,6 @@ export function Hero() {
             </a>
           </div>
 
-          {/* Stack tags */}
-          <div className="flex flex-wrap gap-2 mb-10">
-            {stack.map((s) => (
-              <span
-                key={s}
-                className="text-xs px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)] font-medium"
-              >
-                {s}
-              </span>
-            ))}
-          </div>
-
-          {/* Social links */}
           <div className="flex items-center gap-4">
             <a
               href="https://github.com/thorleifjacobsen"

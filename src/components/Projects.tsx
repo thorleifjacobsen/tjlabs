@@ -109,14 +109,6 @@ export function Projects() {
               </ul>
 
               {/* Tech stack */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {['Next.js 15', 'TypeScript', 'Prisma', 'PostgreSQL', 'Stripe', 'Resend', 'Twilio'].map((tag) => (
-                  <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)] font-medium">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
               <a
                 href="https://losttags.com"
                 target="_blank"
@@ -156,14 +148,6 @@ export function Projects() {
                   </li>
                 ))}
               </ul>
-
-              <div className="flex flex-wrap gap-2 mb-6">
-                {['Next.js 16', 'React 19', 'TypeScript', 'Prisma', 'PostgreSQL', 'Tailwind v4', 'PWA'].map((tag) => (
-                  <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)] font-medium">
-                    {tag}
-                  </span>
-                ))}
-              </div>
 
               <a
                 href="https://inventoriz.com"
