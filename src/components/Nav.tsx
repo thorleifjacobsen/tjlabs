@@ -2,18 +2,27 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 export function Nav() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', handler);
+    return () => window.removeEventListener('scroll', handler);
+  }, []);
 
   function toggleLocale() {
     const next = locale === 'nb' ? 'en' : 'nb';
-    // Replace the locale prefix in the path
-    const newPath = pathname.replace(`/${locale}`, `/${next}`);
-    router.push(newPath);
+    router.push(pathname.replace(`/${locale}`, `/${next}`));
   }
 
   const links = [
@@ -24,31 +33,79 @@ export function Nav() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[var(--color-surface)] border-b border-[var(--color-border)] backdrop-blur">
-      <nav className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-        <a href="#" className="font-display text-lg font-semibold tracking-tight text-[var(--color-primary)]">
-          TJ Labs
+    <header
+      className={`sticky top-0 z-50 transition-all duration-200 ${
+        scrolled
+          ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-[var(--color-border)]'
+          : 'bg-transparent'
+      }`}
+    >
+      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* Logo */}
+        <a href="#" className="flex items-center gap-2.5 group">
+          <Image src="/logo.svg" alt="TJ Labs" width={36} height={36} className="rounded-lg" />
+          <span className="font-display text-xl font-semibold text-[var(--color-primary)] tracking-tight">
+            TJ Labs
+          </span>
         </a>
 
-        <div className="flex items-center gap-6">
-          <ul className="hidden sm:flex items-center gap-6 text-sm text-[var(--color-text-secondary)]">
+        {/* Desktop links */}
+        <ul className="hidden md:flex items-center gap-7 text-sm font-medium text-[var(--color-text-secondary)]">
+          {links.map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                className="hover:text-[var(--color-primary)] transition-colors"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Right side */}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={toggleLocale}
+            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors"
+          >
+            {locale === 'nb' ? 'EN' : 'NO'}
+          </button>
+          <a
+            href="#contact"
+            className="hidden md:block text-sm font-medium px-4 py-1.5 rounded-full bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] transition-colors"
+          >
+            {t('contact')}
+          </a>
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden p-1 text-[var(--color-text-secondary)]"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden bg-white border-b border-[var(--color-border)] px-6 pb-4">
+          <ul className="flex flex-col gap-3 text-sm font-medium text-[var(--color-text-secondary)] pt-2">
             {links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="hover:text-[var(--color-text)] transition-colors">
+                <a
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="block py-1.5 hover:text-[var(--color-primary)] transition-colors"
+                >
                   {l.label}
                 </a>
               </li>
             ))}
           </ul>
-
-          <button
-            onClick={toggleLocale}
-            className="text-xs font-medium px-2.5 py-1 rounded border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:border-[var(--color-text-secondary)] transition-colors"
-          >
-            {locale === 'nb' ? 'EN' : 'NO'}
-          </button>
         </div>
-      </nav>
+      )}
     </header>
   );
 }

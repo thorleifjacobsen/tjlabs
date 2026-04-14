@@ -1,14 +1,71 @@
 import { useTranslations } from 'next-intl';
+import { MapPin, Calendar, Coffee } from 'lucide-react';
 
 export function About() {
   const t = useTranslations('about');
 
+  const facts = [
+    { icon: MapPin, text: t('fact_location') },
+    { icon: Calendar, text: t('fact_experience') },
+    { icon: Coffee, text: t('fact_coffee') },
+  ];
+
+  const values = [
+    { title: t('val1_title'), desc: t('val1_desc') },
+    { title: t('val2_title'), desc: t('val2_desc') },
+    { title: t('val3_title'), desc: t('val3_desc') },
+  ];
+
   return (
-    <section id="about" className="border-t border-[var(--color-border)] py-20">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="max-w-2xl">
-          <h2 className="font-display text-3xl text-[var(--color-text)] mb-6">{t('title')}</h2>
-          <p className="text-[var(--color-text-secondary)] leading-relaxed">{t('body')}</p>
+    <section id="about" className="border-t border-[var(--color-border)] py-24 bg-[var(--color-surface)]">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left — text */}
+          <div>
+            <p className="text-sm font-semibold text-[var(--color-accent)] uppercase tracking-widest mb-3">
+              {t('label')}
+            </p>
+            <h2 className="font-display text-4xl text-[var(--color-text)] mb-6">{t('title')}</h2>
+            <div className="space-y-4 text-[var(--color-text-secondary)] leading-relaxed">
+              <p>{t('body1')}</p>
+              <p>{t('body2')}</p>
+            </div>
+
+            {/* Quick facts */}
+            <div className="flex flex-col gap-3 mt-8">
+              {facts.map(({ icon: Icon, text }) => (
+                <div key={text} className="flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
+                  <Icon className="w-4 h-4 text-[var(--color-primary)] flex-shrink-0" />
+                  {text}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right — avatar + values */}
+          <div className="space-y-6">
+            {/* Avatar placeholder */}
+            <div className="flex items-center gap-5 p-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)]">
+              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[oklch(0.32_0.08_248)] to-[oklch(0.55_0.12_248)] flex items-center justify-center flex-shrink-0">
+                <span className="font-display text-3xl font-bold text-white">TJ</span>
+              </div>
+              <div>
+                <div className="font-semibold text-[var(--color-text)] text-lg">Thorleif Jacobsen</div>
+                <div className="text-sm text-[var(--color-text-secondary)]">{t('role')}</div>
+                <div className="text-xs text-[var(--color-text-muted)] mt-1">thorleif@tjlabs.no</div>
+              </div>
+            </div>
+
+            {/* Values */}
+            <div className="space-y-3">
+              {values.map(({ title, desc }) => (
+                <div key={title} className="p-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]">
+                  <div className="font-semibold text-[var(--color-text)] text-sm mb-1">{title}</div>
+                  <div className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{desc}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
