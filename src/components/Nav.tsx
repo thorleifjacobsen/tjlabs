@@ -1,16 +1,12 @@
 'use client';
 
-import { useTranslations, useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export function Nav() {
   const t = useTranslations('nav');
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -19,14 +15,6 @@ export function Nav() {
     window.addEventListener('scroll', handler);
     return () => window.removeEventListener('scroll', handler);
   }, []);
-
-  function toggleLocale() {
-    if (locale === 'nb') {
-      router.push('/en');
-    } else {
-      router.push('/');
-    }
-  }
 
   const links = [
     { href: '#services', label: t('services') },
@@ -68,12 +56,6 @@ export function Nav() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={toggleLocale}
-            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors"
-          >
-            {locale === 'nb' ? 'EN' : 'NO'}
-          </button>
           <a
             href="#contact"
             className="hidden md:block text-sm font-medium px-4 py-1.5 rounded-full bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] transition-colors"
