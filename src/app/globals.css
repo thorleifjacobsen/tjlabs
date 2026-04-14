@@ -45,3 +45,11 @@ h1, h2, h3, h4, h5, h6 {
 .font-display {
   font-family: var(--font-display);
 }
+
+/* Hero mesh gradient */
+.hero-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% -10%, oklch(0.32 0.08 248 / 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at -10% 60%, oklch(0.60 0.18 42 / 0.06) 0%, transparent 55%),
+    var(--color-bg);
+}

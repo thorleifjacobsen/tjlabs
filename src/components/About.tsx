@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { MapPin, Calendar } from 'lucide-react';
+import { AnimateIn } from '@/components/AnimateIn';
 
 export function About() {
   const t = useTranslations('about');
@@ -18,6 +19,7 @@ export function About() {
   return (
     <section id="about" className="border-t border-[var(--color-border)] py-24 bg-[var(--color-surface)]">
       <div className="max-w-6xl mx-auto px-6">
+        <AnimateIn>
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left — text */}
           <div>
@@ -66,6 +68,7 @@ export function About() {
             </div>
           </div>
         </div>
+        </AnimateIn>
       </div>
     </section>
   );

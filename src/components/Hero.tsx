@@ -5,71 +5,46 @@ export function Hero() {
   const t = useTranslations('hero');
 
   return (
-    <section className="relative overflow-hidden">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-10"
-        style={{
-          background: 'radial-gradient(circle, oklch(0.32 0.08 248) 0%, transparent 70%)',
-        }}
-      />
-
-      <div className="max-w-6xl mx-auto px-6 py-28 md:py-40">
+    <section className="hero-bg relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 py-32 md:py-48">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-200 bg-green-50 text-green-700 text-xs font-medium mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-            {t('available')}
-          </div>
+          <p className="text-sm font-medium text-[var(--color-accent)] uppercase tracking-widest mb-5">
+            {t('eyebrow')}
+          </p>
 
-          <h1 className="font-display text-5xl md:text-7xl text-[var(--color-text)] leading-[1.1] mb-6">
+          <h1 className="font-display text-5xl md:text-[4.5rem] text-[var(--color-text)] leading-[1.1] mb-7">
             {t('headline_1')}
             <br />
             <span className="text-[var(--color-primary)]">{t('headline_2')}</span>
           </h1>
 
-          <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-10 max-w-xl">
+          <p className="text-xl text-[var(--color-text-secondary)] leading-relaxed mb-12 max-w-2xl" style={{ fontWeight: 300 }}>
             {t('tagline')}
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-12">
+          <div className="flex flex-wrap gap-4 mb-16">
             <a
-              href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-primary)] text-white text-sm font-semibold hover:bg-[var(--color-primary-hover)] transition-colors shadow-sm"
+              href="#contact"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-primary-hover)] transition-colors shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
             >
               {t('cta_primary')} <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[var(--color-border)] text-[var(--color-text-secondary)] text-sm font-semibold hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors"
+              href="#projects"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl border border-[var(--color-border)] text-[var(--color-text-secondary)] font-medium hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors"
             >
               {t('cta_secondary')}
             </a>
           </div>
 
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/thorleifjacobsen"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors"
-              aria-label="GitHub"
-            >
+          <div className="flex items-center gap-5">
+            <a href="https://github.com/thorleifjacobsen" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors" aria-label="GitHub">
               <Github className="w-5 h-5" />
             </a>
-            <a
-              href="https://linkedin.com/in/thorleifjacobsen"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors"
-              aria-label="LinkedIn"
-            >
+            <a href="https://linkedin.com/in/thorleifjacobsen" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors" aria-label="LinkedIn">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a
-              href="mailto:thorleif@tjlabs.no"
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors"
-              aria-label="Email"
-            >
+            <a href="mailto:thorleif@tjlabs.no" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors" aria-label="Email">
               <Mail className="w-5 h-5" />
             </a>
           </div>

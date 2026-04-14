@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { ArrowUpRight, Tag, Package, Users, QrCode, MapPin, BarChart3, CreditCard, Bell, Layers } from 'lucide-react';
+import { AnimateIn } from '@/components/AnimateIn';
 
 export function Projects() {
   const t = useTranslations('projects');
@@ -8,17 +9,18 @@ export function Projects() {
   return (
     <section id="projects" className="border-t border-[var(--color-border)] py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="mb-14">
-          <p className="text-sm font-semibold text-[var(--color-accent)] uppercase tracking-widest mb-3">
+        <AnimateIn className="mb-14">
+          <p className="text-sm font-medium text-[var(--color-accent)] uppercase tracking-widest mb-3">
             {t('label')}
           </p>
           <h2 className="font-display text-4xl text-[var(--color-text)] mb-4">{t('title')}</h2>
-          <p className="text-[var(--color-text-secondary)] max-w-xl leading-relaxed">{t('subtitle')}</p>
-        </div>
+          <p className="text-[var(--color-text-secondary)] max-w-xl leading-relaxed" style={{ fontWeight: 300 }}>{t('subtitle')}</p>
+        </AnimateIn>
 
         <div className="space-y-16">
 
           {/* ── LostTags ─────────────────────────────────────────────── */}
+          <AnimateIn from="left">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Image side */}
             <div className="order-2 lg:order-1 rounded-2xl overflow-hidden border border-[var(--color-border)] bg-gradient-to-br from-blue-50 to-indigo-50 p-8 flex items-center justify-center min-h-[320px]">
@@ -119,8 +121,10 @@ export function Projects() {
               </a>
             </div>
           </div>
+          </AnimateIn>
 
           {/* ── Inventoriz ───────────────────────────────────────────── */}
+          <AnimateIn from="right">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Text side */}
             <div>
@@ -215,6 +219,7 @@ export function Projects() {
               </div>
             </div>
           </div>
+          </AnimateIn>
 
         </div>
       </div>
