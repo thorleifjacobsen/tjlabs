@@ -21,8 +21,11 @@ export function Nav() {
   }, []);
 
   function toggleLocale() {
-    const next = locale === 'nb' ? 'en' : 'nb';
-    router.push(pathname.replace(`/${locale}`, `/${next}`));
+    if (locale === 'nb') {
+      router.push('/en');
+    } else {
+      router.push('/');
+    }
   }
 
   const links = [

@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { MapPin, Calendar, Coffee } from 'lucide-react';
+import { MapPin, Calendar } from 'lucide-react';
 
 export function About() {
   const t = useTranslations('about');
@@ -7,7 +7,6 @@ export function About() {
   const facts = [
     { icon: MapPin, text: t('fact_location') },
     { icon: Calendar, text: t('fact_experience') },
-    { icon: Coffee, text: t('fact_coffee') },
   ];
 
   const values = [

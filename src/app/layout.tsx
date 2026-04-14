@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://tjlabs.no'),
   title: {
-    default: 'TJ Labs — Thorleif Jacobsen',
+    default: 'TJ Labs - Thorleif Jacobsen',
     template: '%s | TJ Labs',
   },
   description: 'Web developer based in Norway. Custom websites and software solutions.',
