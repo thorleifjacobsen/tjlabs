@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Brand — clean navy + warm accent */
+  --color-primary:        oklch(0.32 0.08 248);
+  --color-primary-hover:  oklch(0.26 0.07 248);
+  --color-accent:         oklch(0.65 0.20 42);
+  --color-accent-hover:   oklch(0.57 0.18 42);
+
+  /* Surfaces */
+  --color-bg:             oklch(0.985 0.004 248);
+  --color-surface:        oklch(1 0.002 248);
+  --color-border:         oklch(0.88 0.015 248);
+
+  /* Text */
+  --color-text:           oklch(0.20 0.02 248);
+  --color-text-secondary: oklch(0.48 0.02 248);
+  --color-text-muted:     oklch(0.63 0.012 248);
+
+  /* Typography */
+  --font-sans: var(--ff-body, system-ui, sans-serif);
+  --font-display: var(--ff-display, system-ui, sans-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}

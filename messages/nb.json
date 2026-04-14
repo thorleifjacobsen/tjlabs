@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "services": "Tjenester",
+    "projects": "Prosjekter",
+    "about": "Om meg",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hei, jeg er Thorleif",
+    "tagline": "Jeg bygger nettsider og programvare som fungerer.",
+    "cta_primary": "Se hva jeg kan gjøre",
+    "cta_secondary": "Ta kontakt"
+  },
+  "services": {
+    "title": "Hva jeg tilbyr",
+    "web_title": "Nettsider",
+    "web_desc": "Skreddersydde nettsider og webapplikasjoner fra idé til ferdig produkt.",
+    "software_title": "Programvare",
+    "software_desc": "Tilpassede løsninger for bedrifter som trenger noe utover hyllevare.",
+    "consulting_title": "Rådgivning",
+    "consulting_desc": "Teknisk sparring, arkitektur og veiledning for ditt prosjekt."
+  },
+  "projects": {
+    "title": "Prosjekter",
+    "losttags_desc": "QR-basert merking og sporing for eiendeler og utstyr.",
+    "inventoriz_desc": "Gratis lagerstyringssystem for små team.",
+    "view": "Se mer"
+  },
+  "about": {
+    "title": "Om meg",
+    "body": "Jeg er en webutvikler basert i Norge. Jeg lager nettsider og programvare for bedrifter og enkeltpersoner som vil ha løsninger som faktisk virker — uten unødvendig kompleksitet."
+  },
+  "contact": {
+    "title": "Ta kontakt",
+    "subtitle": "Har du et prosjekt? Send meg en melding.",
+    "name": "Navn",
+    "email": "E-post",
+    "message": "Melding",
+    "send": "Send",
+    "sent": "Meldingen er sendt!",
+    "error": "Noe gikk galt. Prøv igjen."
+  },
+  "footer": {
+    "rights": "Alle rettigheter forbeholdt."
+  }
+}

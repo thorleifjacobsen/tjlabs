@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Thorleif",
+    "tagline": "I build websites and software that work.",
+    "cta_primary": "See what I can do",
+    "cta_secondary": "Get in touch"
+  },
+  "services": {
+    "title": "What I offer",
+    "web_title": "Websites",
+    "web_desc": "Custom websites and web applications from idea to finished product.",
+    "software_title": "Software",
+    "software_desc": "Tailored solutions for businesses that need something beyond off-the-shelf.",
+    "consulting_title": "Consulting",
+    "consulting_desc": "Technical sparring, architecture, and guidance for your project."
+  },
+  "projects": {
+    "title": "Projects",
+    "losttags_desc": "QR-based labelling and tracking for assets and equipment.",
+    "inventoriz_desc": "Free inventory management system for small teams.",
+    "view": "View project"
+  },
+  "about": {
+    "title": "About me",
+    "body": "I'm a web developer based in Norway. I build websites and software for businesses and individuals who want solutions that actually work — without unnecessary complexity."
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "Have a project in mind? Send me a message.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sent": "Message sent!",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
