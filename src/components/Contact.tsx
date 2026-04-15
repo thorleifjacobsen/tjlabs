@@ -1,11 +1,14 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useState } from 'react';
+import { EmailLink } from '@/components/EmailLink';
 import { Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 
 export function Contact() {
   const t = useTranslations('contact');
+  const locale = useLocale();
+  const emailUser = locale === 'nb' ? 'hei' : 'hello';
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -48,9 +51,11 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-xs text-[var(--color-text-muted)] mb-0.5">{t('info_email_label')}</div>
-                  <a href="mailto:thorleif@tjlabs.no" className="text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">
-                    thorleif@tjlabs.no
-                  </a>
+                  <EmailLink
+                    user={emailUser}
+                    host="tjlabs.no"
+                    className="text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors"
+                  />
                 </div>
               </div>
 

@@ -1,9 +1,12 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { EmailLink } from '@/components/EmailLink';
 
 export function Footer() {
   const t = useTranslations('footer');
+  const locale = useLocale();
+  const emailUser = locale === 'nb' ? 'hei' : 'hello';
 
   return (
     <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface)] py-10 mt-auto">
@@ -21,11 +24,11 @@ export function Footer() {
           {/* Links */}
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--color-text-secondary)]">
             {[
-              { href: '#services', label: t('nav_services') },
-              { href: '#projects', label: t('nav_projects') },
+              { href: '/#services', label: t('nav_services') },
+              { href: '/#projects', label: t('nav_projects') },
               { href: '/blog', label: t('nav_blog') },
-              { href: '#about', label: t('nav_about') },
-              { href: '#contact', label: t('nav_contact') },
+              { href: '/#about', label: t('nav_about') },
+              { href: '/#contact', label: t('nav_contact') },
             ].map((l) => (
               <a key={l.href} href={l.href} className="hover:text-[var(--color-primary)] transition-colors">
                 {l.label}
@@ -41,15 +44,15 @@ export function Footer() {
             <a href="https://linkedin.com/in/thorleifjacobsen" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
               <Linkedin className="w-4 h-4" />
             </a>
-            <a href="mailto:thorleif@tjlabs.no" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
+            <EmailLink user={emailUser} host="tjlabs.no" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
               <Mail className="w-4 h-4" />
-            </a>
+            </EmailLink>
           </div>
         </div>
 
         <div className="mt-6 pt-6 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
           <span>© {new Date().getFullYear()} TJ Labs - {t('rights')}</span>
-          <span>Oslo, Norway</span>
+          <span>Norway</span>
         </div>
       </div>
     </footer>

@@ -46,6 +46,30 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
 
+/* Hero entrance animation */
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-item {
+  animation: hero-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Blog post prose */
 .prose-blog { color: var(--color-text); line-height: 1.75; }
 .prose-blog p { margin-bottom: 1.25em; }

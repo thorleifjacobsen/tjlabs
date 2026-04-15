@@ -33,16 +33,16 @@
     "print_title": "3D-printing",
     "print_desc": "Jeg har en 3D-printer og kan printe enkle ting. Fungerer bra for praktiske brukstilfeller og prototyper.",
     "pcb_title": "Elektronikk og PCB",
-    "pcb_desc": "Enkle kretskort og Arduino-prosjekter. Jeg kan designe og bestille enkle PCB-er."
+    "pcb_desc": "Mikrokontrollere, egendefinert firmware og enkle kretskort. Jeg kan designe og bestille kort til småprosjekter."
   },
   "projects": {
     "label": "Egne prosjekter",
     "title": "Ting jeg har bygget",
     "subtitle": "To prosjekter jeg har designet, bygget og lansert selv. Begge er fortsatt i drift.",
     "view_all": "Se hele porteføljen",
-    "losttags_desc": "En plattform for QR-merker du fester på ting du ikke vil miste. Hvis noen finner gjenstanden og skanner koden, får eieren automatisk beskjed via SMS eller e-post.",
+    "losttags_desc": "En plattform for QR-merker du fester på ting du ikke vil miste. Hvis noen finner gjenstanden og skanner koden, får eieren automatisk beskjed på e-post.",
     "losttags_f1": "Egne QR-merker med valgfritt design",
-    "losttags_f2": "Automatisk varsling via SMS og e-post",
+    "losttags_f2": "Automatisk varsling via e-post",
     "losttags_f3": "Abonnementsbetaling",
     "losttags_f4": "Norsk og engelsk grensesnitt",
     "losttags_stat_label": "Skanninger siste mnd.",

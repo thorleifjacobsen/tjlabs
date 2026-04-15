@@ -20,13 +20,14 @@ export function Nav() {
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
+  const homeHref = locale === 'nb' ? '/' : `/${locale}`;
   const blogHref = locale === 'nb' ? '/blog' : `/${locale}/blog`;
 
   const links = [
-    { href: '#services', label: t('services') },
-    { href: '#projects', label: t('projects') },
+    { href: '/#services', label: t('services') },
+    { href: '/#projects', label: t('projects') },
     { href: blogHref, label: t('blog') },
-    { href: '#about', label: t('about') },
+    { href: '/#about', label: t('about') },
   ];
 
   return (
@@ -39,7 +40,7 @@ export function Nav() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
+        <a href={homeHref} className="flex items-center gap-2.5 group rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]">
           <Image src="/logo.svg" alt="TJ Labs" width={36} height={36} className="rounded-lg" />
           <span className="font-display text-xl font-semibold text-[var(--color-primary)] tracking-tight">
             TJ Labs
@@ -52,7 +53,7 @@ export function Nav() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="hover:text-[var(--color-primary)] transition-colors"
+                className="hover:text-[var(--color-primary)] transition-colors duration-200 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]"
               >
                 {l.label}
               </a>
@@ -64,19 +65,19 @@ export function Nav() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => router.replace(pathname, { locale: locale === 'nb' ? 'en' : 'nb' })}
-            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors"
+            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]"
           >
             {locale === 'nb' ? 'EN' : 'NO'}
           </button>
           <a
-            href="#contact"
-            className="hidden md:block text-sm font-medium px-4 py-1.5 rounded-full bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] transition-colors"
+            href="/#contact"
+            className="hidden md:block text-sm font-medium px-4 py-1.5 rounded-full bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]"
           >
             {t('contact')}
           </a>
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-1 text-[var(--color-text-secondary)]"
+            className="md:hidden p-1 text-[var(--color-text-secondary)] rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -87,19 +88,28 @@ export function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-white border-b border-[var(--color-border)] px-6 pb-4">
+        <div className="md:hidden bg-[var(--color-bg)] border-b border-[var(--color-border)] px-6 pb-4">
           <ul className="flex flex-col gap-3 text-sm font-medium text-[var(--color-text-secondary)] pt-2">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block py-1.5 hover:text-[var(--color-primary)] transition-colors"
+                  className="block py-1.5 hover:text-[var(--color-primary)] transition-colors duration-200 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
                 >
                   {l.label}
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="/#contact"
+                onClick={() => setOpen(false)}
+                className="block py-1.5 font-semibold text-[var(--color-primary)]"
+              >
+                {t('contact')}
+              </a>
+            </li>
           </ul>
         </div>
       )}

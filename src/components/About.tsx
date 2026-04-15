@@ -1,9 +1,12 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { MapPin, Calendar } from 'lucide-react';
 import { AnimateIn } from '@/components/AnimateIn';
+import { EmailLink } from '@/components/EmailLink';
 
 export function About() {
   const t = useTranslations('about');
+  const locale = useLocale();
+  const emailUser = locale === 'nb' ? 'hei' : 'hello';
 
   const facts = [
     { icon: MapPin, text: t('fact_location') },
@@ -53,7 +56,7 @@ export function About() {
               <div>
                 <div className="font-semibold text-[var(--color-text)] text-lg">Thorleif Jacobsen</div>
                 <div className="text-sm text-[var(--color-text-secondary)]">{t('role')}</div>
-                <div className="text-xs text-[var(--color-text-muted)] mt-1">thorleif@tjlabs.no</div>
+                <EmailLink user={emailUser} host="tjlabs.no" className="text-xs text-[var(--color-text-muted)] mt-1 hover:text-[var(--color-primary)] transition-colors" />
               </div>
             </div>
 

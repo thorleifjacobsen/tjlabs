@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { getPost, getAllPosts } from '@/lib/posts';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
@@ -11,21 +11,33 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
-  return { title: post?.title ?? 'Post' };
+  return {
+    title: post?.title ?? 'Post',
+    description: post?.description,
+    openGraph: post ? {
+      title: post.title,
+      description: post.description,
+      type: 'article',
+      publishedTime: post.date,
+    } : undefined,
+  };
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+
+  const t = await getTranslations({ locale, namespace: 'blog' });
+  const blogHref = locale === 'nb' ? '/blog' : `/${locale}/blog`;
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-20">
       <a
-        href="../blog"
+        href={blogHref}
         className="inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors mb-10"
       >
-        <ArrowLeft className="w-4 h-4" /> Tilbake
+        <ArrowLeft className="w-4 h-4" /> {t('back')}
       </a>
 
       <p className="text-xs text-[var(--color-text-muted)] mb-2">{post.date}</p>
