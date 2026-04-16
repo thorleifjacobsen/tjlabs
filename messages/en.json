@@ -102,7 +102,11 @@
     "sent": "Message sent!",
     "sent_sub": "I will get back to you as soon as possible.",
     "send_another": "Send another message",
-    "error": "Something went wrong. Please try again."
+    "error": "Something went wrong. Please try again.",
+    "cta_title": "Send me an email",
+    "cta_sub": "Tell me what it is about, what you need, and a bit about yourself.",
+    "cta_btn": "Open email client",
+    "cta_response": "I usually reply within a day."
   },
   "footer": {
     "nav_services": "What I do",

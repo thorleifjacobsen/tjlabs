@@ -1,35 +1,11 @@
-'use client';
-
 import { useTranslations, useLocale } from 'next-intl';
-import { useState } from 'react';
 import { EmailLink } from '@/components/EmailLink';
-import { Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, MapPin, ArrowUpRight } from 'lucide-react';
 
 export function Contact() {
   const t = useTranslations('contact');
   const locale = useLocale();
   const emailUser = locale === 'nb' ? 'hei' : 'hello';
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus('sending');
-    const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form));
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error('Failed');
-      setStatus('sent');
-      form.reset();
-    } catch {
-      setStatus('error');
-    }
-  }
 
   return (
     <section id="contact" className="border-t border-[var(--color-border)] py-24">
@@ -71,87 +47,25 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Right — form */}
-          <div className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-8">
-            {status === 'sent' ? (
-              <div className="flex flex-col items-center justify-center py-10 gap-4 text-center">
-                <CheckCircle2 className="w-12 h-12 text-green-500" />
-                <p className="font-semibold text-[var(--color-text)]">{t('sent')}</p>
-                <p className="text-sm text-[var(--color-text-secondary)]">{t('sent_sub')}</p>
-                <button
-                  onClick={() => setStatus('idle')}
-                  className="text-sm text-[var(--color-primary)] hover:underline mt-2"
-                >
-                  {t('send_another')}
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-[var(--color-text)] mb-1.5">
-                      {t('name')}
-                    </label>
-                    <input
-                      name="name"
-                      required
-                      placeholder={t('name_placeholder')}
-                      className="w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2.5 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-[var(--color-text)] mb-1.5">
-                      {t('email')}
-                    </label>
-                    <input
-                      name="email"
-                      type="email"
-                      required
-                      placeholder="you@example.com"
-                      className="w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2.5 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-[var(--color-text)] mb-1.5">
-                    {t('subject')}
-                  </label>
-                  <input
-                    name="subject"
-                    placeholder={t('subject_placeholder')}
-                    className="w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2.5 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-[var(--color-text)] mb-1.5">
-                    {t('message')}
-                  </label>
-                  <textarea
-                    name="message"
-                    required
-                    rows={5}
-                    placeholder={t('message_placeholder')}
-                    className="w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2.5 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary)] transition-colors resize-none"
-                  />
-                </div>
-
-                {status === 'error' && (
-                  <p className="text-sm text-red-500 bg-red-50 px-4 py-2.5 rounded-xl">{t('error')}</p>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={status === 'sending'}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-primary)] text-white text-sm font-semibold hover:bg-[var(--color-primary-hover)] disabled:opacity-60 transition-colors"
-                >
-                  <Send className="w-4 h-4" />
-                  {status === 'sending' ? t('sending') : t('send')}
-                </button>
-              </form>
-            )}
+          {/* Right — mailto CTA */}
+          <div className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-8 flex flex-col items-center justify-center text-center gap-6 min-h-[280px]">
+            <div className="w-14 h-14 rounded-2xl bg-[var(--color-primary)] flex items-center justify-center">
+              <Mail className="w-7 h-7 text-white" />
+            </div>
+            <div>
+              <p className="font-display text-xl text-[var(--color-text)] mb-2">{t('cta_title')}</p>
+              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{t('cta_sub')}</p>
+            </div>
+            <EmailLink
+              user={emailUser}
+              host="tjlabs.no"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-primary)] text-white text-sm font-semibold hover:bg-[var(--color-primary-hover)] transition-colors"
+            >
+              {t('cta_btn')} <ArrowUpRight className="w-4 h-4" />
+            </EmailLink>
+            <p className="text-xs text-[var(--color-text-muted)]">{t('cta_response')}</p>
           </div>
+
         </div>
       </div>
     </section>

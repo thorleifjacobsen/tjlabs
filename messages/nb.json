@@ -102,7 +102,11 @@
     "sent": "Melding sendt!",
     "sent_sub": "Jeg svarer deg så snart som mulig.",
     "send_another": "Send en ny melding",
-    "error": "Noe gikk galt. Prøv igjen."
+    "error": "Noe gikk galt. Prøv igjen.",
+    "cta_title": "Send meg en e-post",
+    "cta_sub": "Beskriv gjerne hva det gjelder, hva du trenger og litt om deg selv.",
+    "cta_btn": "Åpne e-postklient",
+    "cta_response": "Jeg svarer som regel innen en dag."
   },
   "footer": {
     "nav_services": "Hva jeg gjør",
