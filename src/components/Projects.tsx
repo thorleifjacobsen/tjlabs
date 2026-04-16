@@ -1,7 +1,11 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
-import { ArrowUpRight, Tag, Package, Users, QrCode, MapPin, BarChart3, CreditCard, Bell, Layers } from 'lucide-react';
+import { ArrowUpRight, Tag, Package } from 'lucide-react';
 import { AnimateIn } from '@/components/AnimateIn';
+
+// Update PORTFOLIO_TOTAL when adding new projects to the portfolio page
+const PROJECTS_ON_HOME = 2;
+const PORTFOLIO_TOTAL = 2;
 
 export function Projects() {
   const t = useTranslations('projects');
@@ -25,63 +29,8 @@ export function Projects() {
           <AnimateIn from="left">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Image side */}
-            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden border border-[var(--color-border)] bg-gradient-to-br from-blue-50 to-indigo-50 p-8 flex items-center justify-center min-h-[320px]">
-              <div className="relative">
-                {/* Phone mockup shell */}
-                <div className="w-56 bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
-                  {/* Status bar */}
-                  <div className="bg-[oklch(0.32_0.08_248)] h-8 flex items-center justify-between px-4">
-                    <span className="text-white text-[10px] font-bold tracking-wide">LostTags</span>
-                    <div className="flex gap-1">
-                      <div className="w-1 h-1 rounded-full bg-white/60" />
-                      <div className="w-1 h-1 rounded-full bg-white/60" />
-                      <div className="w-1 h-1 rounded-full bg-white/60" />
-                    </div>
-                  </div>
-                  {/* App content mock */}
-                  <div className="p-3 space-y-2">
-                    <div className="bg-blue-50 rounded-xl p-3 flex items-center gap-2">
-                      <div className="w-8 h-8 bg-[oklch(0.32_0.08_248)] rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Tag className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <div className="text-[10px] font-semibold text-gray-800">MacBook Pro 16"</div>
-                        <div className="text-[9px] text-gray-500">Kontor, skuff 2</div>
-                      </div>
-                    </div>
-                    <div className="bg-gray-50 rounded-xl p-3 flex items-center gap-2">
-                      <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <QrCode className="w-4 h-4 text-gray-600" />
-                      </div>
-                      <div>
-                        <div className="text-[10px] font-semibold text-gray-800">Sony kamera</div>
-                        <div className="text-[9px] text-gray-500">Veske, lomme A</div>
-                      </div>
-                    </div>
-                    <div className="bg-gray-50 rounded-xl p-3 flex items-center gap-2">
-                      <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-4 h-4 text-gray-600" />
-                      </div>
-                      <div>
-                        <div className="text-[10px] font-semibold text-gray-800">AirPods Max</div>
-                        <div className="text-[9px] text-gray-500">Stue, sofa</div>
-                      </div>
-                    </div>
-                    {/* QR badge preview */}
-                    <div className="mt-2 bg-white border border-gray-100 rounded-xl p-2 flex items-center justify-center gap-2">
-                      <Image src="/losttags-preview.png" alt="LostTags QR badge" width={60} height={60} className="rounded" />
-                      <div className="text-[9px] text-gray-500 text-center">
-                        Custom<br />QR badge
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Floating badge */}
-                <div className="absolute -top-3 -right-6 bg-white border border-[var(--color-border)] rounded-xl px-3 py-2 shadow-lg">
-                  <div className="text-[10px] text-[var(--color-text-muted)]">{t('losttags_stat_label')}</div>
-                  <div className="text-sm font-bold text-[var(--color-primary)]">+2 400</div>
-                </div>
-              </div>
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden border border-[var(--color-border)] min-h-[320px]">
+              <Image src="/losttags-screenshot.png" alt="LostTags" width={1200} height={800} className="w-full h-full object-cover" />
             </div>
 
             {/* Text side */}
@@ -165,74 +114,25 @@ export function Projects() {
               </a>
             </div>
 
-            {/* Image side — dashboard mockup */}
-            <div className="rounded-2xl overflow-hidden border border-[var(--color-border)] bg-gradient-to-br from-slate-50 to-blue-50 p-6 min-h-[320px] flex items-center justify-center">
-              <div className="w-full max-w-sm bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                {/* Sidebar + main layout */}
-                <div className="flex h-52">
-                  {/* Mini sidebar */}
-                  <div className="w-12 bg-[oklch(0.24_0.058_245)] flex flex-col items-center py-3 gap-3">
-                    <div className="w-6 h-6 rounded-md bg-white/20 flex items-center justify-center">
-                      <Package className="w-3.5 h-3.5 text-white" />
-                    </div>
-                    <div className="w-6 h-6 rounded-md flex items-center justify-center">
-                      <Layers className="w-3.5 h-3.5 text-white/50" />
-                    </div>
-                    <div className="w-6 h-6 rounded-md flex items-center justify-center">
-                      <MapPin className="w-3.5 h-3.5 text-white/50" />
-                    </div>
-                    <div className="w-6 h-6 rounded-md flex items-center justify-center">
-                      <BarChart3 className="w-3.5 h-3.5 text-white/50" />
-                    </div>
-                  </div>
-                  {/* Main content */}
-                  <div className="flex-1 p-3 space-y-2">
-                    <div className="text-[10px] font-bold text-gray-700 mb-1">Items (24)</div>
-                    {[
-                      { name: 'MacBook Pro', loc: 'Office', qty: 3 },
-                      { name: 'Monitor 27"', loc: 'Storage', qty: 5 },
-                      { name: 'Keyboard', loc: 'Office', qty: 8 },
-                      { name: 'USB Hub', loc: 'Cabinet', qty: 4 },
-                    ].map((item) => (
-                      <div key={item.name} className="flex items-center gap-2 text-[9px] bg-gray-50 rounded-lg px-2 py-1.5">
-                        <div className="w-4 h-4 rounded bg-[oklch(0.93_0.025_245)] flex-shrink-0" />
-                        <span className="font-medium text-gray-700 flex-1 truncate">{item.name}</span>
-                        <span className="text-gray-400">{item.loc}</span>
-                        <span className="font-bold text-[oklch(0.32_0.08_248)]">x{item.qty}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                {/* Bottom stats bar */}
-                <div className="bg-[oklch(0.984_0.007_245)] border-t border-gray-100 px-3 py-2 flex justify-between text-[9px]">
-                  <div className="text-center">
-                    <div className="font-bold text-[oklch(0.32_0.08_248)]">24</div>
-                    <div className="text-gray-400">{t('inventoriz_stat_items')}</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-bold text-[oklch(0.32_0.08_248)]">6</div>
-                    <div className="text-gray-400">{t('inventoriz_stat_locs')}</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-bold text-[oklch(0.32_0.08_248)]">3</div>
-                    <div className="text-gray-400">{t('inventoriz_stat_users')}</div>
-                  </div>
-                </div>
-              </div>
+            {/* Image side */}
+            <div className="rounded-2xl overflow-hidden border border-[var(--color-border)] min-h-[320px]">
+              <Image src="/inventoriz-screenshot.png" alt="Inventoriz" width={1200} height={800} className="w-full h-full object-cover" />
             </div>
           </div>
           </AnimateIn>
 
         </div>
 
-        <AnimateIn className="mt-14 text-center">
-          <a
-            href={portfolioHref}
-            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] border border-[var(--color-primary)] px-6 py-2.5 rounded-xl hover:bg-[var(--color-primary)] hover:text-white transition-all"
-          >
-            {t('view_all')} <ArrowUpRight className="w-4 h-4" />
-          </a>
-        </AnimateIn>
+        {PROJECTS_ON_HOME < PORTFOLIO_TOTAL && (
+          <AnimateIn className="mt-14 text-center">
+            <a
+              href={portfolioHref}
+              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] border border-[var(--color-primary)] px-6 py-2.5 rounded-xl hover:bg-[var(--color-primary)] hover:text-white transition-all"
+            >
+              {t('view_all')} <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </AnimateIn>
+        )}
       </div>
     </section>
   );
