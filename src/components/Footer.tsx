@@ -1,6 +1,6 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 import { EmailLink } from '@/components/EmailLink';
 import { NAV_LINKS } from '@/lib/nav';
 
@@ -34,10 +34,7 @@ export function Footer() {
             <a href="https://github.com/thorleifjacobsen" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
               <Github className="w-4 h-4" />
             </a>
-            <a href="https://linkedin.com/in/thorleifjacobsen" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <EmailLink user={emailUser} host="tjlabs.no" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
+<EmailLink user={emailUser} host="tjlabs.no" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
               <Mail className="w-4 h-4" />
             </EmailLink>
           </div>

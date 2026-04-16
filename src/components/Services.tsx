@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { Globe, Code2, Layers, Smartphone, ShoppingCart, Wrench, Printer, Cpu } from 'lucide-react';
+import { Globe, Code2, Layers, Smartphone, ShoppingCart, Wrench, Printer, Cpu, Wifi } from 'lucide-react';
 import { AnimateIn } from '@/components/AnimateIn';
 
 export function Services() {
@@ -12,6 +12,7 @@ export function Services() {
     { icon: Smartphone,   title: t('pwa_title'),        desc: t('pwa_desc') },
     { icon: Layers,       title: t('fullstack_title'),  desc: t('fullstack_desc') },
     { icon: Wrench,       title: t('consulting_title'), desc: t('consulting_desc') },
+    { icon: Wifi,         title: t('iot_title'),        desc: t('iot_desc') },
     { icon: Printer,      title: t('print_title'),      desc: t('print_desc') },
     { icon: Cpu,          title: t('pcb_title'),        desc: t('pcb_desc') },
   ];

@@ -7,7 +7,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "Web development and making",
+    "eyebrow": "Web developer and maker",
     "headline_1": "I build things",
     "headline_2": "you actually need.",
     "tagline": "Websites, web applications, 3D printing and a bit of electronics. Up for most things.",
@@ -30,6 +30,8 @@
     "fullstack_desc": "I take responsibility for the whole solution, from database and API to what the user sees. One contact for everything.",
     "consulting_title": "Technical help",
     "consulting_desc": "Need help thinking through something technical, or someone to bounce ideas with? Happy to help.",
+    "iot_title": "IoT and smart home",
+    "iot_desc": "Smart solutions that connect physical things to the internet. Home automation, sensors and custom setups using e.g. Home Assistant.",
     "print_title": "3D printing",
     "print_desc": "I have a 3D printer and can print simple things. Works well for practical use cases and prototypes.",
     "pcb_title": "Electronics and PCB",

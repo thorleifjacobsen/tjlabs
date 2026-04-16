@@ -7,7 +7,7 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "eyebrow": "Webutvikling og making",
+    "eyebrow": "Webutvikler og maker",
     "headline_1": "Jeg bygger ting",
     "headline_2": "du faktisk trenger.",
     "tagline": "Nettsider, webapplikasjoner, 3D-print og litt elektronikk. Jobber med det meste.",
@@ -30,6 +30,8 @@
     "fullstack_desc": "Jeg tar ansvar for hele løsningen, fra database og API til det brukeren ser. Én kontaktperson for alt.",
     "consulting_title": "Teknisk hjelp",
     "consulting_desc": "Trenger du hjelp til å tenke gjennom noe teknisk, eller noen å sparre med? Jeg hjelper gjerne.",
+    "iot_title": "IoT og smarthus",
+    "iot_desc": "Smarte løsninger som kobler fysiske ting til nettet. Hjemmeautomatisering, sensorer og egendefinerte oppsett med f.eks. Home Assistant.",
     "print_title": "3D-printing",
     "print_desc": "Jeg har en 3D-printer og kan printe enkle ting. Fungerer bra for praktiske brukstilfeller og prototyper.",
     "pcb_title": "Elektronikk og PCB",

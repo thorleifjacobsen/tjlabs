@@ -81,7 +81,6 @@ export default async function LocaleLayout({
     worksFor: { '@type': 'Organization', name: 'TJLabs', url: BASE_URL },
     sameAs: [
       'https://github.com/thorleifjacobsen',
-      'https://linkedin.com/in/thorleifjacobsen',
     ],
   };
 

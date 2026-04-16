@@ -1,5 +1,5 @@
 import { useTranslations, useLocale } from 'next-intl';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Github, Mail } from 'lucide-react';
 import { EmailLink } from '@/components/EmailLink';
 
 export function Hero() {
@@ -58,10 +58,7 @@ export function Hero() {
             <a href="https://github.com/thorleifjacobsen" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors duration-200 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]" aria-label="GitHub">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com/in/thorleifjacobsen" target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors duration-200 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]" aria-label="LinkedIn">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <EmailLink user={emailUser} host="tjlabs.no" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors duration-200 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]" aria-label="Email">
+<EmailLink user={emailUser} host="tjlabs.no" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors duration-200 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]" aria-label="Email">
               <Mail className="w-5 h-5" />
             </EmailLink>
           </div>
