@@ -1,6 +1,6 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { EmailLink } from '@/components/EmailLink';
-import { Mail, MapPin, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight } from 'lucide-react';
 
 export function Contact() {
   const t = useTranslations('contact');
@@ -35,15 +35,6 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]">
-                <div className="w-10 h-10 rounded-lg bg-[var(--color-primary)] flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <div className="text-xs text-[var(--color-text-muted)] mb-0.5">{t('info_location_label')}</div>
-                  <div className="text-sm font-medium text-[var(--color-text)]">{t('info_location')}</div>
-                </div>
-              </div>
             </div>
           </div>
 

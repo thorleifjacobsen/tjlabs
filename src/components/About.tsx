@@ -1,5 +1,5 @@
 import { useTranslations, useLocale } from 'next-intl';
-import { MapPin, Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { AnimateIn } from '@/components/AnimateIn';
 import { EmailLink } from '@/components/EmailLink';
 
@@ -9,7 +9,6 @@ export function About() {
   const emailUser = locale === 'nb' ? 'hei' : 'hello';
 
   const facts = [
-    { icon: MapPin, text: t('fact_location') },
     { icon: Calendar, text: t('fact_experience') },
   ];
 
