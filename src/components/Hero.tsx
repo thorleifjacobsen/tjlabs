@@ -9,7 +9,7 @@ export function Hero() {
 
   return (
     <section className="hero-bg relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 py-24 sm:py-36 lg:py-52">
+      <div className="max-w-6xl mx-auto px-6 py-24 sm:py-32 lg:py-40">
         <div className="max-w-3xl">
           <p
             className="hero-item text-sm font-medium text-[var(--color-accent)] uppercase tracking-widest mb-4"
