@@ -5,6 +5,7 @@ import { useRouter, usePathname } from '@/navigation';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { NAV_LINKS } from '@/lib/nav';
 
 export function Nav() {
   const t = useTranslations('nav');
@@ -21,13 +22,7 @@ export function Nav() {
   }, []);
 
   const homeHref = locale === 'nb' ? '/' : `/${locale}`;
-  const blogHref = locale === 'nb' ? '/blog' : `/${locale}/blog`;
-
-  const links = [
-    { href: '/#services', label: t('services') },
-    { href: '/#projects', label: t('projects') },
-    { href: '/#about', label: t('about') },
-  ];
+  const links = NAV_LINKS.map((l) => ({ href: l.href, label: t(l.tKey) }));
 
   return (
     <header

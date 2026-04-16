@@ -2,9 +2,11 @@ import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { EmailLink } from '@/components/EmailLink';
+import { NAV_LINKS } from '@/lib/nav';
 
 export function Footer() {
   const t = useTranslations('footer');
+  const tn = useTranslations('nav');
   const locale = useLocale();
   const emailUser = locale === 'nb' ? 'hei' : 'hello';
 
@@ -20,15 +22,9 @@ export function Footer() {
 
           {/* Links */}
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--color-text-secondary)]">
-            {[
-              { href: '/#services', label: t('nav_services') },
-              { href: '/#projects', label: t('nav_projects') },
-              { href: '/blog', label: t('nav_blog') },
-              { href: '/#about', label: t('nav_about') },
-              { href: '/#contact', label: t('nav_contact') },
-            ].map((l) => (
+            {NAV_LINKS.map((l) => (
               <a key={l.href} href={l.href} className="hover:text-[var(--color-primary)] transition-colors">
-                {l.label}
+                {tn(l.tKey)}
               </a>
             ))}
           </nav>
