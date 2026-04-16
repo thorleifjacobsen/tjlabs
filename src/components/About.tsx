@@ -17,7 +17,7 @@ return (
       <div className="max-w-6xl mx-auto px-6">
         <AnimateIn>
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left — text */}
+          {/* Left - text */}
           <div>
             <p className="text-sm font-semibold text-[var(--color-accent)] uppercase tracking-widest mb-3">
               {t('label')}
@@ -39,7 +39,7 @@ return (
             </div>
           </div>
 
-          {/* Right — brand card */}
+          {/* Right - brand card */}
           <div className="flex items-center gap-5 p-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)]">
             <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[oklch(0.32_0.08_248)] to-[oklch(0.55_0.12_248)] flex items-center justify-center flex-shrink-0">
               <span className="font-display text-3xl font-bold text-white">TJ</span>

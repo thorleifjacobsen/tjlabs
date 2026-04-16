@@ -38,7 +38,7 @@
   "projects": {
     "label": "Egne prosjekter",
     "title": "Ting jeg har bygget",
-    "subtitle": "To prosjekter jeg har designet, bygget og lansert selv. Begge er fortsatt i drift.",
+    "subtitle": "Noen utvalgte prosjekter jeg har bygget og lansert.",
     "view_all": "Se hele porteføljen",
     "losttags_desc": "En plattform for QR-merker du fester på ting du ikke vil miste. Hvis noen finner gjenstanden og skanner koden, får eieren automatisk beskjed på e-post.",
     "losttags_f1": "Egne QR-merker med valgfritt design",

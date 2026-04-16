@@ -63,7 +63,7 @@ export function Nav() {
         {/* Right side */}
         <div className="flex items-center gap-3">
           <button
-            onClick={() => router.replace(pathname, { locale: locale === 'nb' ? 'en' : 'nb' })}
+            onClick={() => router.replace(pathname, { locale: locale === 'nb' ? 'en' : 'nb', scroll: false })}
             className="text-xs font-semibold px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]"
           >
             {locale === 'nb' ? 'EN' : 'NO'}

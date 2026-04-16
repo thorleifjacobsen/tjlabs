@@ -48,7 +48,7 @@ export function Footer() {
         </div>
 
         <div className="mt-6 pt-6 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
-          <span>© {new Date().getFullYear()} TJLabs — {t('rights')}</span>
+          <span>© {new Date().getFullYear()} TJLabs. {t('rights')}</span>
         </div>
       </div>
     </footer>

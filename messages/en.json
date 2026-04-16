@@ -38,7 +38,7 @@
   "projects": {
     "label": "Own projects",
     "title": "Things I have built",
-    "subtitle": "Two projects I have designed, built and launched myself. Both still running.",
+    "subtitle": "A selection of projects I have built and launched.",
     "view_all": "See full portfolio",
     "losttags_desc": "A platform for QR labels you attach to things you do not want to lose. If someone finds the item and scans the code, the owner is automatically notified by email.",
     "losttags_f1": "Custom QR labels with optional design",

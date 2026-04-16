@@ -12,7 +12,7 @@ export function Contact() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-          {/* Left — info */}
+          {/* Left - info */}
           <div>
             <p className="text-sm font-semibold text-[var(--color-accent)] uppercase tracking-widest mb-3">
               {t('label')}
@@ -38,7 +38,7 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Right — mailto CTA */}
+          {/* Right - mailto CTA */}
           <div className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-8 flex flex-col items-center justify-center text-center gap-6 min-h-[280px]">
             <div className="w-14 h-14 rounded-2xl bg-[var(--color-primary)] flex items-center justify-center">
               <Mail className="w-7 h-7 text-white" />
