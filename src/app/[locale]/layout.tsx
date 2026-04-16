@@ -25,8 +25,8 @@ export async function generateMetadata({
 
   return {
     description: isNb
-      ? 'Webutvikler og maker basert i Norge. Nettsider, webapplikasjoner, 3D-printing og elektronikk. Ta kontakt for en prat.'
-      : 'Web developer and maker based in Norway. Websites, web applications, 3D printing and electronics.',
+      ? 'Webutvikler og maker. Nettsider, webapplikasjoner, 3D-printing og elektronikk.'
+      : 'Web developer and maker. Websites, web applications, 3D printing and electronics.',
     alternates: {
       canonical: isNb ? BASE_URL : `${BASE_URL}/en`,
       languages: {
@@ -39,19 +39,19 @@ export async function generateMetadata({
       locale: isNb ? 'nb_NO' : 'en_US',
       alternateLocale: isNb ? ['en_US'] : ['nb_NO'],
       url: isNb ? BASE_URL : `${BASE_URL}/en`,
-      siteName: 'TJ Labs',
-      title: 'TJ Labs - Thorleif Jacobsen',
+      siteName: 'TJLabs',
+      title: 'TJLabs',
       description: isNb
-        ? 'Webutvikler og maker basert i Norge. Nettsider, webapplikasjoner, 3D-printing og elektronikk.'
-        : 'Web developer and maker based in Norway. Websites, web applications, 3D printing and electronics.',
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'TJ Labs' }],
+        ? 'Webutvikler og maker. Nettsider, webapplikasjoner, 3D-printing og elektronikk.'
+        : 'Web developer and maker. Websites, web applications, 3D printing and electronics.',
+      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'TJLabs' }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'TJ Labs - Thorleif Jacobsen',
+      title: 'TJLabs',
       description: isNb
-        ? 'Webutvikler og maker basert i Norge.'
-        : 'Web developer and maker based in Norway.',
+        ? 'Webutvikler og maker. Nettsider, webapplikasjoner, 3D-printing og elektronikk.'
+        : 'Web developer and maker. Websites, web applications, 3D printing and electronics.',
       images: ['/og-image.png'],
     },
   };
@@ -78,8 +78,7 @@ export default async function LocaleLayout({
     name: 'Thorleif Jacobsen',
     url: BASE_URL,
     jobTitle: locale === 'nb' ? 'Webutvikler' : 'Web Developer',
-    worksFor: { '@type': 'Organization', name: 'TJ Labs', url: BASE_URL },
-    address: { '@type': 'PostalAddress', addressCountry: 'NO' },
+    worksFor: { '@type': 'Organization', name: 'TJLabs', url: BASE_URL },
     sameAs: [
       'https://github.com/thorleifjacobsen',
       'https://linkedin.com/in/thorleifjacobsen',
@@ -89,7 +88,7 @@ export default async function LocaleLayout({
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'TJ Labs',
+    name: 'TJLabs',
     url: BASE_URL,
     author: { '@type': 'Person', name: 'Thorleif Jacobsen' },
   };

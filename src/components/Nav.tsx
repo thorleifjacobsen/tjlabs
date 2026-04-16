@@ -40,9 +40,9 @@ export function Nav() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href={homeHref} className="flex items-center gap-2.5 group rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-primary)]">
-          <Image src="/logo.svg" alt="TJ Labs" width={36} height={36} className="rounded-lg" />
+          <Image src="/logo.svg" alt="TJLabs" width={36} height={36} className="rounded-lg" />
           <span className="font-display text-xl font-semibold text-[var(--color-primary)] tracking-tight">
-            TJ Labs
+            TJLabs
           </span>
         </a>
 

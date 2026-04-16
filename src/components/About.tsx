@@ -12,13 +12,7 @@ export function About() {
     { icon: Calendar, text: t('fact_experience') },
   ];
 
-  const values = [
-    { title: t('val1_title'), desc: t('val1_desc') },
-    { title: t('val2_title'), desc: t('val2_desc') },
-    { title: t('val3_title'), desc: t('val3_desc') },
-  ];
-
-  return (
+return (
     <section id="about" className="border-t border-[var(--color-border)] py-24 bg-[var(--color-surface)]">
       <div className="max-w-6xl mx-auto px-6">
         <AnimateIn>
@@ -45,28 +39,15 @@ export function About() {
             </div>
           </div>
 
-          {/* Right — avatar + values */}
-          <div className="space-y-6">
-            {/* Avatar placeholder */}
-            <div className="flex items-center gap-5 p-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)]">
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[oklch(0.32_0.08_248)] to-[oklch(0.55_0.12_248)] flex items-center justify-center flex-shrink-0">
-                <span className="font-display text-3xl font-bold text-white">TJ</span>
-              </div>
-              <div>
-                <div className="font-semibold text-[var(--color-text)] text-lg">Thorleif Jacobsen</div>
-                <div className="text-sm text-[var(--color-text-secondary)]">{t('role')}</div>
-                <EmailLink user={emailUser} host="tjlabs.no" className="text-xs text-[var(--color-text-muted)] mt-1 hover:text-[var(--color-primary)] transition-colors" />
-              </div>
+          {/* Right — brand card */}
+          <div className="flex items-center gap-5 p-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)]">
+            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[oklch(0.32_0.08_248)] to-[oklch(0.55_0.12_248)] flex items-center justify-center flex-shrink-0">
+              <span className="font-display text-3xl font-bold text-white">TJ</span>
             </div>
-
-            {/* Values */}
-            <div className="space-y-3">
-              {values.map(({ title, desc }) => (
-                <div key={title} className="p-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]">
-                  <div className="font-semibold text-[var(--color-text)] text-sm mb-1">{title}</div>
-                  <div className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{desc}</div>
-                </div>
-              ))}
+            <div>
+              <div className="font-semibold text-[var(--color-text)] text-lg">TJLabs</div>
+              <div className="text-sm text-[var(--color-text-secondary)]">{t('role')}</div>
+              <EmailLink user={emailUser} host="tjlabs.no" className="text-xs text-[var(--color-text-muted)] mt-1 hover:text-[var(--color-primary)] transition-colors" />
             </div>
           </div>
         </div>

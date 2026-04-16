@@ -14,11 +14,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           {/* Brand */}
           <div className="flex items-center gap-2.5">
-            <Image src="/logo.svg" alt="TJ Labs" width={32} height={32} className="rounded-md" />
-            <div>
-              <div className="font-display font-semibold text-[var(--color-primary)]">TJ Labs</div>
-              <div className="text-xs text-[var(--color-text-muted)]">Thorleif Jacobsen</div>
-            </div>
+            <Image src="/logo.svg" alt="TJLabs" width={32} height={32} className="rounded-md" />
+            <div className="font-display font-semibold text-[var(--color-primary)]">TJLabs</div>
           </div>
 
           {/* Links */}
@@ -51,8 +48,7 @@ export function Footer() {
         </div>
 
         <div className="mt-6 pt-6 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
-          <span>© {new Date().getFullYear()} TJ Labs - {t('rights')}</span>
-          <span>Norway</span>
+          <span>© {new Date().getFullYear()} TJLabs — {t('rights')}</span>
         </div>
       </div>
     </footer>

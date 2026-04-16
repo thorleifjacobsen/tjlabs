@@ -44,13 +44,13 @@
     "losttags_f1": "Custom QR labels with optional design",
     "losttags_f2": "Automatic notifications by email",
     "losttags_f3": "Subscription payments",
-    "losttags_f4": "Norwegian and English interface",
+    "losttags_f4": "Multilingual interface",
     "losttags_stat_label": "Scans last month",
     "inventoriz_desc": "A simple inventory system for small teams. Keep track of what you have and where it is, scan QR codes in the browser and use it as an app on the phone.",
     "inventoriz_f1": "QR scanning in the browser",
     "inventoriz_f2": "Location-based tracking",
-    "inventoriz_f3": "Works offline",
-    "inventoriz_f4": "Free for small teams",
+    "inventoriz_f3": "Installable as an app (PWA)",
+    "inventoriz_f4": "Free for individuals",
     "inventoriz_stat_items": "items",
     "inventoriz_stat_locs": "locations",
     "inventoriz_stat_users": "users",
@@ -70,7 +70,7 @@
   },
   "about": {
     "label": "About me",
-    "title": "Thorleif Jacobsen",
+    "title": "TJLabs",
     "body1": "I am a web developer and maker. I like building things, whether that is websites, small tools, something to be printed out, or a simple electronics project.",
     "body2": "I have built and launched my own products, and take on freelance work on the side. I do not promise the impossible, but I give it a proper go.",
     "role": "Web developer and maker",
@@ -106,7 +106,7 @@
     "cta_title": "Send me an email",
     "cta_sub": "Tell me what it is about, what you need, and a bit about yourself.",
     "cta_btn": "Open email client",
-    "cta_response": "I usually reply within a day."
+    "cta_response": "Usually responds promptly."
   },
   "footer": {
     "nav_services": "What I do",

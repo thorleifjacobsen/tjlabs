@@ -4,17 +4,17 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://tjlabs.no'),
   title: {
-    default: 'TJ Labs - Thorleif Jacobsen',
-    template: '%s | TJ Labs',
+    default: 'TJLabs',
+    template: '%s | TJLabs',
   },
-  description: 'Webutvikler og maker basert i Norge. Nettsider, webapplikasjoner, 3D-printing og elektronikk.',
+  description: 'Webutvikler og maker. Nettsider, webapplikasjoner, 3D-printing og elektronikk.',
   keywords: [
-    'webutvikler', 'web developer', 'Norway', 'Norge', 'Next.js', 'freelance',
-    'nettsider', 'webapplikasjon', '3D-printing', 'TJ Labs', 'Thorleif Jacobsen',
+    'webutvikler', 'web developer', 'Next.js', 'freelance',
+    'nettsider', 'webapplikasjon', '3D-printing', 'TJLabs',
   ],
-  authors: [{ name: 'Thorleif Jacobsen', url: 'https://tjlabs.no' }],
-  creator: 'Thorleif Jacobsen',
-  publisher: 'TJ Labs',
+  authors: [{ name: 'TJLabs', url: 'https://tjlabs.no' }],
+  creator: 'TJLabs',
+  publisher: 'TJLabs',
   robots: {
     index: true,
     follow: true,

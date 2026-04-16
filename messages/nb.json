@@ -44,13 +44,13 @@
     "losttags_f1": "Egne QR-merker med valgfritt design",
     "losttags_f2": "Automatisk varsling via e-post",
     "losttags_f3": "Abonnementsbetaling",
-    "losttags_f4": "Norsk og engelsk grensesnitt",
+    "losttags_f4": "Flerspråklig grensesnitt",
     "losttags_stat_label": "Skanninger siste mnd.",
     "inventoriz_desc": "Et enkelt lagerstyringssystem for små team. Hold styr på hva du har og hvor det er, skann QR-koder i nettleseren og bruk det som en app på telefonen.",
     "inventoriz_f1": "QR-skanning i nettleseren",
     "inventoriz_f2": "Lokasjonsbasert sporing",
-    "inventoriz_f3": "Fungerer offline",
-    "inventoriz_f4": "Gratis for små team",
+    "inventoriz_f3": "Installérbar som app (PWA)",
+    "inventoriz_f4": "Gratis for enkeltpersoner",
     "inventoriz_stat_items": "gjenstander",
     "inventoriz_stat_locs": "lokasjoner",
     "inventoriz_stat_users": "brukere",
@@ -70,7 +70,7 @@
   },
   "about": {
     "label": "Om meg",
-    "title": "Thorleif Jacobsen",
+    "title": "TJLabs",
     "body1": "Jeg er en webutvikler og maker. Jeg liker å bygge ting, enten det er nettsider, småprogrammer, noe som skal printes ut, eller en enkel elektronikkgreie.",
     "body2": "Jeg har bygget og lansert egne produkter, og jobber på siden med oppdrag for andre. Jeg lover ikke det umulige, men jeg gir det et skikkelig forsøk.",
     "role": "Webutvikler og maker",
@@ -106,7 +106,7 @@
     "cta_title": "Send meg en e-post",
     "cta_sub": "Beskriv gjerne hva det gjelder, hva du trenger og litt om deg selv.",
     "cta_btn": "Åpne e-postklient",
-    "cta_response": "Jeg svarer som regel innen en dag."
+    "cta_response": "Svarer som regel raskt."
   },
   "footer": {
     "nav_services": "Hva jeg gjør",
