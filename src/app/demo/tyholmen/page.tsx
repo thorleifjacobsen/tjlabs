@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation';
 import TyholmenClient from './_client';
 
 export const metadata = {
@@ -8,5 +9,6 @@ export const metadata = {
 };
 
 export default function TyholmenPage() {
+  redirect('https://tjlabs.no'); // fjern denne linjen for å vise siden igjen
   return <TyholmenClient />;
 }
