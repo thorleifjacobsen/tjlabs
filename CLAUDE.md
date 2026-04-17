@@ -13,6 +13,24 @@ npm run lint     # Run ESLint
 
 There are no automated tests.
 
+## Workflow — after every change
+
+Always run these three steps after making any code change:
+
+```bash
+# 1. Commit
+git add <files> && git commit -m "..."
+
+# 2. Build
+npm run build
+
+# 3. Restart the dev PM2 process
+pm2 restart tjlabs-dev
+```
+
+The app runs under PM2 (`tjlabs-dev` on port 5001, `tjlabs-prod` on port 5000).
+Never skip the build + restart — changes won't be visible until the server reloads.
+
 ## Architecture
 
 Personal website for TJ Labs (Thorleif Jacobsen). Built with **Next.js 16 App Router**, **next-intl** for i18n, and **Tailwind CSS v4**.
