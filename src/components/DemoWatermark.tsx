@@ -8,16 +8,13 @@
 export default function DemoWatermark() {
   return (
     <>
-      {/* Top banner */}
+      {/* Corner badge */}
       <div
         style={{ zIndex: 99999 }}
-        className="fixed top-0 left-0 right-0 flex items-center justify-center gap-3 bg-black/80 backdrop-blur-sm text-white text-sm font-semibold py-2 px-4 pointer-events-none select-none"
+        className="fixed bottom-4 right-4 flex items-center gap-2 bg-black/70 backdrop-blur-sm text-white text-xs font-medium py-1.5 px-3 rounded-full pointer-events-none select-none"
       >
-        <span className="text-yellow-400 text-xs uppercase tracking-widest font-bold">Demo</span>
-        <span className="text-white/40">·</span>
-        <span>TJLabs.no Demo Site</span>
-        <span className="text-white/40">·</span>
-        <span className="text-white/60 text-xs font-normal">Ikke en ekte nettside</span>
+        <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 flex-shrink-0" />
+        <span>TJLabs.no Demo</span>
       </div>
 
       {/* Diagonal watermark pattern */}
