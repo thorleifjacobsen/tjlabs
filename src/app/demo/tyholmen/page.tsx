@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation';
 import TyholmenClient from './_client';
+import DemoWatermark from '@/components/DemoWatermark';
 
 export const metadata = {
   robots: 'noindex',
@@ -9,6 +9,10 @@ export const metadata = {
 };
 
 export default function TyholmenPage() {
-  redirect('https://tjlabs.no'); // fjern denne linjen for å vise siden igjen
-  return <TyholmenClient />;
+  return (
+    <>
+      <DemoWatermark />
+      <TyholmenClient />
+    </>
+  );
 }
