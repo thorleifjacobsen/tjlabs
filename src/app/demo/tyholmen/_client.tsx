@@ -170,7 +170,7 @@ export default function TyholmenClient() {
 
               {/* Hours */}
               <div className="mb-7 rounded-sm p-4" style={{ background: '#EBF0EC', borderLeft: '3px solid #2C3E2D' }}>
-                <p className="mb-3 text-xs font-medium" style={{ color: '#2C3E2D', letterSpacing: '0.18em' }}>APNINGSTIDER</p>
+                <p className="mb-3 text-xs font-medium" style={{ color: '#2C3E2D', letterSpacing: '0.18em' }}>ÅPNINGSTIDER</p>
                 <div className="space-y-1.5 text-sm" style={{ color: '#3a3a32' }}>
                   <div className="flex justify-between"><span>Mandag til fredag</span><span className="font-medium">10:00-16:00</span></div>
                   <div className="flex justify-between"><span>Lørdag</span><span className="font-medium">11:00-17:00</span></div>
@@ -226,7 +226,7 @@ export default function TyholmenClient() {
 
               {/* Hours */}
               <div className="mb-7 rounded-sm p-4" style={{ background: 'rgba(255,255,255,0.06)', borderLeft: '3px solid #B8965A' }}>
-                <p className="mb-3 text-xs font-medium" style={{ color: '#B8965A', letterSpacing: '0.18em' }}>APNINGSTIDER</p>
+                <p className="mb-3 text-xs font-medium" style={{ color: '#B8965A', letterSpacing: '0.18em' }}>ÅPNINGSTIDER</p>
                 <div className="space-y-1.5 text-sm" style={{ color: 'rgba(255,255,255,0.72)' }}>
                   <div className="flex justify-between"><span>Tirsdag til lørdag</span><span className="font-medium">Fra kl. 17:00</span></div>
                   <div className="flex justify-between" style={{ color: 'rgba(255,255,255,0.44)' }}><span>Kjøkken stenger</span><span>21:00</span></div>
@@ -334,7 +334,7 @@ export default function TyholmenClient() {
       {/* ── LOCATION & CONTACT ──────────────────────────────────────── */}
       <section id="kontakt" className="py-16 lg:py-24" style={{ background: '#EBF0EC' }}>
         <div className="mx-auto max-w-4xl px-5 text-center">
-          <p className="mb-5 text-xs font-medium" style={{ color: '#2C3E2D', letterSpacing: '0.20em' }}>BESOK OSS</p>
+          <p className="mb-5 text-xs font-medium" style={{ color: '#2C3E2D', letterSpacing: '0.20em' }}>BESØK OSS</p>
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(1.6rem, 5vw, 2.6rem)', fontWeight: 400, color: '#1C1C1C', marginBottom: '1rem' }}>
             Teaterplassen, Arendal
           </h2>
