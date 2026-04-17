@@ -85,12 +85,23 @@ export default function TyholmenPage() {
           className="absolute inset-0"
           style={{ backgroundImage: `url(${IMGS.ute2})`, backgroundSize: 'cover', backgroundPosition: 'center 40%' }}
         />
+        {/* Edge-to-edge base darkening */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(20,20,20,0.50) 0%, rgba(28,28,28,0.40) 50%, rgba(20,20,20,0.80) 100%)' }}
+          style={{ background: 'rgba(10,10,10,0.35)' }}
+        />
+        {/* Radial vignette centred on text area */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 52%, rgba(10,10,10,0.72) 0%, rgba(10,10,10,0) 100%)' }}
+        />
+        {/* Bottom fade */}
+        <div
+          className="absolute inset-x-0 bottom-0"
+          style={{ height: '35%', background: 'linear-gradient(to top, rgba(10,10,10,0.65) 0%, transparent 100%)' }}
         />
         <div className="relative flex h-full min-h-[88vh] flex-col items-center justify-center px-6 py-28 text-center">
-          <p className="mb-6 text-xs font-medium tracking-widest" style={{ color: '#B8965A', letterSpacing: '0.22em' }}>
+          <p className="mb-6 text-xs font-medium tracking-widest" style={{ color: '#B8965A', letterSpacing: '0.22em', textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}>
             TEATERPLASSEN, ARENDAL
           </p>
           <h1
@@ -102,6 +113,7 @@ export default function TyholmenPage() {
               lineHeight: 1.12,
               letterSpacing: '0.02em',
               maxWidth: 760,
+              textShadow: '0 2px 20px rgba(0,0,0,0.55)',
             }}
           >
             Tyholmen Kolonial
@@ -110,7 +122,7 @@ export default function TyholmenPage() {
           </h1>
           <p
             className="mx-auto mt-7 max-w-lg text-base leading-relaxed"
-            style={{ color: 'rgba(247,243,236,0.80)', fontWeight: 300 }}
+            style={{ color: 'rgba(247,243,236,0.92)', fontWeight: 300, textShadow: '0 1px 12px rgba(0,0,0,0.65)' }}
           >
             Delikatessecafé og restaurant ved Teaterplassen i Arendal. Uteservering med
             utsikt over parken om sommeren.
