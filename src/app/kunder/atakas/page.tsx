@@ -55,9 +55,9 @@ export default function AtakasPage() {
 
       {/* HEADER */}
       <header className="sticky top-0 z-50 bg-slate-900 shadow-md">
-        <div className="relative max-w-6xl mx-auto px-4 py-3 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+        <div className="relative max-w-6xl mx-auto px-4 py-3 flex items-center gap-4 md:grid md:grid-cols-[1fr_auto_1fr]">
           {/* Logo – left */}
-          <a href="#" className="flex items-center gap-3 min-w-0">
+          <a href="#" className="flex items-center gap-3 min-w-0 flex-1 md:flex-none">
             <img
               src="https://www.arendal-takservice.no/wp-content/uploads/2025/12/305156840_508003107995487_5938799203690304181_n-1-e1766754537652.jpg"
               alt="Arendal Takservice AS"
@@ -70,7 +70,7 @@ export default function AtakasPage() {
           <DesktopNav />
 
           {/* Right side – CTA + hamburger */}
-          <div className="flex items-center justify-end gap-3">
+          <div className="flex items-center justify-end gap-3 ml-auto md:ml-0">
             <a
               href={PHONE_HREF}
               className="hidden sm:flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors flex-shrink-0"
