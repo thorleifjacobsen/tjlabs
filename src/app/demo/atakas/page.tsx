@@ -1,5 +1,6 @@
 import { DesktopNav, MobileHamburger } from "./MobileNav";
 import { GalleryLightbox } from "./GalleryLightbox";
+import DemoWatermark from "@/components/DemoWatermark";
 
 export const metadata = {
   title: "Arendal Takservice AS – Profesjonell taktekking og takreparasjon",
@@ -52,6 +53,7 @@ const GALLERY_IMAGES = [
 export default function AtakasPage() {
   return (
     <div className="text-slate-800 bg-white">
+      <DemoWatermark />
 
       {/* HEADER */}
       <header className="sticky top-0 z-50 bg-slate-900 shadow-md">

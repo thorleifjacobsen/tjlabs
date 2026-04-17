@@ -1,4 +1,5 @@
 import Header from './_header';
+import DemoWatermark from '@/components/DemoWatermark';
 
 export const metadata = {
   title: 'Premium Boat Service AS - Båtlager og service i Arendal',
@@ -70,7 +71,7 @@ const storagePlans = [
 export default function PremiumBoatPage() {
   return (
     <div style={{ fontFamily: "'Barlow', sans-serif", color: '#1a2e40' }}>
-
+      <DemoWatermark />
       <Header />
 
       {/* ── HERO ── */}
