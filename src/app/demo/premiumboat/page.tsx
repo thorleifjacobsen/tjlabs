@@ -1,3 +1,5 @@
+import Header from './_header';
+
 export const metadata = {
   title: 'Premium Boat Service AS - Båtlager og service i Arendal',
   description:
@@ -69,29 +71,7 @@ export default function PremiumBoatPage() {
   return (
     <div style={{ fontFamily: "'Barlow', sans-serif", color: '#1a2e40' }}>
 
-      {/* ── STICKY HEADER ── */}
-      <header
-        style={{ backgroundColor: '#1a3a5c' }}
-        className="sticky top-0 z-50 shadow-lg"
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 sm:h-20">
-          <img
-            src={LOGO}
-            alt="Premium Boat Service AS"
-            className="h-10 sm:h-12 w-auto object-contain"
-          />
-          <a
-            href="tel:+4790663083"
-            style={{ color: '#a8c8e8', fontFamily: "'Barlow Condensed', sans-serif" }}
-            className="text-lg sm:text-xl font-semibold tracking-wide hover:text-white transition-colors flex items-center gap-2"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-            </svg>
-            +47 906 63 083
-          </a>
-        </div>
-      </header>
+      <Header />
 
       {/* ── HERO ── */}
       <section
@@ -168,7 +148,7 @@ export default function PremiumBoatPage() {
       </section>
 
       {/* ── ABOUT + SERVICES ── */}
-      <section className="py-20 sm:py-28" style={{ backgroundColor: '#f7f9fb' }}>
+      <section id="om-oss" className="py-20 sm:py-28" style={{ backgroundColor: '#f7f9fb' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -192,7 +172,7 @@ export default function PremiumBoatPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div id="tjenester" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((service) => (
               <div
                 key={service.name}
