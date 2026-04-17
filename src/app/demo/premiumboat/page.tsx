@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Premium Boat Service AS - Batlager og service i Arendal',
+  title: 'Premium Boat Service AS - Båtlager og service i Arendal',
   description:
-    'Moderne batlager, motorservice, reparasjoner og klargjoring i Arendal. Lift og oppvarmet innendors lager.',
+    'Moderne båtlager, motorservice, reparasjoner og klargjøring i Arendal. Lift og oppvarmet innendørs lager.',
   robots: 'noindex',
 };
 
@@ -15,39 +15,39 @@ const LOGO =
   'https://web.archive.org/web/20250118174048im_/https://premiumboat.no/wp-content/uploads/2021/09/premiumboat-logo.png';
 
 const services = [
-  { name: 'Batformidling', desc: 'Vi hjelper deg med kjop og salg av bat' },
+  { name: 'Båtformidling', desc: 'Vi hjelper deg med kjøp og salg av båt' },
   { name: 'Motorservice', desc: 'Service og vedlikehold av alle motortyper' },
-  { name: 'Klargjoring', desc: 'Sjo- og vinterklargjoring av baten din' },
+  { name: 'Klargjøring', desc: 'Sjø- og vinterklargjøring av båten din' },
   { name: 'Oppgradering', desc: 'Elektronikk, motor og utstyroppgraderinger' },
   { name: 'Reparasjoner', desc: 'Skrog, motor, innredning - alle typer reparasjoner' },
-  { name: 'Batopplag', desc: 'Trygg innendors og utendors vinterlager' },
-  { name: 'Batpleie', desc: 'Polering, voks, rens og beskyttelse' },
-  { name: 'Ettermontering', desc: 'Montering av utstyr og tilbehor' },
-  { name: 'Restaurering', desc: 'Fullstendig restaurering av eldre bater' },
+  { name: 'Båtopplag', desc: 'Trygg innendørs og utendørs vinterlager' },
+  { name: 'Båtpleie', desc: 'Polering, voks, rens og beskyttelse' },
+  { name: 'Ettermontering', desc: 'Montering av utstyr og tilbehør' },
+  { name: 'Restaurering', desc: 'Fullstendig restaurering av eldre båter' },
 ];
 
 const storagePlans = [
   {
-    name: 'Utendors opplag',
+    name: 'Utendørs opplag',
     price: '3 490,-',
     period: 'per sesong',
     features: [
-      'Sikret omrade',
+      'Sikret område',
       'Strikkavtrekk inkludert',
-      'Av/pa-vogn tilgjengelig',
+      'Av/på-vogn tilgjengelig',
       'Ubegrenset tilgang',
     ],
     highlight: false,
   },
   {
-    name: 'Innendors opplag',
+    name: 'Innendørs opplag',
     price: '6 490,-',
     period: 'per sesong',
     features: [
       'Oppvarmet lager',
-      'Video-overvaking',
-      'Batvask inkludert',
-      'Prioritert klargjoring',
+      'Video-overvåking',
+      'Båtvask inkludert',
+      'Prioritert klargjøring',
     ],
     highlight: true,
   },
@@ -56,10 +56,10 @@ const storagePlans = [
     price: '9 990,-',
     period: 'per sesong',
     features: [
-      'Innendors oppvarmet lager',
+      'Innendørs oppvarmet lager',
       'Motorservice inkludert',
-      'Sjoklargjoring',
-      'Vinterklargjoring',
+      'Sjøklargjøring',
+      'Vinterklargjøring',
     ],
     highlight: false,
   },
@@ -104,7 +104,6 @@ export default function PremiumBoatPage() {
         />
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(10, 28, 46, 0.65)' }} />
 
-        {/* Subtle anchor rope texture at bottom */}
         <div
           className="absolute bottom-0 left-0 right-0 h-1"
           style={{ background: 'linear-gradient(90deg, transparent, #c8a96e, transparent)' }}
@@ -119,7 +118,7 @@ export default function PremiumBoatPage() {
             }}
             className="text-sm sm:text-base font-semibold uppercase mb-4"
           >
-            Batservice og lager i Arendal
+            Båtservice og lager i Arendal
           </p>
           <h1
             style={{
@@ -129,11 +128,11 @@ export default function PremiumBoatPage() {
             }}
             className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6"
           >
-            Nyhet! Bli batopplagskunde hos oss.
+            Nyhet! Bli båtopplagskunde hos oss.
           </h1>
           <p className="text-white/80 text-lg sm:text-xl mb-10 font-light max-w-xl mx-auto">
-            Moderne anlegg med batlift og oppvarmet innendors lager.
-            Drevet av batentusiaster med lang erfaring.
+            Moderne anlegg med båtlift og oppvarmet innendørs lager.
+            Drevet av båtentusiaster med lang erfaring.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -146,7 +145,7 @@ export default function PremiumBoatPage() {
                 letterSpacing: '0.05em',
               }}
             >
-              BESTILL BATOPPLAG
+              BESTILL BÅTOPPLAG
             </a>
             <a
               href="#kontakt"
@@ -161,7 +160,6 @@ export default function PremiumBoatPage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="white" opacity={0.5}>
             <path d="M7 10l5 5 5-5H7z"/>
@@ -173,7 +171,6 @@ export default function PremiumBoatPage() {
       <section className="py-20 sm:py-28" style={{ backgroundColor: '#f7f9fb' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-          {/* Intro */}
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p
               style={{ color: '#c8a96e', fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: '0.2em' }}
@@ -185,17 +182,16 @@ export default function PremiumBoatPage() {
               style={{ fontFamily: "'Barlow Condensed', sans-serif", color: '#1a3a5c' }}
               className="text-3xl sm:text-5xl font-bold mb-6"
             >
-              Batentusiaster med lang erfaring
+              Båtentusiaster med lang erfaring
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Premium Boat Service AS er et moderne bat- og servicesenter i Arendal. Vi tilbyr
-              alt fra vinterlager og motorservice til restaurering og batformidling. Anlegget
-              er utstyrt med batlift og oppvarmet innendors lager, og vi jobber med alle
+              Premium Boat Service AS er et moderne båt- og servicesenter i Arendal. Vi tilbyr
+              alt fra vinterlager og motorservice til restaurering og båtformidling. Anlegget
+              er utstyrt med båtlift og oppvarmet innendørs lager, og vi jobber med alle
               merker og modeller.
             </p>
           </div>
 
-          {/* Services grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((service) => (
               <div
@@ -233,10 +229,10 @@ export default function PremiumBoatPage() {
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               className="text-3xl sm:text-5xl font-bold text-white mb-4"
             >
-              Batopplag - Velg din pakke
+              Båtopplag - Velg din pakke
             </h2>
             <p className="text-white/60 text-lg max-w-xl mx-auto">
-              Trygt og sikkert opplag for baten din. Kontakt oss for tilbud pa din bat.
+              Trygt og sikkert opplag for båten din. Kontakt oss for tilbud på din båt.
             </p>
           </div>
 
@@ -256,7 +252,7 @@ export default function PremiumBoatPage() {
                     className="text-center py-2 text-xs font-bold tracking-widest uppercase"
                     style={{ backgroundColor: '#b8924a', color: '#0d1f30' }}
                   >
-                    Mest populaer
+                    Mest populær
                   </div>
                 )}
                 <div className="p-8">
@@ -312,7 +308,7 @@ export default function PremiumBoatPage() {
                     style={{
                       fontFamily: "'Barlow Condensed', sans-serif",
                       backgroundColor: plan.highlight ? '#1a3a5c' : 'rgba(255,255,255,0.12)',
-                      color: plan.highlight ? '#ffffff' : '#ffffff',
+                      color: '#ffffff',
                       letterSpacing: '0.07em',
                     }}
                   >
@@ -324,7 +320,7 @@ export default function PremiumBoatPage() {
           </div>
 
           <p className="text-center mt-8 text-white/40 text-sm">
-            Prisene er veiledende. Kontakt oss for eksakt tilbud basert pa din bat.
+            Prisene er veiledende. Kontakt oss for eksakt tilbud basert på din båt.
           </p>
         </div>
       </section>
@@ -351,10 +347,10 @@ export default function PremiumBoatPage() {
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               className="text-3xl sm:text-5xl font-bold text-white"
             >
-              Moderne anlegg med batlift
+              Moderne anlegg med båtlift
             </h2>
             <p className="text-white/70 mt-3 text-base sm:text-lg max-w-lg mx-auto">
-              Oppvarmet innendors lager og full servicekapasitet for alle typer bater.
+              Oppvarmet innendørs lager og full servicekapasitet for alle typer båter.
             </p>
           </div>
         </div>
@@ -365,7 +361,6 @@ export default function PremiumBoatPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-            {/* Left: contact info */}
             <div>
               <p
                 style={{ color: '#c8a96e', fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: '0.2em' }}
@@ -377,7 +372,7 @@ export default function PremiumBoatPage() {
                 style={{ fontFamily: "'Barlow Condensed', sans-serif", color: '#1a3a5c' }}
                 className="text-3xl sm:text-5xl font-bold mb-8"
               >
-                Vi er klare til a hjelpe deg
+                Vi er klare til å hjelpe deg
               </h2>
 
               <div className="space-y-6">
@@ -450,7 +445,6 @@ export default function PremiumBoatPage() {
               </div>
             </div>
 
-            {/* Right: CTA card */}
             <div
               className="rounded-2xl p-8 sm:p-10"
               style={{ backgroundColor: '#1a3a5c' }}
@@ -462,7 +456,7 @@ export default function PremiumBoatPage() {
                 Klar for sesongens opplag?
               </h3>
               <p className="text-white/60 mb-8 leading-relaxed">
-                Ring oss eller send en e-post for a fa et tilbud pa batopplag
+                Ring oss eller send en e-post for å få et tilbud på båtopplag
                 eller service. Vi svarer raskt og hjelper deg med det du trenger.
               </p>
               <div className="space-y-3">
@@ -513,7 +507,7 @@ export default function PremiumBoatPage() {
                 className="h-10 w-auto object-contain mb-4"
               />
               <p className="text-white/40 text-sm">
-                Batservice og lager i Arendal
+                Båtservice og lager i Arendal
               </p>
             </div>
             <div
