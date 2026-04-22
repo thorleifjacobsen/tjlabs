@@ -4,12 +4,13 @@ export default function VerkstedPage() {
   return (
     <>
       {/* Foto-banner */}
-      <section className="relative h-64 sm:h-80 flex items-end overflow-hidden">
+      <section className="relative h-52 sm:h-64 flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/demo/jorkjenmc/hero.jpg')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/65 to-black/20" />
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
         <div className="relative z-10 w-full max-w-5xl mx-auto px-5 pb-8">
           <p className="text-zinc-400 text-sm mb-2">Jorkjen MC A/S</p>
           <h1

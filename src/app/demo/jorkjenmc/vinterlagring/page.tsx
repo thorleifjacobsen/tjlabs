@@ -17,12 +17,13 @@ export default function VinterlagringPage() {
   return (
     <>
       {/* Foto-banner */}
-      <section className="relative h-64 sm:h-80 flex items-end overflow-hidden">
+      <section className="relative h-52 sm:h-64 flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/demo/jorkjenmc/hero.jpg')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/65 to-black/20" />
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
         <div className="relative z-10 w-full max-w-5xl mx-auto px-5 pb-8">
           <p className="text-zinc-400 text-sm mb-2">Jorkjen MC A/S</p>
           <h1
@@ -31,6 +32,16 @@ export default function VinterlagringPage() {
           >
             Vinterlagring
           </h1>
+        </div>
+      </section>
+
+      {/* Godkjent-strip */}
+      <section className="bg-zinc-800 border-b border-zinc-700">
+        <div className="max-w-5xl mx-auto px-5 py-3 flex items-center gap-3">
+          <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span className="text-zinc-300 text-sm">Godkjent av Statens Vegvesen som motorsykkel- og mopedverksted</span>
         </div>
       </section>
 

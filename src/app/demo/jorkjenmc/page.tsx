@@ -4,14 +4,15 @@ export default function JorkjenPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[65vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[52vh] flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/demo/jorkjenmc/hero.jpg')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/25" />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
 
-        <div className="relative z-10 w-full max-w-5xl mx-auto px-5 pb-12 sm:pb-16">
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-5 pb-10 sm:pb-14">
           <h1
             className="text-4xl sm:text-5xl font-black text-white leading-[0.9] mb-4"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
