@@ -237,10 +237,10 @@ function Services() {
 /* ── Section: Instructors ──────────────────────────────────────── */
 
 const instructors = [
-  { name: 'Geir Breimyr', title: 'Sensei · Klubbleder', img: 'https://ajjk.no/wp-content/uploads/2022/09/geirsort-scaled.jpg' },
-  { name: 'Arild Emil Olsen', title: 'Senpai · Instruktør', img: 'https://ajjk.no/wp-content/uploads/2023/09/Resized_20230817_201442.jpg' },
-  { name: 'Alf Kristian Eilertsen', title: 'Sensei · Instruktør', img: 'https://ajjk.no/wp-content/uploads/2022/09/alf-scaled.jpg' },
-  { name: 'Carl Are Dreier Hopen', title: 'Sensei · Instruktør', img: 'https://ajjk.no/wp-content/uploads/2022/09/carl-scaled.jpg' },
+  { name: 'Geir Breimyr', title: 'Sensei · Klubbleder', img: '/assets/ajjk/geir.jpg', pos: '50% -30px' },
+  { name: 'Arild Emil Olsen', title: 'Senpai · Instruktør', img: '/assets/ajjk/arild.jpg', pos: '50% -20px' },
+  { name: 'Alf Kristian Eilertsen', title: 'Sensei · Instruktør', img: '/assets/ajjk/alf.jpg', pos: '50% -130px' },
+  { name: 'Carl Are Dreier Hopen', title: 'Sensei · Instruktør', img: '/assets/ajjk/carl.jpg', pos: '50% -130px' },
 ]
 
 function Instructors() {
@@ -265,7 +265,8 @@ function Instructors() {
                 <img
                   src={inst.img}
                   alt={`${inst.name}, instruktør ved Arendal Jiu Jitsu Klubb`}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: inst.pos }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>

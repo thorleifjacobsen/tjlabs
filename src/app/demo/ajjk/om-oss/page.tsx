@@ -16,6 +16,7 @@ const instructors = [
     bio: 'Geir har vært med i klubben siden starten og ledet den i mange år. Han har trent og lært opp elever i alle aldre, og er godt å snakke med om du lurer på noe. Ring ham på 909 69 119.',
     belt: '5. dan',
     img: '/assets/ajjk/geir.jpg',
+    pos: '50% -30px',
   },
   {
     name: 'Arild Emil Olsen',
@@ -24,6 +25,7 @@ const instructors = [
     bio: 'Arild Emil har trent Jiu Jitsu siden han var ung og er i dag fast instruktør i klubben. Han underviser primært i barne- og nybegynnerklassene og er flink til å forklare teknikker på en enkel og forståelig måte.',
     belt: '2. dan',
     img: '/assets/ajjk/arild.jpg',
+    pos: '50% -20px',
   },
   {
     name: 'Alf Kristian Eilertsen',
@@ -32,6 +34,7 @@ const instructors = [
     bio: 'Alf Kristian har trent Jiu Jitsu i mange år og underviser med fokus på tradisjonell teknikk og stil. Han er godt likt i klubbmiljøet og bidrar til den gode stemningen på og utenfor matta.',
     belt: '3. dan',
     img: '/assets/ajjk/alf.jpg',
+    pos: '50% -130px',
   },
   {
     name: 'Carl Are Dreier Hopen',
@@ -40,6 +43,7 @@ const instructors = [
     bio: 'Carl Are har bakgrunn fra konkurranser og underviser voksenklassene med fokus på god teknikk og praktisk anvendelse. Han er grundig og engasjert i undervisningen.',
     belt: '3. dan',
     img: '/assets/ajjk/carl.jpg',
+    pos: '50% -130px',
   },
 ]
 
@@ -223,7 +227,8 @@ export default function OmOssPage() {
                   <img
                     src={inst.img}
                     alt={`${inst.name}, ${inst.title} ved Arendal Jiu Jitsu Klubb`}
-                    className="w-full sm:w-36 h-48 sm:h-full object-cover object-top"
+                    className="w-full sm:w-36 h-48 sm:h-full object-cover"
+                    style={{ objectPosition: inst.pos }}
                   />
                 </div>
                 <div className="p-5 flex flex-col justify-center">
