@@ -10,33 +10,27 @@ const tiPunktSjekk = [
   'Styrelager',
   'Simmeringer',
   'Batterisyre og vedlikeholdslading',
-  'Kjoleveske',
+  'Kjøleveske',
 ];
 
 export default function JorkjenPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-zinc-950 min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('/demo/jorkjenmc/hero.jpg')" }}
-        />
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-          <img
-            src="/demo/jorkjenmc/logo.png"
-            alt="Jorkjen MC"
-            className="h-28 sm:h-36 w-auto mx-auto mb-8"
-          />
+      <section
+        className="min-h-[80vh] flex items-center justify-center"
+        style={{ background: 'linear-gradient(160deg, #1c1c1c 0%, #222 60%, #2a2a2a 100%)' }}
+      >
+        <div className="text-center px-4 max-w-3xl mx-auto">
           <h1
             className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white leading-tight mb-4"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
           >
             Motorsykkelverksted
             <br />
-            <span className="text-green-400">og totallevrandor</span>
+            <span className="text-zinc-300">og totalleverandør</span>
           </h1>
-          <p className="text-zinc-300 text-lg sm:text-xl mb-8">
+          <p className="text-zinc-400 text-lg sm:text-xl mb-8">
             Godkjent MC- og mopedverksted i Arendal
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -57,12 +51,12 @@ export default function JorkjenPage() {
       </section>
 
       {/* Godkjent-banner */}
-      <section className="bg-green-700 text-white py-4 px-4">
+      <section className="bg-zinc-800 text-white py-4 px-4 border-b border-zinc-700">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-center sm:text-left">
-          <svg className="w-8 h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
-          <span className="font-bold text-lg">
+          <span className="text-zinc-200 text-sm font-medium">
             Godkjent av Statens Vegvesen som motorsykkel- og mopedverksted
           </span>
         </div>
@@ -77,16 +71,16 @@ export default function JorkjenPage() {
               className="text-3xl sm:text-4xl font-black uppercase text-zinc-900 mb-6 leading-tight"
               style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
             >
-              Fagfolk du kan stole pa
+              Fagfolk du kan stole på
             </h2>
             <p className="text-zinc-600 text-lg leading-relaxed mb-4">
               Jorkjen MC er et fullt godkjent verksted for MC og moped, med mekanikere
-              som har fagbrev og relevant kompetanse. Vi holder til pa Frolandsveien 410
+              som har fagbrev og relevant kompetanse. Vi holder til på Frolandsveien 410
               i Arendal.
             </p>
             <p className="text-zinc-600 text-lg leading-relaxed mb-6">
-              Vi forer Motul oljer og har kort leveringstid pa deler slik at sykkelen
-              din er ferdig sa raskt som mulig.
+              Vi fører Motul-oljer og har kort leveringstid på deler, slik at sykkelen
+              din er ferdig så raskt som mulig.
             </p>
             <a
               href="tel:90549772"
@@ -96,12 +90,10 @@ export default function JorkjenPage() {
             </a>
           </div>
           <div className="relative">
-            <img
-              src="/demo/jorkjenmc/workshop.jpg"
-              alt="Verkstedet til Jorkjen MC"
-              className="w-full object-cover rounded-sm"
-            />
-            <div className="absolute -bottom-4 -left-4 bg-green-600 text-white px-4 py-3 font-bold text-sm uppercase tracking-wide">
+            <div className="w-full h-64 bg-zinc-200 flex items-center justify-center text-zinc-400 text-sm">
+              Bilde kommer her
+            </div>
+            <div className="absolute -bottom-4 -left-4 bg-[#1c1c1c] text-white px-4 py-3 font-bold text-sm uppercase tracking-wide">
               Mekaniker med fagbrev
             </div>
           </div>
@@ -128,7 +120,7 @@ export default function JorkjenPage() {
                   </svg>
                 ),
                 title: 'Verksted og reparasjon',
-                text: 'Service og reparasjon av MC og moped. Kort leveringstid pa deler.',
+                text: 'Service og reparasjon av MC og moped. Kort leveringstid på deler.',
                 href: '/demo/jorkjenmc/verksted',
                 cta: 'Les mer',
               },
@@ -151,7 +143,7 @@ export default function JorkjenPage() {
                   </svg>
                 ),
                 title: 'Butikk og deler',
-                text: 'Olje, filter, plugger, hjelmer og hansker. Motul oljer pa lager.',
+                text: 'Olje, filter, plugger, hjelmer og hansker. Motul-oljer på lager.',
                 href: '/demo/jorkjenmc/butikk',
                 cta: 'Se utvalg',
               },
@@ -241,12 +233,12 @@ export default function JorkjenPage() {
       {/* Apningstider */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-green-600 font-bold uppercase tracking-widest text-sm mb-2">Apningstider</p>
+          <p className="text-green-600 font-bold uppercase tracking-widest text-sm mb-2">Åpningstider</p>
           <h2
             className="text-3xl sm:text-4xl font-black uppercase text-zinc-900 mb-8 leading-tight"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
           >
-            Nar finner du oss?
+            Når finner du oss?
           </h2>
           <div className="inline-block w-full max-w-sm">
             <div className="bg-yellow-50 border border-yellow-300 text-yellow-800 font-semibold px-4 py-3 mb-6 text-sm">

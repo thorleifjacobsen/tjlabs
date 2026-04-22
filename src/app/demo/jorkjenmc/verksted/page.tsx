@@ -10,7 +10,7 @@ const tiPunktSjekk = [
   'Styrelager',
   'Simmeringer',
   'Batterisyre og vedlikeholdslading',
-  'Kjoleveske',
+  'Kjøleveske',
 ];
 
 export default function VerkstedPage() {
@@ -26,22 +26,22 @@ export default function VerkstedPage() {
           >
             MC- og mopedverksted
             <br />
-            <span className="text-green-400">i Arendal</span>
+            <span className="text-zinc-300">i Arendal</span>
           </h1>
           <p className="text-zinc-300 text-xl leading-relaxed max-w-2xl">
             Godkjent av Statens Vegvesen. Mekanikere med fagbrev og relevant kompetanse.
-            Kort leveringstid pa deler.
+            Kort leveringstid på deler.
           </p>
         </div>
       </section>
 
       {/* Godkjent badge */}
-      <section className="bg-green-700 text-white py-4 px-4">
+      <section className="bg-zinc-800 text-white py-4 px-4 border-b border-zinc-700">
         <div className="max-w-4xl mx-auto flex items-center gap-3">
-          <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
-          <span className="font-bold">Godkjent av Statens Vegvesen som motorsykkel- og mopedverksted</span>
+          <span className="text-zinc-200 text-sm font-medium">Godkjent av Statens Vegvesen som motorsykkel- og mopedverksted</span>
         </div>
       </section>
 
@@ -58,11 +58,11 @@ export default function VerkstedPage() {
             {[
               {
                 title: 'Service og reparasjon',
-                text: 'Vi utforer alt fra rutineservice til mer kompliserte reparasjoner pa MC og moped.',
+                text: 'Vi utfører alt fra rutineservice til mer kompliserte reparasjoner på MC og moped.',
               },
               {
-                title: 'Kortleveringstid pa deler',
-                text: 'Vi bestiller og skaffter deler raskt, slik at sykkelen din star sa lite som mulig.',
+                title: 'Kort leveringstid på deler',
+                text: 'Vi bestiller deler raskt, slik at sykkelen din står så lite som mulig.',
               },
               {
                 title: 'Fagbrev-mekanikere',
@@ -70,7 +70,7 @@ export default function VerkstedPage() {
               },
               {
                 title: 'Motul oljer',
-                text: 'Vi bruker og forer Motul oljer - et av verdens ledende merker innen smoring.',
+                text: 'Vi bruker og fører Motul-oljer, et av verdens ledende merker innen smøring.',
               },
             ].map((item) => (
               <div key={item.title} className="border border-zinc-200 p-6">
@@ -91,7 +91,7 @@ export default function VerkstedPage() {
             className="text-3xl sm:text-4xl font-black uppercase leading-tight mb-4"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
           >
-            La sykkelen sta trygt hos oss
+            La sykkelen stå trygt hos oss
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-8 mb-10">
@@ -134,7 +134,7 @@ export default function VerkstedPage() {
               className="text-3xl font-black uppercase text-zinc-900 mb-6 leading-tight"
               style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
             >
-              Apningstider
+              Åpningstider
             </h2>
             <div className="bg-yellow-50 border border-yellow-300 text-yellow-800 font-semibold px-4 py-3 mb-4 text-sm">
               Sommerstengt uke 29-31
@@ -162,8 +162,8 @@ export default function VerkstedPage() {
               Book verkstedtime
             </h2>
             <p className="text-zinc-600 mb-6 leading-relaxed">
-              Ring Kenneth direkte for a avtale verkstedtime. Vi gir deg et estimat
-              pa tid og pris for jobben.
+              Ring Kenneth direkte for å avtale verkstedtime. Vi gir deg et estimat
+              på tid og pris for jobben.
             </p>
             <a
               href="tel:90549772"

@@ -16,6 +16,9 @@ export default function JorkjenLayout({ children }: { children: React.ReactNode 
               alt="Jorkjen MC"
               className="h-10 w-auto object-contain"
             />
+            <span className="text-white font-bold text-sm tracking-wide hidden sm:block">
+              Jorkjen MC A/S
+            </span>
           </Link>
 
           {/* Desktop nav */}
@@ -116,7 +119,7 @@ export default function JorkjenLayout({ children }: { children: React.ReactNode 
           </div>
 
           <div>
-            <h3 className="text-white font-bold uppercase tracking-wider text-sm mb-3">Apningstider</h3>
+            <h3 className="text-white font-bold uppercase tracking-wider text-sm mb-3">Åpningstider</h3>
             <ul className="text-sm space-y-1.5">
               <li className="text-yellow-400 font-medium">Sommerstengt uke 29-31</li>
               <li className="flex justify-between gap-4"><span>Tirsdag</span><span>09.00-16.00</span></li>

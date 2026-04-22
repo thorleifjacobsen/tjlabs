@@ -35,7 +35,7 @@ const produktkategorier = [
       </svg>
     ),
     name: 'Hjelmer',
-    desc: 'Godkjente hjelmer i ulike storelser og modeller.',
+    desc: 'Godkjente hjelmer i ulike størrelser og modeller.',
   },
   {
     icon: (
@@ -61,11 +61,11 @@ export default function ButikkPage() {
           >
             Deler og utstyr
             <br />
-            <span className="text-green-400">for MC og moped</span>
+            <span className="text-zinc-300">for MC og moped</span>
           </h1>
           <p className="text-zinc-300 text-xl leading-relaxed max-w-2xl">
-            Vi forer et utvalg av det viktigste du trenger: olje, filter, plugger,
-            hjelmer og hansker. Spor oss om vi har det du leter etter.
+            Vi fører et utvalg av det viktigste du trenger: olje, filter, plugger,
+            hjelmer og hansker. Spør oss om vi har det du leter etter.
           </p>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function ButikkPage() {
             className="text-3xl font-black uppercase text-zinc-900 mb-8 leading-tight"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
           >
-            Hva vi forer
+            Hva vi fører
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {produktkategorier.map((produkt) => (
@@ -113,8 +113,8 @@ export default function ButikkPage() {
                 Motul oljer
               </h3>
               <p className="text-zinc-600 leading-relaxed">
-                Autorisert forhandler av Motul smoreoljer. Et av verdens mest anerkjente
-                merker innen motorsportsmoring.
+                Autorisert forhandler av Motul smøreoljer. Et av verdens mest anerkjente
+                merker innen motorsportsmøring.
               </p>
             </div>
           </div>
@@ -133,8 +133,8 @@ export default function ButikkPage() {
               Kjoretoyer til salgs
             </h2>
             <p className="text-zinc-600 leading-relaxed mb-6">
-              Vi har et utvalg MC-er og kjoretoyer til salgs. Stikk innom showromet
-              vart pa Frolandsveien 410 i apningstiden, eller ring for a hore hva
+              Vi har et utvalg MC-er og kjøretøyer til salgs. Stikk innom showrommet
+              vårt på Frolandsveien 410 i åpningstiden, eller ring for å høre hva
               vi har tilgjengelig.
             </p>
             <a
@@ -147,12 +147,8 @@ export default function ButikkPage() {
               Ring for info
             </a>
           </div>
-          <div>
-            <img
-              src="/demo/jorkjenmc/showroom.jpg"
-              alt="Showroom med Kawasaki, ATV og KTM motorsykler"
-              className="w-full object-cover"
-            />
+          <div className="w-full h-64 bg-zinc-200 flex items-center justify-center text-zinc-400 text-sm">
+            Bilde kommer her
           </div>
         </div>
       </section>
@@ -164,7 +160,7 @@ export default function ButikkPage() {
             className="text-3xl font-black uppercase text-zinc-900 mb-6 leading-tight text-center"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
           >
-            Apningstider
+            Åpningstider
           </h2>
           <div className="bg-yellow-50 border border-yellow-300 text-yellow-800 font-semibold px-4 py-3 mb-4 text-sm text-center">
             Sommerstengt uke 29-31
