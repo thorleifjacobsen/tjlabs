@@ -111,6 +111,7 @@ export default function ByggogbetongPage() {
       >
         <button
           onClick={() => handleNav('Hjem')}
+          className="bb-logo"
           style={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontSize: '1.35rem',
@@ -365,8 +366,9 @@ export default function ByggogbetongPage() {
       </section>
 
       {/* OM OSS */}
-      <section id="om-oss" style={{ background: '#fff', padding: '6rem 0' }}>
+      <section id="om-oss" className="bb-section" style={{ background: '#fff', padding: '6rem 0' }}>
         <div
+          className="bb-inner"
           style={{
             maxWidth: '1100px',
             margin: '0 auto',
@@ -418,8 +420,9 @@ export default function ByggogbetongPage() {
               "Her kan vi legge inn et sitat eller en kort oppsummering som fremhever det viktigste."
             </p>
           </div>
-          <div style={{ position: 'relative' }}>
+          <div className="bb-about-img-wrap" style={{ position: 'relative' }}>
             <div
+              className="bb-about-frame"
               style={{
                 position: 'absolute',
                 inset: '-14px',
@@ -444,6 +447,7 @@ export default function ByggogbetongPage() {
       {/* TJENESTER */}
       <section
         id="tjenester"
+        className="bb-section"
         style={{
           position: 'relative',
           padding: '6rem 0',
@@ -461,7 +465,7 @@ export default function ByggogbetongPage() {
             aria-hidden="true"
           />
         </div>
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
+        <div className="bb-inner" style={{ position: 'relative', zIndex: 1, maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <span
               style={{
@@ -494,6 +498,7 @@ export default function ByggogbetongPage() {
           </div>
 
           <div
+            className="bb-grid-auto"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -541,8 +546,8 @@ export default function ByggogbetongPage() {
       </section>
 
       {/* PROSJEKTER */}
-      <section id="prosjekter" style={{ background: '#f0eeeb', padding: '6rem 0' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
+      <section id="prosjekter" className="bb-section" style={{ background: '#f0eeeb', padding: '6rem 0' }}>
+        <div className="bb-inner" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <span
               style={{
@@ -575,6 +580,7 @@ export default function ByggogbetongPage() {
           </div>
 
           <div
+            className="bb-grid-auto"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -632,8 +638,8 @@ export default function ByggogbetongPage() {
       </section>
 
       {/* HVORFOR VELGE OSS */}
-      <section style={{ background: '#fff', padding: '6rem 0' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
+      <section className="bb-section" style={{ background: '#fff', padding: '6rem 0' }}>
+        <div className="bb-inner" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <span
               style={{
@@ -668,6 +674,7 @@ export default function ByggogbetongPage() {
           </div>
 
           <div
+            className="bb-grid-auto"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -712,8 +719,8 @@ export default function ByggogbetongPage() {
       </section>
 
       {/* KONTAKT */}
-      <section id="kontakt" style={{ background: '#2c2c2c', padding: '6rem 0' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
+      <section id="kontakt" className="bb-section" style={{ background: '#2c2c2c', padding: '6rem 0' }}>
+        <div className="bb-inner" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <span
               style={{
@@ -746,6 +753,7 @@ export default function ByggogbetongPage() {
           </div>
 
           <div
+            className="bb-contact-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -946,15 +954,64 @@ export default function ByggogbetongPage() {
 
       {/* RESPONSIVE */}
       <style>{`
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
+
+        /* Nav toggle */
         @media (max-width: 768px) {
           .bb-desktop-nav { display: none !important; }
-          .bb-hamburger { display: flex !important; }
+          .bb-hamburger  { display: flex !important; }
         }
         @media (min-width: 769px) {
           .bb-hamburger { display: none !important; }
         }
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+
+        /* Header logo: shrink on very small screens */
+        @media (max-width: 400px) {
+          .bb-logo { font-size: 1.05rem !important; }
+        }
+
+        /* Section padding: tighter on mobile */
+        @media (max-width: 768px) {
+          .bb-section { padding: 3.5rem 0 !important; }
+        }
+
+        /* About image frame: remove negative inset on mobile to prevent overflow */
+        @media (max-width: 680px) {
+          .bb-about-frame {
+            position: static !important;
+            border: none !important;
+          }
+          .bb-about-img-wrap {
+            margin-top: 1rem;
+          }
+        }
+
+        /* Grids: force single column below a sensible breakpoint */
+        @media (max-width: 560px) {
+          .bb-grid-auto {
+            grid-template-columns: 1fr !important;
+          }
+        }
+
+        /* Contact grid: stack info above form on mobile */
+        @media (max-width: 680px) {
+          .bb-contact-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
+        }
+
+        /* Inner section containers: less side padding on mobile */
+        @media (max-width: 480px) {
+          .bb-inner { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+        }
+
+        /* Project cards: full-width on mobile */
+        @media (max-width: 560px) {
+          .bb-project-card { min-width: 0; }
+        }
       `}</style>
     </div>
   )
