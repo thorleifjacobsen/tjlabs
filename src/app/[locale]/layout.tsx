@@ -110,9 +110,9 @@ export default async function LocaleLayout({
     '@type': 'ItemList',
     name: locale === 'nb' ? 'Tjenester' : 'Services',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: locale === 'nb' ? 'Nettsider' : 'Websites', url: `${BASE_URL}/tjenester/nettside` },
-      { '@type': 'ListItem', position: 2, name: locale === 'nb' ? 'Webapplikasjoner' : 'Web applications', url: `${BASE_URL}/tjenester/webapplikasjon` },
-      { '@type': 'ListItem', position: 3, name: locale === 'nb' ? 'Elektronikk og PCB' : 'Electronics and PCB', url: `${BASE_URL}/tjenester/elektronikk` },
+      { '@type': 'ListItem', position: 1, name: locale === 'nb' ? 'Nettsider' : 'Websites', url: `${BASE_URL}/services/website` },
+      { '@type': 'ListItem', position: 2, name: locale === 'nb' ? 'Webapplikasjoner' : 'Web applications', url: `${BASE_URL}/services/webapp` },
+      { '@type': 'ListItem', position: 3, name: locale === 'nb' ? 'Elektronikk og PCB' : 'Electronics and PCB', url: `${BASE_URL}/services/electronics` },
     ],
   };
 

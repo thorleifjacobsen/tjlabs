@@ -142,12 +142,12 @@
     "meta_desc": "Nettside, webapplikasjon, IoT og elektronikk. Freelance webutvikler basert i Norge.",
     "title": "Tjenester",
     "subtitle": "Her er en oversikt over hva jeg kan hjelpe med.",
-    "nettside_title": "Nettsider",
-    "nettside_desc": "Bedriftssider, landingssider og enkle webløsninger.",
+    "website_title": "Nettsider",
+    "website_desc": "Bedriftssider, landingssider og enkle webløsninger.",
     "webapp_title": "Webapplikasjoner",
     "webapp_desc": "Apper med innlogging, betaling og brukerdata.",
-    "elektronikk_title": "Elektronikk og PCB",
-    "elektronikk_desc": "Kretskort, firmware og IoT-løsninger.",
+    "electronics_title": "Elektronikk og PCB",
+    "electronics_desc": "Kretskort, firmware og IoT-løsninger.",
     "read_more": "Les mer"
   },
   "service_website": {

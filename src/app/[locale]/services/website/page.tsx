@@ -10,33 +10,33 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'service_electronics' });
+  const t = await getTranslations({ locale, namespace: 'service_website' });
   const isNb = locale === 'nb';
   return {
     title: t('meta_title'),
     description: t('meta_desc'),
     alternates: {
-      canonical: isNb ? `${BASE_URL}/tjenester/elektronikk` : `${BASE_URL}/en/tjenester/elektronikk`,
+      canonical: isNb ? `${BASE_URL}/services/website` : `${BASE_URL}/en/services/website`,
       languages: {
-        nb: `${BASE_URL}/tjenester/elektronikk`,
-        en: `${BASE_URL}/en/tjenester/elektronikk`,
+        nb: `${BASE_URL}/services/website`,
+        en: `${BASE_URL}/en/services/website`,
       },
     },
     openGraph: {
       title: t('meta_title'),
       description: t('meta_desc'),
-      url: isNb ? `${BASE_URL}/tjenester/elektronikk` : `${BASE_URL}/en/tjenester/elektronikk`,
+      url: isNb ? `${BASE_URL}/services/website` : `${BASE_URL}/en/services/website`,
     },
   };
 }
 
-export default async function ElektronikkPage({
+export default async function NettisidePage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'service_electronics' });
+  const t = await getTranslations({ locale, namespace: 'service_website' });
 
   const features = ['f1', 'f2', 'f3', 'f4', 'f5'].map((k) => t(k as 'f1'));
   const contactHref = locale === 'nb' ? '/#contact' : '/en#contact';
@@ -52,7 +52,7 @@ export default async function ElektronikkPage({
       url: BASE_URL,
     },
     areaServed: { '@type': 'Country', name: 'Norway' },
-    url: locale === 'nb' ? `${BASE_URL}/tjenester/elektronikk` : `${BASE_URL}/en/tjenester/elektronikk`,
+    url: locale === 'nb' ? `${BASE_URL}/services/website` : `${BASE_URL}/en/services/website`,
   };
 
   return (

@@ -142,12 +142,12 @@
     "meta_desc": "Website, web application, IoT and electronics. Freelance web developer based in Norway.",
     "title": "Services",
     "subtitle": "Here is an overview of what I can help with.",
-    "nettside_title": "Websites",
-    "nettside_desc": "Company pages, landing pages and simple web solutions.",
+    "website_title": "Websites",
+    "website_desc": "Company pages, landing pages and simple web solutions.",
     "webapp_title": "Web applications",
     "webapp_desc": "Apps with login, payments and user data.",
-    "elektronikk_title": "Electronics and PCB",
-    "elektronikk_desc": "Circuit boards, firmware and IoT solutions.",
+    "electronics_title": "Electronics and PCB",
+    "electronics_desc": "Circuit boards, firmware and IoT solutions.",
     "read_more": "Read more"
   },
   "service_website": {

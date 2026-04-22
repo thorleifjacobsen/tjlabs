@@ -8,10 +8,10 @@ export function Services() {
   const base = locale === 'nb' ? '' : '/en';
 
   const items = [
-    { icon: Globe,        title: t('web_title'),        desc: t('web_desc'),        href: `${base}/tjenester/nettside` },
-    { icon: ShoppingCart, title: t('saas_title'),        desc: t('saas_desc'),       href: `${base}/tjenester/webapplikasjon` },
-    { icon: Wifi,         title: t('iot_title'),         desc: t('iot_desc'),        href: `${base}/tjenester/elektronikk` },
-    { icon: Printer,      title: t('print_title'),       desc: t('print_desc'),      href: `${base}/tjenester/3d-printing` },
+    { icon: Globe,        title: t('web_title'),        desc: t('web_desc'),        href: `${base}/services/website` },
+    { icon: ShoppingCart, title: t('saas_title'),        desc: t('saas_desc'),       href: `${base}/services/webapp` },
+    { icon: Wifi,         title: t('iot_title'),         desc: t('iot_desc'),        href: `${base}/services/electronics` },
+    { icon: Printer,      title: t('print_title'),       desc: t('print_desc'),      href: `${base}/services/3d-printing` },
     { icon: HardDrive,    title: t('hardware_title'),    desc: t('hardware_desc'),   href: null },
     { icon: Wrench,       title: t('consulting_title'),  desc: t('consulting_desc'), href: null },
   ];

@@ -16,16 +16,16 @@ export async function generateMetadata({
     title: t('meta_title'),
     description: t('meta_desc'),
     alternates: {
-      canonical: isNb ? `${BASE_URL}/tjenester/3d-printing` : `${BASE_URL}/en/tjenester/3d-printing`,
+      canonical: isNb ? `${BASE_URL}/services/3d-printing` : `${BASE_URL}/en/services/3d-printing`,
       languages: {
-        nb: `${BASE_URL}/tjenester/3d-printing`,
-        en: `${BASE_URL}/en/tjenester/3d-printing`,
+        nb: `${BASE_URL}/services/3d-printing`,
+        en: `${BASE_URL}/en/services/3d-printing`,
       },
     },
     openGraph: {
       title: t('meta_title'),
       description: t('meta_desc'),
-      url: isNb ? `${BASE_URL}/tjenester/3d-printing` : `${BASE_URL}/en/tjenester/3d-printing`,
+      url: isNb ? `${BASE_URL}/services/3d-printing` : `${BASE_URL}/en/services/3d-printing`,
     },
   };
 }
@@ -54,7 +54,7 @@ export default async function PrintPage({
       url: BASE_URL,
     },
     areaServed: { '@type': 'Country', name: 'Norway' },
-    url: locale === 'nb' ? `${BASE_URL}/tjenester/3d-printing` : `${BASE_URL}/en/tjenester/3d-printing`,
+    url: locale === 'nb' ? `${BASE_URL}/services/3d-printing` : `${BASE_URL}/en/services/3d-printing`,
   };
 
   return (

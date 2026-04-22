@@ -10,33 +10,33 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'service_website' });
+  const t = await getTranslations({ locale, namespace: 'service_webapp' });
   const isNb = locale === 'nb';
   return {
     title: t('meta_title'),
     description: t('meta_desc'),
     alternates: {
-      canonical: isNb ? `${BASE_URL}/tjenester/nettside` : `${BASE_URL}/en/tjenester/nettside`,
+      canonical: isNb ? `${BASE_URL}/services/webapp` : `${BASE_URL}/en/services/webapp`,
       languages: {
-        nb: `${BASE_URL}/tjenester/nettside`,
-        en: `${BASE_URL}/en/tjenester/nettside`,
+        nb: `${BASE_URL}/services/webapp`,
+        en: `${BASE_URL}/en/services/webapp`,
       },
     },
     openGraph: {
       title: t('meta_title'),
       description: t('meta_desc'),
-      url: isNb ? `${BASE_URL}/tjenester/nettside` : `${BASE_URL}/en/tjenester/nettside`,
+      url: isNb ? `${BASE_URL}/services/webapp` : `${BASE_URL}/en/services/webapp`,
     },
   };
 }
 
-export default async function NettisidePage({
+export default async function WebapplikasjonPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'service_website' });
+  const t = await getTranslations({ locale, namespace: 'service_webapp' });
 
   const features = ['f1', 'f2', 'f3', 'f4', 'f5'].map((k) => t(k as 'f1'));
   const contactHref = locale === 'nb' ? '/#contact' : '/en#contact';
@@ -52,7 +52,7 @@ export default async function NettisidePage({
       url: BASE_URL,
     },
     areaServed: { '@type': 'Country', name: 'Norway' },
-    url: locale === 'nb' ? `${BASE_URL}/tjenester/nettside` : `${BASE_URL}/en/tjenester/nettside`,
+    url: locale === 'nb' ? `${BASE_URL}/services/webapp` : `${BASE_URL}/en/services/webapp`,
   };
 
   return (

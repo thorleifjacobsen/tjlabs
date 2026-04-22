@@ -10,33 +10,33 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'service_webapp' });
+  const t = await getTranslations({ locale, namespace: 'service_electronics' });
   const isNb = locale === 'nb';
   return {
     title: t('meta_title'),
     description: t('meta_desc'),
     alternates: {
-      canonical: isNb ? `${BASE_URL}/tjenester/webapplikasjon` : `${BASE_URL}/en/tjenester/webapplikasjon`,
+      canonical: isNb ? `${BASE_URL}/services/electronics` : `${BASE_URL}/en/services/electronics`,
       languages: {
-        nb: `${BASE_URL}/tjenester/webapplikasjon`,
-        en: `${BASE_URL}/en/tjenester/webapplikasjon`,
+        nb: `${BASE_URL}/services/electronics`,
+        en: `${BASE_URL}/en/services/electronics`,
       },
     },
     openGraph: {
       title: t('meta_title'),
       description: t('meta_desc'),
-      url: isNb ? `${BASE_URL}/tjenester/webapplikasjon` : `${BASE_URL}/en/tjenester/webapplikasjon`,
+      url: isNb ? `${BASE_URL}/services/electronics` : `${BASE_URL}/en/services/electronics`,
     },
   };
 }
 
-export default async function WebapplikasjonPage({
+export default async function ElektronikkPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'service_webapp' });
+  const t = await getTranslations({ locale, namespace: 'service_electronics' });
 
   const features = ['f1', 'f2', 'f3', 'f4', 'f5'].map((k) => t(k as 'f1'));
   const contactHref = locale === 'nb' ? '/#contact' : '/en#contact';
@@ -52,7 +52,7 @@ export default async function WebapplikasjonPage({
       url: BASE_URL,
     },
     areaServed: { '@type': 'Country', name: 'Norway' },
-    url: locale === 'nb' ? `${BASE_URL}/tjenester/webapplikasjon` : `${BASE_URL}/en/tjenester/webapplikasjon`,
+    url: locale === 'nb' ? `${BASE_URL}/services/electronics` : `${BASE_URL}/en/services/electronics`,
   };
 
   return (

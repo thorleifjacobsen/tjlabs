@@ -16,38 +16,39 @@ export async function generateMetadata({
     title: t('meta_title'),
     description: t('meta_desc'),
     alternates: {
-      canonical: isNb ? `${BASE_URL}/tjenester` : `${BASE_URL}/en/tjenester`,
+      canonical: isNb ? `${BASE_URL}/services` : `${BASE_URL}/en/services`,
       languages: {
-        nb: `${BASE_URL}/tjenester`,
-        en: `${BASE_URL}/en/tjenester`,
+        nb: `${BASE_URL}/services`,
+        en: `${BASE_URL}/en/services`,
       },
     },
   };
 }
 
-export default async function TjenesterPage({
+export default async function ServicesPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'services_overview' });
+  const base = locale === 'nb' ? '' : '/en';
 
   const services = [
     {
-      href: 'tjenester/nettside',
-      title: t('nettside_title'),
-      desc: t('nettside_desc'),
+      href: `${base}/services/website`,
+      title: t('website_title'),
+      desc: t('website_desc'),
     },
     {
-      href: 'tjenester/webapplikasjon',
+      href: `${base}/services/webapp`,
       title: t('webapp_title'),
       desc: t('webapp_desc'),
     },
     {
-      href: 'tjenester/elektronikk',
-      title: t('elektronikk_title'),
-      desc: t('elektronikk_desc'),
+      href: `${base}/services/electronics`,
+      title: t('electronics_title'),
+      desc: t('electronics_desc'),
     },
   ];
 
