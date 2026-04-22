@@ -254,6 +254,8 @@ export default function ByggogbetongPage() {
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
+          paddingTop: '68px',
+          paddingBottom: '80px',
         }}
       >
         <Image
@@ -958,6 +960,11 @@ export default function ByggogbetongPage() {
         *, *::before, *::after { box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { overflow-x: hidden; }
+
+        /* Offset all anchor sections so fixed navbar doesn't cover headings on scroll */
+        #hjem, #om-oss, #tjenester, #prosjekter, #kontakt {
+          scroll-margin-top: 68px;
+        }
 
         /* Nav toggle */
         @media (max-width: 768px) {
