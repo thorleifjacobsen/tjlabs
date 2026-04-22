@@ -34,7 +34,7 @@ const instructors = [
     bio: 'Alf Kristian har trent Jiu Jitsu i mange år og underviser med fokus på tradisjonell teknikk og stil. Han er godt likt i klubbmiljøet og bidrar til den gode stemningen på og utenfor matta.',
     belt: '3. dan',
     img: '/assets/ajjk/alf.jpg',
-    pos: '50% -130px',
+    pos: '50% -110px',
   },
   {
     name: 'Carl Are Dreier Hopen',
@@ -43,7 +43,7 @@ const instructors = [
     bio: 'Carl Are har bakgrunn fra konkurranser og underviser voksenklassene med fokus på god teknikk og praktisk anvendelse. Han er grundig og engasjert i undervisningen.',
     belt: '3. dan',
     img: '/assets/ajjk/carl.jpg',
-    pos: '50% -130px',
+    pos: '50% -110px',
   },
 ]
 

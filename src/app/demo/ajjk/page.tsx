@@ -239,8 +239,8 @@ function Services() {
 const instructors = [
   { name: 'Geir Breimyr', title: 'Sensei · Klubbleder', img: '/assets/ajjk/geir.jpg', pos: '50% -30px' },
   { name: 'Arild Emil Olsen', title: 'Senpai · Instruktør', img: '/assets/ajjk/arild.jpg', pos: '50% -20px' },
-  { name: 'Alf Kristian Eilertsen', title: 'Sensei · Instruktør', img: '/assets/ajjk/alf.jpg', pos: '50% -130px' },
-  { name: 'Carl Are Dreier Hopen', title: 'Sensei · Instruktør', img: '/assets/ajjk/carl.jpg', pos: '50% -130px' },
+  { name: 'Alf Kristian Eilertsen', title: 'Sensei · Instruktør', img: '/assets/ajjk/alf.jpg', pos: '50% -110px' },
+  { name: 'Carl Are Dreier Hopen', title: 'Sensei · Instruktør', img: '/assets/ajjk/carl.jpg', pos: '50% -110px' },
 ]
 
 function Instructors() {
