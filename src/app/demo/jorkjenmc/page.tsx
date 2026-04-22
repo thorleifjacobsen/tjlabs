@@ -17,165 +17,181 @@ export default function JorkjenPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/demo/jorkjenmc/hero.jpg')" }}
         />
-        <div className="absolute inset-0 bg-black/65" />
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
+
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-5 pb-14 sm:pb-20">
+          <p className="text-zinc-400 text-sm mb-4">Frolandsveien 410, 4838 Arendal</p>
           <h1
-            className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white leading-tight mb-4"
+            className="text-5xl sm:text-7xl font-black text-white leading-[1.0] mb-5"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
           >
-            Motorsykkelverksted
+            Motorsykkel-
             <br />
-            <span className="text-zinc-300">og totalleverandør</span>
+            verksted og
+            <br />
+            totalleverandør
           </h1>
-          <p className="text-zinc-400 text-lg sm:text-xl mb-8">
-            Godkjent MC- og mopedverksted i Arendal
+          <p className="text-zinc-300 text-lg mb-8 max-w-lg leading-relaxed">
+            Godkjent av Statens Vegvesen. Mekanikere med fagbrev.
+            Kort leveringstid på deler.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 items-start">
             <a
               href="tel:90549772"
-              className="bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 text-lg uppercase tracking-wide transition-colors"
+              className="inline-flex items-center gap-3 bg-white hover:bg-zinc-100 text-black font-bold px-7 py-4 text-xl transition-colors"
             >
-              Book verkstedtime
+              <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              905 49 772
             </a>
             <a
-              href="/demo/jorkjenmc/butikk"
-              className="border-2 border-white text-white hover:bg-white hover:text-black font-bold px-8 py-4 text-lg uppercase tracking-wide transition-colors"
+              href="/demo/jorkjenmc/verksted"
+              className="inline-flex items-center gap-2 text-zinc-300 hover:text-white font-medium text-lg py-4 transition-colors"
             >
-              Se butikk
+              Se verkstedtjenester
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
       </section>
 
-      {/* Godkjent-banner */}
-      <section className="bg-zinc-800 text-white py-4 px-4 border-b border-zinc-700">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-center sm:text-left">
-          <svg className="w-6 h-6 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {/* Godkjent-strip */}
+      <section className="bg-zinc-800 border-b border-zinc-700">
+        <div className="max-w-5xl mx-auto px-5 py-3 flex items-center gap-3">
+          <svg className="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
-          <span className="text-zinc-200 text-sm font-medium">
+          <span className="text-zinc-300 text-sm">
             Godkjent av Statens Vegvesen som motorsykkel- og mopedverksted
           </span>
         </div>
       </section>
 
-      {/* Om oss */}
-      <section className="bg-white py-16 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-green-600 font-bold uppercase tracking-widest text-sm mb-2">Om oss</p>
+      {/* Om verkstedet + åpningstider */}
+      <section className="bg-[#f8f7f4] py-16 px-5">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
+          <div className="lg:col-span-3">
             <h2
-              className="text-3xl sm:text-4xl font-black uppercase text-zinc-900 mb-6 leading-tight"
+              className="text-4xl sm:text-5xl font-black text-zinc-900 mb-6 leading-tight"
               style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
             >
-              Fagfolk du kan stole på
+              Vi fikser sykkelen din
             </h2>
             <p className="text-zinc-600 text-lg leading-relaxed mb-4">
-              Jorkjen MC er et fullt godkjent verksted for MC og moped, med mekanikere
-              som har fagbrev og relevant kompetanse. Vi holder til på Frolandsveien 410
-              i Arendal.
+              Jorkjen MC er et fullt godkjent verksted for MC og moped på Frolandsveien
+              i Arendal. Kenneth og laget har fagbrev og bred erfaring med alt fra
+              rutineservice til mer kompliserte reparasjoner.
             </p>
-            <p className="text-zinc-600 text-lg leading-relaxed mb-6">
-              Vi fører Motul-oljer og har kort leveringstid på deler, slik at sykkelen
-              din er ferdig så raskt som mulig.
+            <p className="text-zinc-600 text-lg leading-relaxed mb-8">
+              Vi fører Motul-oljer og har gode leverandøravtaler som gir kort
+              leveringstid på deler. Sykkelen din skal stå minst mulig.
             </p>
             <a
               href="tel:90549772"
-              className="inline-block bg-zinc-900 hover:bg-zinc-700 text-white font-bold px-6 py-3 uppercase tracking-wide transition-colors"
+              className="inline-block bg-zinc-900 hover:bg-zinc-700 text-white font-bold px-6 py-3 transition-colors"
             >
-              Ring Kenneth: 905 49 772
+              Ring Kenneth direkte
             </a>
           </div>
-          <div className="relative">
-            <div className="w-full h-64 bg-zinc-200 flex items-center justify-center text-zinc-400 text-sm">
-              Bilde kommer her
+
+          <div className="lg:col-span-2">
+            <h3 className="text-xl font-bold text-zinc-900 mb-5">Åpningstider</h3>
+            <div className="border-l-4 border-yellow-400 bg-yellow-50 px-4 py-3 text-yellow-800 text-sm font-medium mb-5">
+              Sommerstengt uke 29-31
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-[#1c1c1c] text-white px-4 py-3 font-bold text-sm uppercase tracking-wide">
-              Mekaniker med fagbrev
+            {[
+              { dag: 'Tirsdag', tid: '09.00-16.00' },
+              { dag: 'Onsdag', tid: '10.00-14.30' },
+              { dag: 'Torsdag', tid: '09.00-17.00' },
+            ].map((rad, i) => (
+              <div
+                key={rad.dag}
+                className={`flex justify-between items-center py-3.5 border-b border-zinc-200 ${i === 0 ? 'border-t' : ''}`}
+              >
+                <span className="font-semibold text-zinc-800">{rad.dag}</span>
+                <span className="text-zinc-600">{rad.tid}</span>
+              </div>
+            ))}
+            <div className="mt-6 pt-5 border-t border-zinc-200">
+              <p className="text-sm text-zinc-500 mb-1">Bestill time</p>
+              <a href="tel:90549772" className="text-2xl font-bold text-zinc-900 hover:text-green-700 transition-colors">
+                905 49 772
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Tjenester */}
-      <section className="bg-zinc-100 py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-green-600 font-bold uppercase tracking-widest text-sm mb-2 text-center">Tjenester</p>
+      <section className="bg-[#111] py-16 px-5 text-white">
+        <div className="max-w-5xl mx-auto">
           <h2
-            className="text-3xl sm:text-4xl font-black uppercase text-zinc-900 mb-10 text-center leading-tight"
+            className="text-4xl sm:text-5xl font-black mb-10 leading-tight"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
           >
-            Hva vi tilbyr
+            Hva vi gjør
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="divide-y divide-zinc-800">
             {[
               {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                ),
-                title: 'Verksted og reparasjon',
-                text: 'Service og reparasjon av MC og moped. Kort leveringstid på deler.',
+                nr: '01',
+                title: 'Verksted og service',
+                desc: 'Reparasjon og service på MC og moped. Fagbrevmekanikere med relevant kompetanse. Vi bruker Motul-oljer og kvalitetsdeler.',
                 href: '/demo/jorkjenmc/verksted',
-                cta: 'Les mer',
+                cta: 'Se verkstedtjenester',
               },
               {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                ),
+                nr: '02',
                 title: 'Vinterlagring',
-                text: 'Trygg lagring i frostfritt lokale med FG godkjent alarm. 10-punkt sjekk inkludert.',
+                desc: 'Trygg lagring i frostfritt lokale med FG godkjent alarm. Inkluderer 10-punkt sjekk slik at sykkelen er klar til kjøring om våren.',
                 href: '#vinterlagring',
-                cta: 'Se pris',
-                highlight: true,
+                cta: 'Se pris og innhold',
+                price: 'kr 2 390,-',
               },
               {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                  </svg>
-                ),
+                nr: '03',
                 title: 'Butikk og deler',
-                text: 'Olje, filter, plugger, hjelmer og hansker. Motul-oljer på lager.',
+                desc: 'Vi fører olje, filter, plugger, hjelmer og hansker. Kjøretøyer til salgs. Motul-forhandler.',
                 href: '/demo/jorkjenmc/butikk',
-                cta: 'Se utvalg',
+                cta: 'Se butikk',
               },
-            ].map((card) => (
+            ].map((item) => (
               <div
-                key={card.title}
-                className={`p-8 flex flex-col gap-4 ${card.highlight ? 'bg-zinc-900 text-white' : 'bg-white text-zinc-900'}`}
+                key={item.nr}
+                className="py-8 flex flex-col sm:flex-row gap-4 sm:gap-8 sm:items-start"
               >
-                <div className={card.highlight ? 'text-green-400' : 'text-green-600'}>
-                  {card.icon}
+                <span className="text-zinc-600 font-mono text-sm shrink-0 pt-1">{item.nr}</span>
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-baseline gap-3 mb-2">
+                    <h3
+                      className="text-2xl font-bold text-white"
+                      style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    {item.price && (
+                      <span className="text-green-400 font-bold text-lg">{item.price} inkl. mva</span>
+                    )}
+                  </div>
+                  <p className="text-zinc-400 leading-relaxed mb-4 max-w-xl">{item.desc}</p>
+                  <a
+                    href={item.href}
+                    className="text-zinc-300 hover:text-white text-sm font-medium transition-colors inline-flex items-center gap-1.5"
+                  >
+                    {item.cta}
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
-                <h3
-                  className={`text-2xl font-black uppercase leading-tight ${card.highlight ? 'text-white' : 'text-zinc-900'}`}
-                  style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
-                >
-                  {card.title}
-                </h3>
-                <p className={`text-base leading-relaxed flex-1 ${card.highlight ? 'text-zinc-300' : 'text-zinc-600'}`}>
-                  {card.text}
-                </p>
-                <a
-                  href={card.href}
-                  className={`inline-block font-bold uppercase tracking-wide text-sm py-2 border-b-2 w-fit transition-colors ${
-                    card.highlight
-                      ? 'border-green-400 text-green-400 hover:text-white hover:border-white'
-                      : 'border-green-600 text-green-600 hover:text-zinc-900 hover:border-zinc-900'
-                  }`}
-                >
-                  {card.cta}
-                </a>
               </div>
             ))}
           </div>
@@ -183,141 +199,116 @@ export default function JorkjenPage() {
       </section>
 
       {/* Vinterlagring */}
-      <section id="vinterlagring" className="bg-zinc-900 py-16 px-4 text-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <p className="text-green-400 font-bold uppercase tracking-widest text-sm mb-2">Vinterlagring</p>
-            <h2
-              className="text-3xl sm:text-4xl font-black uppercase leading-tight mb-4"
-              style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
-            >
-              La sykkelen overvintre hos oss
-            </h2>
-            <div className="text-5xl font-black text-green-400 mb-2">
-              kr 2 390,-
-            </div>
-            <p className="text-zinc-400 mb-6">inkl. mva og 10-punkt sjekk</p>
-            <div className="flex items-center gap-3 mb-8 p-4 border border-zinc-700 rounded-sm">
-              <svg className="w-6 h-6 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-              <span className="text-zinc-200">Frostfritt lokale med FG godkjent alarm</span>
-            </div>
-            <a
-              href="tel:90549772"
-              className="inline-block bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 uppercase tracking-wide text-lg transition-colors"
-            >
-              Ring for avtale
-            </a>
-          </div>
-
-          <div>
-            <h3
-              className="text-xl font-black uppercase mb-5 text-zinc-300"
-              style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
-            >
-              10-punkt sjekk inkludert
-            </h3>
-            <ul className="space-y-3">
-              {tiPunktSjekk.map((punkt, i) => (
-                <li key={punkt} className="flex items-center gap-3">
-                  <span className="flex items-center justify-center w-7 h-7 bg-green-600 text-white text-xs font-bold rounded-full shrink-0">
-                    {i + 1}
-                  </span>
-                  <span className="text-zinc-200">{punkt}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Apningstider */}
-      <section className="bg-white py-16 px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-green-600 font-bold uppercase tracking-widest text-sm mb-2">Åpningstider</p>
-          <h2
-            className="text-3xl sm:text-4xl font-black uppercase text-zinc-900 mb-8 leading-tight"
-            style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
-          >
-            Når finner du oss?
-          </h2>
-          <div className="inline-block w-full max-w-sm">
-            <div className="bg-yellow-50 border border-yellow-300 text-yellow-800 font-semibold px-4 py-3 mb-6 text-sm">
-              Sommerstengt uke 29-31
-            </div>
-            {[
-              { dag: 'Tirsdag', tid: '09.00 - 16.00' },
-              { dag: 'Onsdag', tid: '10.00 - 14.30' },
-              { dag: 'Torsdag', tid: '09.00 - 17.00' },
-            ].map((rad, i) => (
-              <div
-                key={rad.dag}
-                className={`flex justify-between items-center px-4 py-4 border-b border-zinc-200 ${i === 0 ? 'border-t' : ''}`}
+      <section id="vinterlagring" className="bg-[#f8f7f4] py-16 px-5">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2
+                className="text-4xl sm:text-5xl font-black text-zinc-900 mb-2 leading-tight"
+                style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
               >
-                <span className="font-bold text-zinc-900">{rad.dag}</span>
-                <span className="text-green-700 font-semibold">{rad.tid}</span>
+                Vinterlagring
+              </h2>
+              <div className="text-6xl font-black text-zinc-900 mt-6 mb-1 leading-none">
+                kr 2 390,-
               </div>
-            ))}
+              <p className="text-zinc-500 text-base mb-7">inkl. mva og 10-punkt sjekk</p>
+
+              <div className="flex items-start gap-3 p-4 bg-zinc-100 border border-zinc-200 mb-7">
+                <svg className="w-5 h-5 text-green-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span className="text-zinc-700 text-sm leading-relaxed">
+                  Frostfritt lokale med FG godkjent alarm
+                </span>
+              </div>
+
+              <a
+                href="tel:90549772"
+                className="inline-block bg-zinc-900 hover:bg-zinc-700 text-white font-bold px-7 py-4 text-lg transition-colors"
+              >
+                Ring for å bestille
+              </a>
+            </div>
+
+            <div>
+              <h3 className="text-base font-semibold text-zinc-500 uppercase tracking-wide mb-5">
+                10-punkt sjekk inkludert
+              </h3>
+              <ol className="space-y-3">
+                {tiPunktSjekk.map((punkt, i) => (
+                  <li key={punkt} className="flex items-center gap-4 border-b border-zinc-200 pb-3">
+                    <span className="text-zinc-300 font-mono text-sm w-5 shrink-0">{i + 1}</span>
+                    <span className="text-zinc-700">{punkt}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Kontakt */}
-      <section id="kontakt" className="bg-zinc-950 py-16 px-4 text-white">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-green-400 font-bold uppercase tracking-widest text-sm mb-2 text-center">Kontakt</p>
-          <h2
-            className="text-3xl sm:text-4xl font-black uppercase leading-tight mb-10 text-center"
-            style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
-          >
-            Ta kontakt med oss
-          </h2>
+      <section id="kontakt" className="bg-[#111] py-16 px-5 text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div>
+              <h2
+                className="text-4xl sm:text-5xl font-black mb-8 leading-tight"
+                style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
+              >
+                Ta kontakt
+              </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-            <a
-              href="tel:90549772"
-              className="flex flex-col items-center gap-3 bg-zinc-900 hover:bg-zinc-800 p-8 transition-colors text-center group"
-            >
-              <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <div>
-                <div className="text-sm text-zinc-400 mb-1">Telefon</div>
-                <div className="font-bold text-lg group-hover:text-green-400 transition-colors">905 49 772</div>
-                <div className="text-zinc-400 text-sm">Kenneth</div>
+              <div className="mb-6">
+                <p className="text-zinc-500 text-sm mb-1">Ring Kenneth</p>
+                <a
+                  href="tel:90549772"
+                  className="text-4xl sm:text-5xl font-black text-white hover:text-green-400 transition-colors tracking-tight"
+                  style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
+                >
+                  905 49 772
+                </a>
               </div>
-            </a>
 
-            <a
-              href="mailto:verksted@jorkjenmc.no"
-              className="flex flex-col items-center gap-3 bg-zinc-900 hover:bg-zinc-800 p-8 transition-colors text-center group"
-            >
-              <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <div>
-                <div className="text-sm text-zinc-400 mb-1">E-post</div>
-                <div className="font-bold group-hover:text-green-400 transition-colors break-all">
+              <div className="mb-5">
+                <p className="text-zinc-500 text-sm mb-1">E-post</p>
+                <a
+                  href="mailto:verksted@jorkjenmc.no"
+                  className="text-zinc-200 hover:text-white transition-colors font-medium"
+                >
                   verksted@jorkjenmc.no
-                </div>
+                </a>
               </div>
-            </a>
 
-            <div className="flex flex-col items-center gap-3 bg-zinc-900 p-8 text-center">
-              <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
               <div>
-                <div className="text-sm text-zinc-400 mb-1">Adresse</div>
-                <div className="font-bold">Frolandsveien 410</div>
-                <div className="text-zinc-400">4838 Arendal</div>
+                <p className="text-zinc-500 text-sm mb-1">Adresse</p>
+                <p className="text-zinc-200">Frolandsveien 410, 4838 Arendal</p>
               </div>
+            </div>
+
+            <div>
+              <p className="text-zinc-500 text-sm mb-1">Åpningstider</p>
+              <div className="divide-y divide-zinc-800 mb-6">
+                <div className="py-3 text-yellow-500 text-sm font-medium">
+                  Sommerstengt uke 29-31
+                </div>
+                {[
+                  { dag: 'Tirsdag', tid: '09.00-16.00' },
+                  { dag: 'Onsdag', tid: '10.00-14.30' },
+                  { dag: 'Torsdag', tid: '09.00-17.00' },
+                ].map((rad) => (
+                  <div key={rad.dag} className="flex justify-between py-3">
+                    <span className="text-zinc-300">{rad.dag}</span>
+                    <span className="text-zinc-400">{rad.tid}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-zinc-600 text-xs">Org.nr: 999 100 899</p>
             </div>
           </div>
 
-          <div className="w-full h-80 overflow-hidden rounded-sm">
+          <div className="w-full h-80 overflow-hidden">
             <iframe
               title="Kart Jorkjen MC"
               src="https://www.openstreetmap.org/export/embed.html?bbox=8.765%2C58.473%2C8.815%2C58.503&layer=mapnik&marker=58.488%2C8.790"
