@@ -346,6 +346,7 @@ export default function ByggogbetongPage() {
           </button>
         </div>
         <div
+          className="bb-scroll-hint"
           style={{
             position: 'absolute',
             bottom: '2rem',
@@ -1001,6 +1002,11 @@ export default function ByggogbetongPage() {
             grid-template-columns: 1fr !important;
             gap: 2.5rem !important;
           }
+        }
+
+        /* Hide scroll hint on short viewports so it never overlaps hero content */
+        @media (max-height: 620px) {
+          .bb-scroll-hint { display: none !important; }
         }
 
         /* Inner section containers: less side padding on mobile */
