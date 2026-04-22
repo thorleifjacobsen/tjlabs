@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/en/tjenester/webapplikasjon`,   lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/tjenester/elektronikk`,         lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/en/tjenester/elektronikk`,      lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/tjenester/3d-printing`,         lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/en/tjenester/3d-printing`,      lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
   ];
 
   const postRoutes: MetadataRoute.Sitemap = posts.flatMap((post) => [

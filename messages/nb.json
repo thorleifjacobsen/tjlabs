@@ -20,25 +20,17 @@
     "subtitle": "Fra nettsider til kretskort. Jeg tar på meg varierte oppdrag og finner som regel en god løsning.",
     "web_title": "Nettsider",
     "web_desc": "Enkle og greie nettsider og landingssider. Fungerer, ser bra ut og er enkle å vedlikeholde.",
-    "software_title": "Småverktøy og scripts",
-    "software_desc": "Noe som automatiserer en oppgave, holder styr på data eller kobler ting sammen. Jeg fikser det.",
-    "saas_title": "Webapplikasjoner",
-    "saas_desc": "Apper med innlogging, betaling og brukeradministrasjon. Har gjort det et par ganger og vet hvordan det fungerer.",
-    "pwa_title": "Mobilapper (web)",
-    "pwa_desc": "Webapper som fungerer som en ekte app på telefonen, uten app store og uten installasjon.",
-    "fullstack_title": "Ende-til-ende",
-    "fullstack_desc": "Jeg tar ansvar for hele løsningen, fra database og API til det brukeren ser. Én kontaktperson for alt.",
+    "saas_title": "Webapplikasjoner og verktøy",
+    "saas_desc": "Apper med innlogging og betaling, interne verktøy og scripts, og webapper som fungerer som en ekte app på telefonen.",
+    "iot_title": "IoT og smarthus",
+    "iot_desc": "Smarte løsninger som kobler fysiske ting til nettet. Hjemmeautomatisering, sensorer og egendefinerte oppsett.",
+    "print_title": "3D-printing",
+    "print_desc": "Send filer og få pristilbud. Jeg kan også hjelpe med design fra mål og skisser. Bra for prototyper og funksjonelle deler.",
+    "hardware_title": "Hardware og byggeprosjekter",
+    "hardware_desc": "PC-reparasjon og oppgraderinger, kretskortdesign og elektronikkprosjekter. Maskinvarehjelp fra innside og ut.",
     "consulting_title": "Teknisk hjelp",
     "consulting_desc": "Trenger du hjelp til å tenke gjennom noe teknisk, eller noen å sparre med? Jeg hjelper gjerne.",
-    "iot_title": "IoT og smarthus",
-    "iot_desc": "Smarte løsninger som kobler fysiske ting til nettet. Hjemmeautomatisering, sensorer og egendefinerte oppsett med f.eks. Home Assistant.",
-    "print_title": "3D-printing",
-    "print_desc": "Jeg har en 3D-printer og kan printe enkle ting. Fungerer bra for praktiske brukstilfeller og prototyper.",
-    "pcb_title": "Elektronikk og PCB",
-    "pcb_desc": "Mikrokontrollere, egendefinert firmware og enkle kretskort. Jeg kan designe og bestille kort til småprosjekter.",
-    "pc_title": "PC og data",
-    "pc_desc": "Reparasjon, feilsøking og reinstallasjon av PC og Mac. Hjelp med maskinvare, oppgraderinger og alt som henger seg opp.",
-    "les_mer": "Les mer"
+    "read_more": "Les mer"
   },
   "projects": {
     "label": "Egne prosjekter",
@@ -120,10 +112,11 @@
     "nav_about": "Om meg",
     "nav_contact": "Kontakt",
     "rights": "Alle rettigheter forbeholdt.",
-    "tjenester_label": "Tjenester",
-    "tjenester_nettside": "Nettside",
-    "tjenester_webapp": "Webapplikasjon",
-    "tjenester_elektronikk": "Elektronikk og PCB"
+    "services_label": "Tjenester",
+    "service_website": "Nettside",
+    "service_webapp": "Webapplikasjon",
+    "service_electronics": "Elektronikk",
+    "service_print": "3D-printing"
   },
   "faq": {
     "label": "Spørsmal og svar",
@@ -144,7 +137,7 @@
     "q7": "Hva gjør jeg for å bli synlig på Google?",
     "a7": "Start med en godt bygget nettside og bruk relevante søkeord i innholdet. Nettsidene jeg lager er søkemotoroptimert fra starten av."
   },
-  "tjenester": {
+  "services_overview": {
     "meta_title": "Tjenester | Webutvikler og maker i Norge | TJLabs",
     "meta_desc": "Nettside, webapplikasjon, IoT og elektronikk. Freelance webutvikler basert i Norge.",
     "title": "Tjenester",
@@ -155,9 +148,9 @@
     "webapp_desc": "Apper med innlogging, betaling og brukerdata.",
     "elektronikk_title": "Elektronikk og PCB",
     "elektronikk_desc": "Kretskort, firmware og IoT-løsninger.",
-    "les_mer": "Les mer"
+    "read_more": "Les mer"
   },
-  "tjenester_nettside": {
+  "service_website": {
     "meta_title": "Nettside for bedriften din | Webutvikler i Norge | TJLabs",
     "meta_desc": "Jeg lager enkle og effektive nettsider og hjemmesider for bedrifter i Norge. Rask levering og uforpliktende pristilbud.",
     "title": "Nettside for bedriften din",
@@ -175,7 +168,7 @@
     "cta_body": "Ta kontakt og beskriv hva du trenger. Jeg svarer raskt og gir deg et estimat.",
     "cta_btn": "Ta kontakt"
   },
-  "tjenester_webapp": {
+  "service_webapp": {
     "meta_title": "Webapplikasjon og programutvikling | TJLabs",
     "meta_desc": "Webapplikasjoner med innlogging, betaling og brukerdata. Fullstack webutvikling i Norge.",
     "title": "Webapplikasjon og programutvikling",
@@ -193,7 +186,29 @@
     "cta_body": "Fortell meg hva du trenger, så ser vi om det er noe jeg kan hjelpe med.",
     "cta_btn": "Ta kontakt"
   },
-  "tjenester_elektronikk": {
+  "service_print": {
+    "meta_title": "3D-printing og prototyper | TJLabs",
+    "meta_desc": "Send filer og få pristilbud på 3D-printing. Hjelp med design fra mål og skisser. Prototyper og funksjonelle deler i Norge.",
+    "title": "3D-printing og prototyper",
+    "intro1": "Har du noe du vil ha printet? Send filene dine, så ser jeg på det og gir deg et pristilbud.",
+    "intro2": "Har du ikke en ferdig fil? Jeg kan hjelpe med design fra mål, skisser eller bilder av det du trenger.",
+    "how_title": "Slik fungerer det",
+    "step1": "Send filer og beskriv hva du trenger",
+    "step2": "Jeg ser på det og sender et uforpliktende pristilbud",
+    "step3": "Godkjenner du, printer og sender jeg",
+    "what_title": "Hva jeg kan hjelpe med",
+    "f1": "Prototyper og konseptmodeller",
+    "f2": "Funksjonelle deler og festepunkter",
+    "f3": "Tilpassede braketter og monteringsløsninger",
+    "f4": "Design fra mål og skisser",
+    "f5": "Enkle produkter og praktiske gjenstander",
+    "files_title": "Filformater",
+    "files_body": "Jeg jobber med STL, STEP og OBJ. Har du ikke en ferdig fil, holder det med mål og en beskrivelse av hva du trenger.",
+    "cta_title": "Klar til å sende?",
+    "cta_body": "Send filer og en beskrivelse til hei@tjlabs.no, så kommer jeg tilbake med et pristilbud.",
+    "cta_btn": "Send e-post"
+  },
+  "service_electronics": {
     "meta_title": "Elektronikk, PCB og IoT | TJLabs",
     "meta_desc": "Egendefinerte kretskort, firmware og IoT-løsninger. Smarthus, sensorer og mikrokontrollere i Norge.",
     "title": "Elektronikk, PCB og IoT",

@@ -20,25 +20,17 @@
     "subtitle": "From websites to circuit boards. I take on varied work and usually find a good solution.",
     "web_title": "Websites",
     "web_desc": "Straightforward websites and landing pages. They work, look good and are easy to maintain.",
-    "software_title": "Small tools and scripts",
-    "software_desc": "Something that automates a task, keeps track of data or connects things together. I can sort that.",
-    "saas_title": "Web applications",
-    "saas_desc": "Apps with login, payments and user management. Done it a couple of times and know how it works.",
-    "pwa_title": "Mobile web apps",
-    "pwa_desc": "Web apps that work like a real app on the phone, without an app store and without installation.",
-    "fullstack_title": "End-to-end",
-    "fullstack_desc": "I take responsibility for the whole solution, from database and API to what the user sees. One contact for everything.",
+    "saas_title": "Web applications and tools",
+    "saas_desc": "Apps with login and payments, internal tools and scripts, and web apps that work like a real app on the phone.",
+    "iot_title": "IoT and smart home",
+    "iot_desc": "Smart solutions that connect physical things to the internet. Home automation, sensors and custom setups.",
+    "print_title": "3D printing",
+    "print_desc": "Send files and get a quote. I can also help with design from measurements and sketches. Good for prototypes and functional parts.",
+    "hardware_title": "Hardware and builds",
+    "hardware_desc": "PC repair and upgrades, circuit board design and electronics projects. Hardware help from the inside out.",
     "consulting_title": "Technical help",
     "consulting_desc": "Need help thinking through something technical, or someone to bounce ideas with? Happy to help.",
-    "iot_title": "IoT and smart home",
-    "iot_desc": "Smart solutions that connect physical things to the internet. Home automation, sensors and custom setups using e.g. Home Assistant.",
-    "print_title": "3D printing",
-    "print_desc": "I have a 3D printer and can print simple things. Works well for practical use cases and prototypes.",
-    "pcb_title": "Electronics and PCB",
-    "pcb_desc": "Microcontrollers, custom firmware and simple PCBs. I can design and order boards for small projects.",
-    "pc_title": "PC and computers",
-    "pc_desc": "Repair, troubleshooting and reinstallation of PC and Mac. Help with hardware, upgrades and anything that stops working.",
-    "les_mer": "Read more"
+    "read_more": "Read more"
   },
   "projects": {
     "label": "Own projects",
@@ -120,10 +112,11 @@
     "nav_about": "About",
     "nav_contact": "Contact",
     "rights": "All rights reserved.",
-    "tjenester_label": "Services",
-    "tjenester_nettside": "Website",
-    "tjenester_webapp": "Web application",
-    "tjenester_elektronikk": "Electronics and PCB"
+    "services_label": "Services",
+    "service_website": "Website",
+    "service_webapp": "Web application",
+    "service_electronics": "Electronics",
+    "service_print": "3D printing"
   },
   "faq": {
     "label": "Questions and answers",
@@ -144,7 +137,7 @@
     "q7": "What should I do to get found on Google?",
     "a7": "Start with a well-built website and use relevant keywords in your content. The websites I build are optimized for search engines from the start."
   },
-  "tjenester": {
+  "services_overview": {
     "meta_title": "Services | Web developer and maker in Norway | TJLabs",
     "meta_desc": "Website, web application, IoT and electronics. Freelance web developer based in Norway.",
     "title": "Services",
@@ -155,9 +148,9 @@
     "webapp_desc": "Apps with login, payments and user data.",
     "elektronikk_title": "Electronics and PCB",
     "elektronikk_desc": "Circuit boards, firmware and IoT solutions.",
-    "les_mer": "Read more"
+    "read_more": "Read more"
   },
-  "tjenester_nettside": {
+  "service_website": {
     "meta_title": "Website for your business | Web developer in Norway | TJLabs",
     "meta_desc": "I build simple and effective websites for businesses in Norway. Fast delivery and no-obligation quote.",
     "title": "Website for your business",
@@ -175,7 +168,7 @@
     "cta_body": "Get in touch and describe what you need. I respond quickly and will give you an estimate.",
     "cta_btn": "Get in touch"
   },
-  "tjenester_webapp": {
+  "service_webapp": {
     "meta_title": "Web application and software development | TJLabs",
     "meta_desc": "Web applications with login, payments and user data. Full-stack web development in Norway.",
     "title": "Web application and software development",
@@ -193,7 +186,29 @@
     "cta_body": "Tell me what you need and we will see if I can help.",
     "cta_btn": "Get in touch"
   },
-  "tjenester_elektronikk": {
+  "service_print": {
+    "meta_title": "3D printing and prototypes | TJLabs",
+    "meta_desc": "Send files and get a quote for 3D printing. Help with design from measurements and sketches. Prototypes and functional parts.",
+    "title": "3D printing and prototypes",
+    "intro1": "Have something you want printed? Send your files and I will take a look and give you a price estimate.",
+    "intro2": "No file ready yet? I can help with design from measurements, sketches or photos of what you need.",
+    "how_title": "How it works",
+    "step1": "Send your files and describe what you need",
+    "step2": "I review it and send a no-obligation price estimate",
+    "step3": "Once you approve, I print and send it",
+    "what_title": "What I can help with",
+    "f1": "Prototypes and concept models",
+    "f2": "Functional parts and mounting points",
+    "f3": "Custom brackets and mounting solutions",
+    "f4": "Design from measurements and sketches",
+    "f5": "Simple products and practical objects",
+    "files_title": "File formats",
+    "files_body": "I work with STL, STEP and OBJ. If you do not have a file ready, measurements and a description of what you need is enough.",
+    "cta_title": "Ready to send?",
+    "cta_body": "Send your files and a description to hello@tjlabs.no and I will get back to you with a quote.",
+    "cta_btn": "Send email"
+  },
+  "service_electronics": {
     "meta_title": "Electronics, PCB and IoT | TJLabs",
     "meta_desc": "Custom circuit boards, firmware and IoT solutions. Smart home, sensors and microcontrollers in Norway.",
     "title": "Electronics, PCB and IoT",

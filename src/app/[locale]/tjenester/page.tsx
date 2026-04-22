@@ -10,7 +10,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'tjenester' });
+  const t = await getTranslations({ locale, namespace: 'services_overview' });
   const isNb = locale === 'nb';
   return {
     title: t('meta_title'),
@@ -31,7 +31,7 @@ export default async function TjenesterPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'tjenester' });
+  const t = await getTranslations({ locale, namespace: 'services_overview' });
 
   const services = [
     {

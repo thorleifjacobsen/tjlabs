@@ -1,5 +1,5 @@
 import { useTranslations, useLocale } from 'next-intl';
-import { Globe, Code2, Layers, Smartphone, ShoppingCart, Wrench, Printer, Cpu, Wifi, Monitor, ArrowRight } from 'lucide-react';
+import { Globe, ShoppingCart, Wifi, Printer, HardDrive, Wrench, ArrowRight } from 'lucide-react';
 import { AnimateIn } from '@/components/AnimateIn';
 
 export function Services() {
@@ -9,15 +9,11 @@ export function Services() {
 
   const items = [
     { icon: Globe,        title: t('web_title'),        desc: t('web_desc'),        href: `${base}/tjenester/nettside` },
-    { icon: Code2,        title: t('software_title'),   desc: t('software_desc'),   href: null },
-    { icon: ShoppingCart, title: t('saas_title'),       desc: t('saas_desc'),       href: `${base}/tjenester/webapplikasjon` },
-    { icon: Smartphone,   title: t('pwa_title'),        desc: t('pwa_desc'),        href: null },
-    { icon: Layers,       title: t('fullstack_title'),  desc: t('fullstack_desc'),  href: null },
-    { icon: Wrench,       title: t('consulting_title'), desc: t('consulting_desc'), href: null },
-    { icon: Wifi,         title: t('iot_title'),        desc: t('iot_desc'),        href: `${base}/tjenester/elektronikk` },
-    { icon: Printer,      title: t('print_title'),      desc: t('print_desc'),      href: null },
-    { icon: Cpu,          title: t('pcb_title'),        desc: t('pcb_desc'),        href: `${base}/tjenester/elektronikk` },
-    { icon: Monitor,      title: t('pc_title'),         desc: t('pc_desc'),         href: null },
+    { icon: ShoppingCart, title: t('saas_title'),        desc: t('saas_desc'),       href: `${base}/tjenester/webapplikasjon` },
+    { icon: Wifi,         title: t('iot_title'),         desc: t('iot_desc'),        href: `${base}/tjenester/elektronikk` },
+    { icon: Printer,      title: t('print_title'),       desc: t('print_desc'),      href: `${base}/tjenester/3d-printing` },
+    { icon: HardDrive,    title: t('hardware_title'),    desc: t('hardware_desc'),   href: null },
+    { icon: Wrench,       title: t('consulting_title'),  desc: t('consulting_desc'), href: null },
   ];
 
   return (
@@ -45,7 +41,7 @@ export function Services() {
                     href={href}
                     className="inline-flex items-center gap-1.5 mt-4 text-sm text-[var(--color-primary)] hover:underline"
                   >
-                    {t('les_mer')} <ArrowRight className="w-3.5 h-3.5" />
+                    {t('read_more')} <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 )}
               </div>
