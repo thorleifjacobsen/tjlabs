@@ -13,7 +13,7 @@ export default function JorkjenPage() {
 
         <div className="relative z-10 w-full max-w-5xl mx-auto px-5 pb-12 sm:pb-16">
           <h1
-            className="text-5xl sm:text-7xl font-black text-white leading-[0.88] mb-4"
+            className="text-4xl sm:text-5xl font-black text-white leading-[0.9] mb-4"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
           >
             Motorsykkel-
@@ -172,12 +172,12 @@ export default function JorkjenPage() {
       </section>
 
       {/* Kontakt */}
-      <section id="kontakt" className="bg-[#111] py-16 px-5 text-white">
+      <section id="kontakt" className="bg-[#f8f7f4] py-16 px-5">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
             <div>
               <h2
-                className="text-4xl sm:text-5xl font-black mb-8 leading-tight"
+                className="text-4xl sm:text-5xl font-black text-zinc-900 mb-8 leading-tight"
                 style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
               >
                 Ta kontakt
@@ -187,7 +187,7 @@ export default function JorkjenPage() {
                 <p className="text-zinc-500 text-sm mb-1">Ring Kenneth</p>
                 <a
                   href="tel:90549772"
-                  className="text-4xl sm:text-5xl font-black text-white hover:text-green-400 transition-colors tracking-tight"
+                  className="text-4xl sm:text-5xl font-black text-zinc-900 hover:text-green-700 transition-colors tracking-tight"
                   style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
                 >
                   905 49 772
@@ -196,21 +196,21 @@ export default function JorkjenPage() {
 
               <div className="mb-5">
                 <p className="text-zinc-500 text-sm mb-1">E-post</p>
-                <a href="mailto:verksted@jorkjenmc.no" className="text-zinc-200 hover:text-white transition-colors font-medium">
+                <a href="mailto:verksted@jorkjenmc.no" className="text-zinc-700 hover:text-zinc-900 transition-colors font-medium">
                   verksted@jorkjenmc.no
                 </a>
               </div>
 
               <div>
                 <p className="text-zinc-500 text-sm mb-1">Adresse</p>
-                <p className="text-zinc-200">Frolandsveien 410, 4838 Arendal</p>
+                <p className="text-zinc-700">Frolandsveien 410, 4838 Arendal</p>
               </div>
             </div>
 
             <div>
               <p className="text-zinc-500 text-sm mb-3">Åpningstider</p>
-              <div className="divide-y divide-zinc-800 mb-5">
-                <div className="py-2.5 text-yellow-500 text-sm font-medium">
+              <div className="divide-y divide-zinc-200 mb-5">
+                <div className="py-2.5 text-yellow-700 text-sm font-medium">
                   Sommerstengt uke 29-31
                 </div>
                 {[
@@ -219,20 +219,20 @@ export default function JorkjenPage() {
                   { dag: 'Torsdag', tid: '09.00-17.00' },
                 ].map((rad) => (
                   <div key={rad.dag} className="flex justify-between py-2.5">
-                    <span className="text-zinc-300">{rad.dag}</span>
-                    <span className="text-zinc-400">{rad.tid}</span>
+                    <span className="text-zinc-800 font-medium">{rad.dag}</span>
+                    <span className="text-zinc-500">{rad.tid}</span>
                   </div>
                 ))}
-                <div className="py-2.5 text-zinc-600 text-sm">Øvrige dager: stengt</div>
+                <div className="py-2.5 text-zinc-400 text-sm">Øvrige dager: stengt</div>
               </div>
-              <p className="text-zinc-600 text-xs">Org.nr: 999 100 899</p>
+              <p className="text-zinc-400 text-xs">Org.nr: 999 100 899</p>
             </div>
           </div>
 
           <div className="w-full h-72 overflow-hidden">
             <iframe
               title="Kart Jorkjen MC"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=8.765%2C58.473%2C8.815%2C58.503&layer=mapnik&marker=58.488%2C8.790"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=8.778%2C58.481%2C8.802%2C58.496&layer=mapnik&marker=58.488%2C8.790"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'grayscale(1)' }}
