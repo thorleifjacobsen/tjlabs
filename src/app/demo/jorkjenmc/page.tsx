@@ -12,9 +12,8 @@ export default function JorkjenPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/25" />
 
         <div className="relative z-10 w-full max-w-5xl mx-auto px-5 pb-12 sm:pb-16">
-          <p className="text-zinc-400 text-sm mb-3">Frolandsveien 410, 4838 Arendal</p>
           <h1
-            className="text-5xl sm:text-7xl font-black text-white leading-[1.0] mb-4"
+            className="text-5xl sm:text-7xl font-black text-white leading-[0.88] mb-4"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
           >
             Motorsykkel-
@@ -121,85 +120,53 @@ export default function JorkjenPage() {
           >
             Tjenester
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-zinc-800">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               {
                 title: 'Verksted og service',
                 desc: 'Reparasjon og service på MC og moped. Fagbrev i bunn og Motul-oljer i maskinen.',
                 href: '/demo/jorkjenmc/verksted',
                 cta: 'Les mer',
+                sub: null,
               },
               {
                 title: 'Vinterlagring',
                 desc: 'Frostfritt lokale med FG godkjent alarm. 10-punkt sjekk inkludert.',
-                href: '#vinterlagring',
-                cta: 'kr 2 390,- inkl. mva',
+                href: '/demo/jorkjenmc/verksted',
+                cta: 'Se detaljer',
+                sub: 'kr 2 390,- inkl. mva',
               },
               {
                 title: 'Butikk og deler',
                 desc: 'Olje, filter, plugger, hjelmer og hansker. Motul-forhandler. Kjøretøyer til salgs.',
                 href: '/demo/jorkjenmc/butikk',
                 cta: 'Se butikk',
+                sub: null,
               },
             ].map((item) => (
-              <div key={item.title} className="bg-[#111] p-7 flex flex-col gap-3">
+              <a
+                key={item.title}
+                href={item.href}
+                className="bg-zinc-900 border border-zinc-700 hover:border-zinc-500 p-6 flex flex-col gap-3 transition-colors group"
+              >
                 <h3
-                  className="text-xl font-bold text-white leading-snug"
+                  className="text-2xl font-black text-white leading-tight group-hover:text-green-400 transition-colors"
                   style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
                 >
                   {item.title}
                 </h3>
+                {item.sub && (
+                  <span className="text-green-400 font-bold text-sm">{item.sub}</span>
+                )}
                 <p className="text-zinc-400 text-sm leading-relaxed flex-1">{item.desc}</p>
-                <a
-                  href={item.href}
-                  className="text-green-400 hover:text-white text-sm font-medium transition-colors inline-flex items-center gap-1.5 mt-1"
-                >
+                <span className="text-zinc-500 group-hover:text-white text-sm font-medium transition-colors inline-flex items-center gap-1.5 mt-1">
                   {item.cta}
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
-              </div>
+                </span>
+              </a>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Vinterlagring */}
-      <section id="vinterlagring" className="bg-[#f8f7f4] py-14 px-5">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row gap-8 sm:items-end justify-between">
-          <div>
-            <h2
-              className="text-4xl sm:text-5xl font-black text-zinc-900 mb-2 leading-tight"
-              style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
-            >
-              Vinterlagring
-            </h2>
-            <div className="text-6xl font-black text-zinc-900 mt-4 mb-1 leading-none">
-              kr 2 390,-
-            </div>
-            <p className="text-zinc-500 text-base mb-4">inkl. mva og 10-punkt sjekk</p>
-            <p className="text-zinc-600 text-sm max-w-sm leading-relaxed">
-              Frostfritt lokale med FG godkjent alarm. Sykkelen sjekkes på 10 punkter
-              slik at den er klar til kjøring om våren.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 shrink-0">
-            <a
-              href="/demo/jorkjenmc/verksted#vinterlagring"
-              className="inline-flex items-center gap-2 text-zinc-700 hover:text-zinc-900 font-medium text-sm transition-colors"
-            >
-              Se hva som inngår i sjekken
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a
-              href="tel:90549772"
-              className="inline-block bg-zinc-900 hover:bg-zinc-700 text-white font-bold px-7 py-4 text-lg transition-colors text-center"
-            >
-              Ring for å bestille
-            </a>
           </div>
         </div>
       </section>
@@ -268,7 +235,7 @@ export default function JorkjenPage() {
               src="https://www.openstreetmap.org/export/embed.html?bbox=8.765%2C58.473%2C8.815%2C58.503&layer=mapnik&marker=58.488%2C8.790"
               width="100%"
               height="100%"
-              style={{ border: 0 }}
+              style={{ border: 0, filter: 'grayscale(1)' }}
               loading="lazy"
             />
           </div>
