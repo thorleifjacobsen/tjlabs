@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     // Norwegian secondary
     'IoT løsninger', 'smarthus', 'hjemmeautomatisering',
     'elektronikk', 'PCB design', 'kretskort', '3D printing',
+    'PC reparasjon', 'datareparasjon', 'PC hjelp', 'Mac reparasjon',
     'mikrokontroller', 'ESP32', 'Home Assistant',
     // English
     'web developer', 'web development', 'Next.js', 'freelance',

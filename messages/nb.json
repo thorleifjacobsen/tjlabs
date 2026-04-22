@@ -10,7 +10,7 @@
     "eyebrow": "Webutvikler og maker i Norge",
     "headline_1": "Jeg bygger ting",
     "headline_2": "du faktisk trenger.",
-    "tagline": "Nettsider, webapplikasjoner, 3D-print og litt elektronikk. Tar på meg oppdrag i hele Norge.",
+    "tagline": "Nettsider, webapplikasjoner, PC, elektronikk og 3D-print. Tar på meg oppdrag i hele Norge.",
     "cta_primary": "Ta kontakt",
     "cta_secondary": "Se portefølje"
   },
@@ -35,7 +35,10 @@
     "print_title": "3D-printing",
     "print_desc": "Jeg har en 3D-printer og kan printe enkle ting. Fungerer bra for praktiske brukstilfeller og prototyper.",
     "pcb_title": "Elektronikk og PCB",
-    "pcb_desc": "Mikrokontrollere, egendefinert firmware og enkle kretskort. Jeg kan designe og bestille kort til småprosjekter."
+    "pcb_desc": "Mikrokontrollere, egendefinert firmware og enkle kretskort. Jeg kan designe og bestille kort til småprosjekter.",
+    "pc_title": "PC og data",
+    "pc_desc": "Reparasjon, feilsøking og reinstallasjon av PC og Mac. Hjelp med maskinvare, oppgraderinger og alt som henger seg opp.",
+    "les_mer": "Les mer"
   },
   "projects": {
     "label": "Egne prosjekter",
@@ -129,17 +132,17 @@
     "q1": "Hva koster en nettside?",
     "a1": "Det kommer an på hva du trenger. En enkel landingsside kan koste noen tusenlapper, mens en fullstendig bedriftsnettside med tilpasset design starter gjerne på 10 000 til 30 000 kroner. Jeg gir alltid et uforpliktende estimat etter en kort prat.",
     "q2": "Jobber du med kunder i hele Norge?",
-    "a2": "Ja. Det meste foregår digitalt, og det fungerer fint uten fysiske møter. Jeg har jobbet med kunder fra forskjellige deler av landet.",
+    "a2": "Ja. Jeg tar på meg oppdrag over hele landet. Ta kontakt på e-post, så avtaler vi det praktiske.",
     "q3": "Hva er forskjellen på en nettside og en webapplikasjon?",
     "a3": "En nettside er for informasjon og presentasjon, for eksempel en bedriftsside eller portefølje. En webapplikasjon er interaktiv og lagrer data, for eksempel et bookingsystem eller en portal med innlogging.",
     "q4": "Kan du lage nettside for bedriften min?",
     "a4": "Ja, det er akkurat det jeg gjør. Ta kontakt og beskriv kort hva du trenger, så finner vi ut av det.",
-    "q5": "Bruker du WordPress?",
-    "a5": "Sjelden. Jeg bruker Next.js og React, som gir raskere og mer sikre nettsider. De fleste bedriftsnettsider trenger ikke et tungt CMS.",
+    "q5": "Kan du lage nettside med WordPress?",
+    "a5": "Ja, jeg kan hjelpe med WordPress-nettsider. Jeg tilpasser meg det du trenger.",
     "q6": "Hjelper du med PCB og elektronikk?",
     "a6": "Ja. Jeg kan designe enkle kretskort, skrive firmware til mikrokontrollere og sette opp IoT-løsninger for smarthus og liknende.",
     "q7": "Hva gjør jeg for å bli synlig på Google?",
-    "a7": "Start med en godt bygget nettside, fyll inn Google Business-profilen din, og bruk relevante søkeord i innholdet. Nettsidene jeg lager er optimert for søkemotorer fra starten av."
+    "a7": "Start med en godt bygget nettside og bruk relevante søkeord i innholdet. Nettsidene jeg lager er søkemotoroptimert fra starten av."
   },
   "tjenester": {
     "meta_title": "Tjenester | Webutvikler og maker i Norge | TJLabs",
@@ -159,7 +162,7 @@
     "meta_desc": "Jeg lager enkle og effektive nettsider og hjemmesider for bedrifter i Norge. Rask levering og uforpliktende pristilbud.",
     "title": "Nettside for bedriften din",
     "intro1": "Trenger bedriften din en nettside? Jeg lager nettsider som er enkle å bruke, ser bra ut og fungerer på alle enheter.",
-    "intro2": "Jeg bruker Next.js og React. Det gir raske nettsider og god synlighet på Google uten WordPress-bloat.",
+    "intro2": "Resultatet er en rask, sikker nettside som fungerer godt i søkemotorer og er enkel å vedlikeholde.",
     "what_title": "Hva du får",
     "f1": "Tilpasset design",
     "f2": "Mobilvenlig og rask",
@@ -167,7 +170,7 @@
     "f4": "Enkelt å vedlikeholde",
     "f5": "Kontaktskjema og integrasjoner",
     "tech_title": "Teknologi",
-    "tech_body": "Next.js, React og Tailwind CSS. Ingen unødvendige plugins. En rask, sikker nettside som gjør jobben.",
+    "tech_body": "Jeg bruker moderne webteknologi og tilpasser meg det prosjektet trenger, inkludert WordPress hvis det passer best.",
     "cta_title": "Klar for en ny nettside?",
     "cta_body": "Ta kontakt og beskriv hva du trenger. Jeg svarer raskt og gir deg et estimat.",
     "cta_btn": "Ta kontakt"
@@ -184,8 +187,8 @@
     "f3": "Abonnementstjenester med betaling",
     "f4": "PWA-apper som fungerer på telefonen",
     "f5": "API-integrasjoner og automatisering",
-    "tech_title": "Teknologi",
-    "tech_body": "Next.js, React, Node.js og PostgreSQL. Velger det som passer prosjektet, ikke det som er trendy.",
+    "tech_title": "Tilnærming",
+    "tech_body": "Jeg velger teknologi etter hva prosjektet trenger, ikke hva som er trendy. Enkelt, driftsikkert og lett å bygge videre på.",
     "cta_title": "Har du et prosjekt?",
     "cta_body": "Fortell meg hva du trenger, så ser vi om det er noe jeg kan hjelpe med.",
     "cta_btn": "Ta kontakt"
@@ -202,8 +205,8 @@
     "f3": "Home Assistant og smarthusintegrasjoner",
     "f4": "Sensorer og datainnsamling",
     "f5": "IoT-løsninger som kobler fysiske ting til nettet",
-    "tech_title": "Plattformer",
-    "tech_body": "Arduino, ESP32, Raspberry Pi og Home Assistant. Velger det som passer prosjektet best.",
+    "tech_title": "Tilnærming",
+    "tech_body": "Jeg jobber med mikrokontrollere, enkortsdatamaskiner og vanlige PC-er. Velger det som passer prosjektet.",
     "cta_title": "Har du en idé?",
     "cta_body": "Ta kontakt og beskriv prosjektet. Jeg svarer raskt.",
     "cta_btn": "Ta kontakt"

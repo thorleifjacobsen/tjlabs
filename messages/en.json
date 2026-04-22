@@ -10,7 +10,7 @@
     "eyebrow": "Web developer and maker in Norway",
     "headline_1": "I build things",
     "headline_2": "you actually need.",
-    "tagline": "Websites, web applications, 3D printing and a bit of electronics. Working with clients across Norway.",
+    "tagline": "Websites, web applications, PC, electronics and 3D printing. Working with clients across Norway.",
     "cta_primary": "Get in touch",
     "cta_secondary": "See portfolio"
   },
@@ -35,7 +35,10 @@
     "print_title": "3D printing",
     "print_desc": "I have a 3D printer and can print simple things. Works well for practical use cases and prototypes.",
     "pcb_title": "Electronics and PCB",
-    "pcb_desc": "Microcontrollers, custom firmware and simple PCBs. I can design and order boards for small projects."
+    "pcb_desc": "Microcontrollers, custom firmware and simple PCBs. I can design and order boards for small projects.",
+    "pc_title": "PC and computers",
+    "pc_desc": "Repair, troubleshooting and reinstallation of PC and Mac. Help with hardware, upgrades and anything that stops working.",
+    "les_mer": "Read more"
   },
   "projects": {
     "label": "Own projects",
@@ -129,17 +132,17 @@
     "q1": "How much does a website cost?",
     "a1": "It depends on what you need. A simple landing page can cost a few thousand kroner, while a full business website with custom design typically starts at 10,000 to 30,000 kroner. I always provide a no-obligation estimate after a short conversation.",
     "q2": "Do you work with clients across Norway?",
-    "a2": "Yes. Most of it happens digitally and works fine without in-person meetings. I have worked with clients from different parts of the country.",
+    "a2": "Yes. I work with clients across the country. Get in touch by email and we will sort out the details.",
     "q3": "What is the difference between a website and a web application?",
     "a3": "A website is for information and presentation, for example a company page or portfolio. A web application is interactive and stores data, for example a booking system or a portal with login.",
     "q4": "Can you build a website for my business?",
     "a4": "Yes, that is exactly what I do. Get in touch and describe what you need, and we will figure it out.",
-    "q5": "Do you use WordPress?",
-    "a5": "Rarely. I use Next.js and React, which gives faster and more secure websites. Most business websites do not need a heavy CMS.",
+    "q5": "Can you build a website with WordPress?",
+    "a5": "Yes, I can help with WordPress sites. I adapt to what you need.",
     "q6": "Do you help with PCB and electronics?",
     "a6": "Yes. I can design simple circuit boards, write firmware for microcontrollers and set up IoT solutions for smart homes and similar.",
     "q7": "What should I do to get found on Google?",
-    "a7": "Start with a well-built website, fill in your Google Business profile, and use relevant keywords in your content. The websites I build are optimized for search engines from the start."
+    "a7": "Start with a well-built website and use relevant keywords in your content. The websites I build are optimized for search engines from the start."
   },
   "tjenester": {
     "meta_title": "Services | Web developer and maker in Norway | TJLabs",
@@ -159,15 +162,15 @@
     "meta_desc": "I build simple and effective websites for businesses in Norway. Fast delivery and no-obligation quote.",
     "title": "Website for your business",
     "intro1": "Does your business need a website? I build websites that are easy to use, look good and work on all devices.",
-    "intro2": "I use Next.js and React. That gives fast websites and good visibility on Google without WordPress bloat.",
+    "intro2": "The result is a fast, secure website that works well in search engines and is easy to maintain.",
     "what_title": "What you get",
     "f1": "Custom design",
     "f2": "Mobile-friendly and fast",
     "f3": "Optimized for search engines (SEO)",
     "f4": "Easy to maintain",
     "f5": "Contact form and integrations",
-    "tech_title": "Technology",
-    "tech_body": "Next.js, React and Tailwind CSS. No unnecessary plugins. A fast, secure website that does the job.",
+    "tech_title": "Approach",
+    "tech_body": "I use modern web technology and adapt to what the project needs, including WordPress if that fits best.",
     "cta_title": "Ready for a new website?",
     "cta_body": "Get in touch and describe what you need. I respond quickly and will give you an estimate.",
     "cta_btn": "Get in touch"
@@ -184,8 +187,8 @@
     "f3": "Subscription services with payments",
     "f4": "PWA apps that work on the phone",
     "f5": "API integrations and automation",
-    "tech_title": "Technology",
-    "tech_body": "Next.js, React, Node.js and PostgreSQL. I pick what fits the project, not what is trendy.",
+    "tech_title": "Approach",
+    "tech_body": "I pick what fits the project, not what is trendy. Simple, reliable and easy to build on.",
     "cta_title": "Have a project?",
     "cta_body": "Tell me what you need and we will see if I can help.",
     "cta_btn": "Get in touch"
@@ -202,8 +205,8 @@
     "f3": "Home Assistant and smart home integrations",
     "f4": "Sensors and data collection",
     "f5": "IoT solutions connecting physical things to the internet",
-    "tech_title": "Platforms",
-    "tech_body": "Arduino, ESP32, Raspberry Pi and Home Assistant. I pick what fits the project best.",
+    "tech_title": "Approach",
+    "tech_body": "I work with microcontrollers, single-board computers and regular PCs. I pick what fits the project.",
     "cta_title": "Have an idea?",
     "cta_body": "Get in touch and describe the project. I respond quickly.",
     "cta_btn": "Get in touch"
