@@ -10,7 +10,7 @@ export default function JorkjenLayout({ children }: { children: React.ReactNode 
     <div className="min-h-screen flex flex-col" style={{ background: '#f8f7f4' }}>
       <header className="sticky top-0 z-50 bg-[#111] border-b border-zinc-800">
         <div className="max-w-5xl mx-auto px-5 flex items-center justify-between h-16">
-          <Link href="/demo/jorkjenmc" className="flex items-center gap-3">
+          <Link href="/demo/jorkjenmc" onClick={() => window.scrollTo({ top: 0 })} className="flex items-center gap-3">
             <img
               src="/demo/jorkjenmc/logo.png"
               alt="Jorkjen MC"
@@ -23,7 +23,7 @@ export default function JorkjenLayout({ children }: { children: React.ReactNode 
 
           <nav className="hidden md:flex items-center gap-7">
             {[
-              { href: '/demo/jorkjenmc', label: 'Hjem' },
+              { href: '/demo/jorkjenmc', label: 'Hjem', scrollTop: true },
               { href: '/demo/jorkjenmc/verksted', label: 'Verksted' },
               { href: '/demo/jorkjenmc/vinterlagring', label: 'Vinterlagring' },
               { href: '/demo/jorkjenmc/butikk', label: 'Butikk' },
@@ -32,6 +32,7 @@ export default function JorkjenLayout({ children }: { children: React.ReactNode 
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={link.scrollTop ? () => window.scrollTo({ top: 0 }) : undefined}
                 className="text-sm text-zinc-400 hover:text-white transition-colors"
               >
                 {link.label}
@@ -62,7 +63,7 @@ export default function JorkjenLayout({ children }: { children: React.ReactNode 
         {menuOpen && (
           <nav className="md:hidden bg-zinc-900 border-t border-zinc-800 px-5 py-5 flex flex-col gap-5">
             {[
-              { href: '/demo/jorkjenmc', label: 'Hjem' },
+              { href: '/demo/jorkjenmc', label: 'Hjem', scrollTop: true },
               { href: '/demo/jorkjenmc/verksted', label: 'Verksted' },
               { href: '/demo/jorkjenmc/vinterlagring', label: 'Vinterlagring' },
               { href: '/demo/jorkjenmc/butikk', label: 'Butikk' },
@@ -71,7 +72,7 @@ export default function JorkjenLayout({ children }: { children: React.ReactNode 
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={() => setMenuOpen(false)}
+                onClick={() => { setMenuOpen(false); if (link.scrollTop) window.scrollTo({ top: 0 }); }}
                 className="text-zinc-300 text-base hover:text-white transition-colors"
               >
                 {link.label}

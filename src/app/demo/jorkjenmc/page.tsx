@@ -4,7 +4,7 @@ export default function JorkjenPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[52vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[65vh] flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/demo/jorkjenmc/hero.jpg')" }}

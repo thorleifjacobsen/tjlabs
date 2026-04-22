@@ -4,7 +4,7 @@ export default function VerkstedPage() {
   return (
     <>
       {/* Foto-banner */}
-      <section className="relative h-52 sm:h-64 flex items-end overflow-hidden">
+      <section className="relative h-64 sm:h-80 flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/demo/jorkjenmc/hero.jpg')" }}
