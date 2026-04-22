@@ -320,12 +320,11 @@ export default function JorkjenPage() {
           <div className="w-full h-80 overflow-hidden rounded-sm">
             <iframe
               title="Kart Jorkjen MC"
-              src="https://maps.google.com/maps?q=Frolandsveien+410,+4838+Arendal,+Norway&z=15&output=embed"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=8.765%2C58.473%2C8.815%2C58.503&layer=mapnik&marker=58.488%2C8.790"
               width="100%"
               height="100%"
-              style={{ border: 0, filter: 'grayscale(30%) contrast(1.05)' }}
+              style={{ border: 0 }}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
