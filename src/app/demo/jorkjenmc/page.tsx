@@ -317,8 +317,16 @@ export default function JorkjenPage() {
             </div>
           </div>
 
-          <div className="bg-zinc-800 w-full h-64 flex items-center justify-center text-zinc-500">
-            <span className="text-sm">Kart: Frolandsveien 410, 4838 Arendal</span>
+          <div className="w-full h-80 overflow-hidden rounded-sm">
+            <iframe
+              title="Kart Jorkjen MC"
+              src="https://maps.google.com/maps?q=Frolandsveien+410,+4838+Arendal,+Norway&z=15&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'grayscale(30%) contrast(1.05)' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
