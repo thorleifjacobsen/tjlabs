@@ -25,6 +25,7 @@ export default function JorkjenLayout({ children }: { children: React.ReactNode 
             {[
               { href: '/demo/jorkjenmc', label: 'Hjem' },
               { href: '/demo/jorkjenmc/verksted', label: 'Verksted' },
+              { href: '/demo/jorkjenmc/vinterlagring', label: 'Vinterlagring' },
               { href: '/demo/jorkjenmc/butikk', label: 'Butikk' },
               { href: '/demo/jorkjenmc#kontakt', label: 'Kontakt' },
             ].map((link) => (
@@ -63,6 +64,7 @@ export default function JorkjenLayout({ children }: { children: React.ReactNode 
             {[
               { href: '/demo/jorkjenmc', label: 'Hjem' },
               { href: '/demo/jorkjenmc/verksted', label: 'Verksted' },
+              { href: '/demo/jorkjenmc/vinterlagring', label: 'Vinterlagring' },
               { href: '/demo/jorkjenmc/butikk', label: 'Butikk' },
               { href: '/demo/jorkjenmc#kontakt', label: 'Kontakt' },
             ].map((link) => (

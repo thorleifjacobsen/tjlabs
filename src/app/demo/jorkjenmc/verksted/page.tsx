@@ -1,18 +1,5 @@
 export const metadata = { robots: 'noindex' };
 
-const tiPunktSjekk = [
-  'Dekkslitasje / dekktrykk',
-  'Bremseklosser',
-  'Bremseveskens kokepunkt',
-  'Olje',
-  'Luftfilter',
-  'Hjullager',
-  'Styrelager',
-  'Simmeringer',
-  'Batterisyre og vedlikeholdslading',
-  'Kjøleveske',
-];
-
 export default function VerkstedPage() {
   return (
     <>
@@ -128,54 +115,22 @@ export default function VerkstedPage() {
         </div>
       </section>
 
-      {/* Vinterlagring */}
-      <section className="bg-[#111] py-16 px-5 text-white">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      {/* Lenke til vinterlagring */}
+      <section className="bg-white border-t border-zinc-200 py-8 px-5">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
-            <h2
-              className="text-4xl font-black mb-2 leading-tight"
-              style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
-            >
-              Vinterlagring
-            </h2>
-            <div className="text-6xl font-black text-white mt-5 mb-1 leading-none">
-              kr 2 390,-
-            </div>
-            <p className="text-zinc-400 text-base mb-6">inkl. mva og 10-punkt sjekk</p>
-
-            <div className="flex items-start gap-3 p-4 bg-zinc-800 border border-zinc-700 mb-7">
-              <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-              <span className="text-zinc-300 text-sm">Frostfritt lokale med FG godkjent alarm</span>
-            </div>
-
-            <a
-              href="tel:90549772"
-              className="inline-flex items-center gap-3 bg-white hover:bg-zinc-100 text-black font-bold px-7 py-4 text-lg transition-colors"
-            >
-              <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              905 49 772
-            </a>
+            <p className="font-semibold text-zinc-900">Vinterlagring</p>
+            <p className="text-zinc-500 text-sm">kr 2 390,- inkl. mva og 10-punkt sjekk</p>
           </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-zinc-500 uppercase tracking-wide mb-4">
-              10-punkt sjekk inkludert
-            </h3>
-            <ol className="space-y-2">
-              {tiPunktSjekk.map((punkt, i) => (
-                <li key={punkt} className="flex items-center gap-3 py-2 border-b border-zinc-800">
-                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-green-600 text-white text-xs font-bold shrink-0">
-                    {i + 1}
-                  </span>
-                  <span className="text-zinc-300 text-sm">{punkt}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
+          <a
+            href="/demo/jorkjenmc/vinterlagring"
+            className="inline-flex items-center gap-2 bg-zinc-900 hover:bg-zinc-700 text-white font-bold px-5 py-3 text-sm transition-colors shrink-0"
+          >
+            Les mer om vinterlagring
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </section>
     </>

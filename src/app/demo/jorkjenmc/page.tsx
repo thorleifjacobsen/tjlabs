@@ -132,7 +132,7 @@ export default function JorkjenPage() {
               {
                 title: 'Vinterlagring',
                 desc: 'Frostfritt lokale med FG godkjent alarm. 10-punkt sjekk inkludert.',
-                href: '/demo/jorkjenmc/verksted',
+                href: '/demo/jorkjenmc/vinterlagring',
                 cta: 'Se detaljer',
                 sub: 'kr 2 390,- inkl. mva',
               },
@@ -232,7 +232,7 @@ export default function JorkjenPage() {
           <div className="w-full h-72 overflow-hidden">
             <iframe
               title="Kart Jorkjen MC"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=8.778%2C58.481%2C8.802%2C58.496&layer=mapnik&marker=58.488%2C8.790"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=8.677%2C58.470%2C8.701%2C58.486&layer=mapnik&marker=58.478%2C8.689"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'grayscale(1)' }}
