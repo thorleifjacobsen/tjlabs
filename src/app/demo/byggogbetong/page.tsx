@@ -3,8 +3,6 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
-export const metadata = { robots: 'noindex' }
-
 const NAV_LINKS = ['Hjem', 'Tjenester', 'Om oss', 'Prosjekter', 'Kontakt']
 
 const SERVICES = [
