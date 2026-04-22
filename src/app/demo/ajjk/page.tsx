@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
   title: 'Arendal Jiu Jitsu Klubb',
@@ -54,7 +55,7 @@ function Hero() {
           </h1>
           <div className="w-16 h-1 bg-[#c0392b] mt-4 mb-6 rounded-full" />
           <p className="text-lg text-gray-600 mb-8 max-w-md leading-relaxed">
-            Jiu Jitsu passer for alle — fra 7 til 99 år. Kom og prøv gratis!{' '}
+            Jiu Jitsu passer for alle, fra 7 til 99 år. Kom og prøv gratis!{' '}
             <strong className="text-gray-800">De første 3 timene er på oss.</strong>
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
@@ -88,8 +89,8 @@ function Hero() {
         <div className="relative hidden lg:block">
           <div className="absolute -inset-4 bg-[#c0392b]/5 rounded-2xl -rotate-2" />
           <img
-            src="https://placehold.co/600x500/e8e8e8/555555"
-            alt="Jiu jitsu trening i dojo – elever øver teknikk på matten"
+            src="/assets/ajjk/instructors-group.jpg"
+            alt="Instruktørene ved Arendal Jiu Jitsu Klubb med diplomer i dojoet"
             className="relative rounded-xl shadow-xl w-full object-cover"
           />
           <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg px-5 py-4 border border-gray-100">
@@ -114,9 +115,9 @@ function About() {
         {/* Image */}
         <div className="relative order-2 lg:order-1">
           <img
-            src="https://placehold.co/600x400/e8e8e8/555555"
-            alt="Instruktør demonstrerer Jiu Jitsu-teknikk for elever"
-            className="rounded-xl shadow-lg w-full object-cover"
+            src="/assets/ajjk/dojo.jpg"
+            alt="Treningslokalet ved Arendal Jiu Jitsu Klubb"
+            className="rounded-xl shadow-lg w-full object-cover grayscale"
           />
           <div className="absolute top-4 right-4 bg-[#c0392b] text-white rounded-lg px-4 py-3 shadow-lg">
             <p className="text-2xl font-bold leading-none" style={{ fontFamily: 'var(--font-oswald)' }}>1980</p>
@@ -130,7 +131,7 @@ function About() {
           <SectionHeading>En kampsport for kropp og sjel</SectionHeading>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Jiu Jitsu er en av verdens eldste kampkunster, med røtter tilbake til det føydale Japan.
-            Kunsten handler om å bruke teknikk og balanse fremfor rå kraft — noe som gjør den ideell
+            Kunsten handler om teknikk og balanse fremfor rå kraft, noe som gjør den tilgjengelig
             for alle aldre og størrelser.
           </p>
           <p className="text-gray-600 mb-6 leading-relaxed">
@@ -174,7 +175,7 @@ const services = [
       </svg>
     ),
     title: 'Selvforsvar',
-    desc: 'Lær praktiske selvforsvarsteknikker som fungerer i virkeligheten. Jiu Jitsu ble opprinnelig utviklet som et effektivt forsvarssystem — det underviser vi fremdeles.',
+    desc: 'Lær selvforsvarsteknikker som faktisk fungerer. Jiu Jitsu ble opprinnelig utviklet som et praktisk forsvarssystem, og det underviser vi fremdeles.',
   },
   {
     icon: (
@@ -183,7 +184,7 @@ const services = [
       </svg>
     ),
     title: 'For alle aldre',
-    desc: 'Barn fra 7 år lærer grunnleggende teknikker i et trygt miljø. Voksne opp til 99 år er hjertelig velkomne — det er aldri for sent å begynne!',
+    desc: 'Barn fra 7 år lærer grunnleggende teknikker i et trygt miljø. Voksne opp til 99 år er like velkomne. Det er aldri for sent!',
   },
   {
     icon: (
@@ -204,7 +205,7 @@ function Services() {
           <SectionLabel>Hva tilbyr vi</SectionLabel>
           <SectionHeading>Hvorfor velge AJJK?</SectionHeading>
           <p className="text-gray-500 max-w-xl mx-auto">
-            Vi er mer enn bare en kampsportklubb — vi er et fellesskap som bygger sterke
+            Vi er mer enn en kampsportklubb. Vi er et fellesskap som bygger sterke
             mennesker gjennom god teknikk, respekt og glede.
           </p>
         </div>
@@ -236,10 +237,10 @@ function Services() {
 /* ── Section: Instructors ──────────────────────────────────────── */
 
 const instructors = [
-  { name: 'Geir Breimyr', title: 'Sensei · Klubbleder' },
-  { name: 'Arild Emil Olsen', title: 'Senpai · Instruktør' },
-  { name: 'Alf Kristian Eilertsen', title: 'Sensei · Instruktør' },
-  { name: 'Carl Are Dreier Hopen', title: 'Sensei · Instruktør' },
+  { name: 'Geir Breimyr', title: 'Sensei · Klubbleder', img: 'https://ajjk.no/wp-content/uploads/2022/09/geirsort-scaled.jpg' },
+  { name: 'Arild Emil Olsen', title: 'Senpai · Instruktør', img: 'https://ajjk.no/wp-content/uploads/2023/09/Resized_20230817_201442.jpg' },
+  { name: 'Alf Kristian Eilertsen', title: 'Sensei · Instruktør', img: 'https://ajjk.no/wp-content/uploads/2022/09/alf-scaled.jpg' },
+  { name: 'Carl Are Dreier Hopen', title: 'Sensei · Instruktør', img: 'https://ajjk.no/wp-content/uploads/2022/09/carl-scaled.jpg' },
 ]
 
 function Instructors() {
@@ -250,7 +251,7 @@ function Instructors() {
           <SectionLabel>Våre instruktører</SectionLabel>
           <SectionHeading>Møt teamet</SectionHeading>
           <p className="text-gray-500 max-w-xl mx-auto">
-            Erfarne og dedikerte instruktører som brenner for å dele sin kunnskap og lidenskap for Jiu Jitsu.
+            Instruktørene har trent Jiu Jitsu i mange år og underviser med engasjement og glede.
           </p>
         </div>
 
@@ -262,9 +263,9 @@ function Instructors() {
             >
               <div className="aspect-square bg-gray-100 relative overflow-hidden">
                 <img
-                  src="https://placehold.co/400x400/e8e8e8/555555"
-                  alt={`${inst.name} – Instruktør ved Arendal Jiu Jitsu Klubb`}
-                  className="w-full h-full object-cover"
+                  src={inst.img}
+                  alt={`${inst.name}, instruktør ved Arendal Jiu Jitsu Klubb`}
+                  className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
@@ -295,7 +296,7 @@ function Pricing() {
           <SectionLabel>Medlemskap</SectionLabel>
           <SectionHeading>Enkel og rettferdig prising</SectionHeading>
           <p className="text-gray-500 max-w-xl mx-auto">
-            De første 3 timene er alltid gratis — ingen forpliktelser. Deretter tilbyr vi
+            De første 3 timene er alltid gratis, uten forpliktelser. Deretter tilbyr vi
             rimelige månedspriser for hele familien.
           </p>
         </div>
@@ -413,7 +414,7 @@ const news = [
     category: 'Arrangement',
     title: 'Graderingssermoni – flott innsats!',
     excerpt:
-      'Lørdag avholdt vi årets første graderingssermoni. Gratulerer til alle som fortjent tok nye belter — vi er stolte av dere alle!',
+      'Lørdag avholdt vi årets første graderingssermoni. Gratulerer til alle som tok nye belter. Godt jobbet!',
   },
   {
     date: '10. januar 2025',
@@ -501,8 +502,8 @@ function CTABanner() {
           Klar for å prøve?
         </h2>
         <p className="text-red-100 text-lg mb-8 leading-relaxed">
-          De første <strong className="text-white">3 timene er gratis</strong> — ingen forpliktelser,
-          bare moro og god trening. Ta kontakt i dag!
+          De første <strong className="text-white">3 timene er gratis</strong>, uten forpliktelser.
+          Bare kom og prøv. Ta kontakt i dag!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -532,13 +533,17 @@ function Contact() {
     <section id="kontakt" className="bg-white py-16 sm:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <SectionLabel>Finn oss</SectionLabel>
-          <SectionHeading>Kontakt</SectionHeading>
+          <SectionLabel>Ta kontakt</SectionLabel>
+          <SectionHeading>Kontakt oss</SectionHeading>
+          <p className="text-gray-500 max-w-xl mx-auto">
+            Lurer du på noe? Send oss en melding, ring, eller møt opp på neste trening.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
-          {/* Contact details */}
-          <div className="lg:col-span-2 space-y-6">
+        {/* Top row: info + form */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
+          {/* Contact info */}
+          <div className="lg:col-span-2 space-y-5">
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-lg bg-[#c0392b]/10 text-[#c0392b] flex items-center justify-center shrink-0">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -547,7 +552,7 @@ function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="font-bold text-gray-900" style={{ fontFamily: 'var(--font-oswald)' }}>Adresse</p>
+                <p className="font-bold text-gray-900 text-sm" style={{ fontFamily: 'var(--font-oswald)' }}>Adresse</p>
                 <p className="text-gray-600 text-sm">Gåselia 12<br />4847 Arendal</p>
               </div>
             </div>
@@ -559,7 +564,7 @@ function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="font-bold text-gray-900" style={{ fontFamily: 'var(--font-oswald)' }}>Telefon</p>
+                <p className="font-bold text-gray-900 text-sm" style={{ fontFamily: 'var(--font-oswald)' }}>Telefon</p>
                 <a href="tel:90969119" className="text-gray-600 text-sm hover:text-[#c0392b] transition-colors">
                   909 69 119
                 </a>
@@ -574,13 +579,12 @@ function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="font-bold text-gray-900" style={{ fontFamily: 'var(--font-oswald)' }}>Påmelding trening</p>
-                <p className="text-gray-600 text-sm">Vi bruker Spond-appen</p>
-                <p className="text-gray-400 text-xs mt-0.5">Last ned Spond og finn AJJK</p>
+                <p className="font-bold text-gray-900 text-sm" style={{ fontFamily: 'var(--font-oswald)' }}>Spond</p>
+                <p className="text-gray-600 text-sm">Påmelding til trening via Spond-appen</p>
               </div>
             </div>
 
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-3 pt-1">
               <a
                 href="https://www.facebook.com/profile.php?id=100057278507055"
                 target="_blank"
@@ -604,18 +608,32 @@ function Contact() {
             </div>
           </div>
 
-          {/* Map placeholder */}
-          <div className="lg:col-span-3">
-            <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm aspect-video bg-gray-100 flex items-center justify-center">
-              <img
-                src="https://placehold.co/700x400/e8e8e8/555555"
-                alt="Kart som viser Gåselia 12, 4847 Arendal – lokasjon for Arendal Jiu Jitsu Klubb"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <p className="text-xs text-gray-400 text-center mt-2">Gåselia 12, 4847 Arendal</p>
+          {/* Contact form */}
+          <div className="lg:col-span-3 bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8">
+            <h3
+              className="text-xl font-bold text-gray-900 mb-5"
+              style={{ fontFamily: 'var(--font-oswald)' }}
+            >
+              Send oss en melding
+            </h3>
+            <ContactForm />
           </div>
         </div>
+
+        {/* Map */}
+        <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <iframe
+            src="https://maps.google.com/maps?q=G%C3%A5selia+12%2C+4847+Arendal%2C+Norway&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="360"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Kart: Gåselia 12, 4847 Arendal"
+          />
+        </div>
+        <p className="text-xs text-gray-400 text-center mt-2">Gåselia 12, 4847 Arendal</p>
       </div>
     </section>
   )

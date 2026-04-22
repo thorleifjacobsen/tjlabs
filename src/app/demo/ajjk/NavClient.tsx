@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const navLinks = [
   { href: '/demo/ajjk', label: 'Hjem' },
@@ -11,12 +12,20 @@ const navLinks = [
 
 export default function NavClient() {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+
+  const scrollTop = (e: React.MouseEvent, href: string) => {
+    if (pathname === href) {
+      e.preventDefault()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/demo/ajjk" className="flex items-center gap-3 shrink-0">
+        <Link href="/demo/ajjk" onClick={(e) => scrollTop(e, '/demo/ajjk')} className="flex items-center gap-3 shrink-0">
           <img
             src="https://ajjk.no/wp-content/uploads/2022/09/AJJK-LOGO.jpg"
             alt="Arendal Jiu Jitsu Klubb"
@@ -41,6 +50,7 @@ export default function NavClient() {
             <Link
               key={l.href}
               href={l.href}
+              onClick={(e) => scrollTop(e, l.href)}
               className="text-sm font-semibold tracking-wide text-gray-700 hover:text-[#c0392b] transition-colors"
               style={{ fontFamily: 'var(--font-oswald)' }}
             >
@@ -82,7 +92,7 @@ export default function NavClient() {
               <Link
                 key={l.href}
                 href={l.href}
-                onClick={() => setOpen(false)}
+                onClick={(e) => { scrollTop(e, l.href); setOpen(false) }}
                 className="px-3 py-3 text-gray-700 font-semibold hover:text-[#c0392b] hover:bg-gray-50 rounded transition-colors"
                 style={{ fontFamily: 'var(--font-oswald)' }}
               >

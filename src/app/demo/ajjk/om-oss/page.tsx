@@ -12,30 +12,34 @@ const instructors = [
   {
     name: 'Geir Breimyr',
     title: 'Sensei',
-    role: 'Klubbleder & Chefinstruktør',
-    bio: 'Geir har drevet Arendal Jiu Jitsu Klubb i over 30 år og er den drivende kraften bak klubbens utvikling. Med sin brede kunnskap og varme pedagogikk har han lært opp hundrevis av elever i alle aldre. Geir kan nås på 909 69 119.',
+    role: 'Klubbleder',
+    bio: 'Geir har vært med i klubben siden starten og ledet den i mange år. Han har trent og lært opp elever i alle aldre, og er godt å snakke med om du lurer på noe. Ring ham på 909 69 119.',
     belt: '5. dan',
+    img: '/assets/ajjk/geir.jpg',
   },
   {
     name: 'Arild Emil Olsen',
     title: 'Senpai',
     role: 'Instruktør',
-    bio: 'Arild Emil har trent Jiu Jitsu siden barnsben og er i dag en viktig del av trenerteamet. Han underviser primært i barne- og nybegynnerklassene, og er kjent for sin tålmodighet og evne til å forklare teknikker på en forståelig måte.',
+    bio: 'Arild Emil har trent Jiu Jitsu siden han var ung og er i dag fast instruktør i klubben. Han underviser primært i barne- og nybegynnerklassene og er flink til å forklare teknikker på en enkel og forståelig måte.',
     belt: '2. dan',
+    img: '/assets/ajjk/arild.jpg',
   },
   {
     name: 'Alf Kristian Eilertsen',
     title: 'Sensei',
     role: 'Instruktør',
-    bio: 'Alf Kristian er en erfaren instruktør med dyp kunnskap om tradisjonell Jiu Jitsu. Han bidrar til å ivareta den klassiske stilen og ånden i treningen, og er en ressurs både på matte og i det sosiale miljøet rundt klubben.',
+    bio: 'Alf Kristian har trent Jiu Jitsu i mange år og underviser med fokus på tradisjonell teknikk og stil. Han er godt likt i klubbmiljøet og bidrar til den gode stemningen på og utenfor matta.',
     belt: '3. dan',
+    img: '/assets/ajjk/alf.jpg',
   },
   {
     name: 'Carl Are Dreier Hopen',
     title: 'Sensei',
     role: 'Instruktør',
-    bio: 'Carl Are har en sterk konkurransebakgrunn og tilfører klubben et dynamisk perspektiv på Jiu Jitsu. Han leder voksenklassene med fokus på teknisk presisjon og praktisk anvendelse av teknikker.',
+    bio: 'Carl Are har bakgrunn fra konkurranser og underviser voksenklassene med fokus på god teknikk og praktisk anvendelse. Han er grundig og engasjert i undervisningen.',
     belt: '3. dan',
+    img: '/assets/ajjk/carl.jpg',
   },
 ]
 
@@ -59,7 +63,7 @@ const values = [
       </svg>
     ),
     title: 'Respekt',
-    desc: 'Respekt for instruktørene, medutøverne og kunsten selv er bærebjelken i vår kultur. Vi hilser alltid på hverandre og behandler alle med verdighet.',
+    desc: 'Respekt for instruktørene, medutøverne og kunsten er grunnlaget for vår klubbkultur. Vi hilser på hverandre og behandler alle med verdighet.',
   },
   {
     icon: (
@@ -68,7 +72,7 @@ const values = [
       </svg>
     ),
     title: 'Disiplin',
-    desc: 'God disiplin er nøkkelen til fremgang. Vi lærer å fokusere, øve målrettet og bygge gode vaner — ferdigheter som er verdifulle langt utenfor matta.',
+    desc: 'God disiplin er nøkkelen til fremgang. Vi lærer å fokusere og øve målrettet, noe som er nyttig langt utenfor matta.',
   },
   {
     icon: (
@@ -77,7 +81,7 @@ const values = [
       </svg>
     ),
     title: 'Fellesskap',
-    desc: 'AJJK er mer enn en treningsklubb — vi er en familie. Her møtes folk fra alle bakgrunner og livssituasjoner i et varmt og inkluderende miljø.',
+    desc: 'AJJK er mer enn en treningsklubb. Her møtes folk fra alle bakgrunner i et godt og inkluderende miljø.',
   },
   {
     icon: (
@@ -86,7 +90,7 @@ const values = [
       </svg>
     ),
     title: 'Utvikling',
-    desc: 'Vi tror på kontinuerlig vekst — både fysisk og mentalt. Det handler ikke om å bli best, men om å bli bedre enn du var i går.',
+    desc: 'Vi jobber for å bli bedre, både fysisk og mentalt. Det handler ikke om å bli best, men om å bli bedre enn i går.',
   },
 ]
 
@@ -111,7 +115,7 @@ export default function OmOssPage() {
             Om oss
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl">
-            Arendal Jiu Jitsu Klubb — et levende fellesskap for kampsport, selvforsvar og personlig utvikling siden 1980.
+            Arendal Jiu Jitsu Klubb har holdt til i Arendal siden 1980 og tilbyr kampsport og selvforsvar for alle aldre.
           </p>
         </div>
       </div>
@@ -143,9 +147,8 @@ export default function OmOssPage() {
                 på Sørlandet.
               </p>
               <p>
-                Gjennom fire tiår har vi utdannet hundrevis av elever i tradisjonell Jiu Jitsu —
-                fra nybegynnere som søker selvtillit og selvforsvar, til erfarne utøvere som konkurrerer
-                nasjonalt og internasjonalt.
+                Gjennom fire tiår har vi trent hundrevis av elever i tradisjonell Jiu Jitsu,
+                fra nybegynnere til erfarne utøvere som har konkurrert nasjonalt og internasjonalt.
               </p>
               <p>
                 I dag holder klubben til i et moderne dojo på Gåselia 12 i Arendal, med et aktivt
@@ -218,9 +221,9 @@ export default function OmOssPage() {
               >
                 <div className="sm:w-36 shrink-0">
                   <img
-                    src="https://placehold.co/400x400/e8e8e8/555555"
-                    alt={`${inst.name} – ${inst.title} ved Arendal Jiu Jitsu Klubb`}
-                    className="w-full sm:w-36 h-48 sm:h-full object-cover"
+                    src={inst.img}
+                    alt={`${inst.name}, ${inst.title} ved Arendal Jiu Jitsu Klubb`}
+                    className="w-full sm:w-36 h-48 sm:h-full object-cover object-top"
                   />
                 </div>
                 <div className="p-5 flex flex-col justify-center">
@@ -266,8 +269,8 @@ export default function OmOssPage() {
               Verdier og filosofi
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto">
-              Jiu Jitsu er mer enn kampsport — det er en livsstil og et tankesett som bygger karakter
-              og fellesskap. Dette er verdiene vi lever etter i Arendal Jiu Jitsu Klubb.
+              Jiu Jitsu er mer enn kampsport. Det er en livsform som bygger karakter
+              og skaper gode fellesskap. Dette er verdiene vi praktiserer i AJJK.
             </p>
           </div>
 
@@ -297,7 +300,7 @@ export default function OmOssPage() {
                   className="text-2xl sm:text-3xl font-bold text-gray-900 leading-relaxed"
                   style={{ fontFamily: 'var(--font-oswald)', fontWeight: 400 }}
                 >
-                  Jiu Jitsu — kunsten å seire ved å gi etter. Mykhet overvinner hardhet.
+                  Jiu Jitsu: kunsten å seire ved å gi etter. Mykhet overvinner hardhet.
                 </p>
                 <footer className="mt-4 text-sm text-gray-500">Gammel japansk visdom</footer>
               </blockquote>
@@ -419,7 +422,7 @@ export default function OmOssPage() {
             Bli en del av AJJK-familien
           </h2>
           <p className="text-red-100 mb-8 text-lg">
-            3 gratis prøvetimer venter deg. Ingen forpliktelser — bare kom og se om dette er noe for deg.
+            3 gratis prøvetimer venter deg. Ingen forpliktelser, bare kom og se om dette er noe for deg.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
