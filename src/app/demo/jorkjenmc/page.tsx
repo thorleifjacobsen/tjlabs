@@ -17,11 +17,13 @@ export default function JorkjenPage() {
   return (
     <>
       {/* Hero */}
-      <section
-        className="min-h-[80vh] flex items-center justify-center"
-        style={{ background: 'linear-gradient(160deg, #1c1c1c 0%, #222 60%, #2a2a2a 100%)' }}
-      >
-        <div className="text-center px-4 max-w-3xl mx-auto">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/demo/jorkjenmc/hero.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <h1
             className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white leading-tight mb-4"
             style={{ fontFamily: "'Barlow Condensed', 'Oswald', sans-serif" }}
