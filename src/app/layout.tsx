@@ -9,8 +9,19 @@ export const metadata: Metadata = {
   },
   description: 'Webutvikler og maker. Nettsider, webapplikasjoner, 3D-printing og elektronikk.',
   keywords: [
-    'webutvikler', 'web developer', 'Next.js', 'freelance',
-    'nettsider', 'webapplikasjon', '3D-printing', 'TJLabs',
+    // Norwegian primary
+    'nettside', 'nettside utvikling', 'hjemmeside', 'hjemmeside utvikling',
+    'lage nettside', 'nettside bedrift', 'nettside pris',
+    'webutvikler', 'webutvikling', 'webdesign',
+    'programutvikling', 'freelance webutvikler', 'webutvikler norge',
+    'webapplikasjon', 'webapplikasjon utvikling',
+    // Norwegian secondary
+    'IoT løsninger', 'smarthus', 'hjemmeautomatisering',
+    'elektronikk', 'PCB design', 'kretskort', '3D printing',
+    'mikrokontroller', 'ESP32', 'Home Assistant',
+    // English
+    'web developer', 'web development', 'Next.js', 'freelance',
+    'TJLabs',
   ],
   authors: [{ name: 'TJLabs', url: 'https://tjlabs.no' }],
   creator: 'TJLabs',

@@ -21,12 +21,20 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--color-text-secondary)]">
-            {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} className="hover:text-[var(--color-primary)] transition-colors">
-                {tn(l.tKey)}
-              </a>
-            ))}
+          <nav className="flex flex-col gap-3">
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--color-text-secondary)]">
+              {NAV_LINKS.map((l) => (
+                <a key={l.href} href={l.href} className="hover:text-[var(--color-primary)] transition-colors">
+                  {tn(l.tKey)}
+                </a>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--color-text-muted)]">
+              <span className="font-medium text-[var(--color-text-secondary)]">{t('tjenester_label')}:</span>
+              <a href="tjenester/nettside" className="hover:text-[var(--color-primary)] transition-colors">{t('tjenester_nettside')}</a>
+              <a href="tjenester/webapplikasjon" className="hover:text-[var(--color-primary)] transition-colors">{t('tjenester_webapp')}</a>
+              <a href="tjenester/elektronikk" className="hover:text-[var(--color-primary)] transition-colors">{t('tjenester_elektronikk')}</a>
+            </div>
           </nav>
 
           {/* Social */}

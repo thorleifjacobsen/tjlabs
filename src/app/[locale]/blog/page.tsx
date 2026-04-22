@@ -3,7 +3,22 @@ import { getAllPosts } from '@/lib/posts';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = { title: 'Blogg' };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isNb = locale === 'nb';
+  return {
+    title: isNb
+      ? 'Blogg | Webutvikling, elektronikk og prosjekter'
+      : 'Blog | Web development, electronics and projects',
+    description: isNb
+      ? 'Innlegg om webutvikling, nettside-priser, PCB-design og andre prosjekter.'
+      : 'Posts about web development, website costs, PCB design and other projects.',
+  };
+}
 
 export default function BlogPage() {
   const t = useTranslations('blog');

@@ -3,7 +3,22 @@ import Image from 'next/image';
 import { ArrowUpRight, Tag, Package } from 'lucide-react';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = { title: 'Portefølje' };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isNb = locale === 'nb';
+  return {
+    title: isNb
+      ? 'Portefølje | Nettsider og webapplikasjoner'
+      : 'Portfolio | Websites and web applications',
+    description: isNb
+      ? 'Prosjekter jeg har bygget og lansert. LostTags og Inventoriz, begge bygget med moderne webteknologi.'
+      : 'Projects I have built and launched. LostTags and Inventoriz, both built with modern web technology.',
+  };
+}
 
 export default function PortfolioPage() {
   const t = useTranslations('portfolio');

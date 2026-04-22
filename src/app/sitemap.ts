@@ -8,12 +8,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: BASE,                   lastModified: now,  changeFrequency: 'monthly', priority: 1.0 },
-    { url: `${BASE}/en`,           lastModified: now,  changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE}/portfolio`,    lastModified: now,  changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE}/en/portfolio`, lastModified: now,  changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/blog`,         lastModified: now,  changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE}/en/blog`,      lastModified: now,  changeFrequency: 'weekly',  priority: 0.7 },
+    { url: BASE,                              lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
+    { url: `${BASE}/en`,                      lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/portfolio`,               lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/en/portfolio`,            lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/blog`,                    lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${BASE}/en/blog`,                 lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
+    { url: `${BASE}/tjenester`,               lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/en/tjenester`,            lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/tjenester/nettside`,      lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/en/tjenester/nettside`,   lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/tjenester/webapplikasjon`,      lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/en/tjenester/webapplikasjon`,   lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/tjenester/elektronikk`,         lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/en/tjenester/elektronikk`,      lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
   ];
 
   const postRoutes: MetadataRoute.Sitemap = posts.flatMap((post) => [
