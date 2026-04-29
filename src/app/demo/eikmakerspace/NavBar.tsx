@@ -8,7 +8,7 @@ import Link from 'next/link'
 const navLinks = [
   { href: '/demo/eikmakerspace', label: 'Hjem', exact: true, anchor: false },
   { href: '/demo/eikmakerspace/utstyr', label: 'Utstyr', exact: false, anchor: false },
-  { href: '/demo/eikmakerspace#aktiviteter', label: 'Aktiviteter', exact: false, anchor: true },
+  { href: '/demo/eikmakerspace/aktiviteter', label: 'Aktiviteter', exact: false, anchor: false },
   { href: '/demo/eikmakerspace/bli-medlem', label: 'Bli Medlem', exact: false, anchor: false },
   { href: '/demo/eikmakerspace/booking', label: 'Booking', exact: false, anchor: false },
 ]

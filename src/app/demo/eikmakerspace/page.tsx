@@ -1,34 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { activities as allActivities } from './activities-data'
 
 export const metadata = { robots: 'noindex' }
 
-const activities = [
-  {
-    img: 'https://static.wixstatic.com/media/d38413_6f79806793744b6eb2c4c291887b16ea~mv2.jpg/v1/fill/w_596,h_596,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/d38413_6f79806793744b6eb2c4c291887b16ea~mv2.jpg',
-    label: 'Laser',
-    title: 'Lasergraveringsaktivitet',
-    date: 'Tirsdag 6. mai, 17:00',
-    location: 'Eik Makerspace, Eydehavn',
-    desc: 'Lær deg lasergraveren. Vi lager noe kult sammen i en sosial og avslappet atmosfære.',
-  },
-  {
-    img: 'https://static.wixstatic.com/media/d38413_95671af81c7f425f98c3876b1c64625b~mv2.jpg/v1/fill/w_596,h_596,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/d38413_95671af81c7f425f98c3876b1c64625b~mv2.jpg',
-    label: '3D Printing',
-    title: '3D-printingaktivitet',
-    date: 'Torsdag 8. mai, 17:00',
-    location: 'Eik Makerspace, Eydehavn',
-    desc: 'Fra digital modell til ferdig objekt. Vi bruker Bambu Lab X1 Carbon og ser på hele prosessen.',
-  },
-  {
-    img: 'https://static.wixstatic.com/media/d38413_a73f33e8edbf4e9d92b03d9f5071d0c4~mv2.jpg/v1/fill/w_596,h_596,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/d38413_a73f33e8edbf4e9d92b03d9f5071d0c4~mv2.jpg',
-    label: 'Maling',
-    title: 'Miniatyrmaling og resin 3D-printing',
-    date: 'Fredag 9. mai, 16:00',
-    location: 'Eik Makerspace, Eydehavn',
-    desc: 'Skriv ut og mal miniatyrer med resin-printeren. Perfekt for rollespillfigurer og detaljerte modeller.',
-  },
-]
+const upcomingActivities = allActivities.slice(0, 3)
 
 export default function Home() {
   return (
@@ -134,44 +110,62 @@ export default function Home() {
       </section>
 
       {/* Kommende aktiviteter */}
-      <section id="aktiviteter" className="bg-white py-20 sm:py-24 px-4 sm:px-6">
+      <section className="bg-white py-20 sm:py-24 px-4 sm:px-6">
         <div className="max-w-[1100px] mx-auto">
-          <div className="mb-10">
-            <span className="inline-block text-green-700 font-semibold text-xs uppercase tracking-widest mb-4">Kalender</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-              Kommende aktiviteter
-            </h2>
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <span className="inline-block text-green-700 font-semibold text-xs uppercase tracking-widest mb-4">Kalender</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+                Neste aktiviteter
+              </h2>
+            </div>
+            <Link
+              href="/demo/eikmakerspace/aktiviteter"
+              className="hidden sm:flex items-center gap-1.5 text-sm font-medium text-green-700 hover:text-green-800 transition-colors"
+            >
+              Se alle
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {activities.map((act) => (
-              <div
-                key={act.title}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow transition-shadow duration-200"
+            {upcomingActivities.map((act) => (
+              <Link
+                key={act.id}
+                href="/demo/eikmakerspace/aktiviteter"
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow hover:border-gray-300 transition-all duration-200 group"
               >
                 {/* Activity image */}
                 <div className="relative h-40 bg-gray-100 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={act.img} alt={act.title} className="w-full h-full object-cover" />
-                  <span className="absolute top-2 left-2 bg-white/90 text-gray-700 text-xs font-medium px-2 py-0.5 rounded-full shadow-sm">
+                  <img src={act.img} alt={act.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <span className={`absolute top-2 left-2 text-xs font-medium px-2 py-0.5 rounded-full shadow-sm ${act.labelColor}`}>
                     {act.label}
                   </span>
                 </div>
 
                 <div className="p-5">
-                  <h3 className="font-semibold text-gray-900 text-[15px] mb-2 leading-snug">{act.title}</h3>
-                  <p className="text-xs text-green-700 font-medium mb-0.5">{act.date}</p>
+                  <h3 className="font-semibold text-gray-900 text-[15px] mb-2 leading-snug group-hover:text-green-700 transition-colors">{act.title}</h3>
+                  <p className="text-xs text-green-700 font-medium mb-0.5">{act.date} · {act.time}</p>
                   <p className="text-xs text-gray-400 mb-3">{act.location}</p>
-                  <p className="text-sm text-gray-500 leading-relaxed mb-4">{act.desc}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-400">Flere datoer</span>
-                    <button className="text-xs text-green-700 font-semibold hover:text-green-800 transition-colors border border-green-200 hover:border-green-300 px-3 py-1.5 rounded-lg">
-                      Detaljer
-                    </button>
-                  </div>
+                  <p className="text-sm text-gray-500 leading-relaxed">{act.desc}</p>
                 </div>
-              </div>
+              </Link>
             ))}
+          </div>
+
+          <div className="mt-8 sm:hidden text-center">
+            <Link
+              href="/demo/eikmakerspace/aktiviteter"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-green-700 hover:text-green-800 transition-colors border border-green-200 hover:border-green-300 px-4 py-2 rounded-xl"
+            >
+              Se alle aktiviteter
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
