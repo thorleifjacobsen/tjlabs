@@ -17,19 +17,19 @@ const categories: { id: string; label: string; items: EquipItem[] }[] = [
     items: [
       {
         name: 'Bambu Lab X1 Carbon',
-        desc: 'Rask og presis filamentprinter. Stotter PLA, PETG, ABS og fleire materiale. Multifarge-kompatibel.',
+        desc: 'Rask og presis filamentprinter. Støtter PLA, PETG, ABS og flere materialer. Multifarge-kompatibel.',
         img: '/demo/eikmakerspace/eq1.jpg',
         bookable: true,
       },
       {
         name: 'Anycubic Photon M3 Max',
-        desc: 'Stor resin-printer for hogoploysungsmodeller. Perfekt for miniatyrar, smykker og detaljerte figurar.',
+        desc: 'Stor resin-printer for høyoppløsningsmodeller. Perfekt for miniatyrer, smykker og detaljerte figurer.',
         img: '/demo/eikmakerspace/eq2.jpg',
         bookable: true,
       },
       {
         name: 'Datamaskiner til 3D-modellering',
-        desc: 'Fleire maskiner med Fusion 360, Blender, Bambu Studio og Chitubox installert.',
+        desc: 'Flere maskiner med Fusion 360, Blender, Bambu Studio og Chitubox installert.',
       },
     ],
   },
@@ -39,7 +39,7 @@ const categories: { id: string; label: string; items: EquipItem[] }[] = [
     items: [
       {
         name: '100w CO2 Laser',
-        desc: 'Kutter og graverer i tre, leder, stoff, papir og fleire materiale. Stor arbeidsflate. Krev opplaering foer bruk.',
+        desc: 'Kutter og graverer i tre, lær, stoff, papir og flere materialer. Stor arbeidsflate. Krever opplæring før bruk.',
         bookable: true,
       },
     ],
@@ -50,21 +50,21 @@ const categories: { id: string; label: string; items: EquipItem[] }[] = [
     items: [
       {
         name: 'Bordsag',
-        desc: 'Presisjonsaggregat for rette kapp og gjennomskjaering av bord.',
+        desc: 'Presisjonsaggregat for rette kapp og gjennomskjæring av bord.',
         img: '/demo/eikmakerspace/eq3.jpg',
       },
       {
         name: 'Bandsag',
-        desc: 'For kurver, konturer og sagging av tjukkare materiale.',
+        desc: 'For kurver, konturer og saging av tykkere materialer.',
         img: '/demo/eikmakerspace/eq4.jpg',
       },
       { name: 'Dreiebenk', desc: 'Lag boller, bein og runde former i tre.' },
-      { name: 'Avretter og tykkelseshovl', desc: 'Faa plane og parallelle flater pa treplankane.' },
-      { name: 'Valsepussemaskin', desc: 'Sliper store flater raskt og jamt.' },
-      { name: 'Soylebormaskin', desc: 'For presise hol i rett vinkel.' },
-      { name: 'Bandpussemaskin', desc: 'For forming og slipping av kantar og konturar.' },
-      { name: 'Overhandsfresar', desc: 'Fresar profiler, not og falsar i tre.' },
-      { name: 'Handverktoey', desc: 'Hamrar, sager, meislar, fil, skrutrekkjarar og meir.' },
+      { name: 'Avretter og tykkelseshøvl', desc: 'Få plane og parallelle flater på treplanker.' },
+      { name: 'Valsepussemaskin', desc: 'Sliper store flater raskt og jevnt.' },
+      { name: 'Søylebormaskin', desc: 'For presise hull i rett vinkel.' },
+      { name: 'Bandpussemaskin', desc: 'For forming og slipping av kanter og konturer.' },
+      { name: 'Overhandsfreser', desc: 'Fresing av profiler, not og falser i tre.' },
+      { name: 'Håndverktøy', desc: 'Hammere, sager, meisler, fil, skrutrekkere og mer.' },
     ],
   },
   {
@@ -73,15 +73,15 @@ const categories: { id: string; label: string; items: EquipItem[] }[] = [
     items: [
       { name: 'Keramikkovn', desc: 'For brenning av keramikk og leirarbeid.', img: '/demo/eikmakerspace/eq5.jpg' },
       { name: 'Dreieskive', desc: 'Elektrisk dreieskive for pottemakeri.' },
-      { name: 'Stopeformar', desc: 'Ulike former for slipstoyping.' },
+      { name: 'Støpeformer', desc: 'Ulike former for slipestøping.' },
     ],
   },
   {
     id: 'annet',
     label: 'Annet',
     items: [
-      { name: 'Symaskin', desc: 'For tekstilarbeid og symprosjekt.' },
-      { name: 'Silikonformar og epoxy resin', desc: 'Lag eigne formar og stoy i resin. Strop, lagg og pigment tilgjengeleg.' },
+      { name: 'Symaskin', desc: 'For tekstilarbeid og symprosjekter.' },
+      { name: 'Silikonformer og epoxy resin', desc: 'Lag egne former og støp i resin. Strips, lim og pigment tilgjengelig.' },
     ],
   },
 ]
@@ -109,8 +109,8 @@ export default function UtstyrPage() {
           <span className="inline-block text-green-700 font-semibold text-xs uppercase tracking-widest mb-4">Oversikt</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight mb-4">Utstyr</h1>
           <p className="text-gray-500 text-lg max-w-2xl leading-relaxed mb-6">
-            Alt tilgjengeleg utstyr pa verkstedet. Berre medlemmar kan bruke maskinane.
-            Listene oppdaterast fortlopande.
+            Alt tilgjengelig utstyr på verkstedet. Bare medlemmer kan bruke maskinene.
+            Listene oppdateres fortløpende.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
@@ -140,7 +140,7 @@ export default function UtstyrPage() {
             <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
           <span className="text-amber-800">
-            Alle maskinar krev gyldig medlemsskap. Ikkje-medlemmar kan opphalde seg i lokalet, men <strong>ikkje</strong> bruke maskinane.
+            Alle maskiner krever gyldig medlemskap. Ikke-medlemmer kan oppholde seg i lokalet, men <strong>ikke</strong> bruke maskinene.
           </span>
         </div>
       </div>
@@ -194,8 +194,8 @@ export default function UtstyrPage() {
 
       {/* Bottom CTA */}
       <div className="border-t border-gray-200 bg-gray-50 py-16 px-4 sm:px-6 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-3 tracking-tight">Klar til aa bruke utstyret?</h2>
-        <p className="text-gray-500 mb-6">Meld deg inn og faa tilgang til alt verkstedet har aa by pa.</p>
+        <h2 className="text-2xl font-bold text-gray-900 mb-3 tracking-tight">Klar til å bruke utstyret?</h2>
+        <p className="text-gray-500 mb-6">Meld deg inn og få tilgang til alt verkstedet har å by på.</p>
         <Link href="/demo/eikmakerspace/bli-medlem" className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-7 py-3 rounded-xl transition-colors text-sm shadow-sm">
           Bli medlem
         </Link>

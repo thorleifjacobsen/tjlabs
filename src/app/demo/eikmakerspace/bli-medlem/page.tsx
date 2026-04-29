@@ -3,17 +3,17 @@ import Link from 'next/link'
 export const metadata = { robots: 'noindex' }
 
 const plans = [
-  { id: 'ungdom', label: 'Ungdom', price: 100, note: 'Under 18 ar', highlight: false },
-  { id: 'voksen', label: 'Voksen', price: 250, note: '18 ar og eldre', highlight: true },
+  { id: 'ungdom', label: 'Ungdom', price: 100, note: 'Under 18 år', highlight: false },
+  { id: 'voksen', label: 'Voksen', price: 250, note: '18 år og eldre', highlight: true },
   { id: 'familie-s', label: 'Familie', price: 350, note: '1 voksen + 2 barn', highlight: false },
   { id: 'familie-l', label: 'Stor Familie', price: 400, note: '2 voksne + 2 barn', highlight: false },
-  { id: 'stoette', label: 'Stottemedlem', price: null, note: 'Selvvalt belop', highlight: false },
+  { id: 'stoette', label: 'Støttemedlem', price: null, note: 'Selvvalgt beløp', highlight: false },
 ]
 
 const benefits = [
   {
-    title: 'Eigen oppbevaringsboks',
-    desc: 'Tilgang til din eigen store oppbevaringsboks pa verkstedet. Oppbevar prosjekta trygt mellom besok.',
+    title: 'Egen oppbevaringsboks',
+    desc: 'Tilgang til din egen store oppbevaringsboks på verkstedet. Oppbevar prosjektene trygt mellom besøk.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
@@ -22,7 +22,7 @@ const benefits = [
   },
   {
     title: 'Forbruksmateriell',
-    desc: 'Tilgang til delt forbruksmateriell som pussepapir, lim og anna. Del kostnadane, ikkje berre muligheitene.',
+    desc: 'Tilgang til delt forbruksmateriell som pussepapir, lim og annet. Del kostnadene, ikke bare mulighetene.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <line x1="16.5" y1="9.4" x2="7.5" y2="4.21" />
@@ -32,8 +32,8 @@ const benefits = [
     ),
   },
   {
-    title: 'Tilgang til alle maskinar',
-    desc: 'Bruk laser, 3D-printerar, trearbeidsmaskinane og alt anna utstyr. Nokre maskinar krev ei kort opplaering.',
+    title: 'Tilgang til alle maskiner',
+    desc: 'Bruk laser, 3D-printere, trearbeidsmaskinene og alt annet utstyr. Noen maskiner krever en kort opplæring.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
@@ -41,8 +41,8 @@ const benefits = [
     ),
   },
   {
-    title: 'Del av eit fellesskap',
-    desc: 'Meet andre skapere, del kunnskap og hjelp kvarandre. Delta pa aktivitetar og arrangement.',
+    title: 'Del av et fellesskap',
+    desc: 'Møt andre skapere, del kunnskap og hjelp hverandre. Delta på aktiviteter og arrangementer.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
@@ -52,7 +52,7 @@ const benefits = [
   },
   {
     title: 'Online booking av utstyr',
-    desc: 'Reserver tidsluker pa laseren og 3D-printarane via nettsida. Slipp kø og planlegg prosjekta dine.',
+    desc: 'Reserver tidsluker på laseren og 3D-printerne via nettsiden. Unngå kø og planlegg prosjektene dine.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" />
@@ -71,8 +71,8 @@ export default function BliMedlemPage() {
           <span className="inline-block text-green-700 font-semibold text-xs uppercase tracking-widest mb-4">Bli del av verkstedet</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight mb-4">Bli Medlem</h1>
           <p className="text-gray-500 text-lg max-w-2xl leading-relaxed">
-            Faa tilgang til alt utstyr pa Eik Makerspace. Del kostnadane, ikkje berre muligheitene.
-            Ingen er betalt her, alt driftas paa dugnad.
+            Få tilgang til alt utstyr på Eik Makerspace. Del kostnadene, ikke bare mulighetene.
+            Ingen er betalt her, alt driftes på dugnad.
           </p>
         </div>
       </div>
@@ -81,8 +81,8 @@ export default function BliMedlemPage() {
 
         {/* Pricing */}
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-1">Pris per maned</h2>
-          <p className="text-gray-500 text-sm mb-7">Betaling via Vipps eller bankoverforsel.</p>
+          <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-1">Pris per måned</h2>
+          <p className="text-gray-500 text-sm mb-7">Betaling via Vipps eller bankoverføring.</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {plans.map((plan) => (
@@ -120,7 +120,7 @@ export default function BliMedlemPage() {
 
         {/* Benefits */}
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-7">Kva faar du som medlem?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-7">Hva får du som medlem?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {benefits.map((b) => (
               <div key={b.title} className="flex gap-4 bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
@@ -138,24 +138,24 @@ export default function BliMedlemPage() {
 
         {/* Non-members note */}
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <h3 className="font-semibold text-gray-900 mb-2 text-[15px]">Kva med ikkje-medlemmar?</h3>
+          <h3 className="font-semibold text-gray-900 mb-2 text-[15px]">Hva med ikke-medlemmer?</h3>
           <p className="text-gray-500 text-sm leading-relaxed">
-            Alle er velkomne til aa opphalde seg i lokalet og sja kva vi held paa med.
-            Ikkje-medlemmar kan derimot <strong className="text-gray-700">ikkje</strong> bruke maskinane.
-            Vil du prove deg fram? Stikk innom ein av dei aapne kveldane og meld deg inn om det passar.
+            Alle er velkomne til å oppholde seg i lokalet og se hva vi holder på med.
+            Ikke-medlemmer kan derimot <strong className="text-gray-700">ikke</strong> bruke maskinene.
+            Vil du prøve deg fram? Stikk innom en av de åpne kveldene og meld deg inn om det passer.
           </p>
         </div>
 
         {/* CTA */}
         <div className="bg-green-600 rounded-2xl p-8 sm:p-12 text-center text-white">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 tracking-tight">
-            Klar til aa melde deg inn?
+            Klar til å melde deg inn?
           </h2>
           <p className="text-green-100 mb-7 max-w-md mx-auto text-[15px] leading-relaxed">
-            Send oss ein e-post med kva type medlemsskap du vil ha og kva du heiter. Vi ordnar resten.
+            Send oss en e-post med hva slags medlemskap du vil ha og hva du heter. Vi ordner resten.
           </p>
           <a
-            href="mailto:eik-makerspace@outlook.com?subject=Nytt%20medlemsskap%20Eik%20Makerspace"
+            href="mailto:eik-makerspace@outlook.com?subject=Nytt%20medlemskap%20Eik%20Makerspace"
             className="inline-flex items-center gap-2 bg-white text-green-700 font-semibold px-7 py-3 rounded-xl text-sm shadow hover:bg-green-50 transition-colors"
           >
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -169,13 +169,13 @@ export default function BliMedlemPage() {
 
         {/* FAQ */}
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-6">Vanlige sporsmal</h2>
+          <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-6">Vanlige spørsmål</h2>
           <div className="space-y-3">
             {[
-              { q: 'Kvar betaler eg?', a: 'Betaling via Vipps eller bankoverforsel. Vi sender detaljar nar du melder deg inn.' },
-              { q: 'Krev maskinane opplaering?', a: 'Nokre maskinar, som laseren, krev ei kort opplaering foer foerste bruk. Dette arrangerer vi paa dugnad.' },
-              { q: 'Kan eg melde meg inn midt i manaden?', a: 'Ja, vi fakturerer fraa den datoen du melder deg inn.' },
-              { q: 'Kva skjer om eg vil melde meg ut?', a: 'Send oss ein e-post, og vi avsluttar medlemsskapet ditt naar som helst.' },
+              { q: 'Hvor betaler jeg?', a: 'Betaling via Vipps eller bankoverføring. Vi sender detaljer når du melder deg inn.' },
+              { q: 'Krever maskinene opplæring?', a: 'Noen maskiner, som laseren, krever en kort opplæring før første bruk. Dette arrangerer vi på dugnad.' },
+              { q: 'Kan jeg melde meg inn midt i måneden?', a: 'Ja, vi fakturerer fra den datoen du melder deg inn.' },
+              { q: 'Hva skjer om jeg vil melde meg ut?', a: 'Send oss en e-post, og vi avslutter medlemskapet ditt når som helst.' },
             ].map((faq) => (
               <div key={faq.q} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                 <h3 className="font-semibold text-gray-900 text-sm mb-1.5">{faq.q}</h3>
@@ -187,7 +187,7 @@ export default function BliMedlemPage() {
 
         <div className="text-center">
           <Link href="/demo/eikmakerspace/utstyr" className="text-sm font-medium text-green-700 hover:text-green-800 transition-colors">
-            &larr; Sjaa kva utstyr vi har
+            &larr; Se hva slags utstyr vi har
           </Link>
         </div>
       </div>

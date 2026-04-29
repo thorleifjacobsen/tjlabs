@@ -5,52 +5,28 @@ export const metadata = { robots: 'noindex' }
 
 const activities = [
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500">
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-      </svg>
-    ),
-    bg: 'bg-amber-50',
-    border: 'border-amber-100',
-    iconBg: 'bg-amber-100',
+    img: 'https://static.wixstatic.com/media/d38413_6f79806793744b6eb2c4c291887b16ea~mv2.jpg/v1/fill/w_596,h_596,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/d38413_6f79806793744b6eb2c4c291887b16ea~mv2.jpg',
     label: 'Laser',
-    title: 'Laser gravering aktivitet',
+    title: 'Lasergraveringsaktivitet',
     date: 'Tirsdag 6. mai, 17:00',
     location: 'Eik Makerspace, Eydehavn',
-    desc: 'Laer deg laser-graveraren. Vi lager noko kult saman i ein sosial og avslappa atmosfaere.',
+    desc: 'Lær deg lasergraveren. Vi lager noe kult sammen i en sosial og avslappet atmosfære.',
   },
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-        <line x1="12" y1="22.08" x2="12" y2="12" />
-      </svg>
-    ),
-    bg: 'bg-blue-50',
-    border: 'border-blue-100',
-    iconBg: 'bg-blue-100',
+    img: 'https://static.wixstatic.com/media/d38413_95671af81c7f425f98c3876b1c64625b~mv2.jpg/v1/fill/w_596,h_596,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/d38413_95671af81c7f425f98c3876b1c64625b~mv2.jpg',
     label: '3D Printing',
-    title: '3D printing aktivitet',
+    title: '3D-printingaktivitet',
     date: 'Torsdag 8. mai, 17:00',
     location: 'Eik Makerspace, Eydehavn',
-    desc: 'Fra digital modell til ferdig objekt. Vi brukar Bambu Lab X1 Carbon og ser pa heile prosessen.',
+    desc: 'Fra digital modell til ferdig objekt. Vi bruker Bambu Lab X1 Carbon og ser på hele prosessen.',
   },
   {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-rose-500">
-        <circle cx="12" cy="12" r="2" />
-        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-      </svg>
-    ),
-    bg: 'bg-rose-50',
-    border: 'border-rose-100',
-    iconBg: 'bg-rose-100',
-    label: 'Resin',
-    title: 'Miniatyr maling og resin 3D printing',
+    img: 'https://static.wixstatic.com/media/d38413_a73f33e8edbf4e9d92b03d9f5071d0c4~mv2.jpg/v1/fill/w_596,h_596,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/d38413_a73f33e8edbf4e9d92b03d9f5071d0c4~mv2.jpg',
+    label: 'Maling',
+    title: 'Miniatyrmaling og resin 3D-printing',
     date: 'Fredag 9. mai, 16:00',
     location: 'Eik Makerspace, Eydehavn',
-    desc: 'Skriv ut og mal miniatyrar med resin-printeren. Perfekt for rollespelsfigurar og detaljerte modellar.',
+    desc: 'Skriv ut og mal miniatyrer med resin-printeren. Perfekt for rollespillfigurer og detaljerte modeller.',
   },
 ]
 
@@ -78,8 +54,8 @@ export default function Home() {
           </p>
 
           <p className="text-gray-500 text-lg max-w-xl leading-relaxed mb-10">
-            Lag, laer og utforsk i vaart delte verksted pa Eydehavn.
-            Her er det plass til alle som vil skape noko.
+            Lag, lær og utforsk i vårt delte verksted på Eydehavn.
+            Her er det plass til alle som vil skape noe.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -110,14 +86,14 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-gray-500 leading-relaxed text-[15px]">
                 <p>
-                  Eik Makerspace er eit frivilligdrive skaperverksted i Eydehavn.
-                  Ingen er betalt. Vi deler kostnadane til utstyr og lokale gjennom
-                  medlemsskap, og alle stiller opp pa dugnad.
+                  Eik Makerspace er et frivilligdrevet skaperverksted i Eydehavn.
+                  Ingen er betalt. Vi deler kostnadene til utstyr og lokale gjennom
+                  medlemskap, og alle stiller opp på dugnad.
                 </p>
                 <p>
-                  Her er det plass til aa laere, utvikle, utforske, mestre og
-                  mislykkas. Alle er velkomne uansett bakgrunn eller erfaring.
-                  Det einaste du treng er nysgjerrighet.
+                  Her er det plass til å lære, utvikle, utforske, mestre og
+                  mislykkes. Alle er velkomne uansett bakgrunn eller erfaring.
+                  Det eneste du trenger er nysgjerrighet.
                 </p>
               </div>
 
@@ -131,7 +107,7 @@ export default function Home() {
                   <p className="text-xs text-gray-400 mt-1">Kjelleren til Eydehavn Kuben</p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Aaent</p>
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Åpent</p>
                   <div className="text-sm text-gray-700 space-y-1">
                     <div className="flex justify-between"><span>Tirsdag</span><span className="tabular-nums text-gray-500">17 - 19</span></div>
                     <div className="flex justify-between"><span>Torsdag</span><span className="tabular-nums text-gray-500">17 - 19</span></div>
@@ -160,14 +136,11 @@ export default function Home() {
       {/* Kommende aktiviteter */}
       <section id="aktiviteter" className="bg-white py-20 sm:py-24 px-4 sm:px-6">
         <div className="max-w-[1100px] mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
-            <div>
-              <span className="inline-block text-green-700 font-semibold text-xs uppercase tracking-widest mb-4">Kalender</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-                Kommende aktiviteter
-              </h2>
-            </div>
-            <p className="text-sm text-gray-400">Gjentas kvar veke</p>
+          <div className="mb-10">
+            <span className="inline-block text-green-700 font-semibold text-xs uppercase tracking-widest mb-4">Kalender</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+              Kommende aktiviteter
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -176,14 +149,13 @@ export default function Home() {
                 key={act.title}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow transition-shadow duration-200"
               >
-                {/* Activity header */}
-                <div className={`h-36 ${act.bg} ${act.border} border-b flex items-center justify-center`}>
-                  <div className="text-center">
-                    <div className={`w-14 h-14 rounded-2xl ${act.iconBg} flex items-center justify-center mx-auto mb-2`}>
-                      {act.icon}
-                    </div>
-                    <span className="text-xs font-medium text-gray-500">{act.label}</span>
-                  </div>
+                {/* Activity image */}
+                <div className="relative h-40 bg-gray-100 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={act.img} alt={act.title} className="w-full h-full object-cover" />
+                  <span className="absolute top-2 left-2 bg-white/90 text-gray-700 text-xs font-medium px-2 py-0.5 rounded-full shadow-sm">
+                    {act.label}
+                  </span>
                 </div>
 
                 <div className="p-5">
@@ -192,9 +164,9 @@ export default function Home() {
                   <p className="text-xs text-gray-400 mb-3">{act.location}</p>
                   <p className="text-sm text-gray-500 leading-relaxed mb-4">{act.desc}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-400">Fleire datoar</span>
+                    <span className="text-xs text-gray-400">Flere datoer</span>
                     <button className="text-xs text-green-700 font-semibold hover:text-green-800 transition-colors border border-green-200 hover:border-green-300 px-3 py-1.5 rounded-lg">
-                      Detaljar
+                      Detaljer
                     </button>
                   </div>
                 </div>
@@ -211,7 +183,7 @@ export default function Home() {
             <div>
               <h2 className="text-lg font-semibold text-gray-900">Bli med i fellesskapet</h2>
               <p className="text-sm text-gray-500 mt-1">
-                Chat med andre medlemmar, del prosjekt og hald deg oppdatert.
+                Chat med andre medlemmer, del prosjekter og hold deg oppdatert.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
