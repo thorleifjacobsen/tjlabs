@@ -4,7 +4,13 @@ import { activities as allActivities } from './activities-data'
 
 export const metadata = { robots: 'noindex' }
 
-const upcomingActivities = allActivities.slice(0, 3)
+function formatIsoDate(isoDate: string) {
+  return new Date(isoDate).toLocaleDateString('nb-NO', {
+    weekday: 'long', day: 'numeric', month: 'long',
+  })
+}
+
+const upcomingActivities = allActivities.filter((a) => !a.recurring).slice(0, 3)
 
 export default function Home() {
   return (
@@ -148,7 +154,7 @@ export default function Home() {
 
                 <div className="p-5">
                   <h3 className="font-semibold text-gray-900 text-[15px] mb-2 leading-snug group-hover:text-green-700 transition-colors">{act.title}</h3>
-                  <p className="text-xs text-green-700 font-medium mb-0.5">{act.date} · {act.time}</p>
+                  <p className="text-xs text-green-700 font-medium mb-0.5">{formatIsoDate(act.isoDate)} · {act.time}</p>
                   <p className="text-xs text-gray-400 mb-3">{act.location}</p>
                   <p className="text-sm text-gray-500 leading-relaxed">{act.desc}</p>
                 </div>
