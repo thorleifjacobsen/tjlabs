@@ -18,13 +18,12 @@ const categories: { id: string; label: string; items: EquipItem[] }[] = [
       {
         name: 'Bambu Lab X1 Carbon',
         desc: 'Rask og presis filamentprinter. Støtter PLA, PETG, ABS og flere materialer. Multifarge-kompatibel.',
-        img: '/demo/eikmakerspace/eq1.jpg',
         bookable: true,
       },
       {
         name: 'Anycubic Photon M3 Max',
         desc: 'Stor resin-printer for høyoppløsningsmodeller. Perfekt for miniatyrer, smykker og detaljerte figurer.',
-        img: '/demo/eikmakerspace/eq2.jpg',
+        img: '/demo/eikmakerspace/eq5.jpg',
         bookable: true,
       },
       {
@@ -40,6 +39,7 @@ const categories: { id: string; label: string; items: EquipItem[] }[] = [
       {
         name: '100w CO2 Laser',
         desc: 'Kutter og graverer i tre, lær, stoff, papir og flere materialer. Stor arbeidsflate. Krever opplæring før bruk.',
+        img: '/demo/eikmakerspace/eq1.jpg',
         bookable: true,
       },
     ],
@@ -51,18 +51,17 @@ const categories: { id: string; label: string; items: EquipItem[] }[] = [
       {
         name: 'Bordsag',
         desc: 'Presisjonsaggregat for rette kapp og gjennomskjæring av bord.',
-        img: '/demo/eikmakerspace/eq3.jpg',
+        img: '/demo/eikmakerspace/eq4.jpg',
       },
       {
         name: 'Bandsag',
         desc: 'For kurver, konturer og saging av tykkere materialer.',
-        img: '/demo/eikmakerspace/eq4.jpg',
       },
       { name: 'Dreiebenk', desc: 'Lag boller, bein og runde former i tre.' },
-      { name: 'Avretter og tykkelseshøvl', desc: 'Få plane og parallelle flater på treplanker.' },
+      { name: 'Avretter og tykkelseshøvl', desc: 'Få plane og parallelle flater på treplanker.', img: '/demo/eikmakerspace/eq2.jpg' },
       { name: 'Valsepussemaskin', desc: 'Sliper store flater raskt og jevnt.' },
       { name: 'Søylebormaskin', desc: 'For presise hull i rett vinkel.' },
-      { name: 'Bandpussemaskin', desc: 'For forming og slipping av kanter og konturer.' },
+      { name: 'Bandpussemaskin', desc: 'For forming og slipping av kanter og konturer.', img: '/demo/eikmakerspace/eq3.jpg' },
       { name: 'Overhandsfreser', desc: 'Fresing av profiler, not og falser i tre.' },
       { name: 'Håndverktøy', desc: 'Hammere, sager, meisler, fil, skrutrekkere og mer.' },
     ],
@@ -71,7 +70,7 @@ const categories: { id: string; label: string; items: EquipItem[] }[] = [
     id: 'keramikk',
     label: 'Keramikk',
     items: [
-      { name: 'Keramikkovn', desc: 'For brenning av keramikk og leirarbeid.', img: '/demo/eikmakerspace/eq5.jpg' },
+      { name: 'Keramikkovn', desc: 'For brenning av keramikk og leirarbeid.' },
       { name: 'Dreieskive', desc: 'Elektrisk dreieskive for pottemakeri.' },
       { name: 'Støpeformer', desc: 'Ulike former for slipestøping.' },
     ],
