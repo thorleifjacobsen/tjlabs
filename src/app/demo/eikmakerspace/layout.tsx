@@ -15,7 +15,7 @@ export default function EikLayout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-semibold text-gray-900 mb-3 text-sm">Eik Makerspace</h3>
               <p className="text-sm text-gray-500 leading-relaxed mb-4">
-                Et frivilligdrevet skaperverksted i Eydehavn. Ingen er betalt. Aapent for alle.
+                Et frivilligdrevet skaperverksted i Eydehavn. Ingen er betalt. Åpent for alle.
               </p>
               <div className="flex gap-3">
                 <a href="https://www.facebook.com/Eik-Makerspace-Arendal-100561299156123/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
@@ -47,7 +47,7 @@ export default function EikLayout({ children }: { children: React.ReactNode }) {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900 mb-3 text-sm">Apningstider</h3>
+              <h3 className="font-semibold text-gray-900 mb-3 text-sm">Åpningstider</h3>
               <div className="text-sm text-gray-500 space-y-1.5">
                 <div className="flex justify-between gap-4"><span>Tirsdag</span><span className="text-gray-700 tabular-nums">17:00 - 19:00</span></div>
                 <div className="flex justify-between gap-4"><span>Torsdag</span><span className="text-gray-700 tabular-nums">17:00 - 19:00</span></div>

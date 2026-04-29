@@ -10,8 +10,8 @@ export default function BookingPage() {
           <span className="inline-block text-green-700 font-semibold text-xs uppercase tracking-widest mb-4">Reservasjon</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight mb-4">Booking</h1>
           <p className="text-gray-500 text-base max-w-xl leading-relaxed">
-            Reserver ein tidsluke pa laseren, Bambu Lab X1 Carbon eller resin-printeren.
-            Velg utstyr, klikk deretter ein ledig slot i kalendaren.
+            Reserver en tidsluke på laseren, Bambu Lab X1 Carbon eller resin-printeren.
+            Velg utstyr, klikk deretter en ledig slot i kalenderen.
           </p>
         </div>
       </div>

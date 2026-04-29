@@ -253,10 +253,10 @@ export default function BookingUI() {
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
         </svg>
         <span className="text-amber-800">
-          <strong>Booking er kun for medlemmar.</strong>
-          {' '}Ikkje medlem enno?{' '}
+          <strong>Booking er kun for medlemmer.</strong>
+          {' '}Ikke medlem ennå?{' '}
           <Link href="/demo/eikmakerspace/bli-medlem" className="font-semibold text-green-700 underline underline-offset-2 hover:text-green-800">
-            Les om medlemsskap
+            Les om medlemskap
           </Link>
         </span>
       </div>
@@ -422,11 +422,11 @@ export default function BookingUI() {
 
       {/* My bookings */}
       <div>
-        <h2 className="text-base font-semibold text-gray-900 mb-4">Mine bookingar</h2>
+        <h2 className="text-base font-semibold text-gray-900 mb-4">Mine bookinger</h2>
         {myBookings.length === 0 ? (
           <div className="bg-gray-50 border border-gray-200 rounded-xl px-5 py-8 text-center">
-            <p className="text-sm text-gray-400">Ingen bookingar i denne sesjonen enno.</p>
-            <p className="text-xs text-gray-300 mt-1">Velg ein ledig tidsluke i kalendaren ovanfor.</p>
+            <p className="text-sm text-gray-400">Ingen bookinger i denne sesjonen ennå.</p>
+            <p className="text-xs text-gray-300 mt-1">Velg en ledig tidsluke i kalenderen ovenfor.</p>
           </div>
         ) : (
           <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
@@ -454,7 +454,7 @@ export default function BookingUI() {
 
       {/* Disclaimer */}
       <p className="mt-10 text-xs text-gray-300 text-center">
-        Demo-bookingkalender. Ingen reelle bookingar vert lagra. Kontakt{' '}
+        Demo-bookingkalender. Ingen reelle bookinger lagres. Kontakt{' '}
         <span className="text-gray-400">eik-makerspace@outlook.com</span> for reell booking.
       </p>
     </div>
