@@ -14,25 +14,25 @@ const brands = [
     name: 'Mitsubishi Electric',
     tagline: 'Utmerket ytelse i kaldt klima',
     desc: 'Pålitelige pumper med god varmeytelse også ved lave utetemperaturer. Populær i norske hjem og kjent for stilig design og intuitiv betjening.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mitsubishi_Electric_logo.svg/320px-Mitsubishi_Electric_logo.svg.png',
+    logo: `${BASE}/mitsubishi-electric.svg`,
   },
   {
     name: 'Panasonic',
     tagline: 'Stille og effektiv drift',
     desc: 'God effekt og lavt støynivå. Spesielt sterk på oppvarming ved lave utetemperaturer, noe som gjør den velegnet for innlandet.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Panasonic_logo_%28Blue%29.svg/320px-Panasonic_logo_%28Blue%29.svg.png',
+    logo: `${BASE}/panasonic.svg`,
   },
   {
     name: 'Toshiba',
     tagline: 'Driftsikker hele vinteren',
     desc: 'Effektive og pålitelige pumper med god varmeytelse gjennom hele vintersesongen. Kjent for robust konstruksjon og lang levetid.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Toshiba_logo.svg/320px-Toshiba_logo.svg.png',
+    logo: `${BASE}/toshiba.svg`,
   },
   {
     name: 'Daikin',
     tagline: 'Markedsleder i Europa',
     desc: 'Japansk kvalitet og ingeniørkunst. Kjent for høy energieffektivitet, lang levetid og et bredt utvalg modeller for alle boligstørrelser.',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Daikin_logo.svg/320px-Daikin_logo.svg.png',
+    logo: `${BASE}/daikin.svg`,
   },
 ];
 
