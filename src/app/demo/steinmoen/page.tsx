@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import CatalogMarquee from './CatalogMarquee';
 
 export const metadata: Metadata = {
   title: 'Steinmoen – Din Reklamepartner',
@@ -27,20 +28,6 @@ const services = [
   { num: '10', name: 'Solfilm', slug: 'solfilm', desc: 'Bil & bygg, UV, personvern' },
 ];
 
-const catalogs = [
-  { name: 'Clique 2025', img: '/demo/steinmoen/cat-clique.jpg', url: 'https://viewer.joomag.com/clique-2025-v2/0442190001629794174?short&' },
-  { name: 'Tenson SS25', img: '/demo/steinmoen/cat-tenson.jpg', url: 'https://viewer.joomag.com/tenson-corporate-ss25-v1/0362334001729855822/p1?short=' },
-  { name: 'Craft Corporate', img: '/demo/steinmoen/cat-craft.jpg', url: 'https://viewer.joomag.com/craft-corporate-ss25-v1/0176495001503902632?short&' },
-  { name: 'Cutter & Buck', img: '/demo/steinmoen/cat-cutter.jpg', url: 'https://viewer.joomag.com/cutter-buck-ss25-v1/0085178001503903293/p8?short=' },
-  { name: 'James Harvest', img: '/demo/steinmoen/cat-harvest.jpg', url: 'https://viewer.joomag.com/james-harvest-2025-v1/0159605001485421952?short&' },
-  { name: 'Printer 2025', img: '/demo/steinmoen/cat-printer.jpg', url: 'https://viewer.joomag.com/printer-2025-v2/0328643001548236454?short&' },
-  { name: 'Sagaform SS25', img: '/demo/steinmoen/cat-sagaform.jpg', url: 'https://viewer.joomag.com/sagaform-ss25-v2/0603110001597914465?short&' },
-  { name: 'Toppoint 2024', img: '/demo/steinmoen/cat-toppoint.jpg', url: 'https://viewer.joomag.com/toppoint-2024-v3/0723093001485426873?short&' },
-  { name: 'Kosta Boda', img: '/demo/steinmoen/cat-kosta.jpg', url: 'https://viewer.joomag.com/kosta-boda-ss25-v1/0777468001487153531?short&' },
-  { name: 'Cottover 2025', img: '/demo/steinmoen/cat-cottover.jpg', url: 'https://viewer.joomag.com/cottover-co-2025-v1/0858695001548839005?short&' },
-  { name: 'Bergans 2025', img: '/demo/steinmoen/cat-bergans.png', url: 'https://heyzine.com/flip-book/2b739414cc.html' },
-];
-
 export default function SteinmoenHome() {
   return (
     <>
@@ -49,11 +36,7 @@ export default function SteinmoenHome() {
         .mq-track { display:flex; width:max-content; animation:marquee 40s linear infinite; }
         .mq-track:hover { animation-play-state:paused; }
 
-        @keyframes catmq { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-        .cat-mq { display:flex; width:max-content; animation:catmq 38s linear infinite; }
-        .cat-mq:hover { animation-play-state:paused; }
-
-        .svc-row { transition:background 150ms ease; }
+.svc-row { transition:background 150ms ease; }
         .svc-row:hover { background:#f0f4ff; }
         .svc-name { transition:transform 150ms ease; display:inline-block; }
         .svc-row:hover .svc-name { transform:translateX(3px); }
@@ -61,8 +44,7 @@ export default function SteinmoenHome() {
         .svc-row:hover .svc-arrow { opacity:1; }
         .pj-overlay { opacity:0; transition:opacity 200ms ease; }
         .pj-card:hover .pj-overlay { opacity:1; }
-        .cat-card-hover { transition:box-shadow 150ms ease,transform 150ms ease; }
-        .cat-card-hover:hover { box-shadow:0 6px 20px rgba(0,0,0,0.12); transform:translateY(-2px); }
+
       `}</style>
 
       {/* 1. HERO */}
@@ -247,31 +229,7 @@ export default function SteinmoenHome() {
           </div>
         </div>
 
-        {/* Auto-scrolling strip */}
-        <div className="overflow-hidden">
-          <div className="cat-mq py-2">
-            {[...catalogs, ...catalogs].map((c, i) => (
-              <a
-                key={i}
-                href={c.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cat-card-hover inline-block mx-3 bg-white align-top"
-                style={{ boxShadow: '0 1px 6px rgba(0,0,0,0.08)', width: '148px' }}
-              >
-                <img
-                  src={c.img}
-                  alt={c.name}
-                  style={{ width: '148px', height: '192px', objectFit: 'cover', display: 'block' }}
-                />
-                <div className="p-3">
-                  <p className="text-xs font-semibold text-[#111] mb-1 leading-snug">{c.name}</p>
-                  <p className="text-xs text-[#1a4fd6]">Se katalog &rarr;</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
+        <CatalogMarquee />
       </section>
 
       {/* 6. CTA */}

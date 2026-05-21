@@ -120,7 +120,7 @@ export default function KatalogerClient() {
             </div>
           </div>
           <a
-            href="/demo/steinmoen/kontakt"
+            href="/demo/steinmoen/kontakt#kontakt-form"
             className="px-6 py-3 bg-[#1a4fd6] text-white text-sm font-semibold hover:bg-[#1f60ff] transition-colors shrink-0"
           >
             Ta kontakt
