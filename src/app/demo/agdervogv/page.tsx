@@ -207,7 +207,8 @@ export default function FrontPage() {
                 </p>
                 <p>
                   Kort vei betyr rask respons. Vi er lokale, vi kjenner kundene våre, og vi stiller oss
-                  ansvarlig for arbeidet vi gjør.
+                  ansvarlig for arbeidet vi gjør. Vi tilbyr også vaktmestertjenester for deg som trenger
+                  hjelp med praktisk vedlikehold av bolig og eiendom.
                 </p>
               </div>
               <blockquote className="border-l-4 border-[#ea580c] pl-4 italic text-[#1e293b] font-medium mb-6">

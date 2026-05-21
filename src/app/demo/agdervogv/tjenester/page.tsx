@@ -46,6 +46,12 @@ const services = [
     img: 'https://mee.no/wp-content/uploads/2024/09/BildeB2C-B2B1000x800pxl-scaled.jpg',
     imgAlt: 'Hus med varmepumpe',
   },
+  {
+    title: 'Vaktmestertjenester',
+    body: 'Vi hjelper med praktisk vedlikehold av hjem og eiendom. Enten det gjelder enklere reparasjoner, sesongbaserte oppgaver eller andre handyman-oppdrag, stiller vi opp. Som lokal aktør er vi raskt på plass og kjenner forholdene i området. Ta kontakt for en uforpliktende prat om hva vi kan hjelpe deg med.',
+    img: '/demo/agdervogv/cozy-home.jpg',
+    imgAlt: 'Vedlikehold av bolig og eiendom',
+  },
 ];
 
 const faqs = [
@@ -68,6 +74,10 @@ const faqs = [
   {
     q: 'Hvilke merker leverer og monterer dere?',
     a: 'Vi leverer og monterer fra Mitsubishi Electric, Panasonic, Toshiba og Daikin. Vi hjelper deg velge riktig modell basert på boligstørrelse, isolasjon og budsjett. Vi servicer også andre merker.',
+  },
+  {
+    q: 'Hva slags vaktmesteroppdrag tar dere på dere?',
+    a: 'Vi hjelper med praktisk vedlikehold og enklere reparasjoner på hjem og eiendom. Det kan være sesongbaserte oppgaver, småfiks inne eller ute, eller andre handyman-oppdrag du trenger hjelp med. Ring oss for en prat om hva vi kan gjøre for deg.',
   },
 ];
 
@@ -96,7 +106,7 @@ export default function TjenesterPage() {
             Hva vi tilbyr
           </h1>
           <p className="text-slate-300 max-w-xl">
-            Alt fra første befaring til fast serviceavtale. Alle oppdrag utføres av sertifiserte fagmenn med
+            Alt fra første befaring til fast serviceavtale og vaktmestertjenester. Alle oppdrag utføres av sertifiserte fagmenn med
             lokalkjennskap til Vegårshei og omegn.
           </p>
         </div>

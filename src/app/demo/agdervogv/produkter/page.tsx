@@ -125,7 +125,7 @@ export default function ProdukterPage() {
           </div>
 
           <p className="mt-3 text-xs text-[#94a3b8] border-t border-[#e2e8f0] pt-3">
-            Priser varierer etter modell og bolig — kontakt oss for et uforpliktende tilbud.
+            Priser varierer etter modell og bolig, kontakt oss for et uforpliktende tilbud.
           </p>
         </div>
       </section>

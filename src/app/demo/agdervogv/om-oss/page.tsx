@@ -51,7 +51,7 @@ export default function OmOssPage() {
             Agder Varme og Vedlikehold
           </h1>
           <p className="text-[#64748b] max-w-xl">
-            Din lokale varmepumpeekspert i Vegårshei og omegn. Vi er etablert her, vi jobber her,
+            Din lokale ekspert på varmepumper og vaktmestertjenester i Vegårshei og omegn. Vi er etablert her, vi jobber her,
             og vi kjenner forholdene bedre enn noen tilreisende montør kan.
           </p>
         </div>
@@ -90,7 +90,9 @@ export default function OmOssPage() {
                 </p>
                 <p>
                   I dag tilbyr vi alt fra gratis befaring og rådgivning til sertifisert montering,
-                  service og faste serviceavtaler for privatpersoner og næringsbygg.
+                  service og faste serviceavtaler for privatpersoner og næringsbygg. Vi tar også
+                  på oss vaktmesteroppdrag, fra enklere reparasjoner til sesongbasert vedlikehold
+                  av eiendommen din.
                 </p>
               </div>
 
