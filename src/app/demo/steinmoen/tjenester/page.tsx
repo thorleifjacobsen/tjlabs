@@ -163,9 +163,9 @@ export default function TjenesterPage() {
             <p className="text-white/50 text-sm">Ta kontakt, og vi finner den beste løsningen for din bedrift.</p>
           </div>
           <div className="flex gap-4">
-            <Link href="/demo/steinmoen/kontakt" className="px-6 py-3 bg-[#1a4fd6] text-white text-sm font-semibold hover:bg-[#1f60ff] transition-colors">
+            <a href="/demo/steinmoen/kontakt#kontakt-form" className="px-6 py-3 bg-[#1a4fd6] text-white text-sm font-semibold hover:bg-[#1f60ff] transition-colors">
               Ta kontakt
-            </Link>
+            </a>
             <a href="tel:37043896" className="px-6 py-3 text-white text-sm font-semibold hover:bg-white/10 transition-colors" style={{ border: '1.5px solid rgba(255,255,255,0.3)' }}>
               Ring oss
             </a>

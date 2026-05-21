@@ -179,7 +179,7 @@ export default function KontaktPage() {
       </section>
 
       {/* General contact + form */}
-      <section className="bg-[#0f1f3d] py-[60px] md:py-[100px] px-6 md:px-10">
+      <section id="kontakt-form" className="bg-[#0f1f3d] py-[60px] md:py-[100px] px-6 md:px-10" style={{ scrollMarginTop: '64px' }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Left: contact info */}

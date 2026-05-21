@@ -35,13 +35,13 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
               <Link href="/demo/steinmoen/kontakt" className="text-sm text-[#666] hover:text-[#111] transition-colors duration-150">
                 Kontakt
               </Link>
-              <Link
-                href="/demo/steinmoen/kontakt"
+              <a
+                href="/demo/steinmoen/kontakt#kontakt-form"
                 className="text-sm font-medium px-4 py-2 text-[#111] hover:bg-[#111] hover:text-white transition-colors duration-150"
                 style={{ border: '1.5px solid #111' }}
               >
                 Ta kontakt
-              </Link>
+              </a>
             </nav>
 
             {/* Mobile hamburger */}
@@ -63,14 +63,14 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
             <Link href="/demo/steinmoen/tjenester" className="text-2xl font-semibold text-[#111]" onClick={() => setMenuOpen(false)}>Tjenester</Link>
             <Link href="/demo/steinmoen/kataloger" className="text-2xl font-semibold text-[#111]" onClick={() => setMenuOpen(false)}>Kataloger</Link>
             <Link href="/demo/steinmoen/kontakt" className="text-2xl font-semibold text-[#111]" onClick={() => setMenuOpen(false)}>Kontakt</Link>
-            <Link
-              href="/demo/steinmoen/kontakt"
+            <a
+              href="/demo/steinmoen/kontakt#kontakt-form"
               className="text-base font-medium px-6 py-3 text-[#111]"
               style={{ border: '1.5px solid #111' }}
               onClick={() => setMenuOpen(false)}
             >
               Ta kontakt
-            </Link>
+            </a>
           </div>
         )}
 

@@ -285,12 +285,12 @@ export default function SteinmoenHome() {
             </h2>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 md:shrink-0">
-            <Link
-              href="/demo/steinmoen/kontakt"
+            <a
+              href="/demo/steinmoen/kontakt#kontakt-form"
               className="px-8 py-4 bg-[#1a4fd6] text-white text-sm font-semibold hover:bg-[#1f60ff] transition-colors duration-150 text-center"
             >
               Ta kontakt
-            </Link>
+            </a>
             <Link
               href="/demo/steinmoen/kontakt"
               className="px-8 py-4 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-150 text-center"
