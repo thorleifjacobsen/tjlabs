@@ -29,16 +29,13 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
       <header className="sticky top-0 z-50 bg-white border-b border-[#e2e8f0]">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
 
-          {/* Logo + company name */}
-          <a href={BASE} className="flex items-center gap-2.5 flex-shrink-0">
+          {/* Logo */}
+          <a href={BASE} className="flex-shrink-0">
             <img
-              src="/demo/agdervogv/logo.png"
+              src="/demo/agdervogv/logo-text.png"
               alt="Agder Varme og Vedlikehold"
               className="h-10 w-auto"
             />
-            <span className="font-bold text-[#1e293b] text-[13px] leading-[1.3] hidden sm:block">
-              Agder Varme<br />og Vedlikehold
-            </span>
           </a>
 
           <div className="flex items-center gap-5">
