@@ -16,14 +16,14 @@ export default function ClientMarquee() {
   const outerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  const posRef    = useRef(0);
-  const rafRef    = useRef<number | undefined>(undefined);
-  const singleW   = useRef(0);
-  const dragging  = useRef(false);
-  const dragged   = useRef(false);
-  const startX    = useRef(0);
-  const posStart  = useRef(0);
-  const resumeT   = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const posRef   = useRef(0);
+  const rafRef   = useRef<number | undefined>(undefined);
+  const singleW  = useRef(0);
+  const dragging = useRef(false);
+  const dragged  = useRef(false);
+  const startX   = useRef(0);
+  const posStart = useRef(0);
+  const resumeT  = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const applyPos = () => {
     if (trackRef.current) trackRef.current.style.transform = `translateX(${posRef.current}px)`;
@@ -88,8 +88,15 @@ export default function ClientMarquee() {
   return (
     <div
       ref={outerRef}
-      className="bg-white border-t border-b border-[#e5e5e5] overflow-hidden"
-      style={{ cursor: 'grab', userSelect: 'none', WebkitUserSelect: 'none', height: '48px', display: 'flex', alignItems: 'center' }}
+      className="bg-white border-t border-b border-[#e5e5e5]"
+      style={{
+        position: 'relative',
+        height: '48px',
+        overflow: 'hidden',
+        cursor: 'grab',
+        userSelect: 'none',
+        WebkitUserSelect: 'none',
+      }}
       onMouseDown={(e) => onDragStart(e.clientX)}
       onMouseMove={(e) => onDragMove(e.clientX)}
       onMouseUp={onDragEnd}
@@ -98,16 +105,19 @@ export default function ClientMarquee() {
       onTouchMove={(e) => onDragMove(e.touches[0].clientX)}
       onTouchEnd={onDragEnd}
     >
-      <div
-        ref={trackRef}
-        style={{ display: 'flex', alignItems: 'center', width: 'max-content', willChange: 'transform' }}
-      >
-        {[...clients, ...clients].map((c, i) => (
-          <span key={i} className="text-sm text-[#111] whitespace-nowrap" style={{ padding: '0 32px' }}>
-            {c}
-            <span className="text-[#ddd]" style={{ marginLeft: '32px' }}>|</span>
-          </span>
-        ))}
+      {/* Centering wrapper — keeps track vertically centered without mixing transforms */}
+      <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center' }}>
+        <div
+          ref={trackRef}
+          style={{ display: 'flex', alignItems: 'center', width: 'max-content', flexShrink: 0, willChange: 'transform' }}
+        >
+          {[...clients, ...clients].map((c, i) => (
+            <span key={i} style={{ display: 'inline-flex', alignItems: 'center', flexShrink: 0 }}>
+              <span className="text-sm text-[#444] whitespace-nowrap" style={{ padding: '0 28px' }}>{c}</span>
+              <span style={{ width: '1px', height: '12px', background: '#ddd', flexShrink: 0 }} />
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

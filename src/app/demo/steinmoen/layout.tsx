@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import DemoWatermark from '@/components/DemoWatermark';
-import ScrollToTop from './ScrollToTop';
 
 export default function SteinmoenLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -120,7 +119,6 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
         </footer>
       </div>
 
-      <ScrollToTop />
       <DemoWatermark />
     </>
   );

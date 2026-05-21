@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ScrollToTop from '../ScrollToTop';
 
 export const metadata: Metadata = {
   title: 'Tjenester – Steinmoen',
@@ -172,6 +173,8 @@ export default function TjenesterPage() {
           </div>
         </div>
       </div>
+
+      <ScrollToTop />
     </>
   );
 }
