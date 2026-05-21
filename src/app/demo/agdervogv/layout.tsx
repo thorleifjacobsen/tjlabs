@@ -156,8 +156,12 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
             </div>
           </div>
 
-          <div className="border-t border-[#e2e8f0] pt-6 text-xs text-[#64748b]">
-            &copy; 2025 Agder Varme og Vedlikehold. Alle rettigheter forbeholdt.
+          <div className="border-t border-[#e2e8f0] pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <p className="text-xs text-[#64748b]">&copy; 2025 Agder Varme og Vedlikehold. Alle rettigheter forbeholdt.</p>
+            <div className="flex items-center gap-4">
+              <img src="/demo/agdervogv/isovator.jpg" alt="ISOVATOR sertifisert installatør" className="h-8 w-auto object-contain opacity-80" />
+              <img src="/demo/agdervogv/novap.jpg" alt="NOVAP godkjent forhandler" className="h-8 w-auto object-contain opacity-80" />
+            </div>
           </div>
         </div>
       </footer>
