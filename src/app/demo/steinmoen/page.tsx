@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Steinmoen – Din Reklamepartner',
-  description: 'Skilter, bildekor, profiltøy, trykksaker og mer. Grimstad og Arendal.',
+  description: 'Skilter, bildekor, profiltøy og trykksaker. To lokasjoner i Aust-Agder.',
   robots: 'noindex',
 };
 
@@ -29,15 +27,6 @@ const services = [
   { num: '10', name: 'Solfilm', desc: 'Bil & bygg, UV, personvern' },
 ];
 
-const projects = [
-  { src: '/demo/steinmoen/project-yono.jpg', client: 'Autostrada / Yono', category: 'Helfoliering', large: true },
-  { src: '/demo/steinmoen/project-vikingbad.jpg', client: 'Vikingbad', category: 'Design & Profilering' },
-  { src: '/demo/steinmoen/project-egde.jpg', client: 'EGDE Consulting', category: 'Print-frame' },
-  { src: '/demo/steinmoen/project-aenergi.jpg', client: 'Å Energi', category: 'Figurer & Profilering', large: true },
-  { src: '/demo/steinmoen/project-veidekke.jpg', client: 'Veidekke', category: 'Print-frame' },
-  { src: '/demo/steinmoen/project-agder.jpg', client: 'Agder Karosseri', category: 'Helfoliering' },
-];
-
 const catalogs = [
   { name: 'Clique 2025', img: '/demo/steinmoen/cat-clique.jpg', url: 'https://viewer.joomag.com/clique-2025-v2/0442190001629794174?short&' },
   { name: 'Tenson SS25', img: '/demo/steinmoen/cat-tenson.jpg', url: 'https://viewer.joomag.com/tenson-corporate-ss25-v1/0362334001729855822/p1?short=' },
@@ -56,256 +45,243 @@ export default function SteinmoenHome() {
   return (
     <>
       <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .marquee-inner {
-          display: flex;
-          animation: marquee 30s linear infinite;
-          width: max-content;
-        }
-        .marquee-inner:hover { animation-play-state: paused; }
-        .service-row:hover .service-arrow { opacity: 1; transform: translateX(0); }
-        .service-row { transition: background 150ms ease; }
-        .service-row:hover { background: #111111; }
-        .service-arrow { opacity: 0; transform: translateX(-6px); transition: all 150ms ease; }
-        .project-card:hover .project-overlay { opacity: 1; }
-        .project-overlay { transition: opacity 150ms ease; }
+        @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+        .mq-track { display:flex; width:max-content; animation:marquee 40s linear infinite; }
+        .mq-track:hover { animation-play-state:paused; }
+        .svc-row { transition:background 150ms ease; }
+        .svc-row:hover { background:#f0f4ff; }
+        .svc-name { transition:transform 150ms ease; display:inline-block; }
+        .svc-row:hover .svc-name { transform:translateX(3px); }
+        .svc-arrow { opacity:0; transition:opacity 150ms ease; }
+        .svc-row:hover .svc-arrow { opacity:1; }
+        .pj-overlay { opacity:0; transition:opacity 200ms ease; }
+        .pj-card:hover .pj-overlay { opacity:1; }
+        .cat-card { box-shadow:0 1px 6px rgba(0,0,0,0.08); transition:box-shadow 150ms ease,transform 150ms ease; }
+        .cat-card:hover { box-shadow:0 8px 28px rgba(0,0,0,0.13); transform:translateY(-2px); }
       `}</style>
 
-      {/* 1. INTRO */}
-      <section className="relative min-h-screen bg-[#0a0a0a] flex flex-col justify-between px-6 md:px-10 pt-32 pb-12">
-        <div className="max-w-6xl mx-auto w-full flex-1 flex flex-col justify-center">
-          <p className="text-xs text-[#888] uppercase tracking-[0.2em] mb-8">Grimstad &amp; Arendal</p>
-          <h1
-            className="text-[clamp(3.5rem,10vw,9rem)] font-black text-[#f5f5f5] leading-[0.92] tracking-tight mb-8"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          >
-            Vi gjør<br />
-            <span className="text-[#e8e020]">bedriften din</span><br />
-            synlig.
-          </h1>
-          <p className="text-[#888] text-base md:text-lg max-w-md leading-relaxed">
-            Steinmoen leverer alt innen reklame og profilering — fra skilter og bildekor
-            til profiltøy og gave&shy;artikler.
+      {/* 1. HERO — split layout */}
+      <section className="flex bg-white" style={{ minHeight: '90vh' }}>
+        <div className="flex flex-col justify-center w-full md:w-[60%] px-6 md:px-16 lg:px-20 py-24 md:py-0">
+          <p className="text-xs tracking-[0.25em] text-[#999] uppercase mb-8">
+            Grimstad & Arendal — Din reklamepartner
           </p>
-        </div>
-
-        <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mt-16">
-          <div className="flex gap-6">
+          <h1
+            className="font-black leading-[0.92] tracking-tight mb-8"
+            style={{ fontSize: 'clamp(2.8rem, 7vw, 8rem)' }}
+          >
+            <span className="block text-[#111]">Vi gjør</span>
+            <span className="block text-[#1a4fd6]">bedriften din</span>
+            <span className="block text-[#111]">synlig.</span>
+          </h1>
+          <p className="text-[#666] text-base leading-relaxed max-w-md mb-10" style={{ lineHeight: 1.7 }}>
+            Steinmoen leverer alt innen reklame og profilering. Fra skilter og bildekor
+            til profiltøy og gaveart&shy;ikler. Med to lokasjoner i Aust-Agder.
+          </p>
+          <div className="flex flex-wrap gap-4">
             <Link
               href="/demo/steinmoen/tjenester"
-              className="text-sm text-[#f5f5f5] border-b border-[#f5f5f5] pb-0.5 hover:text-[#e8e020] hover:border-[#e8e020] transition-colors"
+              className="px-6 py-3 bg-[#1a4fd6] text-white text-sm font-semibold hover:bg-[#1540b0] transition-colors duration-150"
             >
-              Se tjenester &rarr;
+              Se tjenester
             </Link>
             <a
               href="#prosjekter"
-              className="text-sm text-[#888] border-b border-[#888] pb-0.5 hover:text-[#f5f5f5] hover:border-[#f5f5f5] transition-colors"
+              className="px-6 py-3 text-[#111] text-sm font-semibold hover:bg-[#111] hover:text-white transition-colors duration-150"
+              style={{ border: '1.5px solid #111' }}
             >
-              Se arbeid &rarr;
+              Se arbeid
             </a>
           </div>
-          <div className="text-right">
-            <p className="text-xs text-[#888] uppercase tracking-[0.2em]">To lokasjoner</p>
-            <p className="text-sm text-[#f5f5f5]">Grimstad</p>
-            <p className="text-sm text-[#f5f5f5]">Arendal</p>
-          </div>
+        </div>
+
+        {/* Right: hero image — fills column height */}
+        <div className="hidden md:block md:w-[40%] relative overflow-hidden" style={{ minHeight: '90vh' }}>
+          <img
+            src="/demo/steinmoen/project-yono.jpg"
+            alt="Helfoliering"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         </div>
       </section>
 
       {/* 2. MARQUEE */}
-      <div className="bg-[#111111] border-y border-[#1a1a1a] py-4 overflow-hidden">
-        <div className="marquee-inner">
+      <div className="bg-white border-t border-b border-[#e5e5e5] py-4 overflow-hidden">
+        <div className="mq-track">
           {[...clients, ...clients].map((c, i) => (
-            <span key={i} className="text-sm text-[#888] whitespace-nowrap px-6">
-              {c} <span className="text-[#2a2a2a] mx-2">|</span>
+            <span key={i} className="text-sm text-[#111] whitespace-nowrap px-8">
+              {c}
+              <span className="text-[#ddd] mx-6">|</span>
             </span>
           ))}
         </div>
       </div>
 
       {/* 3. SERVICES */}
-      <section className="bg-[#0a0a0a] px-6 md:px-10 py-24">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-end justify-between mb-12">
-            <h2 className="text-xs text-[#888] uppercase tracking-[0.2em]">Tjenester</h2>
-            <Link href="/demo/steinmoen/tjenester" className="text-xs text-[#888] hover:text-[#f5f5f5] transition-colors">
-              Se alle &rarr;
+      <section className="bg-white py-[60px] md:py-[120px]">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10">
+          <div className="flex items-center gap-6 mb-12">
+            <p className="text-xs tracking-[0.25em] text-[#999] uppercase whitespace-nowrap">Hva vi tilbyr</p>
+            <div className="flex-1 h-px bg-[#e5e5e5]" />
+            <Link href="/demo/steinmoen/tjenester" className="text-xs text-[#1a4fd6] whitespace-nowrap hover:underline">
+              Se alle tjenester &rarr;
             </Link>
           </div>
 
-          {services.map((s) => (
-            <Link
-              key={s.num}
-              href="/demo/steinmoen/tjenester"
-              className="service-row flex items-center gap-6 py-5 border-b border-[#1a1a1a] group cursor-pointer"
-            >
-              <span className="text-xs text-[#444] w-8 shrink-0 tabular-nums">{s.num}</span>
-              <span className="flex-1 text-xl md:text-2xl font-semibold text-[#f5f5f5]">{s.name}</span>
-              <span className="text-sm text-[#888] hidden md:block">{s.desc}</span>
-              <span className="service-arrow text-[#e8e020] ml-2">&rarr;</span>
-            </Link>
-          ))}
+          <div className="border-t border-[#e5e5e5]">
+            {services.map((s) => (
+              <Link
+                key={s.num}
+                href="/demo/steinmoen/tjenester"
+                className="svc-row flex items-center border-b border-[#e5e5e5] py-5 px-2 cursor-pointer group"
+              >
+                <span className="text-xs font-medium text-[#1a4fd6] tabular-nums w-10 shrink-0">{s.num}</span>
+                <span className="svc-name flex-1 font-black text-[#111]" style={{ fontSize: 'clamp(1.4rem, 2.8vw, 2.5rem)', lineHeight: 1 }}>
+                  {s.name}
+                </span>
+                <span className="text-sm text-[#999] hidden md:block mr-6">{s.desc}</span>
+                <span className="svc-arrow text-[#1a4fd6] text-lg">&rarr;</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* 4. PROJECTS */}
-      <section id="prosjekter" className="bg-[#0a0a0a] px-6 md:px-10 py-24">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-end justify-between mb-12">
-            <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-black text-[#f5f5f5] leading-none">
-              Utvalgte<br />prosjekter
-            </h2>
-            <span className="text-xs text-[#888] uppercase tracking-[0.2em]">Arbeid</span>
+      <section id="prosjekter" className="bg-[#f5f4f0] py-[60px] md:py-[120px]">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10">
+          <div className="flex items-center gap-6 mb-10">
+            <p className="text-xs tracking-[0.25em] text-[#999] uppercase whitespace-nowrap">Utvalgte prosjekter</p>
+            <div className="flex-1 h-px bg-[#d5d3cc]" />
           </div>
 
-          {/* Asymmetric grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
-            {/* Row 1: large left (span 7), two right stacked (span 5) */}
-            <div className="project-card relative md:col-span-7 aspect-[4/3] overflow-hidden bg-neutral-800">
-              <Image
-                src={projects[0].src}
-                alt={projects[0].client}
-                fill
-                className="object-cover"
-              />
-              <div className="project-overlay absolute inset-0 bg-[#0a0a0a]/80 flex flex-col justify-end p-6 opacity-0">
-                <p className="text-xs text-[#888] uppercase tracking-widest mb-1">{projects[0].category}</p>
-                <p className="text-lg font-semibold text-[#f5f5f5]">{projects[0].client}</p>
+          {/* Desktop: asymmetric grid row 1 */}
+          <div className="hidden md:grid" style={{ gridTemplateColumns: '7fr 5fr', gap: 0 }}>
+            <div className="pj-card relative overflow-hidden" style={{ aspectRatio: '3/2' }}>
+              <img src="/demo/steinmoen/project-yono.jpg" alt="Autostrada / Yono" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="pj-overlay absolute inset-0 flex flex-col justify-end p-6" style={{ background: 'rgba(255,255,255,0.88)' }}>
+                <p className="text-xs font-medium text-[#1a4fd6] uppercase tracking-widest mb-1">Helfoliering</p>
+                <p className="text-xl font-semibold text-[#111]">Autostrada / Yono</p>
               </div>
             </div>
-
-            <div className="md:col-span-5 grid grid-rows-2 gap-2">
-              {[projects[1], projects[2]].map((p) => (
-                <div key={p.client} className="project-card relative aspect-[4/3] md:aspect-auto overflow-hidden bg-neutral-800">
-                  <Image src={p.src} alt={p.client} fill className="object-cover" />
-                  <div className="project-overlay absolute inset-0 bg-[#0a0a0a]/80 flex flex-col justify-end p-5 opacity-0">
-                    <p className="text-xs text-[#888] uppercase tracking-widest mb-1">{p.category}</p>
-                    <p className="text-base font-semibold text-[#f5f5f5]">{p.client}</p>
+            <div className="grid" style={{ gridTemplateRows: '1fr 1fr', gap: 0 }}>
+              {[
+                { src: '/demo/steinmoen/project-vikingbad.jpg', client: 'Vikingbad', cat: 'Design & Profilering' },
+                { src: '/demo/steinmoen/project-egde.jpg', client: 'EGDE Consulting', cat: 'Print-frame' },
+              ].map((p) => (
+                <div key={p.client} className="pj-card relative overflow-hidden">
+                  <img src={p.src} alt={p.client} className="absolute inset-0 w-full h-full object-cover" />
+                  <div className="pj-overlay absolute inset-0 flex flex-col justify-end p-5" style={{ background: 'rgba(255,255,255,0.88)' }}>
+                    <p className="text-xs font-medium text-[#1a4fd6] uppercase tracking-widest mb-1">{p.cat}</p>
+                    <p className="text-base font-semibold text-[#111]">{p.client}</p>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
 
-            {/* Row 2: two left, large right */}
-            <div className="md:col-span-5 grid grid-rows-2 gap-2">
-              {[projects[4], projects[5]].map((p) => (
-                <div key={p.client} className="project-card relative aspect-[4/3] md:aspect-auto overflow-hidden bg-neutral-800">
-                  <Image src={p.src} alt={p.client} fill className="object-cover" />
-                  <div className="project-overlay absolute inset-0 bg-[#0a0a0a]/80 flex flex-col justify-end p-5 opacity-0">
-                    <p className="text-xs text-[#888] uppercase tracking-widest mb-1">{p.category}</p>
-                    <p className="text-base font-semibold text-[#f5f5f5]">{p.client}</p>
+          {/* Desktop: asymmetric grid row 2 (swapped) */}
+          <div className="hidden md:grid" style={{ gridTemplateColumns: '5fr 7fr', gap: 0 }}>
+            <div className="grid" style={{ gridTemplateRows: '1fr 1fr', gap: 0 }}>
+              {[
+                { src: '/demo/steinmoen/project-veidekke.jpg', client: 'Veidekke', cat: 'Print-frame' },
+                { src: '/demo/steinmoen/project-agder.jpg', client: 'Agder Karosseri', cat: 'Helfoliering' },
+              ].map((p) => (
+                <div key={p.client} className="pj-card relative overflow-hidden">
+                  <img src={p.src} alt={p.client} className="absolute inset-0 w-full h-full object-cover" />
+                  <div className="pj-overlay absolute inset-0 flex flex-col justify-end p-5" style={{ background: 'rgba(255,255,255,0.88)' }}>
+                    <p className="text-xs font-medium text-[#1a4fd6] uppercase tracking-widest mb-1">{p.cat}</p>
+                    <p className="text-base font-semibold text-[#111]">{p.client}</p>
                   </div>
                 </div>
               ))}
             </div>
-
-            <div className="project-card relative md:col-span-7 aspect-[4/3] overflow-hidden bg-neutral-800">
-              <Image src={projects[3].src} alt={projects[3].client} fill className="object-cover" />
-              <div className="project-overlay absolute inset-0 bg-[#0a0a0a]/80 flex flex-col justify-end p-6 opacity-0">
-                <p className="text-xs text-[#888] uppercase tracking-widest mb-1">{projects[3].category}</p>
-                <p className="text-lg font-semibold text-[#f5f5f5]">{projects[3].client}</p>
+            <div className="pj-card relative overflow-hidden" style={{ aspectRatio: '3/2' }}>
+              <img src="/demo/steinmoen/project-aenergi.jpg" alt="Å Energi" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="pj-overlay absolute inset-0 flex flex-col justify-end p-6" style={{ background: 'rgba(255,255,255,0.88)' }}>
+                <p className="text-xs font-medium text-[#1a4fd6] uppercase tracking-widest mb-1">Figurer & Profilering</p>
+                <p className="text-xl font-semibold text-[#111]">Å Energi</p>
               </div>
             </div>
+          </div>
+
+          {/* Mobile: 2-col grid */}
+          <div className="md:hidden grid grid-cols-2" style={{ gap: 3 }}>
+            {[
+              { src: '/demo/steinmoen/project-yono.jpg', client: 'Autostrada', cat: 'Helfoliering' },
+              { src: '/demo/steinmoen/project-vikingbad.jpg', client: 'Vikingbad', cat: 'Profilering' },
+              { src: '/demo/steinmoen/project-egde.jpg', client: 'EGDE', cat: 'Print' },
+              { src: '/demo/steinmoen/project-aenergi.jpg', client: 'Å Energi', cat: 'Figurer' },
+              { src: '/demo/steinmoen/project-veidekke.jpg', client: 'Veidekke', cat: 'Print' },
+              { src: '/demo/steinmoen/project-agder.jpg', client: 'Agder Karosseri', cat: 'Foliering' },
+            ].map((p) => (
+              <div key={p.client} className="pj-card relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                <img src={p.src} alt={p.client} className="absolute inset-0 w-full h-full object-cover" />
+                <div className="pj-overlay absolute inset-0 flex flex-col justify-end p-3" style={{ background: 'rgba(255,255,255,0.88)' }}>
+                  <p className="text-[10px] font-medium text-[#1a4fd6] uppercase tracking-wider">{p.cat}</p>
+                  <p className="text-sm font-semibold text-[#111]">{p.client}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 5. CATALOG TEASER */}
-      <section className="bg-[#111111] border-t border-[#1a1a1a] px-6 md:px-10 py-24">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-end justify-between mb-10">
-            <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-black text-[#f5f5f5] leading-none">
-              Bla i våre<br />kataloger
-            </h2>
-            <Link href="/demo/steinmoen/kataloger" className="text-xs text-[#888] hover:text-[#f5f5f5] transition-colors uppercase tracking-widest">
-              Alle kataloger &rarr;
+      {/* 5. CATALOGS */}
+      <section className="bg-white py-[60px] md:py-[120px]">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 mb-10">
+          <div className="flex items-end justify-between">
+            <div>
+              <p className="text-xs tracking-[0.25em] text-[#999] uppercase mb-3">Bla gjennom</p>
+              <h2 className="font-black text-[#111] leading-none" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
+                Kataloger
+              </h2>
+            </div>
+            <Link href="/demo/steinmoen/kataloger" className="text-xs text-[#1a4fd6] hover:underline whitespace-nowrap">
+              Se alle &rarr;
             </Link>
           </div>
+        </div>
 
-          <div className="overflow-x-auto pb-4 -mx-6 px-6">
-            <div className="flex gap-4" style={{ width: 'max-content' }}>
-              {catalogs.map((c) => (
-                <a
-                  key={c.name}
-                  href={c.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex-shrink-0 w-40"
-                >
-                  <div className="relative w-40 h-52 overflow-hidden bg-neutral-800 shadow-lg transition-transform duration-150 group-hover:scale-[1.03]">
-                    <img
-                      src={c.img}
-                      alt={c.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <p className="mt-2 text-xs text-[#888] group-hover:text-[#f5f5f5] transition-colors">{c.name}</p>
-                </a>
-              ))}
-            </div>
+        <div className="overflow-x-auto pl-6 md:pl-10 pb-6">
+          <div className="flex gap-4 pr-6 md:pr-10" style={{ width: 'max-content' }}>
+            {catalogs.map((c) => (
+              <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="cat-card block bg-white shrink-0" style={{ width: '160px' }}>
+                <img src={c.img} alt={c.name} style={{ width: '160px', height: '208px', objectFit: 'cover', display: 'block' }} />
+                <div className="p-3">
+                  <p className="text-xs font-semibold text-[#111] mb-1">{c.name}</p>
+                  <p className="text-xs text-[#1a4fd6]">Se katalog &rarr;</p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 6. CONTACT */}
-      <section id="kontakt" className="bg-[#0a0a0a] border-t border-[#1a1a1a] px-6 md:px-10 py-24">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-[clamp(2rem,5vw,4rem)] font-black text-[#f5f5f5] leading-none mb-16">
-            La oss jobbe<br />
-            <span className="text-[#e8e020]">sammen.</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* Left: Mats */}
-            <div>
-              <div className="relative w-full aspect-[3/4] max-w-xs overflow-hidden bg-neutral-800 mb-6">
-                <Image
-                  src="/demo/steinmoen/mats.jpg"
-                  alt="Mats Alfredsen"
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-              <p className="text-xl font-semibold text-[#f5f5f5]">Mats Alfredsen</p>
-              <p className="text-sm text-[#888] mb-4">Selger</p>
-              <a href="mailto:ma@steinmoen.no" className="block text-sm text-[#f5f5f5] hover:text-[#e8e020] transition-colors mb-1">
-                ma@steinmoen.no
-              </a>
-              <a href="tel:97799524" className="block text-sm text-[#f5f5f5] hover:text-[#e8e020] transition-colors">
-                97 79 95 24
-              </a>
-
-              <div className="mt-10 grid grid-cols-2 gap-8">
-                <div>
-                  <p className="text-xs text-[#888] uppercase tracking-widest mb-2">Grimstad</p>
-                  <p className="text-sm text-[#f5f5f5]">Lillesandsveien 44 B</p>
-                  <p className="text-sm text-[#f5f5f5]">4877 Grimstad</p>
-                </div>
-                <div>
-                  <p className="text-xs text-[#888] uppercase tracking-widest mb-2">Arendal</p>
-                  <p className="text-sm text-[#f5f5f5]">Industritoppen 23</p>
-                  <p className="text-sm text-[#f5f5f5]">4848 Arendal</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Form */}
-            <div>
-              <ContactForm />
-
-              <div className="mt-8 pt-8 border-t border-[#1a1a1a]">
-                <p className="text-xs text-[#888] mb-3">Eller ta direkte kontakt:</p>
-                <a href="mailto:post@steinmoen.no" className="block text-sm text-[#f5f5f5] hover:text-[#e8e020] transition-colors mb-1">
-                  post@steinmoen.no
-                </a>
-                <a href="tel:37043896" className="block text-sm text-[#f5f5f5] hover:text-[#e8e020] transition-colors">
-                  37 04 38 96
-                </a>
-              </div>
-            </div>
+      {/* 6. CTA — links to contact page */}
+      <section className="bg-[#0f1f3d] px-6 md:px-10 py-[60px] md:py-[120px]">
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
+          <div>
+            <p className="text-xs tracking-[0.25em] text-white/40 uppercase mb-6">Klar for neste steg?</p>
+            <h2 className="font-black text-white leading-[0.92]" style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)' }}>
+              La oss jobbe<br />
+              <span className="text-[#1a4fd6]">sammen.</span>
+            </h2>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 md:shrink-0">
+            <Link
+              href="/demo/steinmoen/kontakt"
+              className="px-8 py-4 bg-[#1a4fd6] text-white text-sm font-semibold hover:bg-[#1f60ff] transition-colors duration-150 text-center"
+            >
+              Ta kontakt
+            </Link>
+            <Link
+              href="/demo/steinmoen/kontakt"
+              className="px-8 py-4 text-white text-sm font-semibold hover:bg-white/10 transition-colors duration-150 text-center"
+              style={{ border: '1.5px solid rgba(255,255,255,0.3)' }}
+            >
+              Hvem er vi?
+            </Link>
           </div>
         </div>
       </section>
