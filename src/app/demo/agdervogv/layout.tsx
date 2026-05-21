@@ -106,7 +106,7 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
       {/* ── Footer ── */}
       <footer className="bg-[#f8fafc] border-t border-[#e2e8f0] py-8 sm:py-12">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
 
             {/* Company info */}
             <div className="flex sm:block justify-center">
@@ -114,15 +114,21 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
             </div>
 
             {/* Quick links */}
-            <div>
+            <div className="text-center sm:text-left">
               <p className="font-semibold text-sm text-[#1e293b] mb-3">Sider</p>
-              <ul className="space-y-2">
+              {/* Mobile: horizontal row */}
+              <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:hidden">
+                {NAV.map((l) => (
+                  <a key={l.href} href={l.href} className="text-sm text-[#64748b] hover:text-[#1e293b] transition-colors">
+                    {l.label}
+                  </a>
+                ))}
+              </div>
+              {/* Desktop: vertical list */}
+              <ul className="hidden sm:block space-y-2">
                 {NAV.map((l) => (
                   <li key={l.href}>
-                    <a
-                      href={l.href}
-                      className="text-sm text-[#64748b] hover:text-[#1e293b] transition-colors"
-                    >
+                    <a href={l.href} className="text-sm text-[#64748b] hover:text-[#1e293b] transition-colors">
                       {l.label}
                     </a>
                   </li>
@@ -131,7 +137,7 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
             </div>
 
             {/* Contact */}
-            <div>
+            <div className="text-center sm:text-left">
               <p className="font-semibold text-sm text-[#1e293b] mb-3">Kontakt</p>
               <ul className="space-y-2 text-sm text-[#64748b]">
                 <li>
@@ -149,12 +155,12 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
             </div>
           </div>
 
-          <div className="border-t border-[#e2e8f0] pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <p className="text-xs text-[#64748b]">&copy; 2025 Agder Varme og Vedlikehold. Alle rettigheter forbeholdt.</p>
-            <div className="flex items-center gap-4 sm:flex-shrink-0">
+          <div className="border-t border-[#e2e8f0] pt-6 flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="flex items-center gap-4 order-first sm:order-last sm:flex-shrink-0">
               <img src="/demo/agdervogv/isovator.jpg" alt="ISOVATOR sertifisert installatør" className="h-8 w-auto object-contain opacity-80" />
               <img src="/demo/agdervogv/novap.jpg" alt="NOVAP godkjent forhandler" className="h-8 w-auto object-contain opacity-80" />
             </div>
+            <p className="text-xs text-[#64748b] text-center sm:text-left">&copy; 2025 Agder Varme og Vedlikehold. Alle rettigheter forbeholdt.</p>
           </div>
         </div>
       </footer>
