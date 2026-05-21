@@ -13,14 +13,14 @@ const services = [
   {
     title: 'Salg av varmepumpe',
     body: 'Vi hjelper deg finne riktig luft-til-luft-varmepumpe for din bolig. Vi tar hensyn til boligstørrelse, isolasjon og lokale klimaforhold når vi anbefaler modell og plassering. Alle pumper vi selger leveres fra ledende merker med god garanti. Vi gir ærlig rådgivning uten mersalg.',
-    img: 'https://mee.no/wp-content/uploads/2024/12/Uwano1200x900pxl.jpg',
-    imgAlt: 'Moderne innedel montert på vegg',
+    img: '/demo/agdervogv/salg.jpg',
+    imgAlt: 'Varmepumpe – salg og rådgivning',
   },
   {
     title: 'Montering og installasjon',
     body: 'Montering utføres av sertifisert fagmann i henhold til gjeldende forskrifter og produsentens krav. Vi tar oss av alt fra plassering og boring til rørlegging og idriftsettelse. Etter installasjonen gjennomgår vi anlegget med deg. Arbeidet dokumenteres slik du har alt svart på hvitt.',
-    img: 'https://mee.no/wp-content/uploads/2025/03/UWANO_Pure_interior.jpg',
-    imgAlt: 'Varmepumpe i moderne stue',
+    img: '/demo/agdervogv/installasjon.jpg',
+    imgAlt: 'Montering og installasjon av varmepumpe',
   },
   {
     title: 'Service og vedlikehold',
@@ -37,8 +37,8 @@ const services = [
   {
     title: 'Gratis befaring',
     body: 'Usikker på om varmepumpe passer for deg, eller hvilken modell du trenger? Vi kommer hjem til deg, vurderer boligen og gir et konkret tilbud. Ingen skjulte kostnader og ingen press. Befaringen er helt uten forpliktelser.',
-    img: 'https://mee.no/wp-content/uploads/2023/04/Gussuri_soverom.jpg',
-    imgAlt: 'Soverom med varmepumpe',
+    img: '/demo/agdervogv/befaring.jpg',
+    imgAlt: 'Gratis befaring hos kunde',
   },
   {
     title: 'Serviceavtale',
@@ -84,7 +84,7 @@ export default function TjenesterPage() {
       {/* Hero */}
       <section className="relative flex items-center" style={{ minHeight: '300px' }}>
         <img
-          src="https://mee.no/wp-content/uploads/2026/01/AL_8796.jpg"
+          src="/demo/agdervogv/tjenester-hero.jpg"
           alt=""
           aria-hidden
           className="absolute inset-0 w-full h-full object-cover"

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroCarousel from './HeroCarousel';
 
 export const metadata: Metadata = {
   title: 'Agder Varme og Vedlikehold | Varmepumper i Vegårshei',
@@ -113,46 +114,7 @@ export default function FrontPage() {
   return (
     <>
       {/* ── 1. HERO ── */}
-      <section className="relative flex items-center" style={{ minHeight: '72vh' }}>
-        <img
-          src="https://mee.no/wp-content/uploads/2025/08/T-skjortevaer-Pensjonister-sommer-mwd-tekst2560x1466pxl.jpg"
-          alt=""
-          aria-hidden
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/80 via-[#0f172a]/55 to-transparent" />
-
-        <div className="relative max-w-[1100px] mx-auto px-4 sm:px-6 py-24">
-          <p className="text-[#ea580c] font-semibold text-sm uppercase tracking-wider mb-4">
-            Vegårshei og omegn
-          </p>
-          <h1
-            className="font-bold text-white leading-tight mb-5"
-            style={{ fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', maxWidth: '600px' }}
-          >
-            T-skjortevær inne.<br />Uansett ute.
-          </h1>
-          <p className="text-slate-300 text-lg mb-8" style={{ maxWidth: '480px' }}>
-            Med en varmepumpe levert og montert av Agder Varme og Vedlikehold er det aldri for varmt eller for kaldt.
-            Alltid perfekt temperatur, uansett hva som skjer ute.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="tel:97123554"
-              className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-semibold px-6 py-3.5 rounded-lg transition-colors"
-            >
-              <IconPhone />
-              Ring 97 12 35 54
-            </a>
-            <a
-              href={`${BASE}/kontakt`}
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/40 text-white font-semibold px-6 py-3.5 rounded-lg transition-colors backdrop-blur-sm"
-            >
-              Bestill gratis befaring
-            </a>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       {/* ── 2. TRUST STRIP ── */}
       <section className="bg-white border-b border-[#e2e8f0]">

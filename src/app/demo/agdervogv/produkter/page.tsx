@@ -116,7 +116,7 @@ export default function ProdukterPage() {
               <line x1="12" y1="16" x2="12.01" y2="16" />
             </svg>
             <div>
-              <p className="font-semibold text-[#1e293b] mb-0.5">Vi servicer alle merker</p>
+              <p className="font-semibold text-[#1e293b] mb-0.5">Vi gjør service på alle merker</p>
               <p className="text-sm text-[#64748b]">
                 Har du allerede en varmepumpe av et annet merke? Vi utfører service, feilsøking og
                 reparasjon på alle modeller og merker, uansett alder.
@@ -124,13 +124,9 @@ export default function ProdukterPage() {
             </div>
           </div>
 
-          <div className="mt-4 rounded-lg bg-[#fff7ed] border border-orange-200 p-5">
-            <p className="font-semibold text-[#1e293b] mb-1">Priser varierer etter modell</p>
-            <p className="text-sm text-[#64748b]">
-              Vi gir aldri generelle priser fordi riktig modell og pris avhenger av din bolig.
-              Kontakt oss for et uforpliktende tilbud etter befaring.
-            </p>
-          </div>
+          <p className="mt-3 text-xs text-[#94a3b8] border-t border-[#e2e8f0] pt-3">
+            Priser varierer etter modell og bolig — kontakt oss for et uforpliktende tilbud.
+          </p>
         </div>
       </section>
 

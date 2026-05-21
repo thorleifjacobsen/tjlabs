@@ -41,8 +41,8 @@ export default function KontaktPage() {
               <div className="flex items-center gap-4 rounded-lg border border-[#e2e8f0] bg-white p-4 mb-8 shadow-sm">
                 <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-slate-100">
                   <img
-                    src="/demo/agdervogv/technician.jpg"
-                    alt="Din kontakt hos Agder Varme og Vedlikehold"
+                    src="/demo/agdervogv/kontakt-magnus.jpg"
+                    alt="Magnus – din kontakt hos Agder Varme og Vedlikehold"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
@@ -126,18 +126,26 @@ export default function KontaktPage() {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div
-                className="rounded-lg border border-[#e2e8f0] bg-slate-100 flex items-center justify-center"
-                style={{ height: '200px' }}
-              >
-                <div className="text-center text-[#64748b]">
-                  <svg className="w-8 h-8 mx-auto mb-2 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <p className="text-sm font-medium">Vegårshei, Aust-Agder</p>
-                </div>
+              {/* Map */}
+              <div className="rounded-lg overflow-hidden border border-[#e2e8f0]" style={{ height: '200px' }}>
+                <iframe
+                  title="Kart – Sagaveien 7, Vegårshei"
+                  width="100%"
+                  height="200"
+                  frameBorder="0"
+                  scrolling="no"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=8.75%2C58.865%2C8.795%2C58.885&layer=mapnik&marker=58.8747%2C8.7697"
+                  style={{ border: 0 }}
+                />
               </div>
+              <a
+                href="https://www.openstreetmap.org/?mlat=58.8747&mlon=8.7697#map=15/58.8747/8.7697"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-xs text-[#94a3b8] mt-1 hover:text-[#64748b] transition-colors"
+              >
+                Åpne i OpenStreetMap ↗
+              </a>
             </div>
 
             {/* Form */}
