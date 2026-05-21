@@ -56,7 +56,7 @@ const guideItems = [
   {
     step: '4',
     title: 'Plassering og fasade',
-    desc: 'Noen plasseringer er mer krevende enn andre. Magnus vurderer dette på befaring og gir deg ærlig rad.',
+    desc: 'Noen plasseringer er mer krevende enn andre. Magnus vurderer dette på befaring og gir deg ærlig råd.',
   },
 ];
 
@@ -73,7 +73,7 @@ export default function ProdukterPage() {
             Ledende merker
           </h1>
           <p className="text-[#64748b] max-w-xl">
-            Vi leverer og monterer varmepumper fra de beste produsentene. Magnus hjelper deg velge
+            Vi leverer og monterer varmepumper fra de beste produsentene. Vi hjelper deg velge
             riktig modell basert på din bolig, ditt budsjett og lokale forhold i Vegårshei og omegn.
           </p>
         </div>
@@ -153,7 +153,7 @@ export default function ProdukterPage() {
               Fa pris på riktig pumpe
             </h2>
             <p className="text-orange-100 mb-6 max-w-md mx-auto">
-              Ring Magnus for gratis befaring. Vi finner den beste losningen for din bolig og ditt budsjett.
+              Ring oss for gratis befaring. Vi finner den beste løsningen for din bolig og ditt budsjett.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Om oss | Agder Varme og Vedlikehold',
   description:
-    'Magnus er en sertifisert fagmann fra Vegårshei. Din lokale varmepumpeekspert i Vegårshei og omegn.',
+    'Lokal varmepumpeekspert i Vegårshei og omegn. Sertifisert, ærlig og faglig stolt.',
   robots: 'noindex',
 };
 
@@ -11,9 +11,9 @@ const BASE = '/demo/agdervogv';
 
 const certifications = [
   'Sertifisert varmepumpeinstallatør',
-  'Godkjent installatør',
-  'Folger gjeldende HMS-krav',
-  'Tilbyr skriftlig dokumentasjon etter hvert oppdrag',
+  'Godkjent av bransjeorganisasjonen',
+  'Følger gjeldende HMS-krav',
+  'Skriftlig dokumentasjon etter hvert oppdrag',
 ];
 
 const serviceArea = [
@@ -28,7 +28,7 @@ const serviceArea = [
 const values = [
   {
     title: 'Lokal',
-    desc: 'Vi kjenner klimaet og forholdene i Vegårshei og omegn. Det gir bedre rad og mer presise losninger enn en tilreisende montør.',
+    desc: 'Vi kjenner klimaet og forholdene i Vegårshei og omegn. Det gir bedre råd og mer presise løsninger enn en tilreisende montør.',
   },
   {
     title: 'Ærlig',
@@ -43,17 +43,16 @@ const values = [
 export default function OmOssPage() {
   return (
     <>
-      {/* Hero-image + intro */}
+      {/* Page intro */}
       <section className="py-10 md:py-16 bg-[#f8fafc] border-b border-[#e2e8f0]">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
-          <p className="text-[#ea580c] font-semibold text-xs uppercase tracking-wider mb-3">
-            Om oss
-          </p>
+          <p className="text-[#ea580c] font-semibold text-xs uppercase tracking-wider mb-3">Om oss</p>
           <h1 className="font-bold text-[#1e293b] leading-tight mb-4" style={{ fontSize: '2.5rem' }}>
-            Om Magnus og Agder Varme og Vedlikehold
+            Agder Varme og Vedlikehold
           </h1>
           <p className="text-[#64748b] max-w-xl">
-            Et en-mannsforetak bygget på ærlighat, faglig stolthet og godt håndverk.
+            Din lokale varmepumpeekspert i Vegårshei og omegn. Vi er etablert her, vi jobber her,
+            og vi kjenner forholdene bedre enn noen tilreisende montør kan.
           </p>
         </div>
       </section>
@@ -67,7 +66,7 @@ export default function OmOssPage() {
             <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-100" style={{ minHeight: '420px' }}>
               <img
                 src="/demo/agdervogv/technician.jpg"
-                alt="Magnus, fagmann hos Agder Varme og Vedlikehold"
+                alt="Fagmann hos Agder Varme og Vedlikehold"
                 className="w-full h-full object-cover object-top"
                 style={{ minHeight: '420px' }}
               />
@@ -76,31 +75,30 @@ export default function OmOssPage() {
             {/* Text */}
             <div className="pt-2">
               <h2 className="font-bold text-[#1e293b] mb-5" style={{ fontSize: '1.5rem' }}>
-                Magnus fra Vegårshei
+                Hvorfor vi startet
               </h2>
 
               <div className="space-y-4 text-[#64748b] mb-6">
                 <p>
-                  Magnus (37) er grunnleggeren bak Agder Varme og Vedlikehold. Han er utdannet fagmann
-                  og har bodd og jobbet i Vegårshei hele livet. Da han så at det manglet en lokal aktør
-                  som spesialiserte seg på varmepumper i omradet, bestemte han seg for å gjøre noe med det.
+                  Agder Varme og Vedlikehold ble etablert i Vegårshei fordi det rett og slett manglet
+                  en lokal aktør som spesialiserte seg på varmepumper i regionen. Tilreisende selgere
+                  kjenner ikke husene, klimaet eller forholdene her.
                 </p>
                 <p>
-                  I dag tilbyr Magnus alt fra gratis befaring og rådgivning til sertifisert montering og
-                  fast serviceordning. Alle oppdrag utføres av Magnus personlig. Du slipper å forholde
-                  deg til et anonymt firma eller en tilfeldig tekniker.
+                  Vi gjør det annerledes. Vi er lokale, vi rykker raskt ut, og vi stiller oss ansvarlig
+                  for arbeidet vi utfører. Kundene våre er naboene våre.
                 </p>
                 <p>
-                  Ingen mellomledd, ingen anonyme teknikere. Bare Magnus - en fagmann som kjenner naboene
-                  sine og stiller seg ansvarlig for arbeidet sitt.
+                  I dag tilbyr vi alt fra gratis befaring og rådgivning til sertifisert montering,
+                  service og faste serviceavtaler for privatpersoner og næringsbygg.
                 </p>
               </div>
 
               <blockquote className="border-l-4 border-[#ea580c] pl-4 mb-7">
                 <p className="font-semibold text-[#1e293b] italic leading-snug mb-2">
-                  "Det er ingen andre her i omradet som driver med dette, derfor startet jeg."
+                  "Det er ingen andre her i området som driver med dette, derfor startet vi."
                 </p>
-                <footer className="text-sm text-[#64748b]">Magnus, grunnlegger</footer>
+                <footer className="text-sm text-[#64748b]">Grunnleggeren</footer>
               </blockquote>
 
               {/* Certifications */}
@@ -141,19 +139,14 @@ export default function OmOssPage() {
       <section className="py-10 md:py-16 bg-[#f8fafc] border-y border-[#e2e8f0]">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
           <div className="mb-8">
-            <p className="text-[#ea580c] font-semibold text-xs uppercase tracking-wider mb-3">
-              Verdier
-            </p>
+            <p className="text-[#ea580c] font-semibold text-xs uppercase tracking-wider mb-3">Verdier</p>
             <h2 className="font-bold text-[#1e293b] leading-tight" style={{ fontSize: '1.75rem' }}>
               Slik jobber vi
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {values.map((v) => (
-              <div
-                key={v.title}
-                className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm"
-              >
+              <div key={v.title} className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
                 <h3 className="font-bold text-[#1e293b] mb-2">{v.title}</h3>
                 <p className="text-sm text-[#64748b] leading-relaxed">{v.desc}</p>
               </div>
@@ -168,11 +161,9 @@ export default function OmOssPage() {
           <div className="rounded-lg bg-[#1e293b] p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
               <h2 className="font-bold text-white mb-2" style={{ fontSize: '1.5rem' }}>
-                Ta kontakt med Magnus
+                Ta kontakt med oss
               </h2>
-              <p className="text-slate-400">
-                Ring direkte for befaring eller spørsmål. Gratis og uforpliktende.
-              </p>
+              <p className="text-slate-400">Ring direkte for befaring eller spørsmål. Gratis og uforpliktende.</p>
             </div>
             <div className="flex flex-wrap gap-3 flex-shrink-0">
               <a

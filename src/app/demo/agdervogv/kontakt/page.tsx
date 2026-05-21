@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Kontakt | Agder Varme og Vedlikehold',
   description:
-    'Ta kontakt med Magnus for gratis befaring eller spørsmål om varmepumpe. Ring 97 12 35 54.',
+    'Ta kontakt med oss for gratis befaring eller spørsmål om varmepumpe. Ring 97 12 35 54.',
   robots: 'noindex',
 };
 
@@ -22,7 +22,7 @@ export default function KontaktPage() {
         <div className="relative max-w-[1100px] mx-auto px-4 sm:px-6 py-14">
           <p className="text-[#ea580c] font-semibold text-xs uppercase tracking-wider mb-3">Kontakt</p>
           <h1 className="font-bold text-white leading-tight mb-3" style={{ fontSize: '2.5rem' }}>
-            Ta kontakt med Magnus
+            Ta kontakt med oss
           </h1>
           <p className="text-slate-300 max-w-md">
             Ring direkte, send en e-post eller fyll ut skjemaet. Vi svarer raskt.
@@ -37,6 +37,31 @@ export default function KontaktPage() {
 
             {/* Contact info */}
             <div>
+              {/* Person card */}
+              <div className="flex items-center gap-4 rounded-lg border border-[#e2e8f0] bg-white p-4 mb-8 shadow-sm">
+                <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-slate-100">
+                  <img
+                    src="/demo/agdervogv/technician.jpg"
+                    alt="Din kontakt hos Agder Varme og Vedlikehold"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-[#ea580c] uppercase tracking-wider mb-0.5">Din kontakt</p>
+                  <p className="font-bold text-[#1e293b] text-base">Magnus</p>
+                  <p className="text-sm text-[#64748b] mb-2">Sertifisert fagmann</p>
+                  <a
+                    href="tel:97123554"
+                    className="inline-flex items-center gap-1.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-semibold px-3 py-1.5 rounded text-xs transition-colors"
+                  >
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 3h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 10.82a16 16 0 006.08 6.08l1.17-1.17a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 18v-.08z" />
+                    </svg>
+                    Ring 97 12 35 54
+                  </a>
+                </div>
+              </div>
+
               <h2 className="font-bold text-[#1e293b] mb-6" style={{ fontSize: '1.5rem' }}>
                 Kontaktinformasjon
               </h2>
@@ -119,7 +144,7 @@ export default function KontaktPage() {
             <div className="bg-white rounded-lg border border-[#e2e8f0] shadow-sm p-6 sm:p-8">
               <h2 className="font-bold text-[#1e293b] text-xl mb-1">Send en melding</h2>
               <p className="text-sm text-[#64748b] mb-6">
-                Fortell oss hva du trenger hjelp med, så tar Magnus kontakt.
+                Fortell oss hva du trenger hjelp med, så kontakter vi deg.
               </p>
 
               <form action="/demo/agdervogv/kontakt" className="space-y-4">
@@ -195,7 +220,7 @@ export default function KontaktPage() {
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <p className="font-bold text-white">Foretrekker du a ringe direkte?</p>
-            <p className="text-slate-400 text-sm">Magnus svarer på telefon i arbeidstiden.</p>
+            <p className="text-slate-400 text-sm">Vi svarer raskt i arbeidstiden.</p>
           </div>
           <a
             href="tel:97123554"

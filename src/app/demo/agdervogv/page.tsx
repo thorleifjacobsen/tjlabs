@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Agder Varme og Vedlikehold | Varmepumper i Vegårshei',
   description:
-    'Salg, montering og service av varmepumper lokalt i Vegårshei og omegn. Sertifisert fagmann. Ring Magnus: 97 12 35 54.',
+    'Salg, montering og service av varmepumper lokalt i Vegårshei og omegn. Sertifisert fagmann. Ring oss: 97 12 35 54.',
   robots: 'noindex',
 };
 
@@ -90,7 +90,7 @@ const featured = [
   },
   {
     title: 'Service og vedlikehold',
-    desc: 'Arlig service, filterrens og ytelseskontroll. Skriftlig rapport etter hvert besøk.',
+    desc: 'Årlig service, filterrens og ytelseskontroll. Skriftlig rapport etter hvert besøk.',
     img: '/demo/agdervogv/technician.jpg',
     href: `${BASE}/tjenester`,
   },
@@ -98,11 +98,11 @@ const featured = [
 
 const benefits = [
   { label: 'Problemfri installasjon', desc: 'Vi tar oss av alt fra rørlegging til idriftsettelse.' },
-  { label: 'Sikker drift',            desc: 'Faglig korrekt arbeid som varar i mange ar.' },
+  { label: 'Sikker drift',            desc: 'Faglig korrekt arbeid som varer i mange år.' },
   { label: 'Mye varme',              desc: 'God varmeytelse selv ved lave utetemperaturer.' },
-  { label: 'Deilig kjøling',         desc: 'Hold huset kjolt om sommeren uten sveitetokter.' },
-  { label: 'Reduserte kostnader',    desc: 'Spar betydelig på ærlig stromlregning.' },
-  { label: 'Stillegaende',           desc: 'Moderne pumper er nesten lydlose i drift.' },
+  { label: 'Deilig kjøling',         desc: 'Hold huset kjølt om sommeren uten sveiting.' },
+  { label: 'Reduserte kostnader',    desc: 'Spar betydelig på den årlige strømregningen.' },
+  { label: 'Stillegående',           desc: 'Moderne pumper er nesten lydløse i drift.' },
 ];
 
 const brands = ['Daikin', 'Mitsubishi Electric', 'Panasonic', 'Fujitsu', 'Samsung'];
@@ -133,7 +133,7 @@ export default function FrontPage() {
             T-skjortevær inne.<br />Uansett ute.
           </h1>
           <p className="text-slate-300 text-lg mb-8" style={{ maxWidth: '480px' }}>
-            Med en varmepumpe montert av Magnus er det aldri for varmt eller for kaldt.
+            Med en varmepumpe levert og montert av Agder Varme og Vedlikehold er det aldri for varmt eller for kaldt.
             Alltid perfekt temperatur, uansett hva som skjer ute.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -236,20 +236,20 @@ export default function FrontPage() {
             <div>
               <p className="text-[#ea580c] font-semibold text-xs uppercase tracking-wider mb-3">Om oss</p>
               <h2 className="font-bold text-[#1e293b] leading-tight mb-5" style={{ fontSize: '1.75rem' }}>
-                Din lokale fagmann i Vegårshei
+                Lokal ekspertise i Vegårshei og omegn
               </h2>
               <div className="space-y-4 text-[#64748b] mb-6">
                 <p>
-                  Magnus (37) er en sertifisert fagmann fra Vegårshei. Han så at det manglet en lokal
-                  aktør som spesialiserte seg på varmepumper i omradet og bestemte seg for å gjøre noe med det.
+                  Agder Varme og Vedlikehold ble etablert fordi det manglet en lokal aktør som spesialiserte
+                  seg på varmepumper i Vegårshei-regionen. Vi kjenner klimaet, husene og forholdene her.
                 </p>
                 <p>
-                  Alle oppdrag utføres av Magnus personlig. Ingen anonyme teknikere, ingen mellomledd.
-                  Du vet hvem som gjør jobben.
+                  Kort vei betyr rask respons. Vi er lokale, vi kjenner kundene våre, og vi stiller oss
+                  ansvarlig for arbeidet vi gjør.
                 </p>
               </div>
               <blockquote className="border-l-4 border-[#ea580c] pl-4 italic text-[#1e293b] font-medium mb-6">
-                "Det er ingen andre her i omradet som driver med dette, derfor startet jeg."
+                "Det er ingen andre her i området som driver med dette, derfor startet vi."
               </blockquote>
               <a
                 href={`${BASE}/om-oss`}
@@ -339,7 +339,7 @@ export default function FrontPage() {
             <h2 className="font-bold text-white mb-1" style={{ fontSize: '1.75rem' }}>
               Klar for å spare strøm i vinter?
             </h2>
-            <p className="text-slate-400">Ring Magnus for gratis befaring. Ingen forpliktelser.</p>
+            <p className="text-slate-400">Ring oss for gratis befaring. Ingen forpliktelser.</p>
           </div>
           <div className="flex flex-wrap gap-3 flex-shrink-0">
             <a

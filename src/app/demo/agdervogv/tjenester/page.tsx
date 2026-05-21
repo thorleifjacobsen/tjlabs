@@ -36,7 +36,7 @@ const services = [
   },
   {
     title: 'Gratis befaring',
-    body: 'Usikker på om varmepumpe passer for deg, eller hvilken modell du trenger? Magnus kommer hjem til deg, vurderer boligen og gir et konkret tilbud. Ingen skjulte kostnader og ingen press. Befaringen er helt uten forpliktelser.',
+    body: 'Usikker på om varmepumpe passer for deg, eller hvilken modell du trenger? Vi kommer hjem til deg, vurderer boligen og gir et konkret tilbud. Ingen skjulte kostnader og ingen press. Befaringen er helt uten forpliktelser.',
     img: 'https://mee.no/wp-content/uploads/2023/04/Gussuri_soverom.jpg',
     imgAlt: 'Soverom med varmepumpe',
   },
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: 'Hvilke merker leverer og monterer dere?',
-    a: 'Vi leverer og monterer fra Daikin, Mitsubishi Electric, Panasonic, Fujitsu og Samsung. Magnus hjelper deg velge riktig modell basert på boligstørrelse, isolasjon og budsjett.',
+    a: 'Vi leverer og monterer fra Daikin, Mitsubishi Electric, Panasonic, Fujitsu og Samsung. Vi hjelper deg velge riktig modell basert på boligstørrelse, isolasjon og budsjett.',
   },
 ];
 
@@ -96,8 +96,8 @@ export default function TjenesterPage() {
             Hva vi tilbyr
           </h1>
           <p className="text-slate-300 max-w-xl">
-            Alt fra første befaring til fast serviceavtale. Alle oppdrag utføres av Magnus personlig,
-            sertifisert fagmann med lokalkjennskap til Vegårshei og omegn.
+            Alt fra første befaring til fast serviceavtale. Alle oppdrag utføres av sertifiserte fagmenn med
+            lokalkjennskap til Vegårshei og omegn.
           </p>
         </div>
       </section>
@@ -160,7 +160,7 @@ export default function TjenesterPage() {
       <section className="bg-[#ea580c] py-14">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6 text-center">
           <h2 className="font-bold text-white mb-3" style={{ fontSize: '1.75rem' }}>Klar for å komme i gang?</h2>
-          <p className="text-orange-100 mb-6">Ring Magnus direkte for gratis befaring.</p>
+          <p className="text-orange-100 mb-6">Ring oss for gratis befaring.</p>
           <a
             href="tel:97123554"
             className="inline-flex items-center gap-2.5 bg-white text-[#ea580c] font-bold px-7 py-4 rounded-lg hover:bg-orange-50 transition-colors text-lg"
