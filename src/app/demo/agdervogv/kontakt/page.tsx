@@ -130,21 +130,22 @@ export default function KontaktPage() {
               <div className="rounded-lg overflow-hidden border border-[#e2e8f0]" style={{ height: '200px' }}>
                 <iframe
                   title="Kart – Sagaveien 7, Vegårshei"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1034.955015560396!2d8.868078029527876!3d58.74833732834594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46479ef9764da0eb%3A0xac59c58f429140b2!2sSagaveien%207%2C%204985%20Veg%C3%A5rshei!5e0!3m2!1sen!2sno!4v1779399320462!5m2!1sen!2sno"
                   width="100%"
                   height="200"
-                  frameBorder="0"
-                  scrolling="no"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=8.75%2C58.865%2C8.795%2C58.885&layer=mapnik&marker=58.8747%2C8.7697"
                   style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
               <a
-                href="https://www.openstreetmap.org/?mlat=58.8747&mlon=8.7697#map=15/58.8747/8.7697"
+                href="https://maps.google.com/?q=Sagaveien+7,+4985+Vegårshei"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-xs text-[#94a3b8] mt-1 hover:text-[#64748b] transition-colors"
               >
-                Åpne i OpenStreetMap ↗
+                Åpne i Google Maps ↗
               </a>
             </div>
 
