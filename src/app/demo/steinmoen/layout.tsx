@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import DemoWatermark from '@/components/DemoWatermark';
+import ScrollToTop from './ScrollToTop';
 
 export default function SteinmoenLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,11 +21,7 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
         <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#e5e5e5]">
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
             <Link href="/demo/steinmoen">
-              <img
-                src="/demo/steinmoen/logo.svg"
-                alt="Steinmoen"
-                style={{ height: '32px', width: 'auto' }}
-              />
+              <img src="/demo/steinmoen/logo.svg" alt="Steinmoen" style={{ height: '32px', width: 'auto' }} />
             </Link>
 
             {/* Desktop nav */}
@@ -52,7 +50,7 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Meny"
             >
-              <span className={`block w-6 h-px bg-[#111] transition-all duration-200 ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} style={{ height: '1.5px' }} />
+              <span className={`block w-6 bg-[#111] transition-all duration-200 ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} style={{ height: '1.5px' }} />
               <span className={`block w-6 bg-[#111] transition-all duration-200 ${menuOpen ? 'opacity-0' : ''}`} style={{ height: '1.5px' }} />
               <span className={`block w-6 bg-[#111] transition-all duration-200 ${menuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} style={{ height: '1.5px' }} />
             </button>
@@ -82,14 +80,12 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
         <footer className="bg-white border-t border-[#e5e5e5] px-6 md:px-10 pt-12 pb-8">
           <div className="max-w-[1200px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
-              {/* Logo + cert */}
               <div>
                 <img src="/demo/steinmoen/logo2.svg" alt="Steinmoen" style={{ height: '40px', width: 'auto', marginBottom: '16px' }} />
                 <p className="text-sm text-[#666] leading-relaxed mb-4">Din reklamepartner i Aust-Agder.</p>
                 <img src="/demo/steinmoen/miljofyrtarn.svg" alt="Miljøfyrtårn" style={{ height: '48px', width: 'auto' }} />
               </div>
 
-              {/* Nav */}
               <div>
                 <p className="text-xs text-[#999] uppercase tracking-widest mb-4">Navigasjon</p>
                 <div className="space-y-2">
@@ -99,7 +95,6 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
                 </div>
               </div>
 
-              {/* Contact */}
               <div>
                 <p className="text-xs text-[#999] uppercase tracking-widest mb-4">Kontakt</p>
                 <p className="text-sm text-[#666] mb-1">Lillesandsveien 44 B, 4877 Grimstad</p>
@@ -113,13 +108,15 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
               </div>
             </div>
 
-            <div className="border-t border-[#e5e5e5] pt-6 flex justify-between items-center">
+            <div className="border-t border-[#e5e5e5] pt-6">
               <p className="text-xs text-[#999]">&copy; {new Date().getFullYear()} Steinmoen AS. Alle rettigheter forbeholdt.</p>
-              <p className="text-xs text-[#ccc]">Demo av TJ Labs</p>
             </div>
           </div>
         </footer>
       </div>
+
+      <ScrollToTop />
+      <DemoWatermark />
     </>
   );
 }

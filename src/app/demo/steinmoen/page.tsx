@@ -15,16 +15,16 @@ const clients = [
 ];
 
 const services = [
-  { num: '01', name: 'Skilter', desc: 'Fasade, LED, utendørs' },
-  { num: '02', name: 'Bildekor', desc: 'Logo, produkt, identitet' },
-  { num: '03', name: 'Helfoliering', desc: 'Farge, matt, PPF' },
-  { num: '04', name: 'Profiltøy', desc: 'T-skjorter, jakker, capser' },
-  { num: '05', name: 'Trykksaker', desc: 'Visittkort, brosjyrer, plakater' },
-  { num: '06', name: 'Interiør', desc: 'Veggdekor, folie, tapet' },
-  { num: '07', name: 'Taktil markering', desc: 'Ledelinjer, universell utforming' },
-  { num: '08', name: 'Gave & Profilartikler', desc: 'Giveaways, firmagaver' },
-  { num: '09', name: 'Lakkbeskyttelse (PPF)', desc: 'Steinsprutfolie, selvrepararende' },
-  { num: '10', name: 'Solfilm', desc: 'Bil & bygg, UV, personvern' },
+  { num: '01', name: 'Skilter', slug: 'skilter', desc: 'Fasade, LED, utendørs' },
+  { num: '02', name: 'Bildekor', slug: 'bildekor', desc: 'Logo, produkt, identitet' },
+  { num: '03', name: 'Helfoliering', slug: 'helfoliering', desc: 'Farge, matt, PPF' },
+  { num: '04', name: 'Profiltøy', slug: 'profiltoy', desc: 'T-skjorter, jakker, capser' },
+  { num: '05', name: 'Trykksaker', slug: 'trykksaker', desc: 'Visittkort, brosjyrer, plakater' },
+  { num: '06', name: 'Interiør', slug: 'interior', desc: 'Veggdekor, folie, tapet' },
+  { num: '07', name: 'Taktil markering', slug: 'taktil', desc: 'Ledelinjer, universell utforming' },
+  { num: '08', name: 'Gave & Profilartikler', slug: 'gave', desc: 'Giveaways, firmagaver' },
+  { num: '09', name: 'Lakkbeskyttelse (PPF)', slug: 'ppf', desc: 'Steinsprutfolie, selvrepararende' },
+  { num: '10', name: 'Solfilm', slug: 'solfilm', desc: 'Bil & bygg, UV, personvern' },
 ];
 
 const catalogs = [
@@ -48,6 +48,11 @@ export default function SteinmoenHome() {
         @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
         .mq-track { display:flex; width:max-content; animation:marquee 40s linear infinite; }
         .mq-track:hover { animation-play-state:paused; }
+
+        @keyframes catmq { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+        .cat-mq { display:flex; width:max-content; animation:catmq 38s linear infinite; }
+        .cat-mq:hover { animation-play-state:paused; }
+
         .svc-row { transition:background 150ms ease; }
         .svc-row:hover { background:#f0f4ff; }
         .svc-name { transition:transform 150ms ease; display:inline-block; }
@@ -56,11 +61,11 @@ export default function SteinmoenHome() {
         .svc-row:hover .svc-arrow { opacity:1; }
         .pj-overlay { opacity:0; transition:opacity 200ms ease; }
         .pj-card:hover .pj-overlay { opacity:1; }
-        .cat-card { box-shadow:0 1px 6px rgba(0,0,0,0.08); transition:box-shadow 150ms ease,transform 150ms ease; }
-        .cat-card:hover { box-shadow:0 8px 28px rgba(0,0,0,0.13); transform:translateY(-2px); }
+        .cat-card-hover { transition:box-shadow 150ms ease,transform 150ms ease; }
+        .cat-card-hover:hover { box-shadow:0 6px 20px rgba(0,0,0,0.12); transform:translateY(-2px); }
       `}</style>
 
-      {/* 1. HERO — split layout */}
+      {/* 1. HERO */}
       <section className="flex bg-white" style={{ minHeight: '90vh' }}>
         <div className="flex flex-col justify-center w-full md:w-[60%] px-6 md:px-16 lg:px-20 py-24 md:py-0">
           <p className="text-xs tracking-[0.25em] text-[#999] uppercase mb-8">
@@ -74,7 +79,7 @@ export default function SteinmoenHome() {
             <span className="block text-[#1a4fd6]">bedriften din</span>
             <span className="block text-[#111]">synlig.</span>
           </h1>
-          <p className="text-[#666] text-base leading-relaxed max-w-md mb-10" style={{ lineHeight: 1.7 }}>
+          <p className="text-[#666] text-base max-w-md mb-10" style={{ lineHeight: 1.7 }}>
             Steinmoen leverer alt innen reklame og profilering. Fra skilter og bildekor
             til profiltøy og gaveart&shy;ikler. Med to lokasjoner i Aust-Agder.
           </p>
@@ -95,7 +100,6 @@ export default function SteinmoenHome() {
           </div>
         </div>
 
-        {/* Right: hero image — fills column height */}
         <div className="hidden md:block md:w-[40%] relative overflow-hidden" style={{ minHeight: '90vh' }}>
           <img
             src="/demo/steinmoen/project-yono.jpg"
@@ -105,7 +109,7 @@ export default function SteinmoenHome() {
         </div>
       </section>
 
-      {/* 2. MARQUEE */}
+      {/* 2. MARQUEE — clients */}
       <div className="bg-white border-t border-b border-[#e5e5e5] py-4 overflow-hidden">
         <div className="mq-track">
           {[...clients, ...clients].map((c, i) => (
@@ -117,7 +121,7 @@ export default function SteinmoenHome() {
         </div>
       </div>
 
-      {/* 3. SERVICES */}
+      {/* 3. SERVICES — numbered rows, each links to its anchor */}
       <section className="bg-white py-[60px] md:py-[120px]">
         <div className="max-w-[1200px] mx-auto px-6 md:px-10">
           <div className="flex items-center gap-6 mb-12">
@@ -132,7 +136,7 @@ export default function SteinmoenHome() {
             {services.map((s) => (
               <Link
                 key={s.num}
-                href="/demo/steinmoen/tjenester"
+                href={`/demo/steinmoen/tjenester#${s.slug}`}
                 className="svc-row flex items-center border-b border-[#e5e5e5] py-5 px-2 cursor-pointer group"
               >
                 <span className="text-xs font-medium text-[#1a4fd6] tabular-nums w-10 shrink-0">{s.num}</span>
@@ -155,7 +159,7 @@ export default function SteinmoenHome() {
             <div className="flex-1 h-px bg-[#d5d3cc]" />
           </div>
 
-          {/* Desktop: asymmetric grid row 1 */}
+          {/* Desktop row 1: 7fr + 5fr stacked */}
           <div className="hidden md:grid" style={{ gridTemplateColumns: '7fr 5fr', gap: 0 }}>
             <div className="pj-card relative overflow-hidden" style={{ aspectRatio: '3/2' }}>
               <img src="/demo/steinmoen/project-yono.jpg" alt="Autostrada / Yono" className="absolute inset-0 w-full h-full object-cover" />
@@ -180,7 +184,7 @@ export default function SteinmoenHome() {
             </div>
           </div>
 
-          {/* Desktop: asymmetric grid row 2 (swapped) */}
+          {/* Desktop row 2: 5fr stacked + 7fr */}
           <div className="hidden md:grid" style={{ gridTemplateColumns: '5fr 7fr', gap: 0 }}>
             <div className="grid" style={{ gridTemplateRows: '1fr 1fr', gap: 0 }}>
               {[
@@ -205,7 +209,7 @@ export default function SteinmoenHome() {
             </div>
           </div>
 
-          {/* Mobile: 2-col grid */}
+          {/* Mobile 2-col */}
           <div className="md:hidden grid grid-cols-2" style={{ gap: 3 }}>
             {[
               { src: '/demo/steinmoen/project-yono.jpg', client: 'Autostrada', cat: 'Helfoliering' },
@@ -227,7 +231,7 @@ export default function SteinmoenHome() {
         </div>
       </section>
 
-      {/* 5. CATALOGS */}
+      {/* 5. CATALOGS — auto-scrolling marquee */}
       <section className="bg-white py-[60px] md:py-[120px]">
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 mb-10">
           <div className="flex items-end justify-between">
@@ -238,18 +242,30 @@ export default function SteinmoenHome() {
               </h2>
             </div>
             <Link href="/demo/steinmoen/kataloger" className="text-xs text-[#1a4fd6] hover:underline whitespace-nowrap">
-              Se alle &rarr;
+              Se alle kataloger &rarr;
             </Link>
           </div>
         </div>
 
-        <div className="overflow-x-auto pl-6 md:pl-10 pb-6">
-          <div className="flex gap-4 pr-6 md:pr-10" style={{ width: 'max-content' }}>
-            {catalogs.map((c) => (
-              <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="cat-card block bg-white shrink-0" style={{ width: '160px' }}>
-                <img src={c.img} alt={c.name} style={{ width: '160px', height: '208px', objectFit: 'cover', display: 'block' }} />
+        {/* Auto-scrolling strip */}
+        <div className="overflow-hidden">
+          <div className="cat-mq py-2">
+            {[...catalogs, ...catalogs].map((c, i) => (
+              <a
+                key={i}
+                href={c.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cat-card-hover inline-block mx-3 bg-white align-top"
+                style={{ boxShadow: '0 1px 6px rgba(0,0,0,0.08)', width: '148px' }}
+              >
+                <img
+                  src={c.img}
+                  alt={c.name}
+                  style={{ width: '148px', height: '192px', objectFit: 'cover', display: 'block' }}
+                />
                 <div className="p-3">
-                  <p className="text-xs font-semibold text-[#111] mb-1">{c.name}</p>
+                  <p className="text-xs font-semibold text-[#111] mb-1 leading-snug">{c.name}</p>
                   <p className="text-xs text-[#1a4fd6]">Se katalog &rarr;</p>
                 </div>
               </a>
@@ -258,7 +274,7 @@ export default function SteinmoenHome() {
         </div>
       </section>
 
-      {/* 6. CTA — links to contact page */}
+      {/* 6. CTA */}
       <section className="bg-[#0f1f3d] px-6 md:px-10 py-[60px] md:py-[120px]">
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
           <div>
