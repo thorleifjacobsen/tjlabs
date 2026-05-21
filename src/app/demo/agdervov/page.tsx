@@ -235,10 +235,7 @@ export default function AgderVOVPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-10 lg:gap-14 items-center">
             {/* Text */}
             <div>
-              <span className="inline-block text-orange-600 text-xs font-semibold uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full">
-                Agder
-              </span>
-              <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] text-[#1c1c1c]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] text-[#1c1c1c]">
                 Din lokale<br />varmepumpe-<br />ekspert.
               </h1>
               <p className="mt-5 text-lg text-gray-500 leading-relaxed max-w-lg">
@@ -632,7 +629,6 @@ export default function AgderVOVPage() {
                   className="h-8 w-auto"
                 />
               </div>
-              <p className="text-xs text-gray-500">Agder</p>
             </div>
 
             {/* Contact */}
