@@ -155,8 +155,8 @@ const services = [
   },
   {
     icon: <IconSearch className="w-6 h-6" />,
-    title: 'Feilsoking og reparasjon',
-    desc: 'Noe som ikke virker? Vi feilsoker og reparerer alle merker og modeller.',
+    title: 'Feilsøking og reparasjon',
+    desc: 'Noe som ikke virker? Vi feilsøker og reparerer alle merker og modeller.',
   },
   {
     icon: <IconHome className="w-6 h-6" />,
@@ -167,7 +167,7 @@ const services = [
   {
     icon: <IconClipboard className="w-6 h-6" />,
     title: 'Serviceavtale',
-    desc: 'Fast avtale for arlig service. Forutsigbare kostnader og prioritert responstid.',
+    desc: 'Fast avtale for årlig service. Forutsigbare kostnader og prioritert responstid.',
   },
 ];
 
@@ -175,7 +175,7 @@ const whyLocal = [
   {
     icon: <IconMapPin className="w-7 h-7" />,
     title: 'Lokalkjent',
-    desc: 'Magnus kjenner klimaet og forholdene i Tvedestrand-omradet. Det gir bedre rad og riktigere losninger.',
+    desc: 'Magnus kjenner klimaet og forholdene i Agder godt. Det gir bedre råd og riktigere løsninger.',
   },
   {
     icon: <IconZap className="w-7 h-7" />,
@@ -185,7 +185,7 @@ const whyLocal = [
   {
     icon: <IconUser className="w-7 h-7" />,
     title: 'Personlig service',
-    desc: 'Du snakker alltid med Magnus, ikke et callsenter. Direkte, arektig og uforpliktende.',
+    desc: 'Du snakker alltid med Magnus, ikke et callsenter. Direkte, ærlig og uforpliktende.',
   },
 ];
 
@@ -238,13 +238,13 @@ export default function AgderVOVPage() {
             {/* Text */}
             <div>
               <span className="inline-block text-orange-600 text-xs font-semibold uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full">
-                Tvedestrand &amp; omegn
+                Agder
               </span>
               <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] text-[#1c1c1c]">
                 Din lokale<br />varmepumpe-<br />ekspert.
               </h1>
               <p className="mt-5 text-lg text-gray-500 leading-relaxed max-w-lg">
-                Salg, montering og service av varmepumper. Eneste lokale fagmann i omradet.
+                Salg, montering og service av varmepumper. Eneste lokale fagmann i området.
               </p>
               <div className="mt-8 flex flex-wrap gap-4 items-center">
                 <a
@@ -273,7 +273,7 @@ export default function AgderVOVPage() {
             <div className="relative rounded-2xl overflow-hidden h-72 sm:h-96 lg:h-[520px] shadow-xl">
               <img
                 src="/demo/agdervov/hero.jpg"
-                alt="Varmepumpe montert pa fasade"
+                alt="Varmepumpe montert på fasade"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-orange-900/30 via-transparent to-transparent" />
@@ -318,7 +318,7 @@ export default function AgderVOVPage() {
           <div className="max-w-xl">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c]">Tjenester vi tilbyr</h2>
             <p className="mt-3 text-gray-500 text-base leading-relaxed">
-              Fra rad og salg til montering, service og reparasjon. Vi tar oss av alt fra start til slutt.
+              Fra råd og salg til montering, service og reparasjon. Vi tar oss av alt fra start til slutt.
             </p>
           </div>
 
@@ -399,23 +399,23 @@ export default function AgderVOVPage() {
                 Om oss
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c] leading-tight">
-                Lokal fagmann du kan stole pa.
+                Lokal fagmann du kan stole på.
               </h2>
               <div className="mt-5 space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Magnus (37) sa muligheten som ingen andre hadde grep fatt i: Tvedestrand-omradet manglet en lokal
-                  aktiv som spesialiserte seg pa varmepumper. Han hadde fagkunnskapen, lokalkjenskapen og lysten til
-                  a hjelpe naboene sine.
+                  Magnus (37) så muligheten som ingen andre hadde grep fatt i: Agder manglet en lokal
+                  aktør som spesialiserte seg på varmepumper. Han hadde fagkunnskapen, lokalkjennskapen og lysten til
+                  å hjelpe naboene sine.
                 </p>
                 <p>
-                  Resultatet er Agder Varme og Vedlikehold. Et en-mannsforetak bygget pa arlighet, faglig stolthet
-                  og godt handtverk. Ingen mellomledd, ingen anonyme tekniker. Bare Magnus.
+                  Resultatet er Agder Varme og Vedlikehold. Et en-mannsforetak bygget på ærlighet, faglig stolthet
+                  og godt håndverk. Ingen mellomledd, ingen anonyme teknikere. Bare Magnus.
                 </p>
               </div>
 
               <blockquote className="mt-7 border-l-4 border-orange-600 pl-5">
                 <p className="text-lg font-semibold text-[#1c1c1c] leading-snug italic">
-                  "Det er ingen andre her i omradet som driver med dette, derfor startet jeg."
+                  "Det er ingen andre her i området som driver med dette, derfor startet jeg."
                 </p>
                 <footer className="mt-2 text-sm text-gray-500 not-italic font-medium">
                   Magnus, grunnlegger
@@ -424,7 +424,7 @@ export default function AgderVOVPage() {
 
               <div className="mt-7 flex items-center gap-2 text-sm text-gray-500">
                 <IconMapPin className="w-4 h-4 text-orange-600 flex-shrink-0" />
-                Etablert i Tvedestrand, Aust-Agder
+                Etablert i Vegårshei
               </div>
             </div>
           </div>
@@ -439,7 +439,7 @@ export default function AgderVOVPage() {
           <div className="text-center max-w-xl mx-auto mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1c1c1c]">Hvorfor velge lokalt?</h2>
             <p className="mt-3 text-gray-500 leading-relaxed">
-              Lokal ekspertise gir bedre radgiving, kortere responstid og en fagmann som kjenner deg og ditt hjem.
+              Lokal ekspertise gir bedre rådgiving, kortere responstid og en fagmann som kjenner deg og ditt hjem.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -464,7 +464,7 @@ export default function AgderVOVPage() {
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-700">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-            Klar for a spare strom i vinter?
+            Klar for å spare strøm i vinter?
           </h2>
           <p className="mt-4 text-lg text-orange-100">
             Ring Magnus for en gratis befaring i dag.
@@ -506,7 +506,7 @@ export default function AgderVOVPage() {
                 Ta kontakt med Magnus
               </h2>
               <p className="mt-4 text-gray-300 leading-relaxed">
-                Lurer du pa noe? Vil du ha befaring? Ta gjerne kontakt direkte. Vi svarer raskt.
+                Lurer du på noe? Vil du ha befaring? Ta gjerne kontakt direkte. Vi svarer raskt.
               </p>
 
               <div className="mt-10 space-y-6">
@@ -532,10 +532,10 @@ export default function AgderVOVPage() {
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">E-post</p>
                     <a
-                      href="mailto:hei@agdervov.no"
+                      href="mailto:hei@agdervogv.no"
                       className="text-base font-semibold text-white hover:text-orange-400 transition-colors"
                     >
-                      hei@agdervov.no
+                      hei@agdervogv.no
                     </a>
                   </div>
                 </div>
@@ -545,8 +545,8 @@ export default function AgderVOVPage() {
                     <IconMapPin className="w-5 h-5 text-orange-400" />
                   </span>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">Omrade</p>
-                    <p className="text-base font-semibold text-white">Tvedestrand og omegn</p>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">Område</p>
+                    <p className="text-base font-semibold text-white">Agder</p>
                   </div>
                 </div>
               </div>
@@ -632,7 +632,7 @@ export default function AgderVOVPage() {
               </div>
               <div className="leading-none">
                 <p className="font-bold text-white text-sm">Agder Varme og Vedlikehold</p>
-                <p className="text-xs text-gray-500 mt-0.5">Tvedestrand og omegn</p>
+                <p className="text-xs text-gray-500 mt-0.5">Agder</p>
               </div>
             </div>
 
@@ -641,8 +641,8 @@ export default function AgderVOVPage() {
               <a href="tel:97123554" className="block hover:text-white transition-colors">
                 97 12 35 54
               </a>
-              <a href="mailto:hei@agdervov.no" className="block hover:text-white transition-colors">
-                hei@agdervov.no
+              <a href="mailto:hei@agdervogv.no" className="block hover:text-white transition-colors">
+                hei@agdervogv.no
               </a>
             </div>
           </div>

@@ -9,9 +9,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Agder Varme og Vedlikehold | Varmepumper i Tvedestrand',
+  title: 'Agder Varme og Vedlikehold | Varmepumper i Agder',
   description:
-    'Din lokale varmepumpe-ekspert i Tvedestrand og omegn. Salg, montering og service. Ring Magnus: 97 12 35 54.',
+    'Din lokale varmepumpe-ekspert i Agder. Salg, montering og service. Ring Magnus: 97 12 35 54.',
   robots: 'noindex',
 };
 
