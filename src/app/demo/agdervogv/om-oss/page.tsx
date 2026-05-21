@@ -2,101 +2,198 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Om oss | Agder Varme og Vedlikehold',
-  description: 'Lokal varmepumpeekspert i Agder. Magnus er sertifisert fagmann fra Vegårshei.',
+  description:
+    'Magnus er en sertifisert fagmann fra Vegarsshei. Din lokale varmepumpeekspert i Vegarsshei og omegn.',
   robots: 'noindex',
 };
 
+const BASE = '/demo/agdervogv';
+
+const certifications = [
+  'Sertifisert varmepumpeinstallatör',
+  'Godkjent av bransjeorganisasjonen',
+  'Folger gjeldende HMS-krav',
+  'Tilbyr skriftlig dokumentasjon etter hvert oppdrag',
+];
+
+const serviceArea = [
+  'Vegarsshei',
+  'Tvedestrand',
+  'Gjerstad',
+  'Risör',
+  'Froland',
+  'Omegn etter avtale',
+];
+
+const values = [
+  {
+    title: 'Lokal',
+    desc: 'Vi kjenner klimaet og forholdene i Vegarsshei og omegn. Det gir bedre rad og mer presise losninger enn en tilreisende montor.',
+  },
+  {
+    title: 'Aerlig',
+    desc: 'Vi selger det du faktisk trenger. Klare priser, ingen skjulte kostnader, og ingen salg du ikke har bedt om.',
+  },
+  {
+    title: 'Faglig stolthet',
+    desc: 'Vi tar oss tid til a gjore jobben ordentlig, forste gang. Dokumentert arbeid og skriftlig rapport etter hvert besok.',
+  },
+];
+
 export default function OmOssPage() {
   return (
-    <div className="max-w-[960px] mx-auto px-4 py-12">
-
-      {/* ── Story ── */}
-      <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-10 items-start mb-12">
-        <div className="rounded-lg overflow-hidden h-72 bg-gray-100 flex items-center justify-center text-gray-400 text-sm">
-          <img
-            src="/demo/agdervogv/technician.jpg"
-            alt="Magnus, fagmann hos Agder Varme og Vedlikehold"
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
-
-        <div>
-          <h1 className="text-2xl font-bold text-[#1a1a1a] mb-4">
+    <>
+      {/* Hero-image + intro */}
+      <section className="py-10 md:py-16 bg-[#f8fafc] border-b border-[#e2e8f0]">
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
+          <p className="text-[#ea580c] font-semibold text-xs uppercase tracking-wider mb-3">
+            Om oss
+          </p>
+          <h1 className="font-bold text-[#1e293b] leading-tight mb-4" style={{ fontSize: '2.5rem' }}>
             Om Magnus og Agder Varme og Vedlikehold
           </h1>
-          <div className="space-y-4 text-[#1a1a1a] mb-6">
-            <p>
-              Magnus (37) er grunnleggeren bak Agder Varme og Vedlikehold. Han er utdannet fagmann og
-              har bodd og jobbet i Agder hele livet. Da han så at det manglet en lokal aktør som
-              spesialiserte seg på varmepumper i området, bestemte han seg for å gjøre noe med det.
-            </p>
-            <p>
-              I dag tilbyr Magnus alt fra gratis befaring og rådgiving til sertifisert montering og
-              fast serviceordning. Alle oppdrag utføres av Magnus personlig. Du slipper å forholde
-              deg til et anonymt firma eller en tilfeldig tekniker.
-            </p>
-          </div>
-
-          <blockquote className="border-l-2 border-[#c2410c] pl-4 text-[#6b7280] italic mb-6">
-            "Det er ingen andre her i området som driver med dette, derfor startet jeg."
-          </blockquote>
-
-          <ul className="text-sm text-[#6b7280] space-y-1.5">
-            <li>Sertifisert varmepumpeinstallatør</li>
-            <li>Etablert i Vegårshei, Aust-Agder</li>
-            <li>Betjener hele Agder-regionen</li>
-            <li>Alle merker og modeller</li>
-          </ul>
+          <p className="text-[#64748b] max-w-xl">
+            Et en-mannsforetak bygget pa aerlighat, faglig stolthet og godt handverk.
+          </p>
         </div>
-      </div>
+      </section>
 
-      {/* ── Values ── */}
-      <div className="border-t border-[#e5e7eb] pt-10 mb-12">
-        <h2 className="text-base font-bold text-[#1a1a1a] mb-5">Verdier</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {[
-            {
-              title: 'Lokal',
-              text: 'Vi kjenner klimaet og forholdene i Agder. Det gir bedre råd og mer presise løsninger enn en tilreisende montør.',
-            },
-            {
-              title: 'Ærlig',
-              text: 'Vi selger det du faktisk trenger. Klare priser, ingen skjulte kostnader, og ingen salg du ikke har bedt om.',
-            },
-            {
-              title: 'Faglig stolthet',
-              text: 'Vi tar oss tid til å gjøre jobben ordentlig, første gang. Dokumentert arbeid og skriftlig rapport etter hvert besøk.',
-            },
-          ].map((v) => (
-            <div key={v.title} className="border border-[#e5e7eb] rounded-lg p-5 bg-white">
-              <p className="font-semibold text-sm text-[#1a1a1a] mb-1">{v.title}</p>
-              <p className="text-sm text-[#6b7280] leading-relaxed">{v.text}</p>
+      {/* Story section */}
+      <section className="py-10 md:py-16 bg-white">
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+            {/* Photo */}
+            <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-100" style={{ minHeight: '420px' }}>
+              <img
+                src="/demo/agdervogv/technician.jpg"
+                alt="Magnus, fagmann hos Agder Varme og Vedlikehold"
+                className="w-full h-full object-cover object-top"
+                style={{ minHeight: '420px' }}
+              />
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* ── Contact CTA ── */}
-      <div className="border-t border-[#e5e7eb] pt-10">
-        <h2 className="text-base font-bold text-[#1a1a1a] mb-2">Ta kontakt</h2>
-        <p className="text-[#6b7280] mb-4">
-          Ring Magnus direkte for befaring eller spørsmål. Gratis og uforpliktende.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <a
-            href="tel:97123554"
-            className="bg-[#c2410c] hover:bg-[#b03a0b] text-white px-5 py-2.5 rounded text-sm font-semibold transition-colors"
-          >
-            Ring 97 12 35 54
-          </a>
-          <a
-            href="mailto:hei@agdervogv.no"
-            className="border border-[#e5e7eb] hover:bg-[#f9fafb] text-[#1a1a1a] px-5 py-2.5 rounded text-sm font-semibold transition-colors"
-          >
-            hei@agdervogv.no
-          </a>
+            {/* Text */}
+            <div className="pt-2">
+              <h2 className="font-bold text-[#1e293b] mb-5" style={{ fontSize: '1.5rem' }}>
+                Magnus fra Vegarsshei
+              </h2>
+
+              <div className="space-y-4 text-[#64748b] mb-6">
+                <p>
+                  Magnus (37) er grunnleggeren bak Agder Varme og Vedlikehold. Han er utdannet fagmann
+                  og har bodd og jobbet i Vegarsshei hele livet. Da han sa at det manglet en lokal aktor
+                  som spesialiserte seg pa varmepumper i omradet, bestemte han seg for a gjore noe med det.
+                </p>
+                <p>
+                  I dag tilbyr Magnus alt fra gratis befaring og radgiving til sertifisert montering og
+                  fast serviceordning. Alle oppdrag utfores av Magnus personlig. Du slipper a forholde
+                  deg til et anonymt firma eller en tilfeldig tekniker.
+                </p>
+                <p>
+                  Ingen mellomledd, ingen anonyme teknikere. Bare Magnus - en fagmann som kjenner naboene
+                  sine og stiller seg ansvarlig for arbeidet sitt.
+                </p>
+              </div>
+
+              <blockquote className="border-l-4 border-[#ea580c] pl-4 mb-7">
+                <p className="font-semibold text-[#1e293b] italic leading-snug mb-2">
+                  "Det er ingen andre her i omradet som driver med dette, derfor startet jeg."
+                </p>
+                <footer className="text-sm text-[#64748b]">Magnus, grunnlegger</footer>
+              </blockquote>
+
+              {/* Certifications */}
+              <div className="mb-6">
+                <p className="font-semibold text-sm text-[#1e293b] mb-3">Sertifiseringer og kvalitet</p>
+                <ul className="space-y-2">
+                  {certifications.map((c) => (
+                    <li key={c} className="flex items-start gap-2.5 text-sm text-[#64748b]">
+                      <svg className="w-4 h-4 text-[#ea580c] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Service area */}
+              <div>
+                <p className="font-semibold text-sm text-[#1e293b] mb-3">Betjener</p>
+                <div className="flex flex-wrap gap-2">
+                  {serviceArea.map((area) => (
+                    <span
+                      key={area}
+                      className="px-3 py-1 bg-[#f8fafc] border border-[#e2e8f0] rounded-full text-xs font-medium text-[#64748b]"
+                    >
+                      {area}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-10 md:py-16 bg-[#f8fafc] border-y border-[#e2e8f0]">
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
+          <div className="mb-8">
+            <p className="text-[#ea580c] font-semibold text-xs uppercase tracking-wider mb-3">
+              Verdier
+            </p>
+            <h2 className="font-bold text-[#1e293b] leading-tight" style={{ fontSize: '1.75rem' }}>
+              Slik jobber vi
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {values.map((v) => (
+              <div
+                key={v.title}
+                className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm"
+              >
+                <h3 className="font-bold text-[#1e293b] mb-2">{v.title}</h3>
+                <p className="text-sm text-[#64748b] leading-relaxed">{v.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-14 bg-white">
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
+          <div className="rounded-lg bg-[#1e293b] p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div>
+              <h2 className="font-bold text-white mb-2" style={{ fontSize: '1.5rem' }}>
+                Ta kontakt med Magnus
+              </h2>
+              <p className="text-slate-400">
+                Ring direkte for befaring eller sporsmal. Gratis og uforpliktende.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 flex-shrink-0">
+              <a
+                href="tel:97123554"
+                className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold px-6 py-3 rounded-lg transition-colors"
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 3h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 10.82a16 16 0 006.08 6.08l1.17-1.17a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 18v-.08z" />
+                </svg>
+                97 12 35 54
+              </a>
+              <a
+                href={`${BASE}#kontakt`}
+                className="inline-flex items-center gap-2 border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              >
+                Send melding
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
