@@ -104,13 +104,13 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
       <main>{children}</main>
 
       {/* ── Footer ── */}
-      <footer className="bg-[#f8fafc] border-t border-[#e2e8f0] py-12">
+      <footer className="bg-[#f8fafc] border-t border-[#e2e8f0] py-8 sm:py-12">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-8">
 
             {/* Company info */}
-            <div>
-              <img src="/demo/agdervogv/logo-askew.png" alt="Agder Varme og Vedlikehold" className="h-40 w-auto object-contain" />
+            <div className="flex sm:block justify-center">
+              <img src="/demo/agdervogv/logo-askew.png" alt="Agder Varme og Vedlikehold" className="h-28 sm:h-40 w-auto object-contain" />
             </div>
 
             {/* Quick links */}
@@ -149,9 +149,9 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
             </div>
           </div>
 
-          <div className="border-t border-[#e2e8f0] pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="border-t border-[#e2e8f0] pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <p className="text-xs text-[#64748b]">&copy; 2025 Agder Varme og Vedlikehold. Alle rettigheter forbeholdt.</p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 sm:flex-shrink-0">
               <img src="/demo/agdervogv/isovator.jpg" alt="ISOVATOR sertifisert installatør" className="h-8 w-auto object-contain opacity-80" />
               <img src="/demo/agdervogv/novap.jpg" alt="NOVAP godkjent forhandler" className="h-8 w-auto object-contain opacity-80" />
             </div>

@@ -63,12 +63,11 @@ export default function OmOssPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
             {/* Photo */}
-            <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-100" style={{ minHeight: '420px' }}>
+            <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-100 h-64 sm:h-80 lg:h-auto lg:min-h-[420px]">
               <img
                 src="/demo/agdervogv/technician.jpg"
                 alt="Fagmann hos Agder Varme og Vedlikehold"
                 className="w-full h-full object-cover object-top"
-                style={{ minHeight: '420px' }}
               />
             </div>
 
