@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 const BASE = '/demo/agdervogv';
 
 const certifications = [
-  'Sertifisert varmepumpeinstallatør',
-  'Godkjent av bransjeorganisasjonen',
+  'ISOVATOR sertifisert varmepumpeinstallatør',
+  'NOVAP godkjent forhandler',
   'Følger gjeldende HMS-krav',
   'Skriftlig dokumentasjon etter hvert oppdrag',
 ];
@@ -103,7 +103,19 @@ export default function OmOssPage() {
 
               {/* Certifications */}
               <div className="mb-6">
-                <p className="font-semibold text-sm text-[#1e293b] mb-3">Sertifiseringer og kvalitet</p>
+                <p className="font-semibold text-sm text-[#1e293b] mb-3">Sertifiseringer og godkjenninger</p>
+                <div className="flex flex-wrap items-center gap-4 mb-4">
+                  <img
+                    src="/demo/agdervogv/isovator.jpg"
+                    alt="ISOVATOR sertifisert installatør"
+                    className="h-12 w-auto object-contain"
+                  />
+                  <img
+                    src="/demo/agdervogv/novap.jpg"
+                    alt="NOVAP godkjent forhandler"
+                    className="h-12 w-auto object-contain"
+                  />
+                </div>
                 <ul className="space-y-2">
                   {certifications.map((c) => (
                     <li key={c} className="flex items-start gap-2.5 text-sm text-[#64748b]">

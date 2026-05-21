@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Produkter | Agder Varme og Vedlikehold',
   description:
-    'Varmepumper fra Daikin, Mitsubishi Electric, Panasonic, Fujitsu og Samsung. Ring for tilbud.',
+    'Varmepumper fra Mitsubishi Electric, Panasonic, Toshiba og Daikin. Ring for tilbud.',
   robots: 'noindex',
 };
 
@@ -11,29 +11,28 @@ const BASE = '/demo/agdervogv';
 
 const brands = [
   {
-    name: 'Daikin',
-    tagline: 'Markedsleder i Europa',
-    desc: 'Japansk kvalitet og ingeniorkunst. Kjent for hoy energieffektivitet, lang levetid og et bredt utvalg modeller for alle boligstørrelser. Et trygt valg.',
-  },
-  {
     name: 'Mitsubishi Electric',
-    tagline: 'Utmerket kaldtklima-ytelse',
-    desc: 'Svart palitelige pumper med god varmeytelse i kaldt klima. Populaer i norske hjem og kjent for stilig design og intuitiv betjening.',
+    tagline: 'Utmerket ytelse i kaldt klima',
+    desc: 'Pålitelige pumper med god varmeytelse også ved lave utetemperaturer. Populær i norske hjem og kjent for stilig design og intuitiv betjening.',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mitsubishi_Electric_logo.svg/320px-Mitsubishi_Electric_logo.svg.png',
   },
   {
     name: 'Panasonic',
     tagline: 'Stille og effektiv drift',
-    desc: 'God effekt og lav støynivået. Spesielt sterk på oppvarming ved lave utetemperaturer, noe som gjør den velegnet for innlandet.',
+    desc: 'God effekt og lavt støynivå. Spesielt sterk på oppvarming ved lave utetemperaturer, noe som gjør den velegnet for innlandet.',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Panasonic_logo_%28Blue%29.svg/320px-Panasonic_logo_%28Blue%29.svg.png',
   },
   {
-    name: 'Fujitsu',
+    name: 'Toshiba',
     tagline: 'Driftsikker hele vinteren',
-    desc: 'Effektive og palitelige pumper med god varmeytelse gjennom hele vintersesongen. Kjent for robust konstruksjon og lang levetid.',
+    desc: 'Effektive og pålitelige pumper med god varmeytelse gjennom hele vintersesongen. Kjent for robust konstruksjon og lang levetid.',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Toshiba_logo.svg/320px-Toshiba_logo.svg.png',
   },
   {
-    name: 'Samsung',
-    tagline: 'Smart styring og moderne design',
-    desc: 'Moderne design med smart styring via app. Egner seg godt for hus der man ønsker integrert klimakontroll og fjernbetjening.',
+    name: 'Daikin',
+    tagline: 'Markedsleder i Europa',
+    desc: 'Japansk kvalitet og ingeniørkunst. Kjent for høy energieffektivitet, lang levetid og et bredt utvalg modeller for alle boligstørrelser.',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Daikin_logo.svg/320px-Daikin_logo.svg.png',
   },
 ];
 
@@ -56,7 +55,7 @@ const guideItems = [
   {
     step: '4',
     title: 'Plassering og fasade',
-    desc: 'Noen plasseringer er mer krevende enn andre. Magnus vurderer dette på befaring og gir deg ærlig råd.',
+    desc: 'Noen plasseringer er mer krevende enn andre. Vi vurderer dette på befaring og gir deg ærlig råd.',
   },
 ];
 
@@ -73,7 +72,7 @@ export default function ProdukterPage() {
             Ledende merker
           </h1>
           <p className="text-[#64748b] max-w-xl">
-            Vi leverer og monterer varmepumper fra de beste produsentene. Vi hjelper deg velge
+            Vi leverer og monterer varmepumper fra fire utvalgte produsenter. Vi hjelper deg velge
             riktig modell basert på din bolig, ditt budsjett og lokale forhold i Vegårshei og omegn.
           </p>
         </div>
@@ -82,16 +81,25 @@ export default function ProdukterPage() {
       {/* Brand cards */}
       <section className="py-10 md:py-16 bg-white">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {brands.map((b) => (
               <div
                 key={b.name}
                 className="rounded-lg border border-slate-200 shadow-sm bg-white overflow-hidden"
               >
-                {/* Brand header */}
-                <div className="bg-[#f8fafc] border-b border-[#e2e8f0] px-5 py-4">
-                  <p className="font-bold text-[#1e293b] text-lg">{b.name}</p>
-                  <p className="text-[#ea580c] text-xs font-semibold">{b.tagline}</p>
+                {/* Brand header with logo */}
+                <div className="bg-[#f8fafc] border-b border-[#e2e8f0] px-5 py-5 flex items-center gap-4">
+                  <div className="w-28 flex-shrink-0 flex items-center">
+                    <img
+                      src={b.logo}
+                      alt={b.name}
+                      className="max-h-8 w-auto object-contain"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-[#1e293b] text-base leading-tight">{b.name}</p>
+                    <p className="text-[#ea580c] text-xs font-semibold mt-0.5">{b.tagline}</p>
+                  </div>
                 </div>
                 <div className="px-5 py-4">
                   <p className="text-sm text-[#64748b] leading-relaxed">{b.desc}</p>
@@ -100,7 +108,23 @@ export default function ProdukterPage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-lg bg-[#fff7ed] border border-orange-200 p-5">
+          {/* Service other brands note */}
+          <div className="mt-6 rounded-lg bg-[#f1f5f9] border border-[#e2e8f0] p-5 flex gap-3 items-start">
+            <svg className="w-5 h-5 text-[#ea580c] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+            <div>
+              <p className="font-semibold text-[#1e293b] mb-0.5">Vi servicer alle merker</p>
+              <p className="text-sm text-[#64748b]">
+                Har du allerede en varmepumpe av et annet merke? Vi utfører service, feilsøking og
+                reparasjon på alle modeller og merker, uansett alder.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg bg-[#fff7ed] border border-orange-200 p-5">
             <p className="font-semibold text-[#1e293b] mb-1">Priser varierer etter modell</p>
             <p className="text-sm text-[#64748b]">
               Vi gir aldri generelle priser fordi riktig modell og pris avhenger av din bolig.
@@ -115,13 +139,13 @@ export default function ProdukterPage() {
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
           <div className="mb-10">
             <p className="text-[#ea580c] font-semibold text-xs uppercase tracking-wider mb-3">
-              Kjopsguide
+              Kjøpsguide
             </p>
             <h2 className="font-bold text-[#1e293b] leading-tight mb-3" style={{ fontSize: '1.75rem' }}>
-              Hva pavirker valget?
+              Hva påvirker valget?
             </h2>
             <p className="text-[#64748b] max-w-xl">
-              Det er flere faktorer som avgjør hvilken modell som er best for deg. Magnus
+              Det er flere faktorer som avgjør hvilken modell som er best for deg. Vi
               går gjennom alle disse på befaring.
             </p>
           </div>
@@ -150,7 +174,7 @@ export default function ProdukterPage() {
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
           <div className="rounded-lg bg-[#ea580c] p-8 sm:p-10 text-center">
             <h2 className="font-bold text-white mb-3" style={{ fontSize: '1.75rem' }}>
-              Fa pris på riktig pumpe
+              Få pris på riktig pumpe
             </h2>
             <p className="text-orange-100 mb-6 max-w-md mx-auto">
               Ring oss for gratis befaring. Vi finner den beste løsningen for din bolig og ditt budsjett.

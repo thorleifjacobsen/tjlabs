@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: 'Hvilke merker leverer og monterer dere?',
-    a: 'Vi leverer og monterer fra Daikin, Mitsubishi Electric, Panasonic, Fujitsu og Samsung. Vi hjelper deg velge riktig modell basert på boligstørrelse, isolasjon og budsjett.',
+    a: 'Vi leverer og monterer fra Mitsubishi Electric, Panasonic, Toshiba og Daikin. Vi hjelper deg velge riktig modell basert på boligstørrelse, isolasjon og budsjett. Vi servicer også andre merker.',
   },
 ];
 

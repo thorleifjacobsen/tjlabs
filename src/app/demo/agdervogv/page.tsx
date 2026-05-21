@@ -69,7 +69,7 @@ function IconArrow() {
 // ── Data ───────────────────────────────────────────────────────────────────
 
 const trust = [
-  { icon: <IconShield />, label: 'Sertifisert fagmann', sub: 'Godkjent installatør' },
+  { icon: <IconShield />, label: 'Sertifisert fagmann', sub: 'ISOVATOR & NOVAP godkjent' },
   { icon: <IconHome />,   label: 'Gratis befaring',    sub: 'Ingen skjulte kostnader' },
   { icon: <IconGrid />,   label: 'Alle merker',        sub: 'Daikin, Mitsubishi og mer' },
   { icon: <IconMapPin />, label: 'Lokal og rask',      sub: 'Vegårshei og omegn' },
@@ -105,7 +105,7 @@ const benefits = [
   { label: 'Stillegående',           desc: 'Moderne pumper er nesten lydløse i drift.' },
 ];
 
-const brands = ['Daikin', 'Mitsubishi Electric', 'Panasonic', 'Fujitsu', 'Samsung'];
+const brands = ['Mitsubishi Electric', 'Panasonic', 'Toshiba', 'Daikin'];
 
 // ── Page ───────────────────────────────────────────────────────────────────
 
@@ -167,6 +167,27 @@ export default function FrontPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 2b. CERT STRIP ── */}
+      <section className="bg-[#f8fafc] border-b border-[#e2e8f0]">
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center gap-4">
+          <p className="text-xs font-semibold text-[#64748b] uppercase tracking-wider flex-shrink-0">
+            Sertifisert og godkjent:
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <img
+              src="/demo/agdervogv/isovator.jpg"
+              alt="ISOVATOR sertifisert installatør"
+              className="h-10 w-auto object-contain"
+            />
+            <img
+              src="/demo/agdervogv/novap.jpg"
+              alt="NOVAP godkjent forhandler"
+              className="h-10 w-auto object-contain"
+            />
           </div>
         </div>
       </section>
