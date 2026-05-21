@@ -41,7 +41,7 @@ export default function SteinmoenHome() {
       <section className="flex bg-white" style={{ minHeight: '90vh' }}>
         <div className="flex flex-col justify-center w-full md:w-[60%] px-6 md:px-16 lg:px-20 py-24 md:py-0">
           <p className="text-xs tracking-[0.25em] text-[#999] uppercase mb-8">
-            Grimstad & Arendal — Din reklamepartner
+            Grimstad og Arendal
           </p>
           <h1
             className="font-black leading-[0.92] tracking-tight mb-8"
@@ -52,8 +52,8 @@ export default function SteinmoenHome() {
             <span className="block text-[#111]">synlig.</span>
           </h1>
           <p className="text-[#666] text-base max-w-md mb-10" style={{ lineHeight: 1.7 }}>
-            Steinmoen leverer alt innen reklame og profilering. Fra skilter og bildekor
-            til profiltøy og gaveart&shy;ikler. Med to lokasjoner i Aust-Agder.
+            Skilter, bildekor, profiltøy og profilartikler.
+            To lokasjoner i Aust-Agder.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link

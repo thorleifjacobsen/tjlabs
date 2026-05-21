@@ -20,61 +20,61 @@ type Service = {
 const services: Service[] = [
   {
     num: '01', name: 'Skilter', slug: 'skilter',
-    desc: 'Vi produserer og monterer alle typer skilt, fra enkle fasadeskilt til store LED-konstruksjoner. Alt designes og tilpasses din bedriftsprofil.',
+    desc: 'Fasadeskilt, LED-konstruksjoner og alt imellom. Vi produserer og monterer, og tilpasser alt til din profil.',
     tags: ['Fasadeskilt', 'LED-skilt', 'Utendørs', 'Oppheng & bøyler'],
   },
   {
     num: '02', name: 'Bildekor', slug: 'bildekor',
-    desc: 'Gjør kjøretøyet til en vandrende reklametavle. Vi trykker og monterer logoer, produktbilder og arbeidsmotiver direkte på bilen. Holdbar folie med profesjonell finish.',
+    desc: 'Logo, produktbilder og arbeidsbilder montert direkte på kjøretøyet. Varig folie og ren finish.',
     tags: ['Logo', 'Produktbilder', 'Arbeidsbilder', 'Kjøretøy'],
     image: '/demo/steinmoen/project-agder.jpg',
   },
   {
     num: '03', name: 'Helfoliering', slug: 'helfoliering',
-    desc: 'Vil du endre bilens farge, gi den en matt finish eller profilere firmaet? Vi tilbyr helfoliering i et bredt spekter av farger og finish.',
+    desc: 'Bytt farge, gå matt eller wrap for firmaet. Vi folder i alle farger og finisher.',
     tags: ['Fargefolie', 'Matt finish', 'Firmaprofilering', 'Lakkbeskyttelse'],
     image: '/demo/steinmoen/project-yono.jpg',
   },
   {
     num: '04', name: 'Profiltøy', slug: 'profiltoy',
-    desc: 'Vi leverer profiltøy med trykk eller broderi fra ledende merkevarer. T-skjorter, jakker, capser, hettegensere, alt merkes med din logo.',
+    desc: 'T-skjorter, jakker, capser og hettegensere med ditt logo. Trykk eller broderi fra merkevarer vi kjenner godt.',
     tags: ['T-skjorter', 'Jakker', 'Capser', 'Hettegensere', 'Broderi & trykk'],
   },
   {
     num: '05', name: 'Trykksaker', slug: 'trykksaker',
-    desc: 'Fra visittkort til store plakater. Vi leverer trykksaker i høy kvalitet og hjelper deg med design og produksjon fra start til slutt.',
+    desc: 'Visittkort, brosjyrer, plakater og roll-ups. Vi hjelper med design, trykk og levering.',
     tags: ['Visittkort', 'Brosjyrer', 'Plakater', 'Kataloger', 'Roll-ups'],
     image: '/demo/steinmoen/project-egde.jpg',
   },
   {
     num: '06', name: 'Interiør', slug: 'interior',
-    desc: 'Gjør lokalene dine unike med interiørdekor fra Steinmoen. Vi leverer veggdekor, frostet folie til glass, akustiske paneler og printet tapet.',
+    desc: 'Veggdekor, frostet folie på glass, akustikk og printet tapet. Identitet inne, ikke bare ute.',
     tags: ['Veggdekor', 'Frostet folie', 'Akustikkpaneler', 'Printet tapet'],
   },
   {
     num: '07', name: 'Taktil markering', slug: 'taktil',
-    desc: 'Vi leverer løsninger for universell utforming med ledelinjer, taktile kart og varselfelt. Tilpasset gjeldende krav og standarder.',
+    desc: 'Ledelinjer, taktile kart og varselfelt etter gjeldende krav. Vi vet hva som trengs og ordner det.',
     tags: ['Ledelinjer', 'Varselfelt', 'Universell utforming', 'Offentlig sektor'],
   },
   {
     num: '08', name: 'Gave & Profilartikler', slug: 'gave',
-    desc: 'Vi leverer giveaways, eksklusive firmagaver og profilartikler fra kjente merkevarer som Sagaform, Kosta Boda og Toppoint.',
-    tags: ['Giveaways', 'Eksklusive gaver', 'Profilartikler', 'Merkevarer'],
+    desc: 'Giveaways og firmagaver fra Sagaform, Kosta Boda, Toppoint og flere. Noe å huske oss på.',
+    tags: ['Giveaways', 'Firmagaver', 'Profilartikler', 'Merkevarer'],
   },
   {
     num: '09', name: 'Lakkbeskyttelse (PPF)', slug: 'ppf',
-    desc: 'Paint Protection Film (PPF) er en usynlig eller matt steinsprutfolie som beskytter bilens lakk mot steiner, riper og insekter. Selvrepararende.',
+    desc: 'Usynlig eller matt folie som beskytter lakken mot steiner, riper og insekter. Reparerer seg selv.',
     tags: ['Steinsprutfolie', 'Selvrepararende', 'Usynlig PPF', 'Matt PPF'],
   },
   {
     num: '10', name: 'Solfilm', slug: 'solfilm',
-    desc: 'Vi leverer og monterer solfilm for bil og bygg. Solfilm reduserer UV-stråling, holder temperaturen nede og gir økt personvern.',
+    desc: 'Solfilm for bil og bygg. Kutter UV-stråling, demper varme og gir mer privatliv.',
     tags: ['UV-beskyttelse', 'Varmereduksjon', 'Personvern', 'Bil & bygg'],
     image: '/demo/steinmoen/project-veidekke.jpg',
   },
   {
     num: '11', name: 'Kataloger', slug: 'kataloger',
-    desc: 'Vi har et bredt utvalg av kataloger innen profiltøy og gave- og profilartikler. Bla gjennom digitalt eller ta kontakt for prøver og tilbud.',
+    desc: 'Bla gjennom katalogene våre digitalt. Ta kontakt for prøver, priser og bestilling med ditt logo.',
     tags: ['Profiltøy', 'Gave & profilartikler', 'Digitale kataloger'],
   },
 ];
@@ -161,7 +161,7 @@ export default function TjenesterPage() {
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h3 className="text-2xl md:text-3xl font-black text-white mb-2">Klar for et tilbud?</h3>
-            <p className="text-white/50 text-sm">Ta kontakt, og vi finner den beste løsningen for din bedrift.</p>
+            <p className="text-white/50 text-sm">Ring, skriv eller stikk innom. Vi ordner resten.</p>
           </div>
           <div className="flex gap-4">
             <a href="/demo/steinmoen/kontakt#kontakt-form" className="px-6 py-3 bg-[#1a4fd6] text-white text-sm font-semibold hover:bg-[#1f60ff] transition-colors">

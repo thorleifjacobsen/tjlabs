@@ -40,7 +40,7 @@ export default function KatalogerClient() {
             Kataloger
           </h1>
           <p className="text-[#666] text-sm mt-4 max-w-lg" style={{ lineHeight: 1.7 }}>
-            Bla gjennom katalogene digitalt. Ta kontakt med oss for priser og bestilling med ditt logo.
+            Bla gjennom katalogene digitalt. Ta kontakt for priser og bestilling med logo.
           </p>
         </div>
       </div>
