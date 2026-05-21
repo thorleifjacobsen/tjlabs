@@ -13,5 +13,6 @@ Logo-filer er ikke inkludert — de eies av kunden.
 | `befaring.jpg` | `gratisbefaring.jpg` | Levert av kunde |
 | `installasjon.jpg` | `hzflaggshippanasonic.jpg` | Levert av kunde |
 | `salg.jpg` | `takontrolhzflagship.jpg` | Levert av kunde |
+| `technician.jpg` | `pexels-jose-andres-pacheco-cortes-3641213-6471912.jpg` | [Pexels](https://www.pexels.com/photo/6471912) / José Andrés Pacheco Cortés |
 
 Pexels-bilder er lisensiert under [Pexels License](https://www.pexels.com/license/) — fri bruk, ingen attribusjonsplikt.
