@@ -543,8 +543,8 @@ export default function AgderVOVPage() {
                     <IconMapPin className="w-5 h-5 text-orange-400" />
                   </span>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">Område</p>
-                    <p className="text-base font-semibold text-white">Agder</p>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">Adresse</p>
+                    <p className="text-base font-semibold text-white">Sagaveien 7, 4985 Vegårshei</p>
                   </div>
                 </div>
               </div>
