@@ -110,7 +110,7 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
 
             {/* Company info */}
             <div>
-              <img src="/demo/agdervogv/logo-askew.jpg" alt="Agder Varme og Vedlikehold" className="h-20 w-auto object-contain" />
+              <img src="/demo/agdervogv/logo-askew.jpg" alt="Agder Varme og Vedlikehold" className="h-28 w-auto object-contain" />
             </div>
 
             {/* Quick links */}
