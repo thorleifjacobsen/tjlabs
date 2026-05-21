@@ -26,6 +26,9 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
 
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-8">
+              <Link href="/demo/steinmoen" className="text-sm text-[#666] hover:text-[#111] transition-colors duration-150">
+                Forside
+              </Link>
               <Link href="/demo/steinmoen/tjenester" className="text-sm text-[#666] hover:text-[#111] transition-colors duration-150">
                 Tjenester
               </Link>
@@ -60,6 +63,7 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
         {/* Mobile menu */}
         {menuOpen && (
           <div className="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center gap-8 md:hidden">
+            <Link href="/demo/steinmoen" className="text-2xl font-semibold text-[#111]" onClick={() => setMenuOpen(false)}>Forside</Link>
             <Link href="/demo/steinmoen/tjenester" className="text-2xl font-semibold text-[#111]" onClick={() => setMenuOpen(false)}>Tjenester</Link>
             <Link href="/demo/steinmoen/kataloger" className="text-2xl font-semibold text-[#111]" onClick={() => setMenuOpen(false)}>Kataloger</Link>
             <Link href="/demo/steinmoen/kontakt" className="text-2xl font-semibold text-[#111]" onClick={() => setMenuOpen(false)}>Kontakt</Link>
@@ -89,6 +93,7 @@ export default function SteinmoenLayout({ children }: { children: React.ReactNod
               <div>
                 <p className="text-xs text-[#999] uppercase tracking-widest mb-4">Navigasjon</p>
                 <div className="space-y-2">
+                  <Link href="/demo/steinmoen" className="block text-sm text-[#666] hover:text-[#111] transition-colors">Forside</Link>
                   <Link href="/demo/steinmoen/tjenester" className="block text-sm text-[#666] hover:text-[#111] transition-colors">Tjenester</Link>
                   <Link href="/demo/steinmoen/kataloger" className="block text-sm text-[#666] hover:text-[#111] transition-colors">Kataloger</Link>
                   <Link href="/demo/steinmoen/kontakt" className="block text-sm text-[#666] hover:text-[#111] transition-colors">Kontakt</Link>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import CatalogMarquee from './CatalogMarquee';
+import ClientMarquee from './ClientMarquee';
 
 export const metadata: Metadata = {
   title: 'Steinmoen – Din Reklamepartner',
@@ -8,12 +9,6 @@ export const metadata: Metadata = {
   robots: 'noindex',
 };
 
-const clients = [
-  'Å Energi', 'Veidekke', 'Rema 1000', 'Skatteetaten', 'UIA',
-  'Sørlandet Sykehus', 'XL Bygg', 'NYMO', 'J.B. Ugland',
-  'EGDE Consulting', 'IndustriTRE', 'Vikingbad', 'Agder Karosseri',
-  'Amundsen Bygg', 'Kuben', 'Fargeriket', 'Igland Garasjen', 'Autostrada',
-];
 
 const services = [
   { num: '01', name: 'Skilter', slug: 'skilter', desc: 'Fasade, LED, utendørs' },
@@ -32,11 +27,7 @@ export default function SteinmoenHome() {
   return (
     <>
       <style>{`
-        @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-        .mq-track { display:flex; width:max-content; animation:marquee 40s linear infinite; }
-        .mq-track:hover { animation-play-state:paused; }
-
-.svc-row { transition:background 150ms ease; }
+        .svc-row { transition:background 150ms ease; }
         .svc-row:hover { background:#f0f4ff; }
         .svc-name { transition:transform 150ms ease; display:inline-block; }
         .svc-row:hover .svc-name { transform:translateX(3px); }
@@ -44,7 +35,6 @@ export default function SteinmoenHome() {
         .svc-row:hover .svc-arrow { opacity:1; }
         .pj-overlay { opacity:0; transition:opacity 200ms ease; }
         .pj-card:hover .pj-overlay { opacity:1; }
-
       `}</style>
 
       {/* 1. HERO */}
@@ -92,16 +82,7 @@ export default function SteinmoenHome() {
       </section>
 
       {/* 2. MARQUEE — clients */}
-      <div className="bg-white border-t border-b border-[#e5e5e5] py-4 overflow-hidden">
-        <div className="mq-track">
-          {[...clients, ...clients].map((c, i) => (
-            <span key={i} className="text-sm text-[#111] whitespace-nowrap px-8">
-              {c}
-              <span className="text-[#ddd] mx-6">|</span>
-            </span>
-          ))}
-        </div>
-      </div>
+      <ClientMarquee />
 
       {/* 3. SERVICES — numbered rows, each links to its anchor */}
       <section className="bg-white py-[60px] md:py-[120px]">
