@@ -94,7 +94,7 @@ export default function KontaktPage() {
                     <a href="mailto:hei@agdervogv.no" className="font-semibold text-[#1e293b] hover:text-[#ea580c] transition-colors">
                       hei@agdervogv.no
                     </a>
-                    <p className="text-sm text-[#64748b] mt-0.5">Svar innen en arbeidsdag</p>
+                    <p className="text-sm text-[#64748b] mt-0.5">Vi svarer så fort vi kan</p>
                   </div>
                 </div>
 
@@ -215,7 +215,7 @@ export default function KontaktPage() {
                 </button>
 
                 <p className="text-xs text-[#64748b] text-center">
-                  Vi ringer deg tilbake innen en arbeidsdag.
+                  Vi tar kontakt så fort vi har mulighet.
                 </p>
               </form>
             </div>
