@@ -110,11 +110,7 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
 
             {/* Company info */}
             <div>
-              <div className="flex items-center gap-2.5 mb-3">
-                <img src="/demo/agdervogv/logo.png" alt="" className="h-8 w-auto" />
-              </div>
-              <p className="font-bold text-sm text-[#1e293b] mb-1">Agder Varme og Vedlikehold</p>
-              <p className="text-sm text-[#64748b]">Varmepumper og vaktmestertjenester i Vegårshei og omegn</p>
+              <img src="/demo/agdervogv/logo-askew.jpg" alt="Agder Varme og Vedlikehold" className="h-20 w-auto object-contain" />
             </div>
 
             {/* Quick links */}
