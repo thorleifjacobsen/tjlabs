@@ -13,7 +13,7 @@ const brands = [
   {
     name: 'Daikin',
     tagline: 'Markedsleder i Europa',
-    desc: 'Japansk kvalitet og ingeniorkunst. Kjent for hoy energieffektivitet, lang levetid og et bredt utvalg modeller for alle boligstorrelser. Et trygt valg.',
+    desc: 'Japansk kvalitet og ingeniorkunst. Kjent for hoy energieffektivitet, lang levetid og et bredt utvalg modeller for alle boligstørrelser. Et trygt valg.',
   },
   {
     name: 'Mitsubishi Electric',
@@ -23,7 +23,7 @@ const brands = [
   {
     name: 'Panasonic',
     tagline: 'Stille og effektiv drift',
-    desc: 'God effekt og lav stoynivaet. Spesielt sterk pa oppvarming ved lave utetemperaturer, noe som gjor den velegnet for innlandet.',
+    desc: 'God effekt og lav støynivået. Spesielt sterk på oppvarming ved lave utetemperaturer, noe som gjør den velegnet for innlandet.',
   },
   {
     name: 'Fujitsu',
@@ -33,20 +33,20 @@ const brands = [
   {
     name: 'Samsung',
     tagline: 'Smart styring og moderne design',
-    desc: 'Moderne design med smart styring via app. Egner seg godt for hus der man onsker integrert klimakontroll og fjernbetjening.',
+    desc: 'Moderne design med smart styring via app. Egner seg godt for hus der man ønsker integrert klimakontroll og fjernbetjening.',
   },
 ];
 
 const guideItems = [
   {
     step: '1',
-    title: 'Boligens storrelse',
-    desc: 'Antall kvadratmeter og etasjer avgjor hvilken kapasitet du trenger. Vi hjelper deg beregne riktig dimensjon.',
+    title: 'Boligens størrelse',
+    desc: 'Antall kvadratmeter og etasjer avgjør hvilken kapasitet du trenger. Vi hjelper deg beregne riktig dimensjon.',
   },
   {
     step: '2',
     title: 'Isolasjonsstandard',
-    desc: 'Et godt isolert hus trenger en mindre pumpe. Et eldre hus kan trenge en storre modell for a holde varmen.',
+    desc: 'Et godt isolert hus trenger en mindre pumpe. Et eldre hus kan trenge en større modell for å holde varmen.',
   },
   {
     step: '3',
@@ -56,7 +56,7 @@ const guideItems = [
   {
     step: '4',
     title: 'Plassering og fasade',
-    desc: 'Noen plasseringer er mer krevende enn andre. Magnus vurderer dette pa befaring og gir deg ærlig rad.',
+    desc: 'Noen plasseringer er mer krevende enn andre. Magnus vurderer dette på befaring og gir deg ærlig rad.',
   },
 ];
 
@@ -74,7 +74,7 @@ export default function ProdukterPage() {
           </h1>
           <p className="text-[#64748b] max-w-xl">
             Vi leverer og monterer varmepumper fra de beste produsentene. Magnus hjelper deg velge
-            riktig modell basert pa din bolig, ditt budsjett og lokale forhold i Vegarsshei og omegn.
+            riktig modell basert på din bolig, ditt budsjett og lokale forhold i Vegårshei og omegn.
           </p>
         </div>
       </section>
@@ -121,8 +121,8 @@ export default function ProdukterPage() {
               Hva pavirker valget?
             </h2>
             <p className="text-[#64748b] max-w-xl">
-              Det er flere faktorer som avgjor hvilken modell som er best for deg. Magnus
-              gar gjennom alle disse pa befaring.
+              Det er flere faktorer som avgjør hvilken modell som er best for deg. Magnus
+              går gjennom alle disse på befaring.
             </p>
           </div>
 
@@ -150,7 +150,7 @@ export default function ProdukterPage() {
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
           <div className="rounded-lg bg-[#ea580c] p-8 sm:p-10 text-center">
             <h2 className="font-bold text-white mb-3" style={{ fontSize: '1.75rem' }}>
-              Fa pris pa riktig pumpe
+              Fa pris på riktig pumpe
             </h2>
             <p className="text-orange-100 mb-6 max-w-md mx-auto">
               Ring Magnus for gratis befaring. Vi finner den beste losningen for din bolig og ditt budsjett.
@@ -166,7 +166,7 @@ export default function ProdukterPage() {
                 Ring 97 12 35 54
               </a>
               <a
-                href={`${BASE}#kontakt`}
+                href={`${BASE}/kontakt`}
                 className="inline-flex items-center gap-2 border border-white/50 hover:border-white text-white font-semibold px-6 py-4 rounded-lg transition-colors text-base"
               >
                 Send melding

@@ -9,7 +9,7 @@ const NAV = [
   { href: `${BASE}/tjenester`, label: 'Tjenester' },
   { href: `${BASE}/produkter`, label: 'Produkter' },
   { href: `${BASE}/om-oss`, label: 'Om oss' },
-  { href: `${BASE}#kontakt`, label: 'Kontakt' },
+  { href: `${BASE}/kontakt`, label: 'Kontakt' },
 ];
 
 export default function AgderVOGVLayout({ children }: { children: React.ReactNode }) {
@@ -67,7 +67,7 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
             <button
               className="md:hidden p-1 text-[#1e293b]"
               onClick={() => setOpen(!open)}
-              aria-label={open ? 'Lukk meny' : 'Apne meny'}
+              aria-label={open ? 'Lukk meny' : 'Åpne meny'}
             >
               {open ? (
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -117,7 +117,7 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
                 <img src="/demo/agdervogv/logo.png" alt="" className="h-8 w-auto" />
               </div>
               <p className="font-bold text-sm text-[#1e293b] mb-1">Agder Varme og Vedlikehold</p>
-              <p className="text-sm text-[#64748b]">Varmepumper i Vegarsshei og omegn</p>
+              <p className="text-sm text-[#64748b]">Varmepumper i Vegårshei og omegn</p>
             </div>
 
             {/* Quick links */}
@@ -151,7 +151,7 @@ export default function AgderVOGVLayout({ children }: { children: React.ReactNod
                     hei@agdervogv.no
                   </a>
                 </li>
-                <li>Sagaveien 7, 4985 Vegarsshei</li>
+                <li>Sagaveien 7, 4985 Vegårshei</li>
               </ul>
             </div>
           </div>

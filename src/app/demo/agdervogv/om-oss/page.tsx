@@ -3,24 +3,24 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Om oss | Agder Varme og Vedlikehold',
   description:
-    'Magnus er en sertifisert fagmann fra Vegarsshei. Din lokale varmepumpeekspert i Vegarsshei og omegn.',
+    'Magnus er en sertifisert fagmann fra Vegårshei. Din lokale varmepumpeekspert i Vegårshei og omegn.',
   robots: 'noindex',
 };
 
 const BASE = '/demo/agdervogv';
 
 const certifications = [
-  'Sertifisert varmepumpeinstallatör',
-  'Godkjent av bransjeorganisasjonen',
+  'Sertifisert varmepumpeinstallatør',
+  'Godkjent installatør',
   'Folger gjeldende HMS-krav',
   'Tilbyr skriftlig dokumentasjon etter hvert oppdrag',
 ];
 
 const serviceArea = [
-  'Vegarsshei',
+  'Vegårshei',
   'Tvedestrand',
   'Gjerstad',
-  'Risör',
+  'Risør',
   'Froland',
   'Omegn etter avtale',
 ];
@@ -28,15 +28,15 @@ const serviceArea = [
 const values = [
   {
     title: 'Lokal',
-    desc: 'Vi kjenner klimaet og forholdene i Vegarsshei og omegn. Det gir bedre rad og mer presise losninger enn en tilreisende montor.',
+    desc: 'Vi kjenner klimaet og forholdene i Vegårshei og omegn. Det gir bedre rad og mer presise losninger enn en tilreisende montør.',
   },
   {
-    title: 'Aerlig',
+    title: 'Ærlig',
     desc: 'Vi selger det du faktisk trenger. Klare priser, ingen skjulte kostnader, og ingen salg du ikke har bedt om.',
   },
   {
     title: 'Faglig stolthet',
-    desc: 'Vi tar oss tid til a gjore jobben ordentlig, forste gang. Dokumentert arbeid og skriftlig rapport etter hvert besok.',
+    desc: 'Vi tar oss tid til å gjøre jobben ordentlig, første gang. Dokumentert arbeid og skriftlig rapport etter hvert besøk.',
   },
 ];
 
@@ -53,7 +53,7 @@ export default function OmOssPage() {
             Om Magnus og Agder Varme og Vedlikehold
           </h1>
           <p className="text-[#64748b] max-w-xl">
-            Et en-mannsforetak bygget pa aerlighat, faglig stolthet og godt handverk.
+            Et en-mannsforetak bygget på ærlighat, faglig stolthet og godt håndverk.
           </p>
         </div>
       </section>
@@ -76,18 +76,18 @@ export default function OmOssPage() {
             {/* Text */}
             <div className="pt-2">
               <h2 className="font-bold text-[#1e293b] mb-5" style={{ fontSize: '1.5rem' }}>
-                Magnus fra Vegarsshei
+                Magnus fra Vegårshei
               </h2>
 
               <div className="space-y-4 text-[#64748b] mb-6">
                 <p>
                   Magnus (37) er grunnleggeren bak Agder Varme og Vedlikehold. Han er utdannet fagmann
-                  og har bodd og jobbet i Vegarsshei hele livet. Da han sa at det manglet en lokal aktor
-                  som spesialiserte seg pa varmepumper i omradet, bestemte han seg for a gjore noe med det.
+                  og har bodd og jobbet i Vegårshei hele livet. Da han så at det manglet en lokal aktør
+                  som spesialiserte seg på varmepumper i omradet, bestemte han seg for å gjøre noe med det.
                 </p>
                 <p>
-                  I dag tilbyr Magnus alt fra gratis befaring og radgiving til sertifisert montering og
-                  fast serviceordning. Alle oppdrag utfores av Magnus personlig. Du slipper a forholde
+                  I dag tilbyr Magnus alt fra gratis befaring og rådgivning til sertifisert montering og
+                  fast serviceordning. Alle oppdrag utføres av Magnus personlig. Du slipper å forholde
                   deg til et anonymt firma eller en tilfeldig tekniker.
                 </p>
                 <p>
@@ -171,7 +171,7 @@ export default function OmOssPage() {
                 Ta kontakt med Magnus
               </h2>
               <p className="text-slate-400">
-                Ring direkte for befaring eller sporsmal. Gratis og uforpliktende.
+                Ring direkte for befaring eller spørsmål. Gratis og uforpliktende.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 flex-shrink-0">
@@ -185,7 +185,7 @@ export default function OmOssPage() {
                 97 12 35 54
               </a>
               <a
-                href={`${BASE}#kontakt`}
+                href={`${BASE}/kontakt`}
                 className="inline-flex items-center gap-2 border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 Send melding
