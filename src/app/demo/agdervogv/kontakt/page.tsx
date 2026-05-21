@@ -119,9 +119,9 @@ export default function KontaktPage() {
                     </svg>
                   </span>
                   <div>
-                    <p className="text-xs font-semibold text-[#64748b] uppercase tracking-wider mb-0.5">Åpningstider</p>
-                    <p className="font-semibold text-[#1e293b]">Man-fre: 07.00-18.00</p>
-                    <p className="text-sm text-[#64748b] mt-0.5">Lør etter avtale</p>
+                    <p className="text-xs font-semibold text-[#64748b] uppercase tracking-wider mb-0.5">Responstid</p>
+                    <p className="font-semibold text-[#1e293b]">Vi svarer så fort vi har mulighet</p>
+                    <p className="text-sm text-[#64748b] mt-0.5">Ingen ventetider, ingen køsystem</p>
                   </div>
                 </div>
               </div>
@@ -220,7 +220,7 @@ export default function KontaktPage() {
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <p className="font-bold text-white">Foretrekker du a ringe direkte?</p>
-            <p className="text-slate-400 text-sm">Vi svarer raskt i arbeidstiden.</p>
+            <p className="text-slate-400 text-sm">Vi svarer så fort vi har mulighet.</p>
           </div>
           <a
             href="tel:97123554"

@@ -98,7 +98,7 @@ export default function OmOssPage() {
                 <p className="font-semibold text-[#1e293b] italic leading-snug mb-2">
                   "Det er ingen andre her i området som driver med dette, derfor startet vi."
                 </p>
-                <footer className="text-sm text-[#64748b]">Grunnleggeren</footer>
+                <footer className="text-sm text-[#64748b]">Magnus Wedø, grunnlegger</footer>
               </blockquote>
 
               {/* Certifications */}
