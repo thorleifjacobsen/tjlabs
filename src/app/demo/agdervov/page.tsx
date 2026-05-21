@@ -200,15 +200,13 @@ export default function AgderVOVPage() {
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
           {/* Brand */}
-          <div className="flex items-center gap-2.5 flex-shrink-0">
-            <div className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white flex-shrink-0">
-              <IconFlame className="w-4 h-4" />
-            </div>
-            <div className="leading-none">
-              <p className="font-bold text-[#1c1c1c] text-sm">Agder Varme</p>
-              <p className="text-xs text-gray-500 font-medium">og Vedlikehold</p>
-            </div>
-          </div>
+          <a href="#" className="flex-shrink-0">
+            <img
+              src="/demo/agdervov/logo.png"
+              alt="Agder Varme og Vedlikehold"
+              className="h-10 w-auto"
+            />
+          </a>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
@@ -626,14 +624,15 @@ export default function AgderVOVPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             {/* Brand */}
-            <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 bg-orange-600 rounded-md flex items-center justify-center text-white flex-shrink-0">
-                <IconFlame className="w-3.5 h-3.5" />
+            <div className="flex items-center gap-3">
+              <div className="bg-white rounded-lg px-3 py-2">
+                <img
+                  src="/demo/agdervov/logo.png"
+                  alt="Agder Varme og Vedlikehold"
+                  className="h-8 w-auto"
+                />
               </div>
-              <div className="leading-none">
-                <p className="font-bold text-white text-sm">Agder Varme og Vedlikehold</p>
-                <p className="text-xs text-gray-500 mt-0.5">Agder</p>
-              </div>
+              <p className="text-xs text-gray-500">Agder</p>
             </div>
 
             {/* Contact */}
