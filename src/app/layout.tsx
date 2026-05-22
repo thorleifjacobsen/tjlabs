@@ -1,5 +1,14 @@
 import type { Metadata } from 'next';
+import { Comfortaa } from 'next/font/google';
+import { getLocale } from 'next-intl/server';
 import './globals.css';
+
+const comfortaa = Comfortaa({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--ff-comfortaa',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://tjlabs.no'),
@@ -37,6 +46,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return children;
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  let locale = 'nb';
+  try {
+    locale = await getLocale();
+  } catch {
+    // demo and other non-intl routes fall back to default locale
+  }
+
+  return (
+    <html lang={locale} className={comfortaa.variable}>
+      <body>{children}</body>
+    </html>
+  );
 }

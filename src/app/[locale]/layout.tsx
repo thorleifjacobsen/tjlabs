@@ -1,17 +1,9 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { Comfortaa } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import type { Metadata } from 'next';
-
-const comfortaa = Comfortaa({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-  variable: '--ff-comfortaa',
-  display: 'swap',
-});
 
 const BASE_URL = 'https://tjlabs.no';
 
@@ -117,30 +109,30 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} className={comfortaa.variable}>
-      <body className="min-h-screen flex flex-col">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesListSchema) }}
-        />
-        <NextIntlClientProvider locale={locale} messages={messages}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesListSchema) }}
+      />
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        <div className="min-h-screen flex flex-col">
           <Nav />
           <div className="flex-1">{children}</div>
           <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+        </div>
+      </NextIntlClientProvider>
+    </>
   );
 }

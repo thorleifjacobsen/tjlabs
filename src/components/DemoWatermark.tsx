@@ -9,13 +9,16 @@ export default function DemoWatermark() {
   return (
     <>
       {/* Corner badge */}
-      <div
+      <a
+        href="https://tjlabs.no"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{ zIndex: 99999 }}
-        className="fixed bottom-4 right-4 flex items-center gap-2 bg-black/35 backdrop-blur-sm text-white text-xs font-medium py-1.5 px-3 rounded-full pointer-events-none select-none"
+        className="fixed bottom-4 right-4 flex items-center gap-2 bg-black/35 backdrop-blur-sm text-white text-xs font-medium py-1.5 px-3 rounded-full select-none hover:bg-black/50 transition-colors"
       >
         <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 flex-shrink-0" />
         <span>TJLabs.no Demo</span>
-      </div>
+      </a>
 
       {/* Diagonal watermark pattern */}
       <div
@@ -45,7 +48,7 @@ export default function DemoWatermark() {
               {Array.from({ length: 6 }).map((_, col) => (
                 <span
                   key={col}
-                  className="text-black/[0.02] font-bold text-2xl tracking-widest uppercase"
+                  className="text-black/[0.022] font-bold text-2xl tracking-widest uppercase"
                   style={{ padding: '0 4rem' }}
                 >
                   TJLabs.no Demo
