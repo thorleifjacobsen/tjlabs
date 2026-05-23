@@ -23,37 +23,26 @@ function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
         <a href="/demo/con-serv" className="flex items-center gap-3">
+          <img
+            src="/demo/con-serv/logo.png"
+            alt="Con-Serv AS"
+            style={{ height: 48 }}
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).style.display = "none";
+              const next = e.currentTarget.nextSibling as HTMLElement;
+              if (next) next.style.display = "block";
+            }}
+          />
           <span
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              background: "#1e2326",
-              borderRadius: "10px",
-              padding: "6px 12px",
+              display: "none",
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 700,
+              fontSize: "1.5rem",
+              color: "#1e2326",
             }}
           >
-            <img
-              src="/demo/con-serv/logo.png"
-              alt="Con-Serv AS"
-              style={{ height: 36 }}
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-                const next = e.currentTarget.nextSibling as HTMLElement;
-                if (next) next.style.display = "block";
-              }}
-            />
-            <span
-              style={{
-                display: "none",
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
-                fontSize: "1.5rem",
-                color: "#fff",
-              }}
-            >
-              CON-SERV
-            </span>
+            CON-SERV
           </span>
         </a>
 
@@ -224,26 +213,37 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Col 1 */}
           <div>
-            <img
-              src="/demo/con-serv/logo.png"
-              alt="Con-Serv AS"
-              style={{ height: 48, marginBottom: 16, filter: "brightness(0) invert(1)" }}
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-                const next = e.currentTarget.nextSibling as HTMLElement;
-                if (next) next.style.display = "block";
-              }}
-            />
             <span
               style={{
-                display: "none",
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
-                fontSize: "1.5rem",
-                color: "#fff",
+                display: "inline-flex",
+                alignItems: "center",
+                background: "#fff",
+                borderRadius: "10px",
+                padding: "8px 14px",
+                marginBottom: 16,
               }}
             >
-              CON-SERV
+              <img
+                src="/demo/con-serv/logo.png"
+                alt="Con-Serv AS"
+                style={{ height: 40 }}
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.display = "none";
+                  const next = e.currentTarget.nextSibling as HTMLElement;
+                  if (next) next.style.display = "block";
+                }}
+              />
+              <span
+                style={{
+                  display: "none",
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "1.5rem",
+                  color: "#1e2326",
+                }}
+              >
+                CON-SERV
+              </span>
             </span>
             <p
               style={{
