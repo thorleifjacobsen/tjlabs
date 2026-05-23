@@ -23,26 +23,37 @@ function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
         <a href="/demo/con-serv" className="flex items-center gap-3">
-          <img
-            src="/demo/con-serv/logo.png"
-            alt="Con-Serv AS"
-            style={{ height: 48 }}
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).style.display = "none";
-              const next = e.currentTarget.nextSibling as HTMLElement;
-              if (next) next.style.display = "block";
-            }}
-          />
           <span
             style={{
-              display: "none",
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 700,
-              fontSize: "1.5rem",
-              color: "#1e2326",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#1e2326",
+              borderRadius: "10px",
+              padding: "6px 12px",
             }}
           >
-            CON-SERV
+            <img
+              src="/demo/con-serv/logo.png"
+              alt="Con-Serv AS"
+              style={{ height: 36 }}
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).style.display = "none";
+                const next = e.currentTarget.nextSibling as HTMLElement;
+                if (next) next.style.display = "block";
+              }}
+            />
+            <span
+              style={{
+                display: "none",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 700,
+                fontSize: "1.5rem",
+                color: "#fff",
+              }}
+            >
+              CON-SERV
+            </span>
           </span>
         </a>
 
