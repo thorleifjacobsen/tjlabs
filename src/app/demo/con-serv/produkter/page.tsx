@@ -100,7 +100,7 @@ const products = [
     title: "ISANLEGG",
     img: "/demo/con-serv/isanlegg.jpg",
     imgSide: "left",
-    text: "For Frio Nordica produserer og monterer vi isanlegg over hele verden. Det meste av deler blir prefabrikkert pa verkstedet for de sendes til lokasjon.",
+    text: "For Frio Nordica produserer og monterer vi isanlegg over hele verden. Det meste av deler blir prefabrikkert på verkstedet for de sendes til lokasjon.",
   },
   {
     title: "SPESIALCONTAINERE",

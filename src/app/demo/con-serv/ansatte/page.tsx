@@ -221,18 +221,6 @@ export default function Ansatte() {
               </div>
             ))}
           </div>
-
-          <p
-            style={{
-              textAlign: "center",
-              fontFamily: "'Barlow', sans-serif",
-              fontSize: "0.9rem",
-              color: "#94a3b8",
-              marginTop: 36,
-            }}
-          >
-            Vi er totalt 10 fagfolk. Ta kontakt for mer informasjon.
-          </p>
         </div>
       </section>
 
