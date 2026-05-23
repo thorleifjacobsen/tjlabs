@@ -239,54 +239,6 @@ export default function OmOss() {
         </div>
       </section>
 
-      {/* STATS STRIP */}
-      <section style={{ background: "#2d3439", padding: "48px 0" }}>
-        <div className="max-w-6xl mx-auto px-4 md:px-8">
-          <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-0"
-            style={{ textAlign: "center" }}
-          >
-            {[
-              { stat: "2009", label: "Etablert" },
-              { stat: "10+", label: "Fagfolk" },
-              { stat: "NS-1090", label: "Sertifisert" },
-            ].map((item, i) => (
-              <div
-                key={item.label}
-                style={{
-                  padding: "32px 24px",
-                  borderRight: i < 2 ? "1px solid rgba(255,255,255,0.12)" : "none",
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontWeight: 700,
-                    fontSize: "3.5rem",
-                    color: "#e07b00",
-                    lineHeight: 1,
-                    marginBottom: 8,
-                  }}
-                >
-                  {item.stat}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "'Barlow', sans-serif",
-                    fontWeight: 500,
-                    fontSize: "0.9rem",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.1em",
-                    color: "rgba(255,255,255,0.6)",
-                  }}
-                >
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {ctaBanner}
     </>
