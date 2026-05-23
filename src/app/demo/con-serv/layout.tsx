@@ -23,16 +23,18 @@ function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
         <a href="/demo/con-serv" className="flex items-center gap-3">
-          <img
-            src="/demo/con-serv/logo.png"
-            alt="Con-Serv AS"
-            style={{ height: 48 }}
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).style.display = "none";
-              const next = e.currentTarget.nextSibling as HTMLElement;
-              if (next) next.style.display = "block";
-            }}
-          />
+          <div style={{ overflow: "hidden", height: 33, flexShrink: 0 }}>
+            <img
+              src="/demo/con-serv/logo.png"
+              alt="Con-Serv AS"
+              style={{ height: 48, marginTop: -15, display: "block" }}
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).style.display = "none";
+                const next = e.currentTarget.nextSibling as HTMLElement;
+                if (next) next.style.display = "block";
+              }}
+            />
+          </div>
           <span
             style={{
               display: "none",
@@ -223,16 +225,18 @@ function Footer() {
                 marginBottom: 16,
               }}
             >
-              <img
-                src="/demo/con-serv/logo.png"
-                alt="Con-Serv AS"
-                style={{ height: 40 }}
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = "none";
-                  const next = e.currentTarget.nextSibling as HTMLElement;
-                  if (next) next.style.display = "block";
-                }}
-              />
+              <div style={{ overflow: "hidden", height: 28 }}>
+                <img
+                  src="/demo/con-serv/logo.png"
+                  alt="Con-Serv AS"
+                  style={{ height: 40, marginTop: -12, display: "block" }}
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.display = "none";
+                    const next = e.currentTarget.nextSibling as HTMLElement;
+                    if (next) next.style.display = "block";
+                  }}
+                />
+              </div>
               <span
                 style={{
                   display: "none",
