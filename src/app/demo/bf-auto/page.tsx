@@ -248,7 +248,7 @@ export default function BFAutoPage() {
             <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-3">
               Bestill time eller ta kontakt
             </h2>
-            <p className="text-slate-500 text-lg">Vi svarer vanligvis samme dag</p>
+            <p className="text-slate-500 text-lg">Ta gjerne kontakt, så hjelper vi deg</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -399,7 +399,6 @@ export default function BFAutoPage() {
                   Send henvendelse
                 </button>
 
-                <p className="text-xs text-slate-400 text-center">Vi svarer vanligvis samme dag</p>
               </form>
             </div>
           </div>
