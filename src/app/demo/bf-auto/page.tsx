@@ -114,7 +114,7 @@ export default function BFAutoPage() {
             </div>
 
             <a
-              href="https://www.google.com/maps/place/BF+Auto+Helle+%26+Pedersen+ANS"
+              href="https://maps.app.goo.gl/tdpTvqsFAVRVKf3GA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm transition-colors"
