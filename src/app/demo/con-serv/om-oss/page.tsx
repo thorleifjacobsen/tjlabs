@@ -27,7 +27,7 @@ const ctaBanner = (
           marginBottom: 28,
         }}
       >
-        Vi tar oppdrag av alle storrelser, for industri og private kunder.
+        Vi tar oppdrag av alle størrelser, for industri og private kunder.
       </p>
       <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
         <a
@@ -109,7 +109,7 @@ export default function OmOss() {
               margin: "0 auto",
             }}
           >
-            Grimstads foretrukne leverandor av stalkonstruksjoner og anleggsarbeid siden 2009.
+            Grimstads foretrukne leverandør av stålkonstruksjoner og anleggsarbeid siden 2009.
           </p>
         </div>
       </section>
@@ -144,7 +144,7 @@ export default function OmOss() {
                   lineHeight: 1.1,
                 }}
               >
-                HISTORIEN VAR
+                HISTORIEN VÅR
               </h2>
               <p
                 style={{
@@ -155,7 +155,7 @@ export default function OmOss() {
                   marginBottom: 16,
                 }}
               >
-                Con-Serv ble grunnlagt i 2009. I starten leide vi produksjonslokaler, men sommeren 2011 bygde vi nye, tilpassede lokaler i Osterskogen i Grimstad.
+                Con-Serv ble grunnlagt i 2009. I starten leide vi produksjonslokaler, men sommeren 2011 bygde vi nye, tilpassede lokaler i Østerskogen i Grimstad.
               </p>
               <p
                 style={{
@@ -166,7 +166,7 @@ export default function OmOss() {
                   marginBottom: 16,
                 }}
               >
-                Lokalene bestar av en stor sveisehall, en hall for arbeid med rustfritt og aluminium, og et eget omrade for sandblas og lakkering.
+                Lokalene består av en stor sveisehall, en hall for arbeid med rustfritt og aluminium, og et eget område for sandblåsing og lakkering.
               </p>
               <p
                 style={{
@@ -176,7 +176,7 @@ export default function OmOss() {
                   lineHeight: 1.7,
                 }}
               >
-                I dag er vi 10 ansatte med fagkompetanse innen sveising, mekanikk og maskinarbeid. Vi tar oppdrag for industri og privat kunder, store som sma.
+                I dag er vi 10 ansatte med fagkompetanse innen sveising, mekanikk og maskinarbeid. Vi tar oppdrag for industri og private kunder, store som små.
               </p>
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function OmOss() {
                   lineHeight: 1.7,
                 }}
               >
-                Con-Serv er sertifisert etter NS-1090 "Komponenter for stalkonstruksjoner" utforelsesklasse EXC 2. Dette sikrer dokumentert kvalitet i alle faser av prosjektet, fra produksjon til ferdig montert produkt.
+                Con-Serv er sertifisert etter NS-1090 "Komponenter for stålkonstruksjoner" utførelsesklasse EXC 2. Dette sikrer dokumentert kvalitet i alle faser av prosjektet, fra produksjon til ferdig montert produkt.
               </p>
             </div>
             <img

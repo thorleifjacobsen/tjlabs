@@ -32,7 +32,7 @@ const ctaBanner = (
           marginBottom: 28,
         }}
       >
-        Vi tar oppdrag av alle storrelser, for industri og private kunder.
+        Vi tar oppdrag av alle størrelser, for industri og private kunder.
       </p>
       <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
         <a
@@ -137,7 +137,7 @@ export default function Forside() {
               marginBottom: 24,
             }}
           >
-            STAL SOM HOLDER
+            STÅL SOM HOLDER
           </h1>
           <p
             style={{
@@ -150,7 +150,7 @@ export default function Forside() {
               lineHeight: 1.7,
             }}
           >
-            Vi produserer og monterer stalkonstruksjoner, trapper, rekkverk, porter og spesialcontainere. For industri og private kunder.
+            Vi produserer og monterer stålkonstruksjoner, trapper, rekkverk, porter og spesialcontainere. For industri og private kunder.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <a
@@ -166,7 +166,7 @@ export default function Forside() {
                 textDecoration: "none",
               }}
             >
-              Se vare produkter
+              Se våre produkter
             </a>
             <a
               href="/demo/con-serv/kontakt"
@@ -275,7 +275,7 @@ export default function Forside() {
                 marginBottom: 12,
               }}
             >
-              HVA VI GJOR
+              HVA VI GJØR
             </h2>
             <p
               style={{
@@ -295,7 +295,7 @@ export default function Forside() {
               {
                 img: "/demo/con-serv/verksted.jpg",
                 title: "Verkstedtjenester",
-                desc: "Stalbygg, trapper, rekkverk, porter, beslag, transportskruer og spesialcontainere. Vi produserer i vanlig stal, rustfritt og aluminium.",
+                desc: "Stålbygg, trapper, rekkverk, porter, beslag, transportskruer og spesialcontainere. Vi produserer i vanlig stål, rustfritt og aluminium.",
                 link: "/demo/con-serv/produkter",
                 icon: (
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e07b00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -420,7 +420,7 @@ export default function Forside() {
                   marginBottom: 28,
                 }}
               >
-                Con-Serv ble grunnlagt i 2009 og holder til i Osterskogen i Grimstad. Vi er 10 ansatte med fagkompetanse innen sveising, mekanikk og maskinarbeid. Bedriften er sertifisert etter NS-1090 EXC 2, som sikrer dokumentert kvalitet i hele prosjektfasen.
+                Con-Serv ble grunnlagt i 2009 og holder til i Østerskogen i Grimstad. Vi er 10 ansatte med fagkompetanse innen sveising, mekanikk og maskinarbeid. Bedriften er sertifisert etter NS-1090 EXC 2, som sikrer dokumentert kvalitet i hele prosjektfasen.
               </p>
               <a
                 href="/demo/con-serv/om-oss"
@@ -469,17 +469,17 @@ export default function Forside() {
                 color: "#1e2326",
               }}
             >
-              NOEN AV VARE PRODUKTER
+              NOEN AV VÅRE PRODUKTER
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
-              { title: "Stalbygg", img: "/demo/con-serv/hal.jpg", desc: "Stalkonstruksjoner og komplette stalbygg" },
+              { title: "Stålbygg", img: "/demo/con-serv/hal.jpg", desc: "Stålkonstruksjoner og komplette stålbygg" },
               { title: "Rekkverk og porter", img: "/demo/con-serv/rekkverk.jpg", desc: "Rekkverk, gjerder og porter i alle utforelser" },
               { title: "Trapper", img: "/demo/con-serv/trapp.jpg", desc: "Innvendige og utvendige trapper" },
               { title: "Isanlegg", img: "/demo/con-serv/isanlegg.jpg", desc: "Produksjon og montering av isanlegg" },
-              { title: "Spesialcontainere", img: "/demo/con-serv/container1.jpg", desc: "Egenutviklede containere for mange formal" },
+              { title: "Spesialcontainere", img: "/demo/con-serv/container1.jpg", desc: "Egenutviklede containere for mange formål" },
               { title: "Beslag og transport", img: "/demo/con-serv/verksted.jpg", desc: "Presise beslag og transportskruer" },
             ].map((item) => (
               <div

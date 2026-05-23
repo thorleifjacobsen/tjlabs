@@ -27,7 +27,7 @@ const ctaBanner = (
           marginBottom: 28,
         }}
       >
-        Vi tar oppdrag av alle storrelser, for industri og private kunder.
+        Vi tar oppdrag av alle størrelser, for industri og private kunder.
       </p>
       <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
         <a
@@ -68,7 +68,7 @@ const ctaBanner = (
 const services = [
   {
     title: "Gravearbeid",
-    desc: "Graving for alle formal, fra kabelgrofter til fundamenter og vann/avlop.",
+    desc: "Graving for alle formål, fra kabelgrøfter til fundamenter og vann/avløp.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e07b00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M2 20h20" />
@@ -79,7 +79,7 @@ const services = [
   },
   {
     title: "Sprengning",
-    desc: "Kontrollert sprengning utfort av erfarne fagfolk med nodvendige godkjenninger.",
+    desc: "Kontrollert sprengning utført av erfarne fagfolk med nødvendige godkjenninger.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e07b00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
@@ -186,7 +186,7 @@ export default function Anlegg() {
                   lineHeight: 1.7,
                 }}
               >
-                Con-Serv har en dedikert anleggsavdeling som utforer oppdrag av alle storrelser. Vi jobber for industrikunder og private, og tar pa oss alt fra enkle graveoppdrag til storre anleggsprosjekter med sprengning og massetransport.
+                Con-Serv har en dedikert anleggsavdeling som utfører oppdrag av alle størrelser. Vi jobber for industrikunder og private, og tar på oss alt fra enkle graveoppdrag til større anleggsprosjekter med sprengning og massetransport.
               </p>
             </div>
             <div>
@@ -220,7 +220,7 @@ export default function Anlegg() {
                 color: "#1e2326",
               }}
             >
-              VARE TJENESTER
+              VÅRE TJENESTER
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

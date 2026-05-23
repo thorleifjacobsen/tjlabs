@@ -27,7 +27,7 @@ const ctaBanner = (
           marginBottom: 28,
         }}
       >
-        Vi tar oppdrag av alle storrelser, for industri og private kunder.
+        Vi tar oppdrag av alle størrelser, for industri og private kunder.
       </p>
       <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
         <a
@@ -88,7 +88,7 @@ const team = [
     email: "odd.arne.haugen@con-serv.no",
   },
   {
-    name: "Odd Jorgen Haugen",
+    name: "Odd Jørgen Haugen",
     title: "Anlegg, Styremedlem",
     phone: "952 59 706",
     phoneHref: "95259706",
@@ -123,7 +123,7 @@ export default function Ansatte() {
               marginBottom: 16,
             }}
           >
-            MOT OSS
+            MØT OSS
           </h1>
           <p
             style={{
@@ -132,7 +132,7 @@ export default function Ansatte() {
               color: "rgba(255,255,255,0.65)",
             }}
           >
-            Fagfolk med hjerte for handverk.
+            Fagfolk med hjerte for håndverk.
           </p>
         </div>
       </section>

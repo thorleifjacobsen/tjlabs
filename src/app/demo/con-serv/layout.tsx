@@ -243,7 +243,7 @@ function Footer() {
                 lineHeight: 1.6,
               }}
             >
-              Din leverandor av stalarbeider for alle formal
+              Din leverandør av stålarbeider for alle formål
             </p>
             <p
               style={{
@@ -252,7 +252,7 @@ function Footer() {
                 color: "rgba(255,255,255,0.55)",
               }}
             >
-              Osterskogen 36, 4879 Grimstad
+              Østerskogen 36, 4879 Grimstad
             </p>
           </div>
 

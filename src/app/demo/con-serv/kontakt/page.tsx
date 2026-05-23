@@ -67,7 +67,7 @@ export default function Kontakt() {
               {[
                 {
                   label: "Adresse",
-                  value: "Osterskogen 36, 4879 Grimstad",
+                  value: "Østerskogen 36, 4879 Grimstad",
                   href: null,
                 },
                 {
@@ -81,12 +81,12 @@ export default function Kontakt() {
                   href: "mailto:rikki.aanonsen@con-serv.no",
                 },
                 {
-                  label: "Anlegg (Odd Jorgen Haugen)",
+                  label: "Anlegg (Odd Jørgen Haugen)",
                   value: "952 59 706",
                   href: "tel:95259706",
                 },
                 {
-                  label: "Apningstider",
+                  label: "Åpningstider",
                   value: "Man-Fre: 07:00-16:00",
                   href: null,
                 },
@@ -270,7 +270,7 @@ export default function Kontakt() {
             style={{ textAlign: "center" }}
           >
             {[
-              { label: "Adresse", value: "Osterskogen 36, 4879 Grimstad" },
+              { label: "Adresse", value: "Østerskogen 36, 4879 Grimstad" },
               { label: "Telefon", value: "930 00 696" },
               { label: "Org.nr", value: "123 456 789" },
             ].map((item) => (

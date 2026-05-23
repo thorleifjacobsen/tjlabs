@@ -27,7 +27,7 @@ const ctaBanner = (
           marginBottom: 28,
         }}
       >
-        Vi tar oppdrag av alle storrelser, for industri og private kunder.
+        Vi tar oppdrag av alle størrelser, for industri og private kunder.
       </p>
       <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
         <a
@@ -67,22 +67,22 @@ const ctaBanner = (
 
 const products = [
   {
-    title: "STALBYGG",
+    title: "STÅLBYGG",
     img: "/demo/con-serv/hal.jpg",
     imgSide: "right",
-    text: "Vi sveiser og monterer elementer til stalbygg av alle slag. Alle bygg og konstruksjonsdeler leveres med dokumentasjon og sertifikater i henhold til NS-1090 EXC 2.",
+    text: "Vi sveiser og monterer elementer til stålbygg av alle slag. Alle bygg og konstruksjonsdeler leveres med dokumentasjon og sertifikater i henhold til NS-1090 EXC 2.",
   },
   {
     title: "PORTER, REKKVERK OG GJERDER",
     img: "/demo/con-serv/rekkverk.jpg",
     imgSide: "left",
-    text: "Porter i ulike utforelser. Rekkverk for innvendig og utvendig bruk, med eller uten glass, i rustfritt eller vanlig stal. Vi kan galvanisere, lakkere eller pulverlakkere alle deler. Smijernsgjerder og stolper til flettverksgjerder prefabrikkeres pa verkstedet.",
+    text: "Porter i ulike utførelser. Rekkverk for innvendig og utvendig bruk, med eller uten glass, i rustfritt eller vanlig stål. Vi kan galvanisere, lakkere eller pulverlakkere alle deler. Smijernsgjerder og stolper til flettverksgjerder prefabrikkeres på verkstedet.",
   },
   {
     title: "TRAPPER",
     img: "/demo/con-serv/trapp.jpg",
     imgSide: "right",
-    text: "Vi produserer innvendige og utvendige trapper som lakkerte staltrapper med stal- eller eiketrinn. Trinnene kan ogsa flislegges etter kundens onske.",
+    text: "Vi produserer innvendige og utvendige trapper som lakkerte ståltrapper med stål- eller eiketrinn. Trinnene kan også flislegges etter kundens ønske.",
   },
   {
     title: "TRANSPORTSKRUER",
@@ -94,7 +94,7 @@ const products = [
     title: "BESLAG",
     img: "/demo/con-serv/verksted.jpg",
     imgSide: "right",
-    text: "Bedriften har bade platesaks og plateknekke som sikrer stabil kvalitet pa alle beslag. Vi knekker rustfritt stal og aluminiumprofiler.",
+    text: "Bedriften har både platesaks og plateknekke som sikrer stabil kvalitet på alle beslag. Vi knekker rustfritt stål og aluminiumprofiler.",
   },
   {
     title: "ISANLEGG",
@@ -106,7 +106,7 @@ const products = [
     title: "SPESIALCONTAINERE",
     img: "/demo/con-serv/container1.jpg",
     imgSide: "right",
-    text: "Var Spesial Container type 3-1 er et referanseprodukt for Con-Serv. En vanlig 20-fots container som slatt ut gir ca. 35 m2 gulvareal. Brukes til kontor, spiserom eller arbeidsbrakke og settes opp pa ca. 20 minutter. Vi produserer ogsa spesialcontainere for offshore og det norske Forsvaret.",
+    text: "Vår Spesial Container type 3-1 er et referanseprodukt for Con-Serv. En vanlig 20-fots container som slått ut gir ca. 35 m² gulvareal. Brukes til kontor, spiserom eller arbeidsbrakke og settes opp på ca. 20 minutter. Vi produserer også spesialcontainere for offshore og det norske Forsvaret.",
   },
   {
     title: "KIOSKER OG SPESIALBYGG",
@@ -160,7 +160,7 @@ export default function Produkter() {
               margin: "0 auto",
             }}
           >
-            Vi produserer et vidt spekter av produkter i vanlig stal, rustfritt og aluminium.
+            Vi produserer et vidt spekter av produkter i vanlig stål, rustfritt og aluminium.
           </p>
         </div>
       </section>
