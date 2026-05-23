@@ -240,7 +240,7 @@ export default function OmOss() {
       </section>
 
       {/* STATS STRIP */}
-      <section style={{ background: "#1e2326", padding: "48px 0" }}>
+      <section style={{ background: "#2d3439", padding: "48px 0" }}>
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-0"
