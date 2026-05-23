@@ -27,6 +27,13 @@ export default function BFAutoLayout({ children }: { children: React.ReactNode }
               <p className="text-sm leading-relaxed">
                 Ditt nærverksted på Stoa i Arendal. Profesjonell bilservice for alle merker og årsmodeller.
               </p>
+              <div className="mt-4 inline-block bg-white rounded-md px-3 py-2">
+                <img
+                  src="/demo/bf-auto/mekopartner-logo.png"
+                  alt="MekoPartner-verksted"
+                  style={{ height: '28px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                />
+              </div>
             </div>
 
             <div>

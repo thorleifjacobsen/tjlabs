@@ -196,22 +196,12 @@ export default function BFAutoPage() {
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-wrap items-center gap-6">
-                <a
-                  href="#kontakt"
-                  className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                >
-                  Bestill time
-                </a>
-                <div className="flex flex-col gap-1">
-                  <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">Godkjent partner</span>
-                  <img
-                    src="/demo/bf-auto/mekopartner-logo.png"
-                    alt="MekoPartner-verksted"
-                    style={{ height: '36px', width: 'auto', objectFit: 'contain' }}
-                  />
-                </div>
-              </div>
+              <a
+                href="#kontakt"
+                className="mt-8 inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              >
+                Bestill time
+              </a>
             </div>
 
             <div>
