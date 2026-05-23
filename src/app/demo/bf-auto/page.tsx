@@ -102,14 +102,28 @@ export default function BFAutoPage() {
             </a>
           </div>
 
-          <div
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm"
-            style={{ backgroundColor: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.22)', color: 'rgba(255,255,255,0.9)' }}
-          >
-            <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-            </svg>
-            Man - Fre: 07:30 - 15:30
+          <div className="flex flex-wrap gap-3">
+            <div
+              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm"
+              style={{ backgroundColor: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.22)', color: 'rgba(255,255,255,0.9)' }}
+            >
+              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              Man - Fre: 07:30 - 15:30
+            </div>
+
+            <a
+              href="https://www.google.com/maps/place/BF+Auto+Helle+%26+Pedersen+ANS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm transition-colors"
+              style={{ backgroundColor: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.22)', color: 'rgba(255,255,255,0.9)' }}
+            >
+              <span className="text-yellow-400 leading-none">&#9733;</span>
+              <span className="font-semibold">4.8</span>
+              <span style={{ color: 'rgba(255,255,255,0.65)' }}>· 44 anmeldelser på Google</span>
+            </a>
           </div>
         </div>
       </section>
@@ -309,8 +323,7 @@ export default function BFAutoPage() {
                     <table className="text-sm text-slate-600 border-separate" style={{ borderSpacing: '0 2px' }}>
                       <tbody>
                         {[
-                          ['Man - Tors', '07:30 - 15:30'],
-                          ['Fredag', '07:30 - 15:30'],
+                          ['Man - Fre', '07:30 - 15:30'],
                           ['Lørdag', 'Stengt'],
                           ['Søndag', 'Stengt'],
                         ].map(([day, hours]) => (
