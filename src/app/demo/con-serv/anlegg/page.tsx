@@ -126,7 +126,7 @@ export default function Anlegg() {
         }}
       >
         <img
-          src="/demo/con-serv/anlegg-hero.jpg"
+          src="/demo/con-serv/anlegg-hero2.jpg"
           alt=""
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />

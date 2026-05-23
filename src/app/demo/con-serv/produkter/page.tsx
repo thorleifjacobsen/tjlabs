@@ -145,7 +145,7 @@ export default function Produkter() {
         }}
       >
         <img
-          src="/demo/con-serv/staal-bg.jpg"
+          src="/demo/con-serv/verksted-hero.jpg"
           alt=""
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />
