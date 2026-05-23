@@ -65,7 +65,13 @@ const ctaBanner = (
   </section>
 );
 
-const products = [
+const products: {
+  title: string;
+  img: string;
+  imgSide: "left" | "right";
+  imgRotate?: number;
+  text: string;
+}[] = [
   {
     title: "STÅLBYGG",
     img: "/demo/con-serv/hal.jpg",
@@ -88,7 +94,7 @@ const products = [
     title: "TRANSPORTSKRUER",
     img: "https://placehold.co/800x500/e2e8f0/94a3b8?text=Transportskruer",
     imgSide: "left",
-    text: "Transportskruer blir fagmessig fremstilt og balansert for de forlater bedriften.",
+    text: "Transportskruer blir fagmessig fremstilt og balansert før de forlater bedriften.",
   },
   {
     title: "BESLAG",
@@ -100,19 +106,26 @@ const products = [
     title: "ISANLEGG",
     img: "/demo/con-serv/isanlegg.jpg",
     imgSide: "left",
-    text: "For Frio Nordica produserer og monterer vi isanlegg over hele verden. Det meste av deler blir prefabrikkert på verkstedet for de sendes til lokasjon.",
+    imgRotate: -90,
+    text: "For Frio Nordica produserer og monterer vi isanlegg over hele verden. Det meste av deler blir prefabrikkert på verkstedet før de sendes til lokasjon.",
   },
   {
     title: "SPESIALCONTAINERE",
-    img: "/demo/con-serv/container1.jpg",
+    img: "/demo/con-serv/container2.jpg",
     imgSide: "right",
     text: "Vår Spesial Container type 3-1 er et referanseprodukt for Con-Serv. En vanlig 20-fots container som slått ut gir ca. 35 m² gulvareal. Brukes til kontor, spiserom eller arbeidsbrakke og settes opp på ca. 20 minutter. Vi produserer også spesialcontainere for offshore og det norske Forsvaret.",
   },
   {
     title: "KIOSKER OG SPESIALBYGG",
-    img: "https://placehold.co/800x500/e2e8f0/94a3b8?text=Kiosker",
+    img: "/demo/con-serv/kiosk.jpg",
     imgSide: "left",
     text: "Vi produserer transportable kiosker tilpasset kundens behov. Billigere enn leie over tid og kan flyttes etter behov.",
+  },
+  {
+    title: "STATIV FOR KILDESORTERINGS DUNKER",
+    img: "/demo/con-serv/soppel-stativ.jpg",
+    imgSide: "right",
+    text: "Etter ønske fra privat kunder har vi laget et enkelt og funksjonelt stativ til kildesorterings dunker. Stativet kan utvides til fem eller flere dunker dersom ønskelig.",
   },
 ];
 
@@ -206,17 +219,41 @@ export default function Produkter() {
                   </p>
                 </div>
                 <div style={{ direction: "ltr" }}>
-                  <img
-                    src={product.img}
-                    alt={product.title}
-                    style={{
-                      width: "100%",
-                      height: 300,
-                      objectFit: "cover",
-                      borderRadius: "8px",
-                      display: "block",
-                    }}
-                  />
+                  {product.imgRotate !== undefined ? (
+                    <div
+                      style={{
+                        position: "relative",
+                        height: 300,
+                        overflow: "hidden",
+                        borderRadius: "8px",
+                      }}
+                    >
+                      <img
+                        src={product.img}
+                        alt={product.title}
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          height: "200%",
+                          width: "auto",
+                          transform: `translate(-50%, -50%) rotate(${product.imgRotate}deg)`,
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={product.img}
+                      alt={product.title}
+                      style={{
+                        width: "100%",
+                        height: 300,
+                        objectFit: "cover",
+                        borderRadius: "8px",
+                        display: "block",
+                      }}
+                    />
+                  )}
                 </div>
               </div>
             </div>

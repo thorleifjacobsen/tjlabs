@@ -1,5 +1,7 @@
+import CertLightbox from "../CertLightbox";
+
 export const metadata = {
-  title: "Om Con-Serv AS | Stalarbeider Grimstad",
+  title: "Om Con-Serv AS | Stålarbeider Grimstad",
   robots: "noindex",
 };
 
@@ -232,18 +234,7 @@ export default function OmOss() {
                 Con-Serv er sertifisert etter NS-1090 "Komponenter for stålkonstruksjoner" utførelsesklasse EXC 2. Dette sikrer dokumentert kvalitet i alle faser av prosjektet, fra produksjon til ferdig montert produkt.
               </p>
             </div>
-            <img
-              src="https://placehold.co/300x400/e2e8f0/94a3b8?text=NS-1090+Sertifikat"
-              alt="NS-1090 Sertifikat"
-              style={{
-                maxWidth: 240,
-                width: "100%",
-                borderRadius: "8px",
-                margin: "0 auto",
-                display: "block",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.10)",
-              }}
-            />
+            <CertLightbox />
           </div>
         </div>
       </section>
