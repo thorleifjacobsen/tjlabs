@@ -23,11 +23,11 @@ function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
         <a href="/demo/con-serv" className="flex items-center gap-3">
-          <div style={{ overflow: "hidden", height: 33, flexShrink: 0 }}>
+          <div style={{ overflow: "hidden", height: 42, flexShrink: 0 }}>
             <img
               src="/demo/con-serv/logo.png"
               alt="Con-Serv AS"
-              style={{ height: 48, marginTop: -15, display: "block" }}
+              style={{ height: 48, marginTop: -6, display: "block" }}
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).style.display = "none";
                 const next = e.currentTarget.nextSibling as HTMLElement;
@@ -225,11 +225,11 @@ function Footer() {
                 marginBottom: 16,
               }}
             >
-              <div style={{ overflow: "hidden", height: 28 }}>
+              <div style={{ overflow: "hidden", height: 35 }}>
                 <img
                   src="/demo/con-serv/logo.png"
                   alt="Con-Serv AS"
-                  style={{ height: 40, marginTop: -12, display: "block" }}
+                  style={{ height: 40, marginTop: -5, display: "block" }}
                   onError={(e) => {
                     (e.currentTarget as HTMLImageElement).style.display = "none";
                     const next = e.currentTarget.nextSibling as HTMLElement;
