@@ -196,12 +196,22 @@ export default function BFAutoPage() {
                 </div>
               </div>
 
-              <a
-                href="#kontakt"
-                className="mt-8 inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-              >
-                Bestill time
-              </a>
+              <div className="mt-8 flex flex-wrap items-center gap-6">
+                <a
+                  href="#kontakt"
+                  className="inline-block bg-[#b91c1c] hover:bg-[#991b1b] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                >
+                  Bestill time
+                </a>
+                <div className="flex flex-col gap-1">
+                  <span className="text-xs text-slate-400 uppercase tracking-widest font-medium">Godkjent partner</span>
+                  <img
+                    src="/demo/bf-auto/mekopartner-logo.png"
+                    alt="MekoPartner-verksted"
+                    style={{ height: '36px', width: 'auto', objectFit: 'contain' }}
+                  />
+                </div>
+              </div>
             </div>
 
             <div>
@@ -328,10 +338,15 @@ export default function BFAutoPage() {
               </div>
 
               <div className="mt-6 rounded-xl overflow-hidden border border-slate-200">
-                <img
-                  src="https://placehold.co/600x240/e2e8f0/94a3b8?text=Industritoppen+12A%2C+Stoa"
-                  alt="Kart - Industritoppen 12A, Stoa"
-                  className="w-full"
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193.21274828539998!2d8.71925623960807!3d58.45679240761904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464794a4296bc019%3A0xc5964c18690818d2!2sBF%20Auto%20Helle%20%26%20Pedersen%20ANS!5e0!3m2!1sen!2sno!4v1779572082130!5m2!1sen!2sno"
+                  width="100%"
+                  height="280"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="BF Auto Helle & Pedersen ANS på kart"
                 />
               </div>
             </div>
