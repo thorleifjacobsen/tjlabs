@@ -1,0 +1,393 @@
+Build a multi-page demo website for Con-Serv AS, a Norwegian steel fabrication and construction company based in Grimstad. The site should feel professional, trustworthy, and industrial — clean white base with dark anthracite accents, so visitors immediately think "this is the company we have been looking for."
+
+---
+
+## PROJECT SETUP
+
+- Framework: Next.js App Router, TypeScript
+- All files under: src/app/demo/con-serv/
+- Tailwind CSS available globally, no setup needed
+- Standalone layout.tsx — no shared components from outside src/app/demo/con-serv/
+- No imports from outside src/app/demo/con-serv/
+- Use <img> tags, NOT Next.js Image component
+- export const metadata = { robots: 'noindex' } on ALL page.tsx files
+- Mobile-first, fully responsive
+- No em dashes or en dashes anywhere in code or text
+- No Inter font
+- Use correct Norwegian letters: Æ, Ø, Å wherever applicable
+- Font: Import "Barlow Condensed" (weights 600, 700) and "Barlow" (400, 500) from Google Fonts via a <link> tag in layout.tsx. Use Barlow Condensed for all headings, Barlow for body text.
+
+---
+
+## IMAGE DOWNLOADS
+
+Run these curl commands BEFORE building. Save to public/demo/con-serv/:
+
+```bash
+curl -L -o public/demo/con-serv/logo.png "http://www.con-serv.no/wp-content/uploads/2012/12/con-servlogo3.png"
+curl -L -o public/demo/con-serv/verksted.jpg "http://www.con-serv.no/wp-content/uploads/2011/04/Verksted.jpg"
+curl -L -o public/demo/con-serv/hal.jpg "http://www.con-serv.no/wp-content/uploads/2011/04/Hal.jpg"
+curl -L -o public/demo/con-serv/rekkverk.jpg "http://www.con-serv.no/wp-content/uploads/2011/04/Rekkverk-svart-ute-kuvika.jpg"
+curl -L -o public/demo/con-serv/port.jpg "http://www.con-serv.no/wp-content/uploads/2011/04/port.jpg"
+curl -L -o public/demo/con-serv/trapp.jpg "http://www.con-serv.no/wp-content/uploads/2011/04/DSC_0020.jpg"
+curl -L -o public/demo/con-serv/isanlegg.jpg "http://www.con-serv.no/wp-content/uploads/2011/04/Is-anlegg-e1504603219349.jpg"
+curl -L -o public/demo/con-serv/container1.jpg "http://www.con-serv.no/wp-content/uploads/2011/04/sommer-09-161-150x150.jpg"
+curl -L -o public/demo/con-serv/anlegg.jpg "http://www.con-serv.no/wp-content/uploads/2019/10/20191016_123906.jpg"
+curl -L -o public/demo/con-serv/sveising.jpg "http://www.con-serv.no/wp-content/uploads/2011/04/%C3%98yvind-sveiser.jpg"
+curl -L -o public/demo/con-serv/lokaler.jpg "http://www.con-serv.no/wp-content/uploads/2017/09/Lokaler-til-Con-serv.jpg"
+curl -L -o public/demo/con-serv/hero-bg.jpg "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=80"
+curl -L -o public/demo/con-serv/staal-bg.jpg "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1600&q=80"
+curl -L -o public/demo/con-serv/anlegg-hero.jpg "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1600&q=80"
+```
+
+Image fallback rule: If any image fails to load, show a styled div with class "bg-slate-100 flex items-center justify-center text-slate-400 text-sm" containing the text "Bilde kommer".
+
+---
+
+## DESIGN TOKENS
+
+Colors:
+- Background: #ffffff
+- Surface/alternate sections: #f8fafc
+- Anthracite (dark sections, footer, nav): #1e2326
+- Anthracite medium (cards, borders): #2d3439
+- Accent: #e07b00 (industrial orange)
+- Accent hover: #c96e00
+- Text primary: #1e2326
+- Text secondary: #64748b
+- Border: #e2e8f0
+
+Typography:
+- Headings: "Barlow Condensed", font-weight 700, uppercase tracking-wide
+- Subheadings: "Barlow Condensed", font-weight 600
+- Body: "Barlow", font-weight 400
+- Hero headline: text-5xl md:text-7xl
+- Section headline: text-3xl md:text-5xl
+- Card headline: text-xl md:text-2xl
+
+Spacing:
+- Section padding: py-10 md:py-20
+- Max content width: max-w-6xl mx-auto px-4 md:px-8
+
+Cards:
+- rounded-lg border border-slate-200 shadow-sm bg-white
+
+Buttons:
+- Primary: bg-[#e07b00] hover:bg-[#c96e00] text-white font-semibold px-6 py-3 rounded transition-colors
+- Secondary/ghost: border-2 border-[#e07b00] text-[#e07b00] hover:bg-[#e07b00] hover:text-white px-6 py-3 rounded transition-colors
+
+---
+
+## FILE STRUCTURE
+
+src/app/demo/con-serv/
+  layout.tsx          -- shared nav + footer
+  page.tsx            -- forside (home)
+  produkter/
+    page.tsx
+  anlegg/
+    page.tsx
+  om-oss/
+    page.tsx
+  ansatte/
+    page.tsx
+  kontakt/
+    page.tsx
+
+---
+
+## LAYOUT.TSX
+
+Sticky white header, max-w-6xl centered content, shadow-sm on scroll (add shadow-md class via inline style always — no JS needed for demo).
+
+Left side of header:
+- Logo image: /demo/con-serv/logo.png, height 48px
+- If logo fails: text "CON-SERV" in Barlow Condensed 700 text-2xl text-[#1e2326]
+
+Right side of header (desktop):
+- Nav links: Hjem | Produkter | Anlegg | Om oss | Ansatte | Kontakt
+- Each link styled: text-[#1e2326] hover:text-[#e07b00] font-medium transition-colors text-sm uppercase tracking-wide
+- CTA button: phone number "930 00 696" styled as primary button (small: px-4 py-2 text-sm)
+
+Mobile header:
+- Hamburger icon (pure CSS or inline SVG, no library)
+- Mobile menu drops down with same links stacked vertically
+- Use useState for open/close — this is a client component, add "use client"
+
+Footer (anthracite background #1e2326, white text):
+- 3 columns on desktop, stacked on mobile
+- Col 1: Logo (white version if available, else text) + tagline "Din leverandør av stålarbeider for alle formål" + address: Østerskogen 36, 4879 Grimstad
+- Col 2: Navigation links (same as header) in white/muted
+- Col 3: Contact info: Rikki Aanonsen (Daglig leder) mob 930 00 696, rikki.aanonsen@con-serv.no
+- Bottom bar: "© 2025 Con-Serv AS. Alle rettigheter forbeholdt." centered, border-t border-white/10
+
+---
+
+## PAGE 1: FORSIDE (page.tsx)
+
+metadata: { title: 'Con-Serv AS | Stålarbeider Grimstad', robots: 'noindex' }
+
+### HERO SECTION
+- Full-width, min-height 90vh
+- Background: hero-bg.jpg with dark overlay (bg-black/50)
+- Centered content, white text
+- Eyebrow text (small caps, accent color): "Grimstad, Aust-Agder"
+- H1: "STÅL SOM HOLDER"
+- Subtext (max-w-xl): "Vi produserer og monterer stålkonstruksjoner, trapper, rekkverk, porter og spesialcontainere. For industri og private kunder."
+- Two CTAs side by side: primary "Se våre produkter" (links to /demo/con-serv/produkter), ghost "Kontakt oss" (links to /demo/con-serv/kontakt)
+- Bottom of hero: a thin strip in anthracite (#1e2326) showing the NS-1090 EXC 2 certification badge as text: "Sertifisert NS-1090 EXC 2" with a checkmark SVG icon beside it, plus "Etablert 2009" and "10 ansatte" — three trust items in a row, white text, icon + label
+
+### SERVICES OVERVIEW SECTION
+Background: white
+Heading: "HVA VI GJØR"
+Subtext: "Con-Serv har to avdelinger som til sammen dekker alt fra verkstedproduksjon til anleggsarbeid."
+
+Two large cards side by side (gap-6, md:grid-cols-2):
+
+Card 1 — Verkstedtjenester:
+- Top image: verksted.jpg (h-48 object-cover rounded-t-lg)
+- Icon (SVG wrench or gear, accent color)
+- Title: "Verkstedtjenester"
+- Description: "Stålbygg, trapper, rekkverk, porter, beslag, transportskruer og spesialcontainere. Vi produserer i vanlig stål, rustfritt og aluminium."
+- Link: "Les mer" -> /demo/con-serv/produkter
+
+Card 2 — Anleggstjenester:
+- Top image: anlegg.jpg
+- Icon (SVG excavator-like or shovel, accent color)
+- Title: "Anleggstjenester"
+- Description: "Graving, sprengning, massetransport og hagearbeid. Vi tar oppdrag for industri og private kunder i hele regionen."
+- Link: "Les mer" -> /demo/con-serv/anlegg
+
+### ABOUT TEASER SECTION
+Background: #f8fafc
+2-column layout on desktop (text left, image right), stacked on mobile
+
+Left:
+- Eyebrow: "OM CON-SERV"
+- Heading: "FAGKOMPETANSE OG SERTIFISERT KVALITET"
+- Body text: "Con-Serv ble grunnlagt i 2009 og holder til i Østerskogen i Grimstad. Vi er 10 ansatte med fagkompetanse innen sveising, mekanikk og maskinarbeid. Bedriften er sertifisert etter NS-1090 EXC 2, som sikrer dokumentert kvalitet i hele prosjektfasen."
+- CTA: "Lær mer om oss" -> /demo/con-serv/om-oss
+
+Right:
+- Image: lokaler.jpg, rounded-lg, object-cover h-80
+
+### PRODUCT HIGHLIGHTS SECTION
+Background: white
+Heading: "NOEN AV VÅRE PRODUKTER"
+
+Grid: 3 columns desktop, 2 tablet, 1 mobile. 6 cards total:
+
+1. Stålbygg — image: hal.jpg
+2. Rekkverk og porter — image: rekkverk.jpg
+3. Trapper — image: trapp.jpg
+4. Isanlegg — image: isanlegg.jpg
+5. Spesialcontainere — image: container1.jpg
+6. Beslag og transport — image: verksted.jpg
+
+Each card:
+- Image top (h-40 object-cover rounded-t-lg)
+- Title (Barlow Condensed 600)
+- 1-line description
+- No link needed, just visual showcase
+
+### CTA BANNER SECTION
+Background: anthracite #1e2326
+Full width, centered text, white
+Heading: "TA KONTAKT FOR TILBUD"
+Subtext: "Vi tar oppdrag av alle størrelser, for industri og private kunder."
+Two buttons: primary "Ring oss: 930 00 696" (tel: link), ghost white variant "Send en melding" -> /demo/con-serv/kontakt
+
+---
+
+## PAGE 2: PRODUKTER (/produkter/page.tsx)
+
+metadata: { title: 'Produkter | Con-Serv AS', robots: 'noindex' }
+
+### PAGE HERO
+- Background: staal-bg.jpg with overlay bg-black/60
+- Height: min-h-[40vh]
+- H1: "PRODUKTER OG TJENESTER"
+- Subtext: "Vi produserer et vidt spekter av produkter i vanlig stål, rustfritt og aluminium."
+
+### PRODUCTS SECTIONS
+Each product gets its own 2-column section (alternating image left/right), with a thin border-b between them. Full product list:
+
+1. STÅLBYGG
+Image: hal.jpg (right)
+Text: "Vi sveiser og monterer elementer til stålbygg av alle slag. Alle bygg og konstruksjonsdeler leveres med dokumentasjon og sertifikater i henhold til NS-1090 EXC 2."
+
+2. PORTER, REKKVERK OG GJERDER
+Image: rekkverk.jpg (left)
+Text: "Porter i ulike utførelser. Rekkverk for innvendig og utvendig bruk, med eller uten glass, i rustfritt eller vanlig stål. Vi kan galvanisere, lakkere eller pulverlakkere alle deler. Smijernsgjerder og stolper til flettverksgjerder prefabrikkeres på verkstedet."
+
+3. TRAPPER
+Image: trapp.jpg (right)
+Text: "Vi produserer innvendige og utvendige trapper som lakkerte ståltrapper med stål- eller eiketrinn. Trinnene kan også flislegges etter kundens ønske."
+
+4. TRANSPORTSKRUER
+Image: Unsplash placeholder https://placehold.co/800x500/e2e8f0/94a3b8?text=Transportskruer (left)
+Text: "Transportskruer blir fagmessig fremstilt og balansert før de forlater bedriften."
+
+5. BESLAG
+Image: verksted.jpg (right)
+Text: "Bedriften har både platesaks og plateknekke som sikrer stabil kvalitet på alle beslag. Vi knekker rustfritt stål og aluminiumprofiler."
+
+6. ISANLEGG
+Image: isanlegg.jpg (left)
+Text: "For Frio Nordica produserer og monterer vi isanlegg over hele verden. Det meste av deler blir prefabrikkert på verkstedet før de sendes til lokasjon."
+
+7. SPESIALCONTAINERE
+Image: container1.jpg (right)
+Text: "Vår Spesial Container type 3-1 er et referanseprodukt for Con-Serv. En vanlig 20-fots container som slått ut gir ca. 35 m² gulvareal. Brukes til kontor, spiserom eller arbeidsbrakke og settes opp på ca. 20 minutter. Vi produserer også spesialcontainere for offshore og det norske Forsvaret."
+
+8. KIOSKER OG SPESIALBYGG
+Image: https://placehold.co/800x500/e2e8f0/94a3b8?text=Kiosker (left)
+Text: "Vi produserer transportable kiosker tilpasset kundens behov. Billigere enn leie over tid og kan flyttes etter behov."
+
+### BOTTOM CTA
+Same anthracite CTA banner as forside.
+
+---
+
+## PAGE 3: ANLEGG (/anlegg/page.tsx)
+
+metadata: { title: 'Anleggstjenester | Con-Serv AS', robots: 'noindex' }
+
+### PAGE HERO
+Background: anlegg-hero.jpg with overlay bg-black/55
+H1: "ANLEGGSTJENESTER"
+Subtext: "Graving, sprengning, massetransport og hagearbeid for industri og private kunder."
+
+### INTRO SECTION
+2-col: text left, image right (anlegg.jpg)
+Heading: "EGEN ANLEGGSAVDELING"
+Text: "Con-Serv har en dedikert anleggsavdeling som utfører oppdrag av alle størrelser. Vi jobber for industrikunder og private, og tar på oss alt fra enkle graveoppdrag til større anleggsprosjekter med sprengning og massetransport."
+
+### SERVICES GRID
+4 cards in 2x2 grid (md:grid-cols-2), each with an SVG icon (accent color), title and short description:
+
+1. Gravearbeid: "Graving for alle formål, fra kabelgrøfter til fundamenter og vann/avløp."
+2. Sprengning: "Kontrollert sprengning utført av erfarne fagfolk med nødvendige godkjenninger."
+3. Massetransport: "Effektiv transport og håndtering av masser i forbindelse med anleggsprosjekter."
+4. Hagearbeid: "Planering, opparbeiding og ferdigstilling av utearealer for private og næringsliv."
+
+### BOTTOM CTA
+Same anthracite CTA banner.
+
+---
+
+## PAGE 4: OM OSS (/om-oss/page.tsx)
+
+metadata: { title: 'Om Con-Serv AS | Stålarbeider Grimstad', robots: 'noindex' }
+
+### PAGE HERO
+Background: sveising.jpg with overlay bg-black/60
+H1: "OM CON-SERV AS"
+Subtext: "Grimstads foretrukne leverandør av stålkonstruksjoner og anleggsarbeid siden 2009."
+
+### STORY SECTION
+2-col: image left (lokaler.jpg), text right
+Heading: "HISTORIEN VÅR"
+Text blocks (use multiple <p> with mb-4):
+- "Con-Serv ble grunnlagt i 2009. I starten leide vi produksjonslokaler, men sommeren 2011 bygde vi nye, tilpassede lokaler i Østerskogen i Grimstad."
+- "Lokalene består av en stor sveisehall, en hall for arbeid med rustfritt og aluminium, og et eget område for sandblåsing og lakkering."
+- "I dag er vi 10 ansatte med fagkompetanse innen sveising, mekanikk og maskinarbeid. Vi tar oppdrag for industri og privat kunder, store som små."
+
+### CERTIFICATION SECTION
+Background: #f8fafc
+Centered, max-w-2xl
+Heading: "SERTIFISERT KVALITET"
+Large accent-colored badge/box:
+- NS-1090 EXC 2 (large, Barlow Condensed)
+- Text: "Con-Serv er sertifisert etter NS-1090 «Komponenter for stålkonstruksjoner» utførelsesklasse EXC 2. Dette sikrer dokumentert kvalitet i alle faser av prosjektet, fra produksjon til ferdig montert produkt."
+- Image: https://placehold.co/300x400/e2e8f0/94a3b8?text=NS-1090+Sertifikat (show as a document thumbnail, max-w-xs centered below text)
+
+### VALUES/FACTS STRIP
+3 large stat boxes in a row (anthracite background):
+- "2009" / "Etablert"
+- "10+" / "Fagfolk"
+- "NS-1090" / "Sertifisert"
+
+### BOTTOM CTA
+Same anthracite CTA banner.
+
+---
+
+## PAGE 5: ANSATTE (/ansatte/page.tsx)
+
+metadata: { title: 'Ansatte | Con-Serv AS', robots: 'noindex' }
+
+### PAGE HERO (no background image, anthracite bg instead)
+Background: #1e2326
+H1: "MØTOSS" (white)
+Subtext: "Fagfolk med hjerte for håndverk." (white, muted)
+
+### TEAM GRID
+4 columns desktop, 2 tablet, 1 mobile
+One card per person:
+
+Card structure:
+- Headshot placeholder image: https://placehold.co/400x400/e2e8f0/94a3b8?text=Bilde+kommer (square, rounded-full w-32 h-32 mx-auto object-cover mb-4)
+- Name (Barlow Condensed 700, text-xl)
+- Title (text-sm uppercase tracking-wide text-[#e07b00])
+- Divider line
+- Phone number as tel: link
+- Email as mailto: link
+
+People:
+1. Rikki Aanonsen — Daglig leder — mob: 930 00 696 — rikki.aanonsen@con-serv.no
+2. Glenn Aanonsen — Styremedlem — mob: 997 24 006 — glenn.aanonsen@con-serv.no
+3. Odd Arne Haugen — Styreleder — mob: 415 135 13 — odd.arne.haugen@con-serv.no
+4. Odd Jørgen Haugen — Anlegg, Styremedlem — mob: 952 59 706 — (no email listed, omit email row)
+
+Below the grid, add a note in muted text:
+"Vi er totalt 10 fagfolk. Ta kontakt for mer informasjon."
+
+### BOTTOM CTA
+Same anthracite CTA banner.
+
+---
+
+## PAGE 6: KONTAKT (/kontakt/page.tsx)
+
+metadata: { title: 'Kontakt | Con-Serv AS', robots: 'noindex' }
+
+### PAGE HERO (anthracite, no image)
+Background: #1e2326
+H1: "KONTAKT OSS" (white)
+Subtext: "Vi svarer raskt og gir deg et uforpliktende tilbud." (white)
+
+### CONTACT SECTION
+2-col layout on desktop: contact info left, form right
+
+Left column — Contact info:
+- Section heading: "FINN OSS"
+- Address: Østerskogen 36, 4879 Grimstad
+- Phone (main): 930 00 696 (Rikki Aanonsen, Daglig leder)
+- Email: rikki.aanonsen@con-serv.no
+- For anlegg: Odd Jørgen Haugen, mob 952 59 706
+- Opening hours placeholder: "Man-Fre: 07:00-16:00"
+- An embedded Google Maps iframe: https://maps.google.com/maps?q=Østerskogen+36,+4879+Grimstad&output=embed (iframe, w-full h-64 rounded-lg border-0 mt-4)
+
+Right column — Contact form (no functionality needed, visual only):
+- Fields: Navn (text), E-post (email), Telefon (text), Melding (textarea rows=5)
+- Each field: full width, border border-slate-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-[#e07b00] mb-4
+- Submit button: primary button "Send melding" full width
+- Below button, small muted text: "Vi svarer normalt innen en arbeidsdag."
+
+### BOTTOM: MAP FULL WIDTH
+Below the 2-col section, a full-width anthracite strip with company details repeated (address, phone, org.nr placeholder "Org.nr: 123 456 789").
+
+---
+
+## GENERAL RULES FOR ALL PAGES
+
+- Use correct Norwegian: Æ, Ø, Å in all text
+- No em dashes anywhere — use comma or period instead
+- No en dashes anywhere — use "til" or "og" instead
+- No placeholder Lorem Ipsum text — all text should be real Norwegian content based on the info above
+- All pages must have the anthracite CTA banner near the bottom before the footer (except kontakt page which already ends with contact info)
+- All internal links use href="/demo/con-serv/[page]"
+- Section headings in Barlow Condensed uppercase
+- Keep the nav active state: highlight the current page link in accent color (use usePathname from next/navigation in layout.tsx — mark layout as "use client")
+- The overall feel: industrial but approachable, premium but not pretentious. A family-run Norwegian steel company that knows what they are doing.
