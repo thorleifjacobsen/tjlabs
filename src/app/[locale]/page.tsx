@@ -1,31 +1,19 @@
 import type { Metadata } from 'next';
-import { ArrowRight, Globe, Cpu, Layers } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'TJLabs — Webutvikler & Maker i Norge',
   description:
-    'Nettsider, webapplikasjoner og elektronikk. Jeg tar på meg oppdrag i hele Norge. 10+ års erfaring.',
+    'Nettsider, webapplikasjoner og elektronikk. Tar på meg oppdrag i hele Norge.',
 };
 
-const services = [
-  {
-    icon: Globe,
-    title: 'Nettsider',
-    desc: 'Enkle og effektive bedriftssider og landingssider. Rask levering, ser bra ut og er enkle å vedlikeholde.',
-    href: '/tjenester',
-  },
-  {
-    icon: Layers,
-    title: 'Webapplikasjoner',
-    desc: 'Apper med innlogging og betaling, interne verktøy og portaler. Fullstack fra database til grensesnitt.',
-    href: '/tjenester',
-  },
-  {
-    icon: Cpu,
-    title: 'Elektronikk & mer',
-    desc: 'PCB-design, firmware, IoT og smarthus. Pluss 3D-printing og teknisk rådgivning.',
-    href: '/tjenester',
-  },
+const caps = [
+  'Nettsider',
+  'Webapplikasjoner',
+  'Elektronikk & IoT',
+  '3D-printing',
+  'PC & hardware',
+  'Teknisk rådgivning',
 ];
 
 export default function Home() {
@@ -33,109 +21,83 @@ export default function Home() {
     <main>
       {/* Hero */}
       <section className="hero-bg min-h-screen flex flex-col justify-center relative">
-        <div className="max-w-6xl mx-auto px-6 pt-24 pb-20 w-full">
-          <p
-            className="hero-item text-xs font-semibold tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-8"
-          >
-            Webutvikler &amp; Maker — Norge
-          </p>
-
+        <div className="max-w-5xl mx-auto px-6 pt-24 pb-20 w-full">
           <h1
-            className="hero-item font-display font-semibold leading-[1.1] mb-8"
-            style={{ animationDelay: '60ms', fontSize: 'clamp(3rem, 8vw, 7rem)' }}
+            className="hero-item font-display font-semibold leading-[1.05] mb-10"
+            style={{ animationDelay: '40ms', fontSize: 'clamp(3.5rem, 9vw, 8rem)' }}
           >
             <span className="block text-[var(--color-text)]">Nettsider.</span>
             <span className="block text-[var(--color-text)]">Apper.</span>
-            <span className="block text-[var(--color-primary)]">Elektronikk.</span>
+            <span className="block text-[var(--color-primary)] glow-orb">Elektronikk.</span>
           </h1>
 
           <p
-            className="hero-item text-[var(--color-text-secondary)] max-w-lg mb-12"
-            style={{ animationDelay: '140ms', fontSize: '1.125rem', lineHeight: 1.6 }}
+            className="hero-item text-[var(--color-text-secondary)] max-w-md mb-12"
+            style={{ animationDelay: '140ms', fontSize: '1.0625rem', lineHeight: 1.65 }}
           >
-            Tar på meg varierte oppdrag i hele Norge. Jeg finner som regel en god løsning — og sier fra hvis ikke.
+            Webutvikler og maker basert i Norge. Tar på meg det meste — og sier fra hvis ikke.
           </p>
 
           <div
-            className="hero-item flex flex-wrap gap-4"
-            style={{ animationDelay: '220ms' }}
+            className="hero-item flex flex-wrap gap-5"
+            style={{ animationDelay: '230ms' }}
           >
-            <a href="/tjenester" className="btn-primary">
-              Se hva jeg gjør <ArrowRight className="w-4 h-4" />
+            <a href="/kontakt" className="btn-primary">
+              Ta kontakt <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="/kontakt" className="btn-ghost">
-              Ta kontakt
+            <a href="/tjenester" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors self-center">
+              Hva jeg gjør →
             </a>
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div
-          className="hero-item absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
-          style={{ animationDelay: '400ms' }}
+          className="hero-item absolute bottom-10 left-6 md:left-12"
+          style={{ animationDelay: '380ms' }}
         >
-          <span className="text-[10px] tracking-widest uppercase text-[var(--color-text-muted)]">scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-[var(--color-border)] to-transparent" />
+          <div className="w-px h-10 bg-gradient-to-b from-[var(--color-border)] to-transparent" />
         </div>
       </section>
 
-      {/* Service teasers */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="flex items-center gap-4 mb-14">
-          <div className="divider" />
-          <span className="text-xs tracking-[0.18em] uppercase font-semibold text-[var(--color-text-muted)]">
-            Hva jeg gjør
-          </span>
-        </div>
+      {/* Capabilities list */}
+      <section className="max-w-5xl mx-auto px-6 pt-20 pb-28">
+        <p className="text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] mb-10">
+          Hva jeg gjør
+        </p>
 
-        <div className="grid md:grid-cols-3 gap-5">
-          {services.map((s) => (
-            <a key={s.title} href={s.href} className="card p-7 group block">
-              <div className="w-10 h-10 rounded-lg bg-[var(--color-surface-2)] border border-[var(--color-border)] flex items-center justify-center mb-5 group-hover:border-[var(--color-primary)] group-hover:bg-[oklch(0.62_0.22_248_/_0.08)] transition-all duration-250">
-                <s.icon className="w-5 h-5 text-[var(--color-text-secondary)] group-hover:text-[var(--color-primary)] transition-colors" />
+        <div>
+          {caps.map((label, i) => (
+            <a
+              key={label}
+              href="/tjenester"
+              className="group flex items-center justify-between border-b border-[var(--color-border)] py-5 hover:pl-3 transition-all duration-300"
+            >
+              <div className="flex items-center gap-6">
+                <span className="text-[10px] font-mono text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-colors w-5">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span
+                  className="font-display font-medium text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors"
+                  style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)' }}
+                >
+                  {label}
+                </span>
               </div>
-              <h3 className="font-display font-medium text-[var(--color-text)] text-lg mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                {s.title}
-              </h3>
-              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                {s.desc}
-              </p>
+              <ArrowRight className="w-4 h-4 text-[var(--color-text-muted)] opacity-0 group-hover:opacity-100 group-hover:text-[var(--color-primary)] transition-all duration-200 shrink-0" />
             </a>
           ))}
         </div>
 
-        <div className="mt-10 flex justify-end">
+        <div className="mt-16 flex items-center justify-between">
+          <p className="text-sm text-[var(--color-text-muted)] max-w-xs leading-relaxed">
+            10+ år med webutvikling, elektronikk og maker-prosjekter.
+          </p>
           <a
-            href="/tjenester"
-            className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-primary)] inline-flex items-center gap-1.5 transition-colors"
+            href="/portefolje"
+            className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors shrink-0 ml-8"
           >
-            Se alle tjenester <ArrowRight className="w-3.5 h-3.5" />
+            Se prosjekter →
           </a>
-        </div>
-      </section>
-
-      {/* Portfolio teaser */}
-      <section className="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
-        <div className="max-w-6xl mx-auto px-6 py-20">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="divider" />
-                <span className="text-xs tracking-[0.18em] uppercase font-semibold text-[var(--color-text-muted)]">
-                  Arbeid
-                </span>
-              </div>
-              <h2 className="font-display text-3xl text-[var(--color-text)]">
-                Prosjekter og demosider
-              </h2>
-              <p className="text-[var(--color-text-secondary)] mt-2 text-sm max-w-sm">
-                Egne produkter og nettsider jeg har bygget for kunder og demostrasjon.
-              </p>
-            </div>
-            <a href="/portefolje" className="btn-ghost shrink-0">
-              Se portefølje <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
         </div>
       </section>
     </main>

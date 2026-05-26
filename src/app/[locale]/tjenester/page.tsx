@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ArrowRight, Globe, Layers, Cpu, Package, Wrench, MessageCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Tjenester | TJLabs',
@@ -9,125 +9,86 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    icon: Globe,
     title: 'Nettsider',
-    desc: 'Enkle og effektive bedriftssider og landingssider. Fungerer på alle enheter, ser bra ut og er søkemotoroptimert fra start.',
-    tags: ['Bedriftssider', 'Landingssider', 'SEO', 'Responsivt design'],
-    href: '/services/website',
+    desc: 'Enkle og greie bedriftssider og landingssider. Ser bra ut, fungerer på alle enheter og er søkemotoroptimert fra start. Rask levering og lett å vedlikeholde.',
+    detail: 'Bedriftssider, landingssider, porteføljer',
   },
   {
-    icon: Layers,
     title: 'Webapplikasjoner',
-    desc: 'Apper med innlogging, betaling og brukerdata. Interne portaler, bookingsystemer og abonnementstjenester. Fullstack.',
-    tags: ['Innlogging', 'Betaling', 'Portaler', 'PWA'],
-    href: '/services/webapp',
+    desc: 'Apper med innlogging, betaling og brukerdata. Interne portaler, bookingsystemer og abonnementstjenester. Fullstack fra database til grensesnitt — jeg gjør alt selv.',
+    detail: 'Portaler, booking, SaaS, PWA',
   },
   {
-    icon: Cpu,
-    title: 'Elektronikk og IoT',
-    desc: 'PCB-design og prototyper, firmware til mikrokontrollere, smarthusintegrasjoner og sensorbaserte løsninger.',
-    tags: ['PCB-design', 'ESP32 / Arduino', 'Home Assistant', 'IoT'],
-    href: '/services/electronics',
+    title: 'Elektronikk & IoT',
+    desc: 'PCB-design og prototyper, firmware til ESP32 og Arduino, smarthusintegrasjoner med Home Assistant og sensorbaserte løsninger. Kobler det fysiske til nettet.',
+    detail: 'PCB, firmware, Home Assistant, sensorer',
   },
   {
-    icon: Package,
     title: '3D-printing',
-    desc: 'Send filer og få pristilbud. Jeg hjelper også med design fra mål og skisser — bra for prototyper og funksjonelle deler.',
-    tags: ['STL / STEP', 'Prototyper', 'Funksjonelle deler', 'Design fra mål'],
-    href: '/services/3d-printing',
+    desc: 'Send filer og få pristilbud. Jobber med STL, STEP og OBJ. Kan også hjelpe med design fra mål og skisser — bra for prototyper, festepunkter og funksjonelle deler.',
+    detail: 'Prototyper, funksjonelle deler, design fra mål',
   },
   {
-    icon: Wrench,
-    title: 'PC og hardware',
-    desc: 'PC-reparasjon og oppgraderinger, databerging og maskinvarehjelp. Gjelder både Windows og Mac.',
-    tags: ['PC-reparasjon', 'Oppgraderinger', 'Databerging'],
-    href: null,
+    title: 'PC & hardware',
+    desc: 'PC-reparasjon og oppgraderinger, databerging og maskinvarehjelp. Windows og Mac. Vet hva som er inni en datamaskin og er ikke redd for å åpne den.',
+    detail: 'Reparasjon, oppgraderinger, databerging',
   },
   {
-    icon: MessageCircle,
     title: 'Teknisk rådgivning',
-    desc: 'Trenger du hjelp til å tenke gjennom en teknisk utfordring, eller noen å sparre med? Jeg hjelper gjerne.',
-    tags: ['Sparring', 'Teknisk vurdering', 'Planlegging'],
-    href: '/kontakt',
+    desc: 'Trenger du noen å sparre med om en teknisk utfordring? Hjelper gjerne med å tenke gjennom arkitektur, produktvalg eller problemstillinger du sitter fast i.',
+    detail: 'Sparring, vurderinger, planlegging',
   },
 ];
 
 export default function TjenesterPage() {
   return (
-    <main className="pt-28 pb-24">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="mb-16">
-          <div className="flex items-center gap-4 mb-5">
-            <div className="divider" />
-            <span className="text-xs tracking-[0.18em] uppercase font-semibold text-[var(--color-text-muted)]">
-              Hva jeg kan hjelpe med
+    <main className="max-w-5xl mx-auto px-6 pt-28 pb-24">
+      <div className="mb-16">
+        <h1
+          className="font-display font-semibold text-[var(--color-text)]"
+          style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', lineHeight: 1.05 }}
+        >
+          Tjenester
+        </h1>
+        <p className="text-[var(--color-text-secondary)] mt-4 text-base max-w-md" style={{ lineHeight: 1.7 }}>
+          Fra nettsider til kretskort. Jeg tar på meg varierte oppdrag og finner som regel en god løsning.
+        </p>
+      </div>
+
+      <div className="border-t border-[var(--color-border)]">
+        {services.map((s, i) => (
+          <div
+            key={s.title}
+            className="border-b border-[var(--color-border)] py-10 grid grid-cols-[2.5rem_1fr] md:grid-cols-[2.5rem_14rem_1fr] gap-x-8 gap-y-4"
+          >
+            <span className="text-[10px] font-mono text-[var(--color-text-muted)] pt-1.5">
+              {String(i + 1).padStart(2, '0')}
             </span>
-          </div>
-          <h1 className="font-display font-semibold text-[var(--color-text)] mb-4"
-            style={{ fontSize: 'clamp(2.25rem, 5vw, 3.5rem)' }}>
-            Tjenester
-          </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-xl" style={{ lineHeight: 1.7 }}>
-            Fra nettsider til kretskort. Jeg tar på meg varierte oppdrag og finner som regel en god løsning.
-          </p>
-        </div>
 
-        {/* Services grid */}
-        <div className="grid md:grid-cols-2 gap-5">
-          {services.map((s) => {
-            const Wrapper = s.href ? 'a' : 'div';
-            const props = s.href
-              ? { href: s.href, className: 'card p-8 group block' }
-              : { className: 'card p-8' };
-
-            return (
-              <Wrapper key={s.title} {...(props as React.HTMLAttributes<HTMLElement>)}>
-                <div className="flex items-start justify-between mb-5">
-                  <div className="w-11 h-11 rounded-xl bg-[var(--color-surface-2)] border border-[var(--color-border)] flex items-center justify-center group-hover:border-[var(--color-primary)] group-hover:bg-[oklch(0.62_0.22_248_/_0.08)] transition-all duration-250">
-                    <s.icon className="w-5 h-5 text-[var(--color-text-secondary)] group-hover:text-[var(--color-primary)] transition-colors" />
-                  </div>
-                  {s.href && (
-                    <ArrowRight className="w-4 h-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-colors mt-1" />
-                  )}
-                </div>
-
-                <h2 className="font-display font-medium text-xl text-[var(--color-text)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  {s.title}
-                </h2>
-                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-5">
-                  {s.desc}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {s.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2.5 py-1 rounded-md bg-[var(--color-surface-2)] text-[var(--color-text-muted)] border border-[var(--color-border)]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </Wrapper>
-            );
-          })}
-        </div>
-
-        {/* CTA */}
-        <div className="mt-16 p-8 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div>
-            <h2 className="font-display font-medium text-xl text-[var(--color-text)] mb-1">
-              Har du et prosjekt i tankene?
+            <h2
+              className="font-display font-medium text-[var(--color-text)]"
+              style={{ fontSize: 'clamp(1.125rem, 2vw, 1.375rem)' }}
+            >
+              {s.title}
+              <span className="block text-xs font-normal text-[var(--color-text-muted)] mt-1 tracking-wide">
+                {s.detail}
+              </span>
             </h2>
-            <p className="text-sm text-[var(--color-text-secondary)]">
-              Beskriv gjerne hva du trenger og jeg svarer raskt.
+
+            <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed col-start-2 md:col-auto">
+              {s.desc}
             </p>
           </div>
-          <a href="/kontakt" className="btn-primary shrink-0">
-            Ta kontakt <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
+        ))}
+      </div>
+
+      <div className="mt-16 flex items-center justify-between">
+        <p className="text-sm text-[var(--color-text-muted)]">
+          Noe som ikke passer inn her? Ta kontakt uansett.
+        </p>
+        <a href="/kontakt" className="btn-primary">
+          Ta kontakt <ArrowRight className="w-4 h-4" />
+        </a>
       </div>
     </main>
   );
