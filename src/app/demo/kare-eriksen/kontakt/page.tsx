@@ -31,7 +31,7 @@ export default function KontaktPage() {
       {/* Contact info + map */}
       <section className="py-16 md:py-20 bg-white">
         <div
-          className="mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
+          className="mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8"
           style={{ maxWidth: '1100px' }}
         >
           {/* Contact info card */}
@@ -151,9 +151,9 @@ export default function KontaktPage() {
           </div>
 
           {/* Map */}
-          <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm" style={{ height: '420px' }}>
+          <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm h-full min-h-[320px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2087.3983150977374!2d8.715004077372065!3d58.45411058076768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46479498d1441227%3A0x2b952db8e484ccda!2sK%C3%A5re%20Eriksen%20AS!5e0!3m2!1sen!2sno!4v1779786766261!5m2!1sen!2sno"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2087.3983150977374!2d8.715004077372065!3d58.45411058076768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46479498d1441227%3A0x2b952db8e484ccda!2sK%C3%A5re%20Eriksen%20AS!5e1!3m2!1sen!2sno!4v1779786766261!5m2!1sen!2sno"
               width="100%"
               height="100%"
               style={{ border: 0, display: 'block' }}
