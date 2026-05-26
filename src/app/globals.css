@@ -7,11 +7,11 @@
   --color-accent:         oklch(0.75 0.17 42);
 
   /* Surfaces */
-  --color-bg:             oklch(0.09 0.015 248);
-  --color-surface:        oklch(0.12 0.015 248);
-  --color-surface-2:      oklch(0.16 0.018 248);
-  --color-border:         oklch(0.22 0.025 248);
-  --color-border-bright:  oklch(0.38 0.05 248);
+  --color-bg:             oklch(0.14 0.012 248);
+  --color-surface:        oklch(0.17 0.012 248);
+  --color-surface-2:      oklch(0.21 0.014 248);
+  --color-border:         oklch(0.26 0.018 248);
+  --color-border-bright:  oklch(0.40 0.04 248);
 
   /* Text */
   --color-text:           oklch(0.93 0.008 248);
@@ -72,24 +72,9 @@ h1, h2, h3, h4, h5, h6 {
   animation: glow-breathe 8s ease-in-out infinite;
 }
 
-/* Hero background with grid */
+/* Hero background — plain, no grid */
 .hero-bg {
-  position: relative;
   background-color: var(--color-bg);
-  background-image:
-    linear-gradient(oklch(0.22 0.025 248 / 0.35) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(0.22 0.025 248 / 0.35) 1px, transparent 1px);
-  background-size: 72px 72px;
-}
-
-.hero-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 70% at 5% 0%, oklch(0.62 0.22 248 / 0.18) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 40% at 95% 90%, oklch(0.75 0.17 42 / 0.08) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 /* Card — no lift, just border */
