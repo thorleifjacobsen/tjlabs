@@ -1,6 +1,5 @@
 export const NAV_LINKS = [
-  { href: '/#services', tKey: 'services' },
-  { href: '/#projects', tKey: 'projects' },
-  { href: '/#about', tKey: 'about' },
-  { href: '/#contact', tKey: 'contact' },
+  { href: '/tjenester', label: 'Tjenester' },
+  { href: '/portefolje', label: 'Portefølje' },
+  { href: '/kontakt', label: 'Kontakt' },
 ] as const;

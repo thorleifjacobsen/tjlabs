@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Comfortaa } from 'next/font/google';
-import { getLocale } from 'next-intl/server';
 import './globals.css';
 
 const comfortaa = Comfortaa({
@@ -46,16 +45,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  let locale = 'nb';
-  try {
-    locale = await getLocale();
-  } catch {
-    // demo and other non-intl routes fall back to default locale
-  }
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={locale} className={comfortaa.variable}>
+    <html lang="nb" className={comfortaa.variable}>
       <body>{children}</body>
     </html>
   );
