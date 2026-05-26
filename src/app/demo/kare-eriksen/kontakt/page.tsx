@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Kontakt oss - Kåre Eriksen AS',
-  description: 'Ta kontakt med Kåre Eriksen AS. Industritoppen 23, 4848 Arendal. Tlf: 911 09 595. Vi svarer innen en virkedag.',
+  description: 'Ta kontakt med Kåre Eriksen AS. Industritoppen 23, 4848 Arendal. Tlf: 911 09 595.',
   robots: 'noindex',
 };
 
@@ -23,24 +23,20 @@ export default function KontaktPage() {
             Kontakt oss
           </h1>
           <p className="text-slate-600 max-w-xl leading-relaxed">
-            Har du spørsmål om et byggeprosjekt, eller vil du ha et tilbud? Fyll ut skjemaet eller ta direkte kontakt med oss.
+            Har du spørsmål om et byggeprosjekt, eller vil du ha et tilbud? Ring oss eller send en e-post, så svarer vi deg raskt.
           </p>
         </div>
       </section>
 
-      {/* Contact layout */}
+      {/* Contact info */}
       <section className="py-16 md:py-20 bg-white">
-        <div
-          className="mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-5 gap-10"
-          style={{ maxWidth: '1100px' }}
-        >
-          {/* Left: Contact info */}
-          <div className="lg:col-span-2">
-            <div className="rounded-lg border border-slate-200 shadow-sm p-6" style={{ backgroundColor: '#f8fafc' }}>
-              <h2 className="font-semibold text-lg mb-5" style={{ color: '#1e3a5f' }}>
+        <div className="mx-auto px-4 sm:px-6" style={{ maxWidth: '1100px' }}>
+          <div className="max-w-lg">
+            <div className="rounded-lg border border-slate-200 shadow-sm p-6 md:p-8" style={{ backgroundColor: '#f8fafc' }}>
+              <h2 className="font-semibold text-lg mb-6" style={{ color: '#1e3a5f' }}>
                 Kontaktinformasjon
               </h2>
-              <ul className="space-y-4 text-sm">
+              <ul className="space-y-5 text-sm">
                 <li className="flex items-start gap-3">
                   <svg
                     className="w-5 h-5 mt-0.5 flex-shrink-0"
@@ -72,11 +68,7 @@ export default function KontaktPage() {
                   </svg>
                   <div>
                     <p className="font-medium text-slate-700">Telefon</p>
-                    <a
-                      href="tel:91109595"
-                      className="transition-colors"
-                      style={{ color: '#1e3a5f' }}
-                    >
+                    <a href="tel:91109595" style={{ color: '#1e3a5f' }} className="font-medium">
                       911 09 595
                     </a>
                   </div>
@@ -94,11 +86,7 @@ export default function KontaktPage() {
                   </svg>
                   <div>
                     <p className="font-medium text-slate-700">E-post</p>
-                    <a
-                      href="mailto:post@keriksen.no"
-                      className="transition-colors"
-                      style={{ color: '#1e3a5f' }}
-                    >
+                    <a href="mailto:post@keriksen.no" style={{ color: '#1e3a5f' }} className="font-medium">
                       post@keriksen.no
                     </a>
                   </div>
@@ -116,8 +104,7 @@ export default function KontaktPage() {
                   </svg>
                   <div>
                     <p className="font-medium text-slate-700">Åpningstider</p>
-                    <p className="text-slate-500">Mandag til fredag</p>
-                    <p className="text-slate-500">07:00 til 16:00</p>
+                    <p className="text-slate-500">Mandag til fredag: 07:00 til 16:00</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -138,9 +125,7 @@ export default function KontaktPage() {
                 </li>
               </ul>
 
-              <div
-                className="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3"
-              >
+              <div className="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
                 <svg
                   className="w-6 h-6 flex-shrink-0"
                   style={{ color: '#c8820a' }}
@@ -161,93 +146,6 @@ export default function KontaktPage() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Right: Contact form */}
-          <div className="lg:col-span-3">
-            <h2 className="font-semibold text-lg mb-5" style={{ color: '#1e3a5f' }}>
-              Send oss en melding
-            </h2>
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="navn"
-                    className="block text-sm font-medium mb-1.5"
-                    style={{ color: '#374151' }}
-                  >
-                    Navn
-                  </label>
-                  <input
-                    id="navn"
-                    type="text"
-                    placeholder="Ola Nordmann"
-                    className="border border-slate-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 text-sm"
-                    style={{ '--tw-ring-color': '#1e3a5f' } as React.CSSProperties}
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="telefon"
-                    className="block text-sm font-medium mb-1.5"
-                    style={{ color: '#374151' }}
-                  >
-                    Telefon
-                  </label>
-                  <input
-                    id="telefon"
-                    type="tel"
-                    placeholder="900 00 000"
-                    className="border border-slate-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 text-sm"
-                    style={{ '--tw-ring-color': '#1e3a5f' } as React.CSSProperties}
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  htmlFor="epost"
-                  className="block text-sm font-medium mb-1.5"
-                  style={{ color: '#374151' }}
-                >
-                  E-post
-                </label>
-                <input
-                  id="epost"
-                  type="email"
-                  placeholder="ola@eksempel.no"
-                  className="border border-slate-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 text-sm"
-                  style={{ '--tw-ring-color': '#1e3a5f' } as React.CSSProperties}
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="melding"
-                  className="block text-sm font-medium mb-1.5"
-                  style={{ color: '#374151' }}
-                >
-                  Melding
-                </label>
-                <textarea
-                  id="melding"
-                  rows={6}
-                  placeholder="Beskriv prosjektet ditt, f.eks. type bygg, omfang og ønsket oppstartstidspunkt..."
-                  className="border border-slate-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 text-sm resize-none"
-                  style={{ '--tw-ring-color': '#1e3a5f' } as React.CSSProperties}
-                />
-              </div>
-              <div className="flex items-center justify-between gap-4">
-                <button
-                  type="submit"
-                  className="px-8 py-3 rounded-md text-white font-semibold text-sm transition-colors"
-                  style={{ backgroundColor: '#1e3a5f' }}
-                >
-                  Send henvendelse
-                </button>
-                <p className="text-xs text-slate-400 text-right">
-                  Vi svarer vanligvis innen en virkedag.
-                </p>
-              </div>
-            </form>
           </div>
         </div>
       </section>
