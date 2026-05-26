@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Eikaas Ved — Kvalitetsved i Agder",
+  title: "Eikås Ved - Kvalitetsved i Agder",
   description:
     "Tørr bjørkeved og eik levert til deg i østre del av Agder. Kappet i 30 cm lengder, klar for peisen.",
   robots: { index: false, follow: false },

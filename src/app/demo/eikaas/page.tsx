@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Eikaas Ved — Kvalitetsved i Agder",
+  title: "Eikås Ved - Kvalitetsved i Agder",
   description:
     "Tørr bjørkeved og eik levert til deg i østre del av Agder. Kappet i 30 cm lengder, klar for peisen.",
   robots: { index: false, follow: false },
@@ -402,7 +402,7 @@ export default function EikaasPage() {
       {/* NAV */}
       <nav className="ev-nav">
         <div className="ev-nav-inner">
-          <a href="#" className="ev-logo">Eikaas Ved</a>
+          <a href="#" className="ev-logo">Eikås Ved</a>
           <div className="ev-nav-links">
             {NAV_LINKS.map((l) => (
               <a key={l.href} href={l.href} className="ev-nav-link">{l.label}</a>
@@ -465,10 +465,10 @@ export default function EikaasPage() {
               <div className="ev-om-text">
                 <div className="ev-section-header">
                   <div className="ev-divider" />
-                  <h2 className="ev-h2">Om Eikaas Ved</h2>
+                  <h2 className="ev-h2">Om Eikås Ved</h2>
                 </div>
                 <p className="ev-body-muted">
-                  Eikaas Ved er en liten lokal vedprodusent i Agder. Vi selger tørr
+                  Eikås Ved er en liten lokal vedprodusent i Agder. Vi selger tørr
                   bjørke- og eikeved i store sekker, kappet i passende 30 cm
                   lengder. Ta kontakt for bestilling eller spørsmål, vi finner en
                   løsning som passer deg.
@@ -497,7 +497,7 @@ export default function EikaasPage() {
             <div className="ev-section-header">
               <div className="ev-divider" />
               <div className="ev-priser-h2-wrap">
-                <h2 className="ev-h2">Våre produkt</h2>
+                <h2 className="ev-h2" style={{ margin: 0 }}>Våre produkter</h2>
                 <span className="ev-priser-underline" />
               </div>
               <p style={{ marginTop: "1.25rem", fontSize: "1rem", color: "#6b7280", letterSpacing: "0.01em" }}>
@@ -636,7 +636,7 @@ export default function EikaasPage() {
       <footer className="ev-footer">
         <div className="ev-footer-inner">
           <div>
-            <div className="ev-footer-brand">Eikaas Ved</div>
+            <div className="ev-footer-brand">Eikås Ved</div>
             <div className="ev-footer-info">
               <span className="ev-footer-info-line">Østre Agder</span>
               <span className="ev-footer-info-line">Telefon: 907 47 375</span>
@@ -654,7 +654,7 @@ export default function EikaasPage() {
           </div>
         </div>
         <div className="ev-footer-bar">
-          <span className="ev-footer-copy">&copy; 2025 Eikaas Ved</span>
+          <span className="ev-footer-copy">&copy; 2025 Eikås Ved</span>
         </div>
       </footer>
     </>
