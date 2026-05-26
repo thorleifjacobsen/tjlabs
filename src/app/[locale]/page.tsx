@@ -21,7 +21,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="border-t border-[var(--color-border)] pt-8 mb-16">
+      <div className="border-t border-[var(--color-border)] pt-8">
         <p className="text-xs text-[var(--color-text-muted)] mb-4 tracking-widest uppercase">
           Hva jeg gjør
         </p>
@@ -29,24 +29,6 @@ export default function Home() {
           Nettsider&nbsp;&nbsp;·&nbsp;&nbsp;Elektronikk&nbsp;&nbsp;·&nbsp;&nbsp;IoT&nbsp;&nbsp;·&nbsp;&nbsp;3D-printing&nbsp;&nbsp;·&nbsp;&nbsp;PC&nbsp;&nbsp;·&nbsp;&nbsp;PCB
         </p>
       </div>
-
-      <nav className="flex flex-wrap gap-x-8 gap-y-3 text-sm">
-        <a href="/tjenester" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors">
-          Tjenester
-        </a>
-        <a href="/portefolje" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors">
-          Prosjekter
-        </a>
-        <a href="/kontakt" className="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors">
-          Kontakt
-        </a>
-        <a
-          href="mailto:hei@tjlabs.no"
-          className="text-[var(--color-primary)] hover:opacity-75 transition-opacity"
-        >
-          hei@tjlabs.no
-        </a>
-      </nav>
     </main>
   );
 }
