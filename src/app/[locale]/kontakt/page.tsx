@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { EmailLink } from '@/components/EmailLink';
 
 export const metadata: Metadata = {
   title: 'Kontakt | TJLabs',
@@ -15,12 +16,11 @@ export default function KontaktPage() {
         Kontakt
       </h1>
 
-      <a
-        href="mailto:hei@tjlabs.no"
+      <EmailLink
+        user="hei"
+        host="tjlabs.no"
         className="text-[var(--color-primary)] hover:opacity-75 transition-opacity text-lg"
-      >
-        hei@tjlabs.no
-      </a>
+      />
 
       <p className="text-sm text-[var(--color-text-muted)] mt-6 max-w-xs" style={{ lineHeight: 1.7 }}>
         Beskriv gjerne hva det gjelder. Svarer så fort som mulig.

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { EmailLink } from '@/components/EmailLink';
 
 export const metadata: Metadata = {
   title: 'Tjenester | TJLabs',
@@ -40,12 +41,11 @@ export default function TjenesterPage() {
       </div>
 
       <div className="mt-12">
-        <a
-          href="mailto:hei@tjlabs.no"
+        <EmailLink
+          user="hei"
+          host="tjlabs.no"
           className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors"
-        >
-          hei@tjlabs.no
-        </a>
+        />
       </div>
     </main>
   );
