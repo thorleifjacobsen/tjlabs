@@ -15,9 +15,9 @@ export default function Home() {
         >
           TJLabs
         </h1>
-        <p className="text-[var(--color-text-secondary)]" style={{ lineHeight: 1.6 }}>
+        <p className="text-[var(--color-text-secondary)]" style={{ lineHeight: 1.65 }}>
           Webutvikler og maker basert i Norge.<br />
-          Tar på meg nettsider, apper og elektronikkprosjekter.
+          Tar på meg nettsider og elektronikkprosjekter.
         </p>
       </div>
 
@@ -26,7 +26,7 @@ export default function Home() {
           Hva jeg gjør
         </p>
         <p className="text-sm text-[var(--color-text-secondary)] leading-loose">
-          Nettsider&nbsp;&nbsp;·&nbsp;&nbsp;Webapplikasjoner&nbsp;&nbsp;·&nbsp;&nbsp;Elektronikk&nbsp;&nbsp;·&nbsp;&nbsp;IoT&nbsp;&nbsp;·&nbsp;&nbsp;3D-printing&nbsp;&nbsp;·&nbsp;&nbsp;Rådgivning
+          Nettsider&nbsp;&nbsp;·&nbsp;&nbsp;Elektronikk&nbsp;&nbsp;·&nbsp;&nbsp;IoT&nbsp;&nbsp;·&nbsp;&nbsp;3D-printing&nbsp;&nbsp;·&nbsp;&nbsp;PC&nbsp;&nbsp;·&nbsp;&nbsp;PCB
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function Home() {
         </a>
         <a
           href="mailto:hei@tjlabs.no"
-          className="text-[var(--color-primary)] hover:opacity-80 transition-opacity"
+          className="text-[var(--color-primary)] hover:opacity-75 transition-opacity"
         >
           hei@tjlabs.no
         </a>

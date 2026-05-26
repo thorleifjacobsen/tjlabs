@@ -2,16 +2,15 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tjenester | TJLabs',
-  description: 'Nettsider, webapplikasjoner, elektronikk, 3D-printing og rådgivning.',
+  description: 'Nettsider, elektronikk, IoT, 3D-printing og PC.',
 };
 
 const services = [
-  { title: 'Nettsider',             hint: 'bedriftssider, landingssider' },
-  { title: 'Webapplikasjoner',      hint: 'portaler, booking, interne verktøy' },
-  { title: 'Elektronikk & IoT',     hint: 'PCB, firmware, smarthus' },
-  { title: '3D-printing',           hint: 'prototyper, funksjonelle deler' },
-  { title: 'PC & hardware',         hint: 'reparasjon, oppgraderinger' },
-  { title: 'Rådgivning',            hint: 'tekniske spørsmål og sparring' },
+  { title: 'Nettsider',         hint: 'bedriftssider, landingssider' },
+  { title: 'Webapplikasjoner',  hint: 'portaler, booking, interne verktøy' },
+  { title: 'Elektronikk & IoT', hint: 'PCB, firmware, smarthus' },
+  { title: '3D-printing',       hint: 'prototyper, funksjonelle deler' },
+  { title: 'PC & hardware',     hint: 'reparasjon, oppgraderinger' },
 ];
 
 export default function TjenesterPage() {
