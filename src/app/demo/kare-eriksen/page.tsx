@@ -224,83 +224,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Projects teaser */}
-      <section id="prosjekter" className="py-16 md:py-20" style={{ backgroundColor: '#f8fafc' }}>
-        <div className="mx-auto px-4 sm:px-6" style={{ maxWidth: '1100px' }}>
-          <div className="text-center mb-10">
+      {/* Projects teaser strip */}
+      <section id="prosjekter" className="py-14 md:py-16" style={{ backgroundColor: '#f8fafc' }}>
+        <div
+          className="mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6"
+          style={{ maxWidth: '1100px' }}
+        >
+          <div>
             <span
-              className="text-xs font-semibold uppercase tracking-widest mb-3 block"
+              className="text-xs font-semibold uppercase tracking-widest mb-2 block"
               style={{ color: '#c8820a' }}
             >
               Referanseprosjekter
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: '#1e3a5f' }}>
-              Noen av våre prosjekter
+              Se hva vi har bygget
             </h2>
+            <p className="text-slate-600 mt-2 text-sm leading-relaxed max-w-md">
+              Fra brannstasjoner og næringsbygg til tilbygg og renovering. Vi har lang erfaring med prosjekter i alle størrelser.
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="rounded-lg border border-slate-200 shadow-sm overflow-hidden bg-white">
-              <div className="h-48 bg-slate-100 flex items-center justify-center text-slate-400 text-sm">
-                Bilde kommer
-              </div>
-              <div className="p-5">
-                <span
-                  className="text-xs font-semibold uppercase tracking-wider"
-                  style={{ color: '#c8820a' }}
-                >
-                  Totalentreprise
-                </span>
-                <h3 className="font-semibold mt-1 mb-1.5" style={{ color: '#1e3a5f' }}>
-                  Ny brannstasjon, Froland kommune
-                </h3>
-                <p className="text-sm text-slate-500">
-                  2015. Totalentreprise for Froland kommune. Nytt, moderne bygg med garasje, mannskapsrom og administrasjonsdel.
-                </p>
-              </div>
-            </div>
-            <div className="rounded-lg border border-slate-200 shadow-sm overflow-hidden bg-white">
-              <img
-                src="/demo/kare-eriksen/project2.jpg"
-                alt="Kontor- og lagerbygg, Arendals Fossekompani"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-5">
-                <span
-                  className="text-xs font-semibold uppercase tracking-wider"
-                  style={{ color: '#c8820a' }}
-                >
-                  Næringsbygg
-                </span>
-                <h3 className="font-semibold mt-1 mb-1.5" style={{ color: '#1e3a5f' }}>
-                  Kontor- og lagerbygg, Arendals Fossekompani ASA
-                </h3>
-                <p className="text-sm text-slate-500">
-                  2014. Nytt kontor- og lagerbygg for Arendals Fossekompani ASA. Profesjonell utførelse med høye krav til kvalitet og fremdrift.
-                </p>
-              </div>
-            </div>
-            <div className="rounded-lg border border-slate-200 shadow-sm overflow-hidden bg-white">
-              <img
-                src="/demo/kare-eriksen/project3.jpg"
-                alt="Boligprosjekt Arendal"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-5">
-                <span
-                  className="text-xs font-semibold uppercase tracking-wider"
-                  style={{ color: '#c8820a' }}
-                >
-                  Tilbygg og renovering
-                </span>
-                <h3 className="font-semibold mt-1 mb-1.5" style={{ color: '#1e3a5f' }}>
-                  Boligprosjekt, Arendal
-                </h3>
-                <p className="text-sm text-slate-500">
-                  Tilbygg og innvendig renovering av enebolig i Arendal. Utvidet boligarealet med stue og nytt bad, levert på tid og innenfor budsjett.
-                </p>
-              </div>
-            </div>
-          </div>
+          <a
+            href={`${BASE}/prosjekter`}
+            className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-md text-white text-sm font-semibold"
+            style={{ backgroundColor: '#1e3a5f' }}
+          >
+            Se alle prosjekter
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </section>
 

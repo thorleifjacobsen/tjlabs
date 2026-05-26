@@ -8,7 +8,7 @@ const BASE = '/demo/kare-eriksen';
 const navLinks = [
   { label: 'Hjem', href: BASE },
   { label: 'Tjenester', href: `${BASE}/tjenester` },
-  { label: 'Prosjekter', href: `${BASE}#prosjekter` },
+  { label: 'Prosjekter', href: `${BASE}/prosjekter` },
   { label: 'Om oss', href: `${BASE}/om-oss` },
   { label: 'Kontakt', href: `${BASE}/kontakt` },
 ];
