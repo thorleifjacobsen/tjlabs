@@ -150,14 +150,20 @@ export default function KontaktPage() {
         </div>
       </section>
 
-      {/* Map placeholder */}
+      {/* Map */}
       <section className="pb-16 md:pb-20 bg-white">
         <div className="mx-auto px-4 sm:px-6" style={{ maxWidth: '1100px' }}>
-          <div
-            className="rounded-lg bg-slate-200 flex items-center justify-center text-slate-400 text-sm"
-            style={{ height: '300px' }}
-          >
-            Kart kommer
+          <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm" style={{ height: '350px' }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2087.3983150977374!2d8.715004077372065!3d58.45411058076768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46479498d1441227%3A0x2b952db8e484ccda!2sK%C3%A5re%20Eriksen%20AS!5e0!3m2!1sen!2sno!4v1779786766261!5m2!1sen!2sno"
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Kåre Eriksen AS på kart"
+            />
           </div>
         </div>
       </section>
