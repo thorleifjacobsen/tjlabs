@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const projects = [
   {
     name: 'LostTags',
-    year: '2023',
+    year: '2026',
     desc: 'QR-merker for tapte ting. Finner noen gjenstanden din, får du beskjed automatisk.',
     url: 'https://losttags.com',
     stack: 'Next.js · Stripe · Postgres',
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     name: 'Inventoriz',
-    year: '2022',
+    year: '2018',
     desc: 'Lagerstyring for små team. QR-skanning i nettleseren, fungerer som app på telefonen.',
     url: 'https://inventoriz.com',
     stack: 'Next.js · SQLite · PWA',

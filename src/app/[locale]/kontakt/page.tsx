@@ -23,7 +23,7 @@ export default function KontaktPage() {
       </a>
 
       <p className="text-sm text-[var(--color-text-muted)] mt-6 max-w-xs" style={{ lineHeight: 1.7 }}>
-        Beskriv gjerne hva det gjelder. Svarer som regel samme dag.
+        Beskriv gjerne hva det gjelder. Svarer så fort som mulig.
       </p>
     </main>
   );
