@@ -73,7 +73,7 @@ export default function SMMultiservicePage() {
       <section
         className="relative min-h-[70vh] flex items-center"
         style={{
-          backgroundImage: 'url(/demo/sm-multiservice/brygge-bygget.jpg)',
+          backgroundImage: 'url(/demo/sm-multiservice/tilbygg.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -84,7 +84,7 @@ export default function SMMultiservicePage() {
             Faglig håndverk fra brygge til bad
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-            SM Multiservice utfører bryggbygging, tilbygg, baderoms-renovering og maritime tjenester langs Sørlandet. Vi leverer også komplette brygger med lasteskip.
+            SM Multiservice utfører bryggbygging, tilbygg og baderoms-renovering langs Sørlandet. Vi tar jobben og leverer.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -161,7 +161,7 @@ export default function SMMultiservicePage() {
               {
                 icon: <AnchorIcon className="w-8 h-8" />,
                 title: 'Bryggbygging',
-                text: 'Vi planlegger og bygger brygger tilpasset din eiendom og dine behov. Solid håndverk med materialer som tåler kulde, salt og bølger. Vi leverer også komplette bryggdeler med lasteskip til steder uten kjørevei.',
+                text: 'Vi planlegger og bygger brygger tilpasset din eiendom og dine behov. Solid håndverk med materialer som tåler kulde, salt og bølger.',
               },
               {
                 icon: <HouseIcon className="w-8 h-8" />,
