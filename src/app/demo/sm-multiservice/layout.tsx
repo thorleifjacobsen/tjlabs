@@ -45,7 +45,7 @@ export default function SMMultiserviceLayout({ children }: { children: ReactNode
             SM Multiservice AS | Org.nr. 989 888 846 | Eydehavn
 
             {' | '}
-            <a href="https://tjlabs.no" style={{ color: 'inherit', textDecoration: 'none' }}>Levert av TJ Labs</a>
+            <a href="https://tjlabs.no" style={{ color: 'inherit', textDecoration: 'none' }}>Levert av TJLabs</a>
           </p>
         </div>
       </footer>
