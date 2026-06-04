@@ -11,7 +11,7 @@ export default function SMMultiserviceLayout({ children }: { children: ReactNode
           <div>
             <p className="font-bold text-lg mb-3">SM Multiservice AS</p>
             <p className="text-slate-300 text-sm leading-relaxed">
-              SM Multiservice AS leverer bryggbygging og maritime tjenester med base i Eydehavn, Aust-Agder.
+              SM Multiservice AS utfører bryggbygging, tilbygg, baderoms-renovering og maritime tjenester med base i Eydehavn, Aust-Agder.
             </p>
           </div>
           <div>

@@ -15,12 +15,19 @@ function AnchorIcon({ className = 'w-7 h-7' }: { className?: string }) {
   )
 }
 
-function ShipIcon({ className = 'w-7 h-7' }: { className?: string }) {
+function HouseIcon({ className = 'w-7 h-7' }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M2 20h20" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 20l-1-9h16l-1 9" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 11V6l3-3 3 3v5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline strokeLinecap="round" strokeLinejoin="round" points="9 22 9 12 15 12 15 22" />
+    </svg>
+  )
+}
+
+function DropletIcon({ className = 'w-7 h-7' }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
     </svg>
   )
 }
@@ -74,10 +81,10 @@ export default function SMMultiservicePage() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-white">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Vi bygger brygger som varer
+            Faglig håndverk fra brygge til bad
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-            Faglig bryggbygging og maritime tjenester langs Sørladskysten. Vi leverer også komplette brygger med lasteskip.
+            SM Multiservice utfører bryggbygging, tilbygg, baderoms-renovering og maritime tjenester langs Sørlandet. Vi leverer også komplette brygger med lasteskip.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -102,10 +109,10 @@ export default function SMMultiservicePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: <AnchorIcon />, label: 'Erfarne fagfolk' },
-              { icon: <ShipIcon />, label: 'Levering med lasteskip' },
-              { icon: <WrenchIcon />, label: 'Tilbygg og reparasjon' },
-              { icon: <MapPinIcon />, label: 'Eydehavn, Aust-Agder' },
+              { icon: <AnchorIcon />, label: 'Bryggbygging' },
+              { icon: <HouseIcon />, label: 'Tilbygg og konstruksjon' },
+              { icon: <DropletIcon />, label: 'Baderom og renovering' },
+              { icon: <MapPinIcon />, label: 'Eydehavn, Sørlandet' },
             ].map(item => (
               <div
                 key={item.label}
@@ -126,16 +133,16 @@ export default function SMMultiservicePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-4" style={{ color: '#1a4f7a' }}>
-                Lokalt håndverk, maritim kompetanse
+                Solid håndverk, bredt tilbud
               </h2>
               <p className="text-slate-700 leading-relaxed text-base">
-                SM Multiservice AS eies og drives av Svein Magne Stiansen, med base i Eydehavn. Vi har lang erfaring med bygging og reparasjon av brygger, og tilbyr også tilbygg og andre konstruksjonstjenester. Det vi gjør, gjør vi ordentlig.
+                SM Multiservice AS eies og drives av Svein Magne Stiansen, med base i Eydehavn. Vi utfører alt fra bryggbygging og tilbygg til baderoms-renovering og konstruksjonsarbeid. Lang erfaring, lokalt forankret og et bredt tilbud. Det vi gjør, gjør vi ordentlig.
               </p>
             </div>
             <div>
               <FallbackImage
                 src="/demo/sm-multiservice/brygge-lyngdal.jpg"
-                alt="Bryggprosjekt"
+                alt="Prosjekt utført av SM Multiservice"
                 className="rounded-lg aspect-video w-full object-cover shadow-sm"
               />
             </div>
@@ -154,17 +161,17 @@ export default function SMMultiservicePage() {
               {
                 icon: <AnchorIcon className="w-8 h-8" />,
                 title: 'Bryggbygging',
-                text: 'Vi planlegger og bygger brygger tilpasset din tomt og dine behov. Solid håndverk med materialer som tåler kulde, salt og bølger.',
+                text: 'Vi planlegger og bygger brygger tilpasset din eiendom og dine behov. Solid håndverk med materialer som tåler kulde, salt og bølger. Vi leverer også komplette bryggdeler med lasteskip til steder uten kjørevei.',
               },
               {
-                icon: <ShipIcon className="w-8 h-8" />,
-                title: 'Leveranse med lasteskip',
-                text: 'Ingen kjøreveiadkomst? Ingen problem. Vi leverer og setter på plass komplette bryggdeler med lasteskip direkte til din eiendom.',
+                icon: <HouseIcon className="w-8 h-8" />,
+                title: 'Tilbygg og konstruksjon',
+                text: 'Trenger du mer plass? Vi bygger tilbygg og garasjer tilpasset eksisterende bygg. Grundig planlegging og faglig utførelse fra start til ferdig resultat.',
               },
               {
-                icon: <WrenchIcon className="w-8 h-8" />,
-                title: 'Reparasjon og tilbygg',
-                text: 'Vi reparerer eksisterende brygger og tar også oppdrag innen tilbygg og lettere konstruksjonsarbeid.',
+                icon: <DropletIcon className="w-8 h-8" />,
+                title: 'Baderom og renovering',
+                text: 'Vi fornyer baderom og tar på oss reparasjons- og renoveringsoppdrag. Kvalitetsarbeid med fokus på detaljer og varige løsninger.',
               },
             ].map(card => (
               <div key={card.title} className="rounded-lg border border-slate-200 shadow-sm p-6">
@@ -186,9 +193,9 @@ export default function SMMultiservicePage() {
           <p className="text-slate-600 text-center mb-10">Noen eksempler på arbeid vi har levert</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { src: '/demo/sm-multiservice/brygge-bygget.jpg', caption: 'Brygge bygget av SM Multiservice' },
-              { src: '/demo/sm-multiservice/brygge-lasteskip.jpg', caption: 'Levering med lasteskip' },
-              { src: '/demo/sm-multiservice/brygge-lyngdal.jpg', caption: 'Bryggprosjekt i Lyngdal' },
+              { src: '/demo/sm-multiservice/bad.jpg', caption: 'Baderoms-renovering' },
+              { src: '/demo/sm-multiservice/tilbygg.jpg', caption: 'Tilbygg på bolig' },
+              { src: '/demo/sm-multiservice/brygge-bygget.jpg', caption: 'Bryggbygging' },
             ].map(img => (
               <div key={img.src}>
                 <FallbackImage
@@ -212,7 +219,7 @@ export default function SMMultiservicePage() {
           <p className="text-slate-600 text-center mb-12">
             Vi gir deg et uforpliktende tilbud. Ring oss eller send oss en e-post.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <a
               href="tel:40057058"
               className="group flex flex-col items-center text-center rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md hover:border-[#1a4f7a]/30 transition-all"
@@ -232,7 +239,7 @@ export default function SMMultiservicePage() {
                 <MailIcon />
               </div>
               <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">E-post</p>
-              <p className="font-bold text-slate-800 break-all group-hover:underline">post@sm-multiservice.no</p>
+              <p className="text-sm font-semibold text-slate-800 group-hover:underline">post@sm-multiservice.no</p>
             </a>
 
             <div className="flex flex-col items-center text-center rounded-xl p-8 border border-slate-200 shadow-sm">
@@ -246,7 +253,7 @@ export default function SMMultiservicePage() {
           </div>
           <div className="mt-10 rounded-xl overflow-hidden shadow-sm border border-slate-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d484.5171652887692!2d8.846488124701535!3d58.50427931767596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464795ed78a685ff%3A0xe055dda4b9c9ade3!2sBudalen%2013%2C%204810%20Eydehavn!5e1!3m2!1sen!2sno!4v1780565755697!5m2!1sen!2sno"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2084.4202321820767!2d8.84692790175129!3d58.50427978372422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464795ed78a685ff%3A0xe055dda4b9c9ade3!2sBudalen%2013%2C%204810%20Eydehavn%2C%20Norway!5e0!3m2!1sen!2sus!4v1780565980320!5m2!1sen!2sus"
               width="100%"
               height="350"
               style={{ border: 0 }}

@@ -17,7 +17,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <a href="#" className="flex flex-col leading-tight">
           <span className="font-bold text-lg" style={{ color: '#1a4f7a' }}>SM Multiservice</span>
-          <span className="text-xs text-slate-500">Brygger og maritime tjenester</span>
+          <span className="text-xs text-slate-500">Bygg, brygger og renovering</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-6">
