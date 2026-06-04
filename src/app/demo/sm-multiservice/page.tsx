@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import FallbackImage from './FallbackImage'
-import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
   robots: 'noindex',
@@ -206,31 +205,44 @@ export default function SMMultiservicePage() {
 
       {/* Kontakt */}
       <section id="kontakt" className="bg-white py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-2 text-center" style={{ color: '#1a4f7a' }}>
             Ta kontakt
           </h2>
-          <p className="text-slate-600 text-center mb-10">
-            Vi gir deg et uforpliktende tilbud. Ring oss eller send en melding.
+          <p className="text-slate-600 text-center mb-12">
+            Vi gir deg et uforpliktende tilbud. Ring oss eller send oss en e-post.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-lg p-6 space-y-5" style={{ backgroundColor: '#e8f0f7' }}>
-              <div className="flex items-center gap-3 text-slate-700">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <a
+              href="tel:40057058"
+              className="group flex flex-col items-center text-center rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md hover:border-[#1a4f7a]/30 transition-all"
+            >
+              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#e8f0f7', color: '#1a4f7a' }}>
                 <PhoneIcon />
-                <a href="tel:40057058" className="font-semibold hover:underline">400 57 058</a>
               </div>
-              <div className="flex items-center gap-3 text-slate-700">
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">Telefon</p>
+              <p className="font-bold text-slate-800 text-lg group-hover:underline">400 57 058</p>
+            </a>
+
+            <a
+              href="mailto:post@sm-multiservice.no"
+              className="group flex flex-col items-center text-center rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md hover:border-[#1a4f7a]/30 transition-all"
+            >
+              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#e8f0f7', color: '#1a4f7a' }}>
                 <MailIcon />
-                <a href="mailto:post@sm-multiservice.no" className="hover:underline break-all">
-                  post@sm-multiservice.no
-                </a>
               </div>
-              <div className="flex items-start gap-3 text-slate-700">
-                <MapPinIcon className="w-5 h-5 shrink-0 mt-0.5" />
-                <span>Budalen 13, 4810 Eydehavn</span>
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">E-post</p>
+              <p className="font-bold text-slate-800 break-all group-hover:underline">post@sm-multiservice.no</p>
+            </a>
+
+            <div className="flex flex-col items-center text-center rounded-xl p-8 border border-slate-200 shadow-sm">
+              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#e8f0f7', color: '#1a4f7a' }}>
+                <MapPinIcon className="w-5 h-5" />
               </div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">Adresse</p>
+              <p className="font-bold text-slate-800">Budalen 13</p>
+              <p className="text-slate-600 text-sm">4810 Eydehavn</p>
             </div>
-            <ContactForm />
           </div>
         </div>
       </section>
