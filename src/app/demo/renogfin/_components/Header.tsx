@@ -18,7 +18,7 @@ export default function Header() {
     href === BASE ? pathname === BASE : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-16 max-w-[1100px] items-center justify-between px-4 md:h-[72px]">
         <Link href={BASE} className="flex items-center" aria-label="Ren & Fin AS, til forsiden">
           <img src="/demo/renogfin/logo.png" alt="Ren & Fin AS" className="h-11 max-h-[44px] w-auto" />
