@@ -1,8 +1,12 @@
+import Lightbox from '../_components/Lightbox';
 import SafeImg from '../_components/SafeImg';
 import { SERVICES } from '../_components/data';
 import { Container, ContactBand, PageHeader } from '../_components/ui';
 
 export const metadata = { title: 'Tjenester', robots: 'noindex' };
+
+const thumb =
+  'group block cursor-zoom-in overflow-hidden rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d9488]';
 
 export default function TjenesterPage() {
   return (
@@ -26,14 +30,21 @@ export default function TjenesterPage() {
       {SERVICES.map((s, i) => (
         <section key={s.id} id={s.id} className={`py-10 md:py-16 ${i % 2 ? 'bg-[#f8fafc]' : 'bg-white'}`}>
           <Container className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-            <div className={i % 2 ? 'md:order-2' : ''}>
+            <button
+              type="button"
+              data-lb={s.id}
+              data-src={s.image}
+              data-alt={s.title}
+              aria-label={`Vis bilde: ${s.title}`}
+              className={`${thumb} ${i % 2 ? 'md:order-2' : ''}`}
+            >
               <SafeImg
                 src={s.image}
                 alt={s.title}
                 position={s.imagePosition}
-                className="aspect-[3/2] w-full rounded-lg"
+                className="aspect-[3/2] w-full transition-transform duration-300 group-hover:scale-[1.03]"
               />
-            </div>
+            </button>
             <div>
               <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">{s.title}</h2>
               <p className="mt-4 leading-relaxed">{s.intro}</p>
@@ -51,7 +62,20 @@ export default function TjenesterPage() {
               <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4">
                 {s.gallery.map((g) => (
                   <li key={g.src}>
-                    <SafeImg src={g.src} alt={g.alt} className="aspect-square w-full rounded-lg" />
+                    <button
+                      type="button"
+                      data-lb={s.id}
+                      data-src={g.src}
+                      data-alt={g.alt}
+                      aria-label={`Vis bilde: ${g.alt}`}
+                      className={`${thumb} w-full`}
+                    >
+                      <SafeImg
+                        src={g.src}
+                        alt={g.alt}
+                        className="aspect-square w-full transition-transform duration-300 group-hover:scale-[1.03]"
+                      />
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -61,6 +85,7 @@ export default function TjenesterPage() {
       ))}
 
       <ContactBand />
+      <Lightbox />
     </>
   );
 }
