@@ -1,7 +1,7 @@
 import SafeImg from '../_components/SafeImg';
 import { SITE, TESTIMONIALS } from '../_components/data';
 import { ClockIcon, PinIcon, ShieldIcon, TagIcon, UserIcon, SparkleIcon } from '../_components/icons';
-import { CtaBand, IconBadge, PageHeader, Section, TestimonialCard, card } from '../_components/ui';
+import { CtaBand, IconBadge, PageHeader, Section, TestimonialMarquee, card } from '../_components/ui';
 
 export const metadata = { title: 'Om oss', robots: 'noindex' };
 
@@ -99,10 +99,8 @@ export default function OmOssPage() {
 
       <Section alt>
         <h2 className="text-3xl font-bold tracking-tight text-slate-900">Dette sier kundene våre</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TESTIMONIALS.map((t) => (
-            <TestimonialCard key={t.name} {...t} />
-          ))}
+        <div className="mt-8">
+          <TestimonialMarquee items={TESTIMONIALS} />
         </div>
       </Section>
 

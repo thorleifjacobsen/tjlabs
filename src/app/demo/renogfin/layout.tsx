@@ -22,6 +22,13 @@ const scopedCss = `
 .rf h1, .rf h2, .rf h3 { line-height: 1.2; }
 html { scroll-behavior: smooth; }
 .rf [id] { scroll-margin-top: 88px; }
+@keyframes rf-marquee { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 12px)); } }
+.rf-marquee-track { animation: rf-marquee 40s linear infinite; }
+.rf-marquee:hover .rf-marquee-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .rf-marquee { overflow-x: auto; }
+  .rf-marquee-track { animation: none; }
+}
 `;
 
 export default function RenOgFinLayout({ children }: { children: ReactNode }) {

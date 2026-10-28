@@ -2,7 +2,7 @@ import Link from 'next/link';
 import SafeImg from './_components/SafeImg';
 import { BASE, SERVICES, TESTIMONIALS } from './_components/data';
 import { ArrowIcon, RollIcon, SparkleIcon, TagIcon, UserIcon, PinIcon } from './_components/icons';
-import { CtaBand, IconBadge, Section, TestimonialCard, btnPrimary, card } from './_components/ui';
+import { CtaBand, IconBadge, Section, TestimonialMarquee, btnPrimary, card } from './_components/ui';
 
 export const metadata = { robots: 'noindex' };
 
@@ -138,10 +138,8 @@ export default function HomePage() {
       {/* Testimonials */}
       <Section alt>
         <h2 className="text-3xl font-bold tracking-tight text-slate-900">Dette sier kundene våre</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TESTIMONIALS.map((t) => (
-            <TestimonialCard key={t.name} {...t} />
-          ))}
+        <div className="mt-8">
+          <TestimonialMarquee items={TESTIMONIALS} />
         </div>
       </Section>
 
