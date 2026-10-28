@@ -68,23 +68,6 @@ export function TestimonialCard({ name, quote }: { name: string; quote: string }
   );
 }
 
-// Endless horizontal scroll: the list is rendered twice and shifted by half its width
-export function TestimonialMarquee({ items }: { items: { name: string; quote: string }[] }) {
-  return (
-    <div className="rf-marquee relative -mx-4 overflow-hidden px-4 md:mx-0 md:px-0">
-      <div className="rf-marquee-track flex w-max items-center gap-6 py-1" style={{ animationDuration: `${items.length * 8}s` }}>
-        {[...items, ...items].map((t, i) => (
-          <div key={i} aria-hidden={i >= items.length} className="w-[300px] shrink-0 sm:w-[340px]">
-            <TestimonialCard {...t} />
-          </div>
-        ))}
-      </div>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#f8fafc] to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#f8fafc] to-transparent" />
-    </div>
-  );
-}
-
 export function AreasSection({ alt = false }: { alt?: boolean }) {
   return (
     <Section alt={alt}>

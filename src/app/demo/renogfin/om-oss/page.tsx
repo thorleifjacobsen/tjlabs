@@ -1,7 +1,8 @@
+import TestimonialMarquee from '../_components/TestimonialMarquee';
 import SafeImg from '../_components/SafeImg';
 import { SITE, TESTIMONIALS } from '../_components/data';
 import { ClockIcon, ShieldIcon, TagIcon, UserIcon } from '../_components/icons';
-import { AreasSection, CtaBand, IconBadge, PageHeader, Section, TestimonialMarquee, card } from '../_components/ui';
+import { AreasSection, CtaBand, IconBadge, PageHeader, Section, card } from '../_components/ui';
 
 export const metadata = { title: 'Om oss', robots: 'noindex' };
 

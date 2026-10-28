@@ -1,8 +1,9 @@
+import TestimonialMarquee from './_components/TestimonialMarquee';
 import Link from 'next/link';
 import SafeImg from './_components/SafeImg';
 import { BASE, SERVICES, TESTIMONIALS } from './_components/data';
 import { ArrowIcon, RollIcon, SparkleIcon, TagIcon, UserIcon, PinIcon } from './_components/icons';
-import { AreasSection, BeforeAfter, CtaBand, IconBadge, Section, TestimonialMarquee, btnPrimary, card } from './_components/ui';
+import { AreasSection, BeforeAfter, CtaBand, IconBadge, Section, btnPrimary, card } from './_components/ui';
 
 export const metadata = { robots: 'noindex' };
 
