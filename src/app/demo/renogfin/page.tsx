@@ -134,6 +134,17 @@ export default function HomePage() {
               </div>
             </article>
           ))}
+          <article className="flex flex-col justify-center rounded-lg bg-[#ccfbf1] p-6 lg:col-span-2 lg:p-10">
+            <h3 className="text-xl font-bold tracking-tight text-slate-900">Finner du ikke det du ser etter?</h3>
+            <p className="mt-2 max-w-md leading-relaxed text-slate-700">
+              Fortell oss hva du trenger, så finner vi en løsning som passer deg.
+            </p>
+            <div className="mt-5">
+              <Link href={`${BASE}/kontakt`} className={btnPrimary}>
+                Kontakt oss
+              </Link>
+            </div>
+          </article>
         </div>
       </Section>
 
