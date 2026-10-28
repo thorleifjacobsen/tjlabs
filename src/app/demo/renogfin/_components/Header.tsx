@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { BASE, NAV, SITE } from './data';
 import { CloseIcon, MenuIcon, PhoneIcon } from './icons';
 import Logo from './Logo';
@@ -10,9 +10,21 @@ import Logo from './Logo';
 export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const firstRender = useRef(true);
 
+  // Closing the mobile menu shrinks the page while Next.js restores scroll, which
+  // can leave the new page part way down. Jump explicitly once the layout settles.
   useEffect(() => {
     setOpen(false);
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    requestAnimationFrame(() => {
+      const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+      if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
+      else window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    });
   }, [pathname]);
 
   const isActive = (href: string) =>
