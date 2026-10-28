@@ -24,6 +24,11 @@ const scopedCss = `
 html { scroll-behavior: smooth; }
 .rf [id] { scroll-margin-top: 88px; }
 .rf-marquee-scroll { scrollbar-width: none; overscroll-behavior-x: contain; }
+@keyframes rf-nudge-r { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+@keyframes rf-nudge-l { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-4px); } }
+.rf-nudge-right { animation: rf-nudge-r 1.2s ease-in-out infinite; }
+.rf-nudge-left { animation: rf-nudge-l 1.2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .rf-nudge-right, .rf-nudge-left { animation: none; } }
 .rf-marquee-scroll::-webkit-scrollbar { display: none; }
 `;
 

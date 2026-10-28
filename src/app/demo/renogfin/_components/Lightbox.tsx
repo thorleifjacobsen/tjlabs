@@ -10,13 +10,17 @@ type Photo = { src: string; alt: string };
 export default function Lightbox() {
   const [items, setItems] = useState<Photo[]>([]);
   const [index, setIndex] = useState(-1);
+  const [moved, setMoved] = useState(false);
   const closeRef = useRef<HTMLButtonElement>(null);
   const touchX = useRef<number | null>(null);
   const open = index >= 0;
 
   const close = useCallback(() => setIndex(-1), []);
   const step = useCallback(
-    (dir: 1 | -1) => setIndex((i) => (i + dir + items.length) % items.length),
+    (dir: 1 | -1) => {
+      setMoved(true);
+      setIndex((i) => (i + dir + items.length) % items.length);
+    },
     [items.length],
   );
 
@@ -28,6 +32,7 @@ export default function Lightbox() {
       const group = [...document.querySelectorAll<HTMLElement>(`[data-lb="${el.dataset.lb}"]`)];
       setItems(group.map((g) => ({ src: g.dataset.src ?? '', alt: g.dataset.alt ?? '' })));
       setIndex(group.indexOf(el));
+      setMoved(false);
     };
     document.addEventListener('click', onClick);
     return () => document.removeEventListener('click', onClick);
@@ -85,7 +90,13 @@ export default function Lightbox() {
       </div>
 
       <div className="relative flex min-h-0 flex-1 items-center justify-center px-4 pb-4 sm:px-20" onClick={(e) => e.target === e.currentTarget && close()}>
-        <img key={photo.src} src={photo.src} alt={photo.alt} className="max-h-full max-w-full rounded object-contain" />
+        <img
+          key={photo.src}
+          src={photo.src}
+          alt={photo.alt}
+          onClick={() => (many ? step(1) : close())}
+          className={`max-h-full max-w-full select-none rounded object-contain ${many ? 'cursor-pointer' : ''}`}
+        />
         {many && (
           <>
             <button type="button" onClick={() => step(-1)} aria-label="Forrige bilde" className={`${navBtn} left-4`}>
@@ -98,7 +109,14 @@ export default function Lightbox() {
         )}
       </div>
 
-      {photo.alt && <p className="px-4 pb-5 text-center text-sm text-slate-300">{photo.alt}</p>}
+      {photo.alt && <p className="px-4 pb-3 text-center text-sm text-slate-300">{photo.alt}</p>}
+      {many && !moved && (
+        <p className="flex items-center justify-center gap-2 pb-6 text-sm font-medium text-white sm:hidden" aria-hidden="true">
+          <Chevron className="rf-nudge-left h-4 w-4 rotate-180" />
+          Sveip for flere bilder
+          <Chevron className="rf-nudge-right h-4 w-4" />
+        </p>
+      )}
     </div>
   );
 }
