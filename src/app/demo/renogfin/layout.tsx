@@ -4,11 +4,11 @@ import Footer from './_components/Footer';
 
 export const metadata = {
   title: {
-    default: 'Ren & Fin AS, renhold på Romerike',
+    default: 'Ren & Fin AS, profesjonelt vaskebyrå i Oslo og Viken',
     template: '%s, Ren & Fin AS',
   },
   description:
-    'Ren & Fin AS leverer renhold for bedrifter, borettslag og private på Romerike, Lillestrøm og omegn.',
+    'Ren & Fin AS tilbyr pålitelig og effektiv rengjøring for bedrifter og private i Oslo, Romerike, Ullensaker, Gardermoen, Lørenskog, Bærum og Hønefoss.',
   robots: 'noindex',
 };
 

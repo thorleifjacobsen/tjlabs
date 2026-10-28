@@ -8,7 +8,8 @@ export const SITE = {
   phoneShort: '462 68 507',
   phoneHref: 'tel:+4746268507',
   email: 'info@renogfin.no',
-  area: 'Romerike, Lillestrøm og omegn',
+  area: 'Oslo, Romerike, Ullensaker, Gardermoen, Lørenskog, Bærum og Hønefoss',
+  areas: ['Oslo', 'Romerike', 'Ullensaker', 'Gardermoen', 'Lørenskog', 'Bærum', 'Hønefoss'],
   facebook: 'https://www.facebook.com/renogfin/',
   instagram: 'https://www.instagram.com/renogfin.no/',
 };
@@ -18,6 +19,15 @@ export const NAV = [
   { href: `${BASE}/tjenester`, label: 'Tjenester' },
   { href: `${BASE}/om-oss`, label: 'Om oss' },
   { href: `${BASE}/kontakt`, label: 'Kontakt' },
+];
+
+export const TASKS = [
+  'Kontorvask',
+  'Flyttevask',
+  'Visningsvask',
+  'Butikkvask og lokalervask',
+  'Daglig renhold for bedrifter',
+  'Trappevask og fellesarealer',
 ];
 
 export type Service = {
@@ -38,7 +48,8 @@ export const SERVICES: Service[] = [
     intro:
       'Et rent kontor gir bedre trivsel for de ansatte og et godt førsteinntrykk for kundene. Vi setter opp en fast avtale som passer åpningstidene og behovene deres, og dere får en fast kontaktperson som kjenner lokalene.',
     points: [
-      'Kontorlokaler, butikklokaler og fellesarealer',
+      'Kontorvask og daglig renhold for bedrifter',
+      'Butikkvask og lokalervask',
       'Fast avtale daglig, ukentlig eller etter behov',
       'Tørkepapir og toalettpapir inkludert i faste avtaler',
       'Fast kontaktperson og tydelige rutiner',
@@ -75,15 +86,15 @@ export const SERVICES: Service[] = [
   {
     id: 'hovedrengjoring',
     title: 'Hovedrengjøring og flyttevask',
-    short: 'Tak, vegger, vinduer og kjøkkeninnredning. Grundig fra topp til bunn.',
+    short: 'Flyttevask, visningsvask og hovedrengjøring. Grundig fra topp til bunn.',
     image: 'https://placehold.co/800x533/e2e8f0/94a3b8?text=Flyttevask',
     intro:
-      'Skal du flytte, eller trenger hjemmet en skikkelig runde? Vi går gjennom hele boligen fra topp til bunn, så du kan levere nøklene eller nyte et hjem som er rent i hver krok.',
+      'Skal du flytte, selge eller trenger hjemmet en skikkelig runde? Vi går gjennom hele boligen fra topp til bunn, så du kan levere nøklene, ha en skinnende visning eller nyte et hjem som er rent i hver krok.',
     points: [
+      'Flyttevask og visningsvask',
       'Tak, vegger og lister',
       'Vinduer og karmer',
       'Kjøkkeninnredning, inne og ute',
-      'Bad, sluk og fliser',
     ],
   },
   {

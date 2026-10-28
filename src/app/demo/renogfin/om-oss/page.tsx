@@ -1,7 +1,7 @@
 import SafeImg from '../_components/SafeImg';
 import { SITE, TESTIMONIALS } from '../_components/data';
-import { ClockIcon, PinIcon, ShieldIcon, TagIcon, UserIcon, SparkleIcon } from '../_components/icons';
-import { CtaBand, IconBadge, PageHeader, Section, TestimonialMarquee, card } from '../_components/ui';
+import { ClockIcon, ShieldIcon, TagIcon, UserIcon } from '../_components/icons';
+import { AreasSection, CtaBand, IconBadge, PageHeader, Section, TestimonialMarquee, card } from '../_components/ui';
 
 export const metadata = { title: 'Om oss', robots: 'noindex' };
 
@@ -33,7 +33,7 @@ export default function OmOssPage() {
     <>
       <PageHeader
         title="Om oss"
-        intro="Ren & Fin AS er et lokalt renholdsselskap i Skedsmokorset. Vi gjør renhold enkelt for bedrifter, borettslag og private på Romerike."
+        intro="Ren & Fin AS er et profesjonelt vaskebyrå i Oslo og Viken. Vi tilbyr pålitelig og effektiv rengjøring for både bedrifter og private."
       />
 
       <Section>
@@ -41,12 +41,15 @@ export default function OmOssPage() {
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-slate-900">Renhold gjort enkelt</h2>
             <p className="mt-4 leading-relaxed">
+              Vi jobber i {SITE.area}, og leverer renholdstjenester som holder høy kvalitet hver gang.
+            </p>
+            <p className="mt-4 leading-relaxed">
               For en bedrift handler suksess om mer enn tall og resultater. Et rent og ryddig arbeidsmiljø gir
               bedre trivsel for de ansatte og et godt førsteinntrykk for kundene.
             </p>
             <p className="mt-4 leading-relaxed">
               Hos Ren & Fin AS får du gjennomsiktige priser, en enkel oppstart og et team som leverer hver gang.
-              Vi holder til i Skedsmokorset og kjenner området godt, så vi er aldri langt unna.
+              Vi har base i Skedsmokorset, med et stabilt team som er klart til å ta inn nye kunder og oppdrag med en gang.
             </p>
           </div>
           <SafeImg
@@ -70,32 +73,7 @@ export default function OmOssPage() {
         </div>
       </Section>
 
-      <Section>
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className={`${card} flex gap-4 p-6`}>
-            <IconBadge>
-              <PinIcon className="h-5 w-5" />
-            </IconBadge>
-            <div>
-              <h2 className="text-lg font-semibold text-slate-900">Lokalt på Romerike</h2>
-              <p className="mt-2 leading-relaxed">
-                Vi dekker {SITE.area}, med base i {SITE.street}, {SITE.postal}.
-              </p>
-            </div>
-          </div>
-          <div className={`${card} flex gap-4 p-6`}>
-            <IconBadge>
-              <SparkleIcon className="h-5 w-5" />
-            </IconBadge>
-            <div>
-              <h2 className="text-lg font-semibold text-slate-900">Fast avtale eller engangsjobb</h2>
-              <p className="mt-2 leading-relaxed">
-                Trenger du renhold hver dag, en gang i måneden eller bare én gang? Vi tilpasser oss deg.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <AreasSection />
 
       <Section alt>
         <h2 className="text-3xl font-bold tracking-tight text-slate-900">Dette sier kundene våre</h2>

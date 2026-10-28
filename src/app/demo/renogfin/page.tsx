@@ -2,7 +2,7 @@ import Link from 'next/link';
 import SafeImg from './_components/SafeImg';
 import { BASE, SERVICES, TESTIMONIALS } from './_components/data';
 import { ArrowIcon, RollIcon, SparkleIcon, TagIcon, UserIcon, PinIcon } from './_components/icons';
-import { CtaBand, IconBadge, Section, TestimonialMarquee, btnPrimary, card } from './_components/ui';
+import { AreasSection, CtaBand, IconBadge, Section, TestimonialMarquee, btnPrimary, card } from './_components/ui';
 
 export const metadata = { robots: 'noindex' };
 
@@ -10,7 +10,7 @@ const TRUST = [
   { label: 'Ingen skjulte kostnader', icon: <TagIcon className="h-5 w-5" /> },
   { label: 'Fast kontaktperson', icon: <UserIcon className="h-5 w-5" /> },
   { label: 'Tørkepapir og toalettpapir inkludert i faste avtaler', icon: <RollIcon className="h-5 w-5" /> },
-  { label: 'Lokalt på Romerike', icon: <PinIcon className="h-5 w-5" /> },
+  { label: 'Oslo, Romerike og omegn', icon: <PinIcon className="h-5 w-5" /> },
 ];
 
 export default function HomePage() {
@@ -30,8 +30,8 @@ export default function HomePage() {
               Et rent arbeidsmiljø, hver eneste dag
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-slate-100 md:text-xl">
-              Ren & Fin AS leverer renhold for bedrifter, borettslag og private på Romerike. Fast avtale
-              eller engangsjobb, vi tilpasser oss deg.
+              Ren & Fin AS leverer renhold for bedrifter, borettslag og private i Oslo og omegn. Fast
+              avtale eller engangsjobb, vi tilpasser oss deg.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href={`${BASE}/kontakt`} className={btnPrimary}>
@@ -142,6 +142,8 @@ export default function HomePage() {
           <TestimonialMarquee items={TESTIMONIALS} />
         </div>
       </Section>
+
+      <AreasSection />
 
       <CtaBand />
     </>

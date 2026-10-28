@@ -48,7 +48,7 @@ export default function KontaktPage() {
                 <div className="font-semibold text-slate-900">
                   {SITE.street}, {SITE.postal}
                 </div>
-                <div className="mt-1 text-sm">Vi dekker {SITE.area}.</div>
+                <div className="mt-1 text-sm">Vi jobber i {SITE.area}.</div>
               </div>
             </div>
             <div className="flex gap-3 pt-2">

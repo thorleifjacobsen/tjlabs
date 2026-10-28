@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <img src="/demo/renogfin/logo.png" alt="Ren & Fin AS" className="mb-4 h-14 w-auto" />
           <p className="text-sm leading-relaxed text-slate-600">
-            Renhold for bedrifter, borettslag og private på {SITE.area}.
+            Profesjonelt vaskebyrå for bedrifter og private i {SITE.area}.
           </p>
           <div className="mt-4 flex gap-2">
             <a

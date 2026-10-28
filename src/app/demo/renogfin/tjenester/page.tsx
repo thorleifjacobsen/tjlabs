@@ -11,7 +11,7 @@ export default function TjenesterPage() {
     <>
       <PageHeader
         title="Tjenester"
-        intro="Vi tar renholdet for bedrifter, borettslag og private på Romerike. Velg en fast avtale eller bestill en engangsjobb, så tilpasser vi oss deg."
+        intro="Vi tar renholdet for bedrifter, borettslag og private i Oslo og omegn. Velg en fast avtale eller bestill en engangsjobb, så tilpasser vi oss deg."
       />
 
       <div className="border-b border-slate-200 bg-white">

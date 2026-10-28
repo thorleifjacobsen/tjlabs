@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { BASE, SITE } from './data';
-import { PhoneIcon, QuoteIcon, StarIcon } from './icons';
+import { BASE, SITE, TASKS } from './data';
+import { CheckIcon, PhoneIcon, PinIcon, QuoteIcon, StarIcon } from './icons';
 
 export const btnPrimary =
   'inline-flex items-center justify-center gap-2 rounded-lg bg-[#0d9488] px-5 py-3 font-semibold text-white transition-colors hover:bg-[#0f766e]';
@@ -81,6 +81,50 @@ export function TestimonialMarquee({ items }: { items: { name: string; quote: st
       <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#f8fafc] to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#f8fafc] to-transparent" />
     </div>
+  );
+}
+
+export function AreasSection({ alt = false }: { alt?: boolean }) {
+  return (
+    <Section alt={alt}>
+      <div className="grid gap-8 md:grid-cols-2 md:gap-12">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900">Vi utfører blant annet</h2>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+            {TASKS.map((t) => (
+              <li key={t} className="flex items-center gap-3 font-medium text-slate-900">
+                <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ccfbf1] text-[#0d9488]">
+                  <CheckIcon className="h-4 w-4" />
+                </span>
+                {t}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={`${card} p-6 md:p-8`}>
+          <div className="flex items-center gap-3">
+            <IconBadge>
+              <PinIcon className="h-5 w-5" />
+            </IconBadge>
+            <h2 className="text-xl font-bold tracking-tight text-slate-900">Her jobber vi</h2>
+          </div>
+          <ul className="mt-5 flex flex-wrap gap-2">
+            {SITE.areas.map((a) => (
+              <li key={a} className="rounded-full bg-[#ccfbf1] px-3 py-1 text-sm font-medium text-[#0f766e]">
+                {a}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 leading-relaxed">
+            Vi har et stabilt team med tilgjengelig arbeidskraft, og vi er klare til å ta inn nye kunder og
+            oppdrag med en gang.
+          </p>
+          <Link href={`${BASE}/kontakt`} className={`${btnPrimary} mt-6`}>
+            Få et tilbud
+          </Link>
+        </div>
+      </div>
+    </Section>
   );
 }
 
