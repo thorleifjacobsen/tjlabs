@@ -6,9 +6,11 @@ type Props = {
   src?: string;
   alt: string;
   className?: string;
+  position?: string;
+  eager?: boolean;
 };
 
-export default function SafeImg({ src, alt, className = '' }: Props) {
+export default function SafeImg({ src, alt, className = '', position, eager = false }: Props) {
   const [failed, setFailed] = useState(!src);
   const ref = useRef<HTMLImageElement>(null);
 
@@ -31,7 +33,8 @@ export default function SafeImg({ src, alt, className = '' }: Props) {
       ref={ref}
       src={src}
       alt={alt}
-      loading="lazy"
+      loading={eager ? 'eager' : 'lazy'}
+      style={position ? { objectPosition: position } : undefined}
       onError={() => setFailed(true)}
       className={`object-cover ${className}`}
     />

@@ -29,6 +29,7 @@ export const TASKS = [
   'Butikkvask og lokalervask',
   'Daglig renhold for bedrifter',
   'Trappevask og fellesarealer',
+  'Snømåking og strøsingel',
 ];
 
 export type Service = {
@@ -36,6 +37,7 @@ export type Service = {
   title: string;
   short: string;
   image: string;
+  imagePosition?: string;
   intro: string;
   points: string[];
 };
@@ -45,7 +47,8 @@ export const SERVICES: Service[] = [
     id: 'bedrift',
     title: 'Renhold for bedrifter',
     short: 'Kontorlokaler, butikklokaler og eiendomsdrift. Raskt, effektivt og pålitelig.',
-    image: 'https://placehold.co/800x533/e2e8f0/94a3b8?text=Kontorrenhold',
+    image: '/demo/renogfin/kontorrenhold.jpg',
+    imagePosition: 'center 70%',
     intro:
       'Et rent kontor gir bedre trivsel for de ansatte og et godt førsteinntrykk for kundene. Vi setter opp en fast avtale som passer åpningstidene og behovene deres, og dere får en fast kontaktperson som kjenner lokalene.',
     points: [
@@ -60,7 +63,7 @@ export const SERVICES: Service[] = [
     id: 'periodisk',
     title: 'Periodisk renhold',
     short: 'Vindusvask, polering, sølvpuss og grundig rydding, hjemme eller på kontoret.',
-    image: 'https://placehold.co/800x533/e2e8f0/94a3b8?text=Vindusvask+og+polering',
+    image: '/demo/renogfin/vindusvask.jpg',
     intro:
       'Noen oppgaver trenger ikke gjøres hver uke, men gjør stor forskjell når de blir gjort skikkelig. Vi tar de periodiske jobbene, enten som en del av en fast avtale eller som en engangsjobb.',
     points: [
@@ -88,7 +91,7 @@ export const SERVICES: Service[] = [
     id: 'hovedrengjoring',
     title: 'Hovedrengjøring og flyttevask',
     short: 'Flyttevask, visningsvask og hovedrengjøring. Grundig fra topp til bunn.',
-    image: 'https://placehold.co/800x533/e2e8f0/94a3b8?text=Flyttevask',
+    image: '/demo/renogfin/bad.jpg',
     intro:
       'Skal du flytte, selge eller trenger hjemmet en skikkelig runde? Vi går gjennom hele boligen fra topp til bunn, så du kan levere nøklene, ha en skinnende visning eller nyte et hjem som er rent i hver krok.',
     points: [
@@ -102,7 +105,7 @@ export const SERVICES: Service[] = [
     id: 'hjemmespa',
     title: 'HjemmeSpa',
     short: 'Grundig rengjøring kombinert med velvære og eteriske oljer for et hjem som føles godt.',
-    image: 'https://placehold.co/800x533/e2e8f0/94a3b8?text=Hjemmespa',
+    image: '/demo/renogfin/hjem.jpg',
     intro:
       'HjemmeSpa er for deg som vil ha mer enn et rent hjem. Vi kombinerer grundig rengjøring med eteriske oljer og små detaljer som gjør at hjemmet føles godt å komme inn i.',
     points: [
@@ -110,6 +113,22 @@ export const SERVICES: Service[] = [
       'Eteriske oljer for frisk duft',
       'Ekstra fokus på bad og soverom',
       'Et hjem som føles godt, ikke bare ser rent ut',
+    ],
+  },
+  {
+    id: 'snomaking',
+    title: 'Snømåking og strøsingel',
+    short: 'Snømåking av innkjørsler, gårdsplasser, parkeringsplasser og fortau, og levering av strøsingel.',
+    image: '/demo/renogfin/snomaking.jpg',
+    imagePosition: 'center 60%',
+    intro:
+      'Vi måker snø og leverer strøsingel, så uteområdene er trygge gjennom vinteren. Lokalt, med rask respons.',
+    points: [
+      'Snømåking av innkjørsler, gårdsplasser, parkeringsplasser og fortau',
+      'Levering av strøsingel',
+      'Tryggere underlag, mindre risiko for fall',
+      'For privatpersoner, borettslag og bedrifter',
+      'Fleksible avtaler, fast eller ved behov',
     ],
   },
 ];
@@ -147,6 +166,11 @@ export const TESTIMONIALS = [
     name: 'Kristin',
     quote:
       'Firmaet “Renogfin” tar ikke bare rengjøringsoppdrag men utfører også hageprosjekter. Vi hyret dem til å forvandle en overgrodd hage og plen til en tilnærmet vedlikeholdsfri hage. Fjerning av ugress, gamle bed, legging av ferdigplen, klipping av hekk, nye gruspartier og beplanting er utført grundig og effektivt og til avtalt tid. Vi anbefaler “Renogfin” til ditt neste hageprosjekt og ville brukt de igjen.',
+  },
+  {
+    name: 'Knut',
+    quote:
+      'Ren og Fin AS utførte ett oppdrag for oss med å klargjøre for og legge ferdigplen. Oppdraget ble utført til vår fulle tilfredsstillelse, og vi kan anbefale Ren og Fin til denne type oppdrag.',
   },
   {
     name: 'Inger Merete',

@@ -19,8 +19,10 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative isolate overflow-hidden">
         <SafeImg
-          src="https://placehold.co/1600x900/e2e8f0/94a3b8?text=Lyst+og+rent+kontorlokale"
-          alt="Lyst og rent kontorlokale"
+          src="/demo/renogfin/hero-kontor.jpg"
+          alt="Renholder fra Ren & Fin tørker støv på et lyst kontor"
+          position="center 40%"
+          eager
           className="absolute inset-0 -z-10 h-full w-full"
         />
         <div className="absolute inset-0 -z-10 bg-slate-900/55" />
@@ -100,8 +102,8 @@ export default function HomePage() {
             </Link>
           </div>
           <SafeImg
-            src="https://placehold.co/800x600/e2e8f0/94a3b8?text=Renholdsteam+i+arbeid"
-            alt="Renholdsteam i arbeid"
+            src="/demo/renogfin/team-logo.jpg"
+            alt="Renholder i Ren & Fin-t-skjorte vasker en vegg på et kontor"
             className="aspect-[4/3] w-full rounded-lg"
           />
         </div>
@@ -118,7 +120,7 @@ export default function HomePage() {
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
             <article key={s.id} className={`${card} flex flex-col overflow-hidden`}>
-              <SafeImg src={s.image} alt={s.title} className="aspect-[3/2] w-full" />
+              <SafeImg src={s.image} alt={s.title} position={s.imagePosition} className="aspect-[3/2] w-full" />
               <div className="flex flex-1 flex-col p-5">
                 <h3 className="text-lg font-semibold text-slate-900">{s.title}</h3>
                 <p className="mt-2 flex-1 text-[15px] leading-relaxed">{s.short}</p>

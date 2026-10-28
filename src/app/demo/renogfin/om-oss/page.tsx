@@ -53,8 +53,8 @@ export default function OmOssPage() {
             </p>
           </div>
           <SafeImg
-            src="https://placehold.co/800x600/e2e8f0/94a3b8?text=Renholdsteam+i+arbeid"
-            alt="Renholdsteam i arbeid"
+            src="/demo/renogfin/hero-kontor.jpg"
+            alt="Renholder fra Ren & Fin tørker støv på et kontor"
             className="aspect-[4/3] w-full rounded-lg"
           />
         </div>

@@ -32,7 +32,7 @@ export default function TjenesterPage() {
         <section key={s.id} id={s.id} className={`py-10 md:py-16 ${i % 2 ? 'bg-[#f8fafc]' : 'bg-white'}`}>
           <Container className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
             <div className={i % 2 ? 'md:order-2' : ''}>
-              <SafeImg src={s.image} alt={s.title} className="aspect-[3/2] w-full rounded-lg" />
+              <SafeImg src={s.image} alt={s.title} position={s.imagePosition} className="aspect-[3/2] w-full rounded-lg" />
             </div>
             <div>
               <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">{s.title}</h2>
