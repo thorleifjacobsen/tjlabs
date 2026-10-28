@@ -7,7 +7,7 @@ export const metadata = { title: 'Tjenester', robots: 'noindex' };
 export default function TjenesterPage() {
   return (
     <>
-      <PageHeader title="Tjenester" intro="Alle tjenestene kan bestilles som fast avtale eller engangsjobb." />
+      <PageHeader title="Tjenester" intro="Renhold for bedrifter, borettslag og private, og arbeid på uteområdet." />
 
       <nav aria-label="Hopp til tjeneste" className="border-b border-slate-200 bg-white">
         <Container className="flex flex-wrap gap-2 py-4">

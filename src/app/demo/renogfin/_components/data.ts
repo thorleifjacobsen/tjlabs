@@ -38,26 +38,20 @@ export const SERVICES: Service[] = [
     id: 'bedrift',
     title: 'Renhold for bedrifter',
     nav: 'Bedrifter',
-    short: 'Kontorer, butikker og lokaler. Daglig, ukentlig eller etter behov.',
+    short: 'Kontorvask, butikkvask og daglig renhold.',
     image: '/demo/renogfin/team-logo.jpg',
     imagePosition: 'center 40%',
-    intro:
-      'Fast renhold av kontorlokaler, butikklokaler og eiendom. Avtalen settes opp etter åpningstidene og behovene deres.',
-    points: [
-      'Kontorvask og daglig renhold',
-      'Butikkvask og lokalervask',
-      'Daglig, ukentlig eller etter behov',
-      '12 måneders avtale gir en ekstra måned uten ekstra kostnad',
-    ],
+    intro: 'Kontorlokaler, butikklokaler og eiendomsdrift. Rask, effektiv og pålitelig.',
+    points: ['Kontorvask', 'Daglig renhold for bedrifter', 'Butikkvask og lokalervask'],
   },
   {
     id: 'periodisk',
     title: 'Periodisk renhold',
     nav: 'Periodisk renhold',
-    short: 'Vindusvask, polering og sølvpuss.',
+    short: 'Vindusvask, sølvpuss og polering.',
     image: '/demo/renogfin/vindusvask.jpg',
-    intro: 'Jobbene som ikke trengs hver uke. Som en del av en fast avtale eller som engangsjobb, hjemme eller på kontoret.',
-    points: ['Vindusvask innvendig og utvendig', 'Polering og behandling av gulv', 'Sølvpuss', 'Grundig rydding'],
+    intro: 'Vasking, rydding, puss, vindusvask, sølvpuss og polering. Hjem eller kontor, vi tar hånd om det.',
+    points: [],
   },
   {
     id: 'borettslag',
@@ -66,13 +60,8 @@ export const SERVICES: Service[] = [
     short: 'Trappevask, dørmatter og fellesarealer.',
     image: '/demo/renogfin/trappevask.jpg',
     imagePosition: 'center 55%',
-    intro: 'Faste rutiner for trappeoppganger og fellesområder, så styret slipper å følge opp.',
-    points: [
-      'Trappevask etter fast plan',
-      'Levering og bytte av dørmatter',
-      'Vaktmestertjenester',
-      'Vedlikehold av fellesområder',
-    ],
+    intro: 'Alt i ett for borettslag og sameier.',
+    points: ['Trappevask', 'Levering av dørmatter', 'Vaktmestertjenester', 'Vindusvask', 'Vedlikehold av fellesområder'],
   },
   {
     id: 'hovedrengjoring',
@@ -80,22 +69,21 @@ export const SERVICES: Service[] = [
     nav: 'Flyttevask',
     short: 'Flyttevask, visningsvask og hovedrengjøring.',
     image: '/demo/renogfin/bad.jpg',
-    intro: 'Når du skal flytte, selge eller trenger en skikkelig runde. Vi går gjennom hele boligen fra topp til bunn.',
-    points: ['Flyttevask og visningsvask', 'Tak, vegger og lister', 'Vinduer og karmer', 'Kjøkkeninnredning, inne og ute'],
+    intro: 'Flyttevask, visningsvask og grundig interiørrengjøring. Tak, vegger, vinduer og kjøkkeninnredning blir helt rent.',
+    points: [],
     gallery: [
-      { src: '/demo/renogfin/rom-takvindu.jpg', alt: 'Lyst soverom med takvindu etter rengjøring' },
-      { src: '/demo/renogfin/rom-stue.jpg', alt: 'Ren og ryddig stue' },
-      { src: '/demo/renogfin/rom-soverom.jpg', alt: 'Rent soverom klart for visning' },
+      { src: '/demo/renogfin/rom-takvindu.jpg', alt: 'Lyst soverom med takvindu' },
+      { src: '/demo/renogfin/rom-stue.jpg', alt: 'Lys stue' },
+      { src: '/demo/renogfin/rom-soverom.jpg', alt: 'Lyst soverom' },
     ],
   },
   {
     id: 'hjemmespa',
     title: 'HjemmeSpa',
     nav: 'HjemmeSpa',
-    short: 'Grundig rengjøring med eteriske oljer.',
+    short: 'Grundig rengjøring med essensielle oljer.',
     image: '/demo/renogfin/hjem.jpg',
-    intro:
-      'Grundig rengjøring av hele boligen, med ekstra fokus på bad og soverom. Vi bruker eteriske oljer for en frisk duft.',
+    intro: 'Velvære med essensielle oljer: avslapning, estetisk oppretting og grundig rengjøring.',
     points: [],
   },
   {
@@ -187,7 +175,7 @@ export const TESTIMONIALS = [
   {
     name: 'Marianne',
     quote:
-      'De leverer varene uten å skryte av det. Huset mitt ser mye bedre ut etter at de har vært her.',
+      'De leverer varene uten å brife med det. Huset mitt ser mye bedre ut etter de har vært her.',
   },
   {
     name: 'Marcela',

@@ -8,9 +8,9 @@ import { ContactBand, Section, btnPrimary, card } from './_components/ui';
 export const metadata = { robots: 'noindex' };
 
 const FACTS = [
-  'Fast kontaktperson',
   'Ingen skjulte kostnader',
   'Tørkepapir og toalettpapir inkludert i faste avtaler',
+  'Stabilt team, klare for nye oppdrag',
 ];
 
 export default function HomePage() {
@@ -83,23 +83,6 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
-
-      <section className="bg-white pb-10 md:pb-16">
-        <div className="mx-auto max-w-[1100px] px-4">
-          <div className="flex flex-col gap-5 rounded-lg bg-[#ccfbf1] p-6 md:flex-row md:items-center md:justify-between md:p-8">
-            <div>
-              <h2 className="text-xl font-bold tracking-tight text-slate-900 md:text-2xl">Ekstra måned på kjøpet</h2>
-              <p className="mt-1 max-w-xl leading-relaxed text-slate-700">
-                Signer en 12 måneders renholdsavtale for bedriften, så får du en ekstra måned med renhold uten
-                ekstra kostnad.
-              </p>
-            </div>
-            <Link href={`${BASE}/kontakt`} className={`${btnPrimary} shrink-0`}>
-              Få tilbudet
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <Section alt>
         <h2 className="text-3xl font-bold tracking-tight text-slate-900">Dette sier kundene våre</h2>
