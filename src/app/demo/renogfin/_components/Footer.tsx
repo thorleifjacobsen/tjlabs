@@ -1,4 +1,3 @@
-import Logo from './Logo';
 import { SITE } from './data';
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from './icons';
 
@@ -12,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-[#f8fafc]">
       <div className="mx-auto flex max-w-[1100px] flex-col gap-8 px-4 py-10 md:flex-row md:items-start md:justify-between">
-        <Logo />
+        <img src="/demo/renogfin/logo.png" alt={SITE.name} className="h-20 w-auto self-start" />
         <address className="text-sm not-italic leading-relaxed text-slate-600">
           {SITE.name}
           <br />

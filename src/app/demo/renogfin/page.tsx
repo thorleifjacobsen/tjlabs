@@ -25,7 +25,7 @@ export default function HomePage() {
           className="absolute inset-0 -z-10 h-full w-full"
         />
         <div className="absolute inset-0 -z-10 bg-slate-900/55" />
-        <div className="mx-auto flex min-h-[52vh] max-w-[1100px] items-center px-4 py-14 md:min-h-[62vh] md:py-20">
+        <div className="mx-auto flex min-h-[52vh] max-w-[1100px] items-center px-4 pb-20 pt-14 md:min-h-[62vh] md:pb-24 md:pt-20">
           <div className="max-w-2xl text-white">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               Et rent arbeidsmiljø, hver eneste dag
@@ -48,17 +48,20 @@ export default function HomePage() {
             <p className="mt-8 text-sm text-slate-200">Vi jobber i {SITE.area}.</p>
           </div>
         </div>
-        <div className="border-t border-white/15 bg-slate-900/60">
-          <ul className="mx-auto grid max-w-[1100px] gap-3 px-4 py-4 sm:grid-cols-3 sm:gap-6 md:py-5">
-            {FACTS.map((f) => (
-              <li key={f} className="flex items-start gap-2.5 text-[15px] font-medium text-white">
-                <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-teal-300" />
-                {f}
-              </li>
-            ))}
-          </ul>
-        </div>
       </section>
+
+      <div className="relative z-10 mx-auto -mt-10 max-w-[1100px] px-4">
+        <ul className={`${card} grid divide-y divide-slate-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0`}>
+          {FACTS.map((f) => (
+            <li key={f} className="flex items-start gap-3 px-5 py-4 text-[15px] font-medium text-slate-900 md:py-5">
+              <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0d9488] text-white">
+                <CheckIcon className="h-3.5 w-3.5" />
+              </span>
+              {f}
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <Section>
         <h2 className="text-3xl font-bold tracking-tight text-slate-900">Tjenester</h2>
