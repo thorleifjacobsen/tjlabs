@@ -121,7 +121,7 @@ export const TESTIMONIALS = [
       'Fantastisk flott rengjøring! Trodde knapt det var mulig å få leiligheten min så fin... den skinte! Den så nesten ut som en helt ny leilighet etter noen timer med Ren og Fin AS. I tillegg hørte de nøye på info, var hyggelige og forståelsesfulle, og gjorde i det hele tatt en fantastisk innsats!',
   },
   {
-    name: 'Andreas Haug',
+    name: 'Andreas',
     quote:
       'Utrolig dyktige, jobber raskt og effektivt. Også over tid. Aldri noe tull. Anbefales på det varmeste.',
   },
@@ -135,7 +135,7 @@ export const TESTIMONIALS = [
       'Vasket ned kjeller etter vi hadde skittent vann inne ifbm overvann som trakk inn. Svært skitten kjeller ble ren og fin! Takk, Sandra!',
   },
   {
-    name: 'Marius Berg',
+    name: 'Marius',
     quote:
       'Et rent kontor hver dag er en skikkelig opptur, det setter standarden for en god arbeidsdag.',
   },
@@ -153,7 +153,7 @@ export const TESTIMONIALS = [
     quote: 'Veldig fornøyd med utført jobb. Et firma jeg vil fortsette å bruke.',
   },
   {
-    name: 'Marianne Hansen',
+    name: 'Marianne',
     quote:
       'De leverer varene uten å skryte av det. Huset mitt ser mye bedre ut etter at de har vært her.',
   },
