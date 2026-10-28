@@ -51,10 +51,10 @@ export default function HomePage() {
       </section>
 
       <div className="relative z-10 mx-auto -mt-10 max-w-[1100px] px-4">
-        <ul className={`${card} grid divide-y divide-slate-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0`}>
+        <ul className={`${card} grid divide-y divide-slate-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:grid-cols-[1fr_1fr_1.6fr]`}>
           {FACTS.map((f) => (
-            <li key={f} className="flex items-start gap-3 px-5 py-4 text-[15px] font-medium text-slate-900 md:py-5">
-              <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0d9488] text-white">
+            <li key={f} className="flex items-center gap-3 px-5 py-4 text-[15px] font-medium text-slate-900 md:py-5">
+              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0d9488] text-white">
                 <CheckIcon className="h-3.5 w-3.5" />
               </span>
               {f}
