@@ -1,13 +1,10 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import SafeImg from './SafeImg';
-import { BASE, SITE, TASKS } from './data';
-import { CheckIcon, PhoneIcon, PinIcon, QuoteIcon, StarIcon } from './icons';
+import { BASE, SITE } from './data';
+import { StarIcon } from './icons';
 
 export const btnPrimary =
   'inline-flex items-center justify-center gap-2 rounded-lg bg-[#0d9488] px-5 py-3 font-semibold text-white transition-colors hover:bg-[#0f766e]';
-export const btnSecondary =
-  'inline-flex items-center justify-center gap-2 rounded-lg border border-[#0d9488] bg-white px-5 py-3 font-semibold text-[#0d9488] transition-colors hover:bg-[#ccfbf1]';
 export const card = 'rounded-lg border border-slate-200 bg-white shadow-sm';
 
 export function Container({ children, className = '' }: { children: ReactNode; className?: string }) {
@@ -34,133 +31,51 @@ export function Section({
 
 export function PageHeader({ title, intro }: { title: string; intro: string }) {
   return (
-    <section className="border-b border-slate-200 bg-[#f8fafc] py-10 md:py-16">
+    <section className="border-b border-slate-200 bg-[#f8fafc] py-10 md:py-14">
       <Container>
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">{title}</h1>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">{intro}</p>
+        <p className="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">{intro}</p>
       </Container>
     </section>
-  );
-}
-
-export function IconBadge({ children }: { children: ReactNode }) {
-  return (
-    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#ccfbf1] text-[#0d9488]">
-      {children}
-    </span>
   );
 }
 
 export function TestimonialCard({ name, quote }: { name: string; quote: string }) {
   return (
     <figure className={`${card} flex flex-col p-6`}>
-      <QuoteIcon className="h-7 w-7 text-[#0d9488]" />
-      <blockquote className="mt-3 flex-1 leading-relaxed text-slate-600">{quote}</blockquote>
-      <figcaption className="mt-5 flex items-center justify-between">
-        <span className="font-semibold text-slate-900">{name}</span>
-        <span className="flex text-amber-400" aria-label="5 av 5 stjerner">
-          {[0, 1, 2, 3, 4].map((i) => (
-            <StarIcon key={i} />
-          ))}
-        </span>
-      </figcaption>
+      <span className="flex text-amber-400" aria-label="5 av 5 stjerner">
+        {[0, 1, 2, 3, 4].map((i) => (
+          <StarIcon key={i} />
+        ))}
+      </span>
+      <blockquote className="mt-3 leading-relaxed text-slate-700">{quote}</blockquote>
+      <figcaption className="mt-4 font-semibold text-slate-900">{name}</figcaption>
     </figure>
   );
 }
 
-export function AreasSection({ alt = false }: { alt?: boolean }) {
+export function ContactBand() {
   return (
-    <Section alt={alt}>
-      <div className="grid gap-8 md:grid-cols-2 md:gap-12">
+    <section className="bg-[#0d9488] py-10 text-white md:py-14">
+      <Container className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900">Vi utfører blant annet</h2>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-            {TASKS.map((t) => (
-              <li key={t} className="flex items-center gap-3 font-medium text-slate-900">
-                <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ccfbf1] text-[#0d9488]">
-                  <CheckIcon className="h-4 w-4" />
-                </span>
-                {t}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className={`${card} p-6 md:p-8`}>
-          <div className="flex items-center gap-3">
-            <IconBadge>
-              <PinIcon className="h-5 w-5" />
-            </IconBadge>
-            <h2 className="text-xl font-bold tracking-tight text-slate-900">Her jobber vi</h2>
-          </div>
-          <ul className="mt-5 flex flex-wrap gap-2">
-            {SITE.areas.map((a) => (
-              <li key={a} className="rounded-full bg-[#ccfbf1] px-3 py-1 text-sm font-medium text-[#0f766e]">
-                {a}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-5 leading-relaxed">
-            Vi har et stabilt team med tilgjengelig arbeidskraft, og vi er klare til å ta inn nye kunder og
-            oppdrag med en gang.
+          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Få et tilbud</h2>
+          <p className="mt-2 text-lg">
+            <a href={SITE.phoneHref} className="font-semibold hover:underline">
+              {SITE.phoneDisplay}
+            </a>
+            <span className="text-teal-100"> eller </span>
+            <a href={`mailto:${SITE.email}`} className="font-semibold hover:underline">
+              {SITE.email}
+            </a>
           </p>
-          <Link href={`${BASE}/kontakt`} className={`${btnPrimary} mt-6`}>
-            Få et tilbud
-          </Link>
         </div>
-      </div>
-    </Section>
-  );
-}
-
-export function BeforeAfter() {
-  const photos = [
-    { label: 'Før', src: '/demo/renogfin/peis-for.jpg', alt: 'Peis full av aske og sot før rengjøring' },
-    { label: 'Etter', src: '/demo/renogfin/peis-etter.jpg', alt: 'Ren peis med blanke glass etter rengjøring' },
-  ];
-  return (
-    <Section>
-      <div className="max-w-2xl">
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900">Før og etter</h2>
-        <p className="mt-3 leading-relaxed">Peisen før og etter en runde med Ren & Fin.</p>
-      </div>
-      <div className="mt-8 grid grid-cols-2 gap-3 md:gap-6">
-        {photos.map((p) => (
-          <figure key={p.label} className="relative overflow-hidden rounded-lg">
-            <SafeImg src={p.src} alt={p.alt} position="center top" className="aspect-square w-full" />
-            <figcaption
-              className={`absolute left-3 top-3 rounded-full px-3 py-1 text-sm font-semibold ${
-                p.label === 'Etter' ? 'bg-[#0d9488] text-white' : 'bg-white/90 text-slate-900'
-              }`}
-            >
-              {p.label}
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-    </Section>
-  );
-}
-
-export function CtaBand() {
-  return (
-    <section className="bg-[#0d9488] py-10 text-white md:py-16">
-      <Container className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
-        <div>
-          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Klar for en renere arbeidsplass?</h2>
-          <p className="mt-2 text-teal-50">Fortell oss hva du trenger, så får du et tilbud raskt.</p>
-        </div>
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Link
-            href={`${BASE}/kontakt`}
-            className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-3 font-semibold text-[#0d9488] transition-colors hover:bg-[#ccfbf1]"
-          >
-            Kontakt oss
-          </Link>
-          <a href={SITE.phoneHref} className="inline-flex items-center gap-2 px-2 py-3 font-semibold text-white hover:underline">
-            <PhoneIcon className="h-5 w-5" />
-            {SITE.phoneDisplay}
-          </a>
-        </div>
+        <Link
+          href={`${BASE}/kontakt`}
+          className="inline-flex items-center justify-center self-start rounded-lg bg-white px-5 py-3 font-semibold text-[#0f766e] transition-colors hover:bg-[#ccfbf1] md:self-auto"
+        >
+          Send forespørsel
+        </Link>
       </Container>
     </section>
   );

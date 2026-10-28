@@ -9,7 +9,6 @@ export const SITE = {
   phoneHref: 'tel:+4746268507',
   email: 'info@renogfin.no',
   area: 'Oslo, Romerike, Ullensaker, Gardermoen, Lørenskog, Bærum og Hønefoss',
-  areas: ['Oslo', 'Romerike', 'Ullensaker', 'Gardermoen', 'Lørenskog', 'Bærum', 'Hønefoss'],
   facebook: 'https://www.facebook.com/renogfin/',
   instagram: 'https://www.instagram.com/renogfin.no/',
   linkedin: 'https://www.linkedin.com/in/ren-og-fin-as-2963a5127/',
@@ -22,17 +21,6 @@ export const NAV = [
   { href: `${BASE}/kontakt`, label: 'Kontakt' },
 ];
 
-export const TASKS = [
-  'Kontorvask',
-  'Flyttevask',
-  'Visningsvask',
-  'Butikkvask og lokalervask',
-  'Daglig renhold for bedrifter',
-  'Trappevask og fellesarealer',
-  'Snømåking og strøsingel',
-  'Hage og utemiljø',
-];
-
 export type Service = {
   id: string;
   title: string;
@@ -40,9 +28,9 @@ export type Service = {
   short: string;
   image: string;
   imagePosition?: string;
-  gallery?: { src: string; alt: string }[];
   intro: string;
   points: string[];
+  gallery?: { src: string; alt: string }[];
 };
 
 export const SERVICES: Service[] = [
@@ -50,43 +38,35 @@ export const SERVICES: Service[] = [
     id: 'bedrift',
     title: 'Renhold for bedrifter',
     nav: 'Bedrifter',
-    short: 'Kontorlokaler, butikklokaler og eiendomsdrift. Raskt, effektivt og pålitelig.',
+    short: 'Kontorer, butikker og lokaler. Daglig, ukentlig eller etter behov.',
     image: '/demo/renogfin/kontorrenhold.jpg',
     imagePosition: 'center 70%',
     intro:
-      'Et rent kontor gir bedre trivsel for de ansatte og et godt førsteinntrykk for kundene. Vi setter opp en fast avtale som passer åpningstidene og behovene deres, og dere får en fast kontaktperson som kjenner lokalene.',
+      'Fast renhold av kontorlokaler, butikklokaler og eiendom. Avtalen settes opp etter åpningstidene og behovene deres.',
     points: [
-      'Kontorvask og daglig renhold for bedrifter',
+      'Kontorvask og daglig renhold',
       'Butikkvask og lokalervask',
-      'Fast avtale daglig, ukentlig eller etter behov',
-      'Tørkepapir og toalettpapir inkludert i faste avtaler',
-      'Fast kontaktperson og tydelige rutiner',
+      'Daglig, ukentlig eller etter behov',
+      '12 måneders avtale gir en ekstra måned uten ekstra kostnad',
     ],
   },
   {
     id: 'periodisk',
     title: 'Periodisk renhold',
     nav: 'Periodisk renhold',
-    short: 'Vindusvask, polering, sølvpuss og grundig rydding, hjemme eller på kontoret.',
+    short: 'Vindusvask, polering og sølvpuss.',
     image: '/demo/renogfin/vindusvask.jpg',
-    intro:
-      'Noen oppgaver trenger ikke gjøres hver uke, men gjør stor forskjell når de blir gjort skikkelig. Vi tar de periodiske jobbene, enten som en del av en fast avtale eller som en engangsjobb.',
-    points: [
-      'Vindusvask innvendig og utvendig',
-      'Polering og behandling av gulv',
-      'Sølvpuss',
-      'Grundig rydding og opprydding',
-    ],
+    intro: 'Jobbene som ikke trengs hver uke. Som en del av en fast avtale eller som engangsjobb, hjemme eller på kontoret.',
+    points: ['Vindusvask innvendig og utvendig', 'Polering og behandling av gulv', 'Sølvpuss', 'Grundig rydding'],
   },
   {
     id: 'borettslag',
     title: 'Borettslag og sameie',
     nav: 'Borettslag',
-    short: 'Trappevask, levering av dørmatter, vaktmestertjenester og vedlikehold av fellesområder.',
+    short: 'Trappevask, dørmatter og fellesarealer.',
     image: '/demo/renogfin/trappevask.jpg',
     imagePosition: 'center 55%',
-    intro:
-      'Rene trappeoppganger og ryddige fellesområder gjør det trivelig å komme hjem. Vi hjelper styret med faste rutiner, så beboerne merker forskjellen uten at styret må følge opp.',
+    intro: 'Faste rutiner for trappeoppganger og fellesområder, så styret slipper å følge opp.',
     points: [
       'Trappevask etter fast plan',
       'Levering og bytte av dørmatter',
@@ -98,64 +78,58 @@ export const SERVICES: Service[] = [
     id: 'hovedrengjoring',
     title: 'Hovedrengjøring og flyttevask',
     nav: 'Flyttevask',
-    short: 'Flyttevask, visningsvask og hovedrengjøring. Grundig fra topp til bunn.',
+    short: 'Flyttevask, visningsvask og hovedrengjøring.',
     image: '/demo/renogfin/bad.jpg',
+    intro: 'Når du skal flytte, selge eller trenger en skikkelig runde. Vi går gjennom hele boligen fra topp til bunn.',
+    points: ['Flyttevask og visningsvask', 'Tak, vegger og lister', 'Vinduer og karmer', 'Kjøkkeninnredning, inne og ute'],
     gallery: [
       { src: '/demo/renogfin/rom-takvindu.jpg', alt: 'Lyst soverom med takvindu etter rengjøring' },
       { src: '/demo/renogfin/rom-stue.jpg', alt: 'Ren og ryddig stue' },
       { src: '/demo/renogfin/rom-soverom.jpg', alt: 'Rent soverom klart for visning' },
-    ],
-    intro:
-      'Skal du flytte, selge eller trenger hjemmet en skikkelig runde? Vi går gjennom hele boligen fra topp til bunn, så du kan levere nøklene, ha en skinnende visning eller nyte et hjem som er rent i hver krok.',
-    points: [
-      'Flyttevask og visningsvask',
-      'Tak, vegger og lister',
-      'Vinduer og karmer',
-      'Kjøkkeninnredning, inne og ute',
     ],
   },
   {
     id: 'hjemmespa',
     title: 'HjemmeSpa',
     nav: 'HjemmeSpa',
-    short: 'Grundig rengjøring kombinert med velvære og eteriske oljer for et hjem som føles godt.',
+    short: 'Grundig rengjøring med eteriske oljer.',
     image: '/demo/renogfin/hjem.jpg',
     intro:
-      'HjemmeSpa er for deg som vil ha mer enn et rent hjem. Vi kombinerer grundig rengjøring med eteriske oljer og små detaljer som gjør at hjemmet føles godt å komme inn i.',
-    points: [
-      'Grundig rengjøring av hele boligen',
-      'Eteriske oljer for frisk duft',
-      'Ekstra fokus på bad og soverom',
-      'Et hjem som føles godt, ikke bare ser rent ut',
-    ],
+      'Grundig rengjøring av hele boligen, med ekstra fokus på bad og soverom. Vi bruker eteriske oljer for en frisk duft.',
+    points: [],
   },
   {
     id: 'snomaking',
     title: 'Snømåking og strøsingel',
     nav: 'Snømåking',
-    short: 'Snømåking av innkjørsler, gårdsplasser, parkeringsplasser og fortau, og levering av strøsingel.',
+    short: 'Snømåking og levering av strøsingel.',
     image: '/demo/renogfin/snomaking.jpg',
     imagePosition: 'center 60%',
-    gallery: [
-      { src: '/demo/renogfin/snofreser.jpg', alt: 'Snøfreser i arbeid ved et gjerde' },
-      { src: '/demo/renogfin/strosingel.jpg', alt: 'Strøsingel på en snødekt gangvei' },
-    ],
-    intro:
-      'Vi måker snø og leverer strøsingel, så uteområdene er trygge gjennom vinteren. Lokalt, med rask respons.',
+    intro: 'For privatpersoner, borettslag og bedrifter. Fast avtale eller ved behov, lokalt og med rask respons.',
     points: [
       'Snømåking av innkjørsler, gårdsplasser, parkeringsplasser og fortau',
       'Levering av strøsingel',
       'Tryggere underlag, mindre risiko for fall',
-      'For privatpersoner, borettslag og bedrifter',
-      'Fleksible avtaler, fast eller ved behov',
+    ],
+    gallery: [
+      { src: '/demo/renogfin/snofreser.jpg', alt: 'Snøfreser i arbeid ved et gjerde' },
+      { src: '/demo/renogfin/strosingel.jpg', alt: 'Strøsingel på en snødekt gangvei' },
     ],
   },
   {
     id: 'hage',
     title: 'Hage og utemiljø',
     nav: 'Hage',
-    short: 'Ferdigplen, hekkeklipping, grusarbeid, beplanting og graving. Fra overgrodd til enkel å vedlikeholde.',
+    short: 'Ferdigplen, hekk, grus og beplanting.',
     image: '/demo/renogfin/hage.jpg',
+    intro: 'Fra overgrodd hage til et uteområde som er enkelt å holde i orden.',
+    points: [
+      'Klargjøring og legging av ferdigplen',
+      'Fjerning av ugress og gamle bed',
+      'Klipping av hekk',
+      'Nye gruspartier og beplanting',
+      'Graving',
+    ],
     gallery: [
       { src: '/demo/renogfin/hage-klargjoring.jpg', alt: 'Hage klargjort for ferdigplen' },
       { src: '/demo/renogfin/hage-plen.jpg', alt: 'Nylagt ferdigplen' },
@@ -163,15 +137,6 @@ export const SERVICES: Service[] = [
       { src: '/demo/renogfin/hage-skraning2.jpg', alt: 'Ferdig beplantet skråning' },
       { src: '/demo/renogfin/hage-basseng.jpg', alt: 'Ny plen ved basseng' },
       { src: '/demo/renogfin/hage-innkjorsel.jpg', alt: 'Ferdig uteområde med plen, hvit singel og belysning' },
-    ],
-    intro:
-      'Vi tar også hageprosjekter og arbeid på uteområdet. Vi gjør en overgrodd hage om til et uteområde som er enkelt å holde i orden, grundig, effektivt og til avtalt tid.',
-    points: [
-      'Klargjøring og legging av ferdigplen',
-      'Fjerning av ugress og gamle bed',
-      'Klipping av hekk',
-      'Nye gruspartier og beplanting',
-      'Graving og utemiljø',
     ],
   },
 ];

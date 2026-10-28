@@ -1,23 +1,21 @@
-import TestimonialMarquee from './_components/TestimonialMarquee';
 import Link from 'next/link';
 import SafeImg from './_components/SafeImg';
-import { BASE, SERVICES, TESTIMONIALS } from './_components/data';
-import { ArrowIcon, RollIcon, SparkleIcon, TagIcon, UserIcon, PinIcon } from './_components/icons';
-import { AreasSection, BeforeAfter, CtaBand, IconBadge, Section, btnPrimary, card } from './_components/ui';
+import TestimonialMarquee from './_components/TestimonialMarquee';
+import { BASE, SERVICES, SITE, TESTIMONIALS } from './_components/data';
+import { PhoneIcon } from './_components/icons';
+import { ContactBand, Section, btnPrimary, card } from './_components/ui';
 
 export const metadata = { robots: 'noindex' };
 
-const TRUST = [
-  { label: 'Ingen skjulte kostnader', icon: <TagIcon className="h-5 w-5" /> },
-  { label: 'Fast kontaktperson', icon: <UserIcon className="h-5 w-5" /> },
-  { label: 'Tørkepapir og toalettpapir inkludert i faste avtaler', icon: <RollIcon className="h-5 w-5" /> },
-  { label: 'Oslo, Romerike og omegn', icon: <PinIcon className="h-5 w-5" /> },
+const FACTS = [
+  'Fast kontaktperson',
+  'Ingen skjulte kostnader',
+  'Tørkepapir og toalettpapir inkludert i faste avtaler',
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
       <section className="relative isolate overflow-hidden">
         <SafeImg
           src="/demo/renogfin/hero-kontor.jpg"
@@ -33,123 +31,73 @@ export default function HomePage() {
               Et rent arbeidsmiljø, hver eneste dag
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-slate-100 md:text-xl">
-              Ren & Fin AS leverer renhold for bedrifter, borettslag og private i Oslo og omegn. Fast
-              avtale eller engangsjobb, vi tilpasser oss deg.
+              Renhold for bedrifter, borettslag og private. Fast avtale eller engangsjobb.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href={`${BASE}/kontakt`} className={btnPrimary}>
                 Få et tilbud
               </Link>
-              <Link
-                href={`${BASE}/tjenester`}
-                className="inline-flex items-center justify-center rounded-lg border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
+              <a
+                href={SITE.phoneHref}
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
               >
-                Se tjenestene
-              </Link>
+                <PhoneIcon className="h-4 w-4" />
+                {SITE.phoneShort}
+              </a>
             </div>
+            <p className="mt-8 text-sm text-slate-200">Vi jobber i {SITE.area}.</p>
           </div>
         </div>
       </section>
 
-      {/* Trust strip */}
-      <section className="border-b border-slate-200 bg-white py-8 md:py-10">
-        <div className="mx-auto grid max-w-[1100px] grid-cols-2 gap-6 px-4 md:grid-cols-4">
-          {TRUST.map((t) => (
-            <div key={t.label} className="flex items-start gap-3">
-              <IconBadge>{t.icon}</IconBadge>
-              <span className="pt-1 text-sm font-medium leading-snug text-slate-900 md:text-[15px]">{t.label}</span>
-            </div>
+      <div className="border-b border-slate-200 bg-white">
+        <ul className="mx-auto grid max-w-[1100px] divide-y divide-slate-200 px-4 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          {FACTS.map((f) => (
+            <li key={f} className="py-4 text-[15px] font-medium text-slate-900 sm:px-6 sm:first:pl-0">
+              {f}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <Section>
+        <h2 className="text-3xl font-bold tracking-tight text-slate-900">Tjenester</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {SERVICES.map((s, i) => (
+            <Link
+              key={s.id}
+              href={`${BASE}/tjenester#${s.id}`}
+              className={`${card} group overflow-hidden transition-colors hover:border-[#0d9488] ${
+                i === 0 ? 'sm:col-span-2' : ''
+              }`}
+            >
+              <SafeImg src={s.image} alt={s.title} position={s.imagePosition} className="h-44 w-full" />
+              <div className="p-4">
+                <h3 className="font-semibold text-slate-900 group-hover:text-[#0f766e]">{s.title}</h3>
+                <p className="mt-1 text-[15px] leading-snug">{s.short}</p>
+              </div>
+            </Link>
           ))}
         </div>
-      </section>
+      </Section>
 
-      {/* Offer */}
-      <Section>
-        <div className="flex flex-col gap-6 rounded-lg border border-teal-200 bg-[#ccfbf1] p-6 md:flex-row md:items-center md:justify-between md:p-10">
-          <div className="flex gap-4">
-            <span className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white text-[#0d9488] sm:inline-flex">
-              <SparkleIcon className="h-6 w-6" />
-            </span>
+      <section className="bg-white pb-10 md:pb-16">
+        <div className="mx-auto max-w-[1100px] px-4">
+          <div className="flex flex-col gap-5 rounded-lg bg-[#ccfbf1] p-6 md:flex-row md:items-center md:justify-between md:p-8">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-slate-900">Ekstra måned på kjøpet</h2>
-              <p className="mt-2 max-w-xl leading-relaxed text-slate-700">
+              <h2 className="text-xl font-bold tracking-tight text-slate-900 md:text-2xl">Ekstra måned på kjøpet</h2>
+              <p className="mt-1 max-w-xl leading-relaxed text-slate-700">
                 Signer en 12 måneders renholdsavtale for bedriften, så får du en ekstra måned med renhold uten
                 ekstra kostnad.
               </p>
             </div>
-          </div>
-          <Link href={`${BASE}/kontakt`} className={`${btnPrimary} shrink-0`}>
-            Få tilbudet
-          </Link>
-        </div>
-      </Section>
-
-      {/* About */}
-      <Section alt>
-        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">Renhold gjort enkelt</h2>
-            <p className="mt-4 leading-relaxed">
-              For en bedrift handler suksess om mer enn tall og resultater. Et rent og ryddig arbeidsmiljø gir
-              bedre trivsel for de ansatte og et godt førsteinntrykk for kundene. Hos Ren & Fin AS får du
-              gjennomsiktige priser, en enkel oppstart og et team som leverer hver gang.
-            </p>
-            <Link
-              href={`${BASE}/om-oss`}
-              className="mt-6 inline-flex items-center gap-2 font-semibold text-[#0d9488] hover:text-[#0f766e]"
-            >
-              Les mer om oss
-              <ArrowIcon className="h-4 w-4" />
+            <Link href={`${BASE}/kontakt`} className={`${btnPrimary} shrink-0`}>
+              Få tilbudet
             </Link>
           </div>
-          <SafeImg
-            src="/demo/renogfin/team-logo.jpg"
-            alt="Renholder i Ren & Fin-t-skjorte vasker en vegg på et kontor"
-            className="aspect-[4/3] w-full rounded-lg"
-          />
         </div>
-      </Section>
+      </section>
 
-      {/* Services */}
-      <Section>
-        <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900">Tjenestene våre</h2>
-          <p className="mt-3 leading-relaxed">
-            Fra daglig kontorrenhold til en grundig flyttevask. Vi tilpasser jobben etter deg.
-          </p>
-        </div>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
-            <article key={s.id} className={`${card} flex flex-col overflow-hidden`}>
-              <SafeImg src={s.image} alt={s.title} position={s.imagePosition} className="aspect-[3/2] w-full" />
-              <div className="flex flex-1 flex-col p-5">
-                <h3 className="text-lg font-semibold text-slate-900">{s.title}</h3>
-                <p className="mt-2 flex-1 text-[15px] leading-relaxed">{s.short}</p>
-                <Link
-                  href={`${BASE}/tjenester#${s.id}`}
-                  className="mt-4 inline-flex items-center gap-2 font-semibold text-[#0d9488] hover:text-[#0f766e]"
-                >
-                  Les mer
-                  <ArrowIcon className="h-4 w-4" />
-                </Link>
-              </div>
-            </article>
-          ))}
-          <article className="flex flex-col justify-center rounded-lg bg-[#ccfbf1] p-6 lg:col-span-2 lg:p-10">
-            <h3 className="text-xl font-bold tracking-tight text-slate-900">Finner du ikke det du ser etter?</h3>
-            <p className="mt-2 max-w-md leading-relaxed text-slate-700">
-              Fortell oss hva du trenger, så finner vi en løsning som passer deg.
-            </p>
-            <div className="mt-5">
-              <Link href={`${BASE}/kontakt`} className={btnPrimary}>
-                Kontakt oss
-              </Link>
-            </div>
-          </article>
-        </div>
-      </Section>
-
-      {/* Testimonials */}
       <Section alt>
         <h2 className="text-3xl font-bold tracking-tight text-slate-900">Dette sier kundene våre</h2>
         <div className="mt-8">
@@ -157,11 +105,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <BeforeAfter />
-
-      <AreasSection alt />
-
-      <CtaBand />
+      <ContactBand />
     </>
   );
 }
