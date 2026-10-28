@@ -39,8 +39,8 @@ export const SERVICES: Service[] = [
     title: 'Renhold for bedrifter',
     nav: 'Bedrifter',
     short: 'Kontorer, butikker og lokaler. Daglig, ukentlig eller etter behov.',
-    image: '/demo/renogfin/kontorrenhold.jpg',
-    imagePosition: 'center 70%',
+    image: '/demo/renogfin/team-logo.jpg',
+    imagePosition: 'center 40%',
     intro:
       'Fast renhold av kontorlokaler, butikklokaler og eiendom. Avtalen settes opp etter åpningstidene og behovene deres.',
     points: [
