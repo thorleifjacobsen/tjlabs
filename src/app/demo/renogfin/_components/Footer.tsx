@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { BASE, NAV, SERVICES, SITE } from './data';
-import { FacebookIcon, InstagramIcon, MailIcon, PhoneIcon, PinIcon } from './icons';
+import { FacebookIcon, InstagramIcon, LinkedinIcon, MailIcon, PhoneIcon, PinIcon } from './icons';
 
 export default function Footer() {
   return (
@@ -29,6 +29,15 @@ export default function Footer() {
               className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 hover:border-[#0d9488] hover:text-[#0d9488]"
             >
               <InstagramIcon className="h-5 w-5" />
+            </a>
+            <a
+              href={SITE.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ren & Fin på LinkedIn"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 hover:border-[#0d9488] hover:text-[#0d9488]"
+            >
+              <LinkedinIcon />
             </a>
           </div>
         </div>

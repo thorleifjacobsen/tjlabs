@@ -1,6 +1,6 @@
 import ContactForm from '../_components/ContactForm';
 import { SITE } from '../_components/data';
-import { FacebookIcon, InstagramIcon, MailIcon, PhoneIcon, PinIcon } from '../_components/icons';
+import { FacebookIcon, InstagramIcon, LinkedinIcon, MailIcon, PhoneIcon, PinIcon } from '../_components/icons';
 import { IconBadge, PageHeader, Section, card } from '../_components/ui';
 
 export const metadata = { title: 'Kontakt', robots: 'noindex' };
@@ -51,7 +51,7 @@ export default function KontaktPage() {
                 <div className="mt-1 text-sm">Vi jobber i {SITE.area}.</div>
               </div>
             </div>
-            <div className="flex gap-3 pt-2">
+            <div className="flex flex-wrap gap-3 pt-2">
               <a
                 href={SITE.facebook}
                 target="_blank"
@@ -69,6 +69,15 @@ export default function KontaktPage() {
               >
                 <InstagramIcon className="h-4 w-4" />
                 Instagram
+              </a>
+              <a
+                href={SITE.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:border-[#0d9488] hover:text-[#0d9488]"
+              >
+                <LinkedinIcon className="h-4 w-4" />
+                LinkedIn
               </a>
             </div>
           </aside>

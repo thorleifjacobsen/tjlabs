@@ -12,6 +12,7 @@ export const SITE = {
   areas: ['Oslo', 'Romerike', 'Ullensaker', 'Gardermoen', 'Lørenskog', 'Bærum', 'Hønefoss'],
   facebook: 'https://www.facebook.com/renogfin/',
   instagram: 'https://www.instagram.com/renogfin.no/',
+  linkedin: 'https://www.linkedin.com/in/ren-og-fin-as-2963a5127/',
 };
 
 export const NAV = [
@@ -115,9 +116,23 @@ export const SERVICES: Service[] = [
 
 export const TESTIMONIALS = [
   {
+    name: 'Barbro',
+    quote:
+      'Fantastisk flott rengjøring! Trodde knapt det var mulig å få leiligheten min så fin... den skinte! Den så nesten ut som en helt ny leilighet etter noen timer med Ren og Fin AS. I tillegg hørte de nøye på info, var hyggelige og forståelsesfulle, og gjorde i det hele tatt en fantastisk innsats!',
+  },
+  {
     name: 'Andreas Haug',
     quote:
       'Utrolig dyktige, jobber raskt og effektivt. Også over tid. Aldri noe tull. Anbefales på det varmeste.',
+  },
+  {
+    name: 'Hilde',
+    quote: 'Vi benyttet Ren & Fin til flyttevask og er veldig fornøyd med jobben de gjorde. Kan trygt anbefales.',
+  },
+  {
+    name: 'Jon',
+    quote:
+      'Vasket ned kjeller etter vi hadde skittent vann inne ifbm overvann som trakk inn. Svært skitten kjeller ble ren og fin! Takk, Sandra!',
   },
   {
     name: 'Marius Berg',
@@ -125,8 +140,25 @@ export const TESTIMONIALS = [
       'Et rent kontor hver dag er en skikkelig opptur, det setter standarden for en god arbeidsdag.',
   },
   {
+    name: 'Ingvild',
+    quote: 'Mine tåkete vinduer ble perfekte. Nydelig arbeid',
+  },
+  {
+    name: 'Kristin',
+    quote:
+      'Firmaet “Renogfin” tar ikke bare rengjøringsoppdrag men utfører også hageprosjekter. Vi hyret dem til å forvandle en overgrodd hage og plen til en tilnærmet vedlikeholdsfri hage. Fjerning av ugress, gamle bed, legging av ferdigplen, klipping av hekk, nye gruspartier og beplanting er utført grundig og effektivt og til avtalt tid. Vi anbefaler “Renogfin” til ditt neste hageprosjekt og ville brukt de igjen.',
+  },
+  {
+    name: 'Inger Merete',
+    quote: 'Veldig fornøyd med utført jobb. Et firma jeg vil fortsette å bruke.',
+  },
+  {
     name: 'Marianne Hansen',
     quote:
       'De leverer varene uten å skryte av det. Huset mitt ser mye bedre ut etter at de har vært her.',
+  },
+  {
+    name: 'Marcela',
+    quote: 'Det er veldig god jobb, de er veldig snille mennesker og jeg liker det firmaet 😊',
   },
 ];

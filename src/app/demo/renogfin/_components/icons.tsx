@@ -128,3 +128,9 @@ export const InstagramIcon = (p: IconProps) => (
     <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
   </Svg>
 );
+
+export const LinkedinIcon = ({ className = 'w-5 h-5' }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M6.9 8.8H3.6V20h3.3zM5.2 3.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8zM20.4 13.6c0-3-1.6-5-4.3-5-1.4 0-2.4.8-2.9 1.6V8.8h-3.2V20h3.3v-5.6c0-1.5.4-2.9 2.2-2.9 1.8 0 1.8 1.7 1.8 3V20h3.3z" />
+  </svg>
+);
