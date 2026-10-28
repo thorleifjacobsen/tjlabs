@@ -11,36 +11,39 @@ export default function KontaktPage() {
 
       <Section>
         <div className="grid gap-8 lg:grid-cols-[1fr_320px] lg:gap-12">
-          <div className={`${card} p-6 md:p-8`}>
-            <ContactForm />
+          <div className="lg:col-start-2 lg:row-start-1">
+            <dl className="space-y-5">
+              <div>
+                <dt className="text-sm text-slate-500">Telefon</dt>
+                <dd>
+                  <a href={SITE.phoneHref} className="text-lg font-semibold text-slate-900 hover:text-[#0d9488]">
+                    {SITE.phoneDisplay}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm text-slate-500">E-post</dt>
+                <dd>
+                  <a href={`mailto:${SITE.email}`} className="text-lg font-semibold text-slate-900 hover:text-[#0d9488]">
+                    {SITE.email}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm text-slate-500">Adresse</dt>
+                <dd className="text-lg font-semibold text-slate-900">
+                  {SITE.street}
+                  <br />
+                  {SITE.postal}
+                </dd>
+              </div>
+            </dl>
+            <p className="mt-6 text-slate-600 lg:hidden">Eller bruk skjemaet nedenfor.</p>
           </div>
 
-          <dl className="space-y-5">
-            <div>
-              <dt className="text-sm text-slate-500">Telefon</dt>
-              <dd>
-                <a href={SITE.phoneHref} className="text-lg font-semibold text-slate-900 hover:text-[#0d9488]">
-                  {SITE.phoneDisplay}
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt className="text-sm text-slate-500">E-post</dt>
-              <dd>
-                <a href={`mailto:${SITE.email}`} className="text-lg font-semibold text-slate-900 hover:text-[#0d9488]">
-                  {SITE.email}
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt className="text-sm text-slate-500">Adresse</dt>
-              <dd className="text-lg font-semibold text-slate-900">
-                {SITE.street}
-                <br />
-                {SITE.postal}
-              </dd>
-            </div>
-          </dl>
+          <div className={`${card} p-6 md:p-8 lg:col-start-1 lg:row-start-1`}>
+            <ContactForm />
+          </div>
         </div>
       </Section>
     </>
