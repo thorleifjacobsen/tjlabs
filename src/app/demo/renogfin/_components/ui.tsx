@@ -52,7 +52,7 @@ export function IconBadge({ children }: { children: ReactNode }) {
 
 export function TestimonialCard({ name, quote }: { name: string; quote: string }) {
   return (
-    <figure className={`${card} flex h-full flex-col p-6`}>
+    <figure className={`${card} flex flex-col p-6`}>
       <QuoteIcon className="h-7 w-7 text-[#0d9488]" />
       <blockquote className="mt-3 flex-1 leading-relaxed text-slate-600">{quote}</blockquote>
       <figcaption className="mt-5 flex items-center justify-between">
@@ -71,7 +71,7 @@ export function TestimonialCard({ name, quote }: { name: string; quote: string }
 export function TestimonialMarquee({ items }: { items: { name: string; quote: string }[] }) {
   return (
     <div className="rf-marquee relative -mx-4 overflow-hidden px-4 md:mx-0 md:px-0">
-      <div className="rf-marquee-track flex w-max gap-6 py-1" style={{ animationDuration: `${items.length * 8}s` }}>
+      <div className="rf-marquee-track flex w-max items-center gap-6 py-1" style={{ animationDuration: `${items.length * 8}s` }}>
         {[...items, ...items].map((t, i) => (
           <div key={i} aria-hidden={i >= items.length} className="w-[300px] shrink-0 sm:w-[340px]">
             <TestimonialCard {...t} />

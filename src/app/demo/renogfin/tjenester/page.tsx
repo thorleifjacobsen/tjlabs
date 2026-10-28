@@ -14,19 +14,19 @@ export default function TjenesterPage() {
         intro="Vi tar renholdet for bedrifter, borettslag og private i Oslo og omegn. Velg en fast avtale eller bestill en engangsjobb, så tilpasser vi oss deg."
       />
 
-      <div className="border-b border-slate-200 bg-white">
-        <Container className="flex gap-2 overflow-x-auto py-3">
+      <nav aria-label="Hopp til tjeneste" className="border-b border-slate-200 bg-white">
+        <Container className="flex flex-wrap gap-2 py-4">
           {SERVICES.map((s) => (
             <a
               key={s.id}
               href={`#${s.id}`}
-              className="shrink-0 rounded-full border border-slate-200 px-4 py-1.5 text-sm font-medium text-slate-700 hover:border-[#0d9488] hover:text-[#0d9488]"
+              className="rounded-full border border-slate-200 px-3.5 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-[#0d9488] hover:bg-[#ccfbf1] hover:text-[#0f766e]"
             >
-              {s.title}
+              {s.nav}
             </a>
           ))}
         </Container>
-      </div>
+      </nav>
 
       {SERVICES.map((s, i) => (
         <section key={s.id} id={s.id} className={`py-10 md:py-16 ${i % 2 ? 'bg-[#f8fafc]' : 'bg-white'}`}>

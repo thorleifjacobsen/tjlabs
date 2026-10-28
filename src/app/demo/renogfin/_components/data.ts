@@ -36,6 +36,7 @@ export const TASKS = [
 export type Service = {
   id: string;
   title: string;
+  nav: string;
   short: string;
   image: string;
   imagePosition?: string;
@@ -47,6 +48,7 @@ export const SERVICES: Service[] = [
   {
     id: 'bedrift',
     title: 'Renhold for bedrifter',
+    nav: 'Bedrifter',
     short: 'Kontorlokaler, butikklokaler og eiendomsdrift. Raskt, effektivt og pålitelig.',
     image: '/demo/renogfin/kontorrenhold.jpg',
     imagePosition: 'center 70%',
@@ -63,6 +65,7 @@ export const SERVICES: Service[] = [
   {
     id: 'periodisk',
     title: 'Periodisk renhold',
+    nav: 'Periodisk renhold',
     short: 'Vindusvask, polering, sølvpuss og grundig rydding, hjemme eller på kontoret.',
     image: '/demo/renogfin/vindusvask.jpg',
     intro:
@@ -77,6 +80,7 @@ export const SERVICES: Service[] = [
   {
     id: 'borettslag',
     title: 'Borettslag og sameie',
+    nav: 'Borettslag',
     short: 'Trappevask, levering av dørmatter, vaktmestertjenester og vedlikehold av fellesområder.',
     image: 'https://placehold.co/800x533/e2e8f0/94a3b8?text=Trappeoppgang',
     intro:
@@ -91,6 +95,7 @@ export const SERVICES: Service[] = [
   {
     id: 'hovedrengjoring',
     title: 'Hovedrengjøring og flyttevask',
+    nav: 'Flyttevask',
     short: 'Flyttevask, visningsvask og hovedrengjøring. Grundig fra topp til bunn.',
     image: '/demo/renogfin/bad.jpg',
     intro:
@@ -105,6 +110,7 @@ export const SERVICES: Service[] = [
   {
     id: 'hjemmespa',
     title: 'HjemmeSpa',
+    nav: 'HjemmeSpa',
     short: 'Grundig rengjøring kombinert med velvære og eteriske oljer for et hjem som føles godt.',
     image: '/demo/renogfin/hjem.jpg',
     intro:
@@ -119,6 +125,7 @@ export const SERVICES: Service[] = [
   {
     id: 'snomaking',
     title: 'Snømåking og strøsingel',
+    nav: 'Snømåking',
     short: 'Snømåking av innkjørsler, gårdsplasser, parkeringsplasser og fortau, og levering av strøsingel.',
     image: '/demo/renogfin/snomaking.jpg',
     imagePosition: 'center 60%',
@@ -135,6 +142,7 @@ export const SERVICES: Service[] = [
   {
     id: 'hage',
     title: 'Hage og utemiljø',
+    nav: 'Hage',
     short: 'Ferdigplen, hekkeklipping, grusarbeid, beplanting og graving. Fra overgrodd til enkel å vedlikeholde.',
     image: '/demo/renogfin/hage.jpg',
     intro:
@@ -181,7 +189,7 @@ export const TESTIMONIALS = [
   {
     name: 'Kristin',
     quote:
-      'Firmaet “Renogfin” tar ikke bare rengjøringsoppdrag men utfører også hageprosjekter. Vi hyret dem til å forvandle en overgrodd hage og plen til en tilnærmet vedlikeholdsfri hage. Fjerning av ugress, gamle bed, legging av ferdigplen, klipping av hekk, nye gruspartier og beplanting er utført grundig og effektivt og til avtalt tid. Vi anbefaler “Renogfin” til ditt neste hageprosjekt og ville brukt de igjen.',
+      'Vi hyret dem til å forvandle en overgrodd hage og plen til en tilnærmet vedlikeholdsfri hage. Vi anbefaler “Renogfin” til ditt neste hageprosjekt og ville brukt de igjen.',
   },
   {
     name: 'Knut',
