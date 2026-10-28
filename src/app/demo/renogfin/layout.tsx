@@ -10,6 +10,7 @@ export const metadata = {
   description:
     'Ren & Fin AS tilbyr pålitelig og effektiv rengjøring for bedrifter og private i Oslo, Romerike, Ullensaker, Gardermoen, Lørenskog, Bærum og Hønefoss.',
   robots: 'noindex',
+  icons: { icon: '/demo/renogfin/logo-mark.png', apple: '/demo/renogfin/logo-mark.png' },
 };
 
 // The root layout sets Comfortaa and a patterned body background, so reset both here
