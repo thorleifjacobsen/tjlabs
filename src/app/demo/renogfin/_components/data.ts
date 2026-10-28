@@ -30,6 +30,7 @@ export const TASKS = [
   'Daglig renhold for bedrifter',
   'Trappevask og fellesarealer',
   'Snømåking og strøsingel',
+  'Hage og utemiljø',
 ];
 
 export type Service = {
@@ -129,6 +130,21 @@ export const SERVICES: Service[] = [
       'Tryggere underlag, mindre risiko for fall',
       'For privatpersoner, borettslag og bedrifter',
       'Fleksible avtaler, fast eller ved behov',
+    ],
+  },
+  {
+    id: 'hage',
+    title: 'Hage og utemiljø',
+    short: 'Ferdigplen, hekkeklipping, grusarbeid, beplanting og graving. Fra overgrodd til enkel å vedlikeholde.',
+    image: '/demo/renogfin/hage.jpg',
+    intro:
+      'Vi tar også hageprosjekter og arbeid på uteområdet. Vi gjør en overgrodd hage om til et uteområde som er enkelt å holde i orden, grundig, effektivt og til avtalt tid.',
+    points: [
+      'Klargjøring og legging av ferdigplen',
+      'Fjerning av ugress og gamle bed',
+      'Klipping av hekk',
+      'Nye gruspartier og beplanting',
+      'Graving og utemiljø',
     ],
   },
 ];
