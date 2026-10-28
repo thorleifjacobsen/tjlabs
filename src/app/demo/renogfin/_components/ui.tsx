@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { BASE, SITE } from './data';
+import { QuoteIcon, StarIcon } from './icons';
 
 export const btnPrimary =
   'inline-flex items-center justify-center gap-2 rounded-lg bg-[#0d9488] px-5 py-3 font-semibold text-white transition-colors hover:bg-[#0f766e]';
@@ -42,8 +43,16 @@ export function PageHeader({ title, intro }: { title: string; intro: string }) {
 export function TestimonialCard({ name, quote }: { name: string; quote: string }) {
   return (
     <figure className={`${card} flex flex-col p-6`}>
-      <blockquote className="leading-relaxed text-slate-700">{quote}</blockquote>
-      <figcaption className="mt-4 font-semibold text-slate-900">{name}</figcaption>
+      <QuoteIcon className="h-7 w-7 text-[#0d9488]" />
+      <blockquote className="mt-3 flex-1 leading-relaxed text-slate-700">{quote}</blockquote>
+      <figcaption className="mt-5 flex items-center justify-between">
+        <span className="font-semibold text-slate-900">{name}</span>
+        <span className="flex text-amber-400" role="img" aria-label="5 av 5 stjerner">
+          {[0, 1, 2, 3, 4].map((i) => (
+            <StarIcon key={i} />
+          ))}
+        </span>
+      </figcaption>
     </figure>
   );
 }
