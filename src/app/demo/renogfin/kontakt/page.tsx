@@ -29,14 +29,6 @@ export default function KontaktPage() {
                   </a>
                 </dd>
               </div>
-              <div>
-                <dt className="text-sm text-slate-500">Adresse</dt>
-                <dd className="text-lg font-semibold text-slate-900">
-                  {SITE.street}
-                  <br />
-                  {SITE.postal}
-                </dd>
-              </div>
             </dl>
             <p className="mt-6 text-slate-600 lg:hidden">Eller bruk skjemaet nedenfor.</p>
           </div>

@@ -7,7 +7,6 @@ export const metadata = { title: 'Om oss', robots: 'noindex' };
 const FACTS = [
   { label: 'Område', value: SITE.area },
   { label: 'Kunder', value: 'Bedrifter, borettslag og private' },
-  { label: 'Adresse', value: `${SITE.street}, ${SITE.postal}` },
 ];
 
 export default function OmOssPage() {
