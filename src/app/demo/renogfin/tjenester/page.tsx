@@ -52,6 +52,17 @@ export default function TjenesterPage() {
               </Link>
             </div>
           </Container>
+          {s.gallery && (
+            <Container className="mt-8">
+              <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4">
+                {s.gallery.map((g) => (
+                  <li key={g.src}>
+                    <SafeImg src={g.src} alt={g.alt} className="aspect-square w-full rounded-lg" />
+                  </li>
+                ))}
+              </ul>
+            </Container>
+          )}
         </section>
       ))}
 

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import SafeImg from './_components/SafeImg';
 import { BASE, SERVICES, TESTIMONIALS } from './_components/data';
 import { ArrowIcon, RollIcon, SparkleIcon, TagIcon, UserIcon, PinIcon } from './_components/icons';
-import { AreasSection, CtaBand, IconBadge, Section, TestimonialMarquee, btnPrimary, card } from './_components/ui';
+import { AreasSection, BeforeAfter, CtaBand, IconBadge, Section, TestimonialMarquee, btnPrimary, card } from './_components/ui';
 
 export const metadata = { robots: 'noindex' };
 
@@ -145,7 +145,9 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <AreasSection />
+      <BeforeAfter />
+
+      <AreasSection alt />
 
       <CtaBand />
     </>

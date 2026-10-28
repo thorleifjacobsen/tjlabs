@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import SafeImg from './SafeImg';
 import { BASE, SITE, TASKS } from './data';
 import { CheckIcon, PhoneIcon, PinIcon, QuoteIcon, StarIcon } from './icons';
 
@@ -123,6 +124,35 @@ export function AreasSection({ alt = false }: { alt?: boolean }) {
             Få et tilbud
           </Link>
         </div>
+      </div>
+    </Section>
+  );
+}
+
+export function BeforeAfter() {
+  const photos = [
+    { label: 'Før', src: '/demo/renogfin/peis-for.jpg', alt: 'Peis full av aske og sot før rengjøring' },
+    { label: 'Etter', src: '/demo/renogfin/peis-etter.jpg', alt: 'Ren peis med blanke glass etter rengjøring' },
+  ];
+  return (
+    <Section>
+      <div className="max-w-2xl">
+        <h2 className="text-3xl font-bold tracking-tight text-slate-900">Før og etter</h2>
+        <p className="mt-3 leading-relaxed">Peisen før og etter en runde med Ren & Fin.</p>
+      </div>
+      <div className="mt-8 grid grid-cols-2 gap-3 md:gap-6">
+        {photos.map((p) => (
+          <figure key={p.label} className="relative overflow-hidden rounded-lg">
+            <SafeImg src={p.src} alt={p.alt} position="center top" className="aspect-square w-full" />
+            <figcaption
+              className={`absolute left-3 top-3 rounded-full px-3 py-1 text-sm font-semibold ${
+                p.label === 'Etter' ? 'bg-[#0d9488] text-white' : 'bg-white/90 text-slate-900'
+              }`}
+            >
+              {p.label}
+            </figcaption>
+          </figure>
+        ))}
       </div>
     </Section>
   );

@@ -40,6 +40,7 @@ export type Service = {
   short: string;
   image: string;
   imagePosition?: string;
+  gallery?: { src: string; alt: string }[];
   intro: string;
   points: string[];
 };
@@ -82,7 +83,8 @@ export const SERVICES: Service[] = [
     title: 'Borettslag og sameie',
     nav: 'Borettslag',
     short: 'Trappevask, levering av dørmatter, vaktmestertjenester og vedlikehold av fellesområder.',
-    image: 'https://placehold.co/800x533/e2e8f0/94a3b8?text=Trappeoppgang',
+    image: '/demo/renogfin/trappevask.jpg',
+    imagePosition: 'center 55%',
     intro:
       'Rene trappeoppganger og ryddige fellesområder gjør det trivelig å komme hjem. Vi hjelper styret med faste rutiner, så beboerne merker forskjellen uten at styret må følge opp.',
     points: [
@@ -98,6 +100,11 @@ export const SERVICES: Service[] = [
     nav: 'Flyttevask',
     short: 'Flyttevask, visningsvask og hovedrengjøring. Grundig fra topp til bunn.',
     image: '/demo/renogfin/bad.jpg',
+    gallery: [
+      { src: '/demo/renogfin/rom-takvindu.jpg', alt: 'Lyst soverom med takvindu etter rengjøring' },
+      { src: '/demo/renogfin/rom-stue.jpg', alt: 'Ren og ryddig stue' },
+      { src: '/demo/renogfin/rom-soverom.jpg', alt: 'Rent soverom klart for visning' },
+    ],
     intro:
       'Skal du flytte, selge eller trenger hjemmet en skikkelig runde? Vi går gjennom hele boligen fra topp til bunn, så du kan levere nøklene, ha en skinnende visning eller nyte et hjem som er rent i hver krok.',
     points: [
@@ -129,6 +136,10 @@ export const SERVICES: Service[] = [
     short: 'Snømåking av innkjørsler, gårdsplasser, parkeringsplasser og fortau, og levering av strøsingel.',
     image: '/demo/renogfin/snomaking.jpg',
     imagePosition: 'center 60%',
+    gallery: [
+      { src: '/demo/renogfin/snofreser.jpg', alt: 'Snøfreser i arbeid ved et gjerde' },
+      { src: '/demo/renogfin/strosingel.jpg', alt: 'Strøsingel på en snødekt gangvei' },
+    ],
     intro:
       'Vi måker snø og leverer strøsingel, så uteområdene er trygge gjennom vinteren. Lokalt, med rask respons.',
     points: [
@@ -145,6 +156,14 @@ export const SERVICES: Service[] = [
     nav: 'Hage',
     short: 'Ferdigplen, hekkeklipping, grusarbeid, beplanting og graving. Fra overgrodd til enkel å vedlikeholde.',
     image: '/demo/renogfin/hage.jpg',
+    gallery: [
+      { src: '/demo/renogfin/hage-klargjoring.jpg', alt: 'Hage klargjort for ferdigplen' },
+      { src: '/demo/renogfin/hage-plen.jpg', alt: 'Nylagt ferdigplen' },
+      { src: '/demo/renogfin/hage-skraning1.jpg', alt: 'Skråning dekket med beplantning' },
+      { src: '/demo/renogfin/hage-skraning2.jpg', alt: 'Ferdig beplantet skråning' },
+      { src: '/demo/renogfin/hage-basseng.jpg', alt: 'Ny plen ved basseng' },
+      { src: '/demo/renogfin/hage-innkjorsel.jpg', alt: 'Ferdig uteområde med plen, hvit singel og belysning' },
+    ],
     intro:
       'Vi tar også hageprosjekter og arbeid på uteområdet. Vi gjør en overgrodd hage om til et uteområde som er enkelt å holde i orden, grundig, effektivt og til avtalt tid.',
     points: [
