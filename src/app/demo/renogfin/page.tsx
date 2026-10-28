@@ -2,7 +2,7 @@ import Link from 'next/link';
 import SafeImg from './_components/SafeImg';
 import TestimonialMarquee from './_components/TestimonialMarquee';
 import { BASE, SERVICES, SITE, TESTIMONIALS } from './_components/data';
-import { PhoneIcon } from './_components/icons';
+import { CheckIcon, PhoneIcon } from './_components/icons';
 import { ContactBand, Section, btnPrimary, card } from './_components/ui';
 
 export const metadata = { robots: 'noindex' };
@@ -25,7 +25,7 @@ export default function HomePage() {
           className="absolute inset-0 -z-10 h-full w-full"
         />
         <div className="absolute inset-0 -z-10 bg-slate-900/55" />
-        <div className="mx-auto flex min-h-[60vh] max-w-[1100px] items-center px-4 py-16 md:min-h-[70vh] md:py-24">
+        <div className="mx-auto flex min-h-[52vh] max-w-[1100px] items-center px-4 py-14 md:min-h-[62vh] md:py-20">
           <div className="max-w-2xl text-white">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               Et rent arbeidsmiljø, hver eneste dag
@@ -48,17 +48,17 @@ export default function HomePage() {
             <p className="mt-8 text-sm text-slate-200">Vi jobber i {SITE.area}.</p>
           </div>
         </div>
+        <div className="border-t border-white/15 bg-slate-900/60">
+          <ul className="mx-auto grid max-w-[1100px] gap-3 px-4 py-4 sm:grid-cols-3 sm:gap-6 md:py-5">
+            {FACTS.map((f) => (
+              <li key={f} className="flex items-start gap-2.5 text-[15px] font-medium text-white">
+                <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-teal-300" />
+                {f}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
-
-      <div className="border-b border-slate-200 bg-white">
-        <ul className="mx-auto grid max-w-[1100px] divide-y divide-slate-200 px-4 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-          {FACTS.map((f) => (
-            <li key={f} className="py-4 text-[15px] font-medium text-slate-900 sm:px-6 sm:first:pl-0">
-              {f}
-            </li>
-          ))}
-        </ul>
-      </div>
 
       <Section>
         <h2 className="text-3xl font-bold tracking-tight text-slate-900">Tjenester</h2>
